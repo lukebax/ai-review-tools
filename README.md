@@ -14,8 +14,8 @@ For a local copy, open **[index.html](index.html)** in Chrome or another modern 
 the data, styling and interaction code. No installation, server or internet
 connection is required to explore the map; outgoing source/tool links require internet.
 
-The explanations below the filters introduce the review stages, AI categories and
-recommendation colours, in that order. The stage descriptions are a workflow
+The explanations below the filters introduce RAISE, then this map and its sources,
+followed by review stages, AI categories and recommendation colours. The stage descriptions are a workflow
 adaptation of RAISE 3 v4; the AI explanation preserves the four-family/three-group
 distinction and translation qualifications.
 
