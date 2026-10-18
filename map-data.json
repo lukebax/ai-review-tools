@@ -660,7 +660,7 @@
           "whyCategoryMd": "Supervised algorithms learn relevance from reviewer-labelled records and update the screening order. Early stopping adds a decision to leave some records unread; that is distinct from merely changing their order.",
           "recommendation": "validation",
           "whyRecommendationMd": "RAISE requires within-review validation when screening stops early. The team must assess the configured algorithm and stopping procedure against prespecified requirements for sensitivity, using suitable review records. A high yield near the start or a run of irrelevant records does not establish that the unscreened remainder contains no relevant studies. Time savings may be small when maximum sensitivity is required.",
-          "officialUrlMd": "[Abstrackr developer repository](https://github.com/bwallace/abstrackr-web). The project also identifies a [Brown-hosted service](http://abstrackr.cebm.brown.edu/); a repository link does not establish that a hosted service is currently available. The developer's [deployment paper](https://doi.org/10.1145/2110363.2110464) describes interactive machine learning for citation screening.",
+          "officialUrlMd": "[Current Abstrackr application](https://abstrackr.com/) · [Current screening-model documentation](https://docs.abstrackr.com/docs/reference/ml-scoring).\n\nThe [former Brown-hosted service](http://abstrackr.cebm.brown.edu/) carries a deprecation and migration notice. The [original developer repository](https://github.com/bwallace/abstrackr-web) and [2012 deployment paper](https://doi.org/10.1145/2110363.2110464) document the earlier implementation. Current documentation describes a model trained on the project's human screening labels. This explains the supervised mechanism; it does not establish that a current model or stopping procedure has been validated for the intended review.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 15; supporting discussion, pp. 6–7."
         },
         {
@@ -672,7 +672,7 @@
           "whyCategoryMd": "These models predict labels or scores from learned examples. This is a separate use from choosing the next record to screen, although the same software can support both.",
           "recommendation": "validation",
           "whyRecommendationMd": "**Explicit rationale:** performance depends on the relevance and quality of training/validation data; the required volume and diversity vary with the concept being classified. Evaluate the chosen prediction procedure on suitable unseen review records. Classification and prioritised screening are distinct methodological roles; listing them is not a separate product-wide endorsement of each feature.",
-          "officialUrlMd": "[developer's Abstrackr repository](https://github.com/bwallace/abstrackr-web).",
+          "officialUrlMd": "[Current Abstrackr application](https://abstrackr.com/) · [Current screening-model documentation](https://docs.abstrackr.com/docs/reference/ml-scoring).\n\nThese links identify the current service and its supervised screening mechanism. The RAISE recommendation concerns the specified workflow; current documentation does not establish validation of a particular model, configuration or stopping procedure.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 15; supporting discussion, pp. 6–7."
         },
         {
@@ -684,7 +684,7 @@
           "whyCategoryMd": "Supervised algorithms use reviewer-labelled records to predict relevance and organise the human screening queue. In this use they change the order of assessment, not which records receive assessment.",
           "recommendation": "acceptable",
           "whyRecommendationMd": "RAISE 3 v4 explicitly distinguishes prioritisation without early stopping: all records are screened, while earlier identification of relevant studies may improve workflow efficiency. This rating does not authorise excluding records by prediction or stopping before the queue is completed.",
-          "officialUrlMd": "[Abstrackr developer repository](https://github.com/bwallace/abstrackr-web). The project also identifies a [Brown-hosted service](http://abstrackr.cebm.brown.edu/); a repository link does not establish that a hosted service is currently available. The developer's [deployment paper](https://doi.org/10.1145/2110363.2110464) describes interactive machine learning for citation screening.",
+          "officialUrlMd": "[Current Abstrackr application](https://abstrackr.com/) · [Current screening-model documentation](https://docs.abstrackr.com/docs/reference/ml-scoring).\n\nThese links identify the current service and its supervised screening mechanism. The RAISE recommendation concerns the specified workflow; current documentation does not establish validation of a particular model, configuration or stopping procedure.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 15; supporting discussion, pp. 6–7. RAISE 2 v4 (25 August 2026), pp. 7 and 18."
         }
       ]
@@ -941,7 +941,7 @@
           "whyCategoryMd": "Agentic AI develops, refines and performs searches from a natural-language request.",
           "recommendation": "exploratory",
           "whyRecommendationMd": "RAISE 3 v4 limits agentic scoping to exploratory and supplementary use. Search choices and available data sources constrain the results, and users need to guide the agent. It may help early familiarisation but should not be relied on for formal evidence retrieval.",
-          "officialUrlMd": "[https://asta.allen.ai/](https://asta.allen.ai/)\n\nThis is the paper-finding function, not a second name for every Asta capability. Ai2's [official description](https://allenai.org/asta/agents) describes decomposing a query, searching, following citations and assessing relevance. These are useful explanatory examples of the agentic search process that RAISE classifies here, rather than independent validation of complete retrieval.",
+          "officialUrlMd": "[https://asta.allen.ai/](https://asta.allen.ai/)\n\nThis is the paper-finding function, not a second name for every Asta capability. [Ai2 describes](https://allenai.org/asta/agents) decomposing a query, searching, following citations and assessing relevance. These are useful explanatory examples of the agentic search process that RAISE classifies here, rather than independent validation of complete retrieval.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 13; supporting discussion, p. 5."
         },
         {
@@ -1493,7 +1493,7 @@
           "whyCategoryMd": "The model generates question wording from prompts, rather than applying fixed rules.",
           "recommendation": "verification",
           "whyRecommendationMd": "Suggestions may be irrelevant, incomplete, biased or duplicate existing reviews. Check their scope and originality before adoption.",
-          "officialUrlMd": "[https://www.deepseek.com/](https://www.deepseek.com/)\n\nDeepSeek is named as a general-purpose LLM example. The official provider page is the navigation link; RAISE does not specify a model or interface. **Its only named Search function in this mapping is query translation:** unlike the other four general assistants, DeepSeek is absent from the search-strategy-development example list on p.12. That omission is not a claim that it cannot generate strategies.",
+          "officialUrlMd": "[https://www.deepseek.com/](https://www.deepseek.com/)\n\nDeepSeek is named as a general-purpose LLM example. The official provider page is the navigation link; RAISE does not specify a model or interface. **Its only named Search function in this mapping is query translation:** unlike the other four general assistants, DeepSeek is absent from the search-strategy-development example list on p.13. That omission is not a claim that it cannot generate strategies.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; supporting discussion, p. 4."
         },
         {
@@ -1838,7 +1838,7 @@
           "whyCategoryMd": "The model produces the cross-study account, even if agents also retrieve sources.",
           "recommendation": "unacceptable",
           "whyRecommendationMd": "Fluent text does not establish compatible studies, correct transformations, appropriate weighting or treatment of uncertainty and heterogeneity. This restriction differs from checked code assistance.",
-          "officialUrlMd": "[https://search.google/ways-to-search/ai-mode/](https://search.google/ways-to-search/ai-mode/)\n\nGoogle's [official description](https://search.google/ways-to-search/ai-mode/) describes AI-generated answers with web links and follow-up questions. In these two Table 2 rows, the relevant output is the generated cross-study conclusion, so RAISE's literal class is **Generative LLMs**, even if the current search service also orchestrates retrieval. This entry is not a blanket judgement about ordinary web searching.",
+          "officialUrlMd": "[https://search.google/ways-to-search/ai-mode/](https://search.google/ways-to-search/ai-mode/)\n\n[Google describes](https://search.google/ways-to-search/ai-mode/) AI-generated answers with web links and follow-up questions. In these two Table 2 rows, the relevant output is the generated cross-study conclusion, so RAISE's literal class is **Generative LLMs**, even if the current search service also orchestrates retrieval. This entry is not a blanket judgement about ordinary web searching.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, pp. 8–9."
         },
         {
@@ -1871,7 +1871,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "Table 2 explicitly requires human verification for translation of non-English studies. Applying that one translation recommendation to this stage is a derived association, not a separately validated screening recommendation. Cochrane guidance supports translation-assisted eligibility assessment. Ambiguous machine wording should prompt clarification rather than a confident exclusion; verification concerns source-language meaning, not just fluent English.",
           "officialUrlMd": "[Google Translate](https://translate.google.com/). RAISE's cited empirical sources include [Balk et al. (2013)](https://link.springer.com/article/10.1186/2046-4053-2-97) and [Jackson et al. (2019)](https://doi.org/10.7326/M19-0891); historical evaluations do not establish current performance across all modes and languages.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10. Stage placement is an editorial application of the single machine-translation row, not an additional stage-specific RAISE rating. Additional contextual source: [Cochrane Handbook §4.4.5](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-04) and [EPOC guidance](https://journals.sagepub.com/doi/10.1177/16094069211061950)."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10. Stage placement is an editorial application of the single machine-translation row, not an additional stage-specific RAISE rating. Additional contextual source: [Cochrane Handbook §4.4.5](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-04#section-4-4-5) and [EPOC guidance](https://journals.sagepub.com/doi/10.1177/16094069211061950)."
         },
         {
           "id": "google-translate--quality-assessment--translation-to-support-human-appraisal--generative-and-other-machine-learning-approaches",
@@ -1883,7 +1883,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "Human verification required is RAISE's explicit translation recommendation; its application to this appraisal context is derived. An apparently absent or unclear safeguard may reflect a translation error. Check consequential methodological meaning against reliable source-language interpretation before treating it as a study limitation. No direct validation of Google Translate's ability to judge bias is claimed.",
           "officialUrlMd": "[Google Translate](https://translate.google.com/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10. Stage placement is an editorial application of the single machine-translation row, not an additional stage-specific RAISE rating. Additional contextual source: [Cochrane Handbook §5.3.2](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-05) distinguishes collecting methodological information from assessing it."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10. Stage placement is an editorial application of the single machine-translation row, not an additional stage-specific RAISE rating. Additional contextual source: [Cochrane Handbook §5.3.2](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-05#section-5-3-2) distinguishes collecting methodological information from assessing it."
         },
         {
           "id": "google-translate--data-extraction--translation-to-support-human-data-extraction--generative-and-other-machine-learning-approaches",
@@ -1907,7 +1907,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "RAISE's verification requirement applies to the translation, with this downstream stage association derived. Numerical meaning and qualitative/cultural context require particular care. A readable translation does not establish compatible studies, correct analytical inputs or valid interpretation. This supporting use must not be read as permission for machine-generated cross-study synthesis, which RAISE treats separately.",
           "officialUrlMd": "[Google Translate](https://translate.google.com/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10. Stage placement is an editorial application of the single machine-translation row, not an additional stage-specific RAISE rating. Additional contextual source: [Cochrane Handbook §21.11](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-21)."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10. Stage placement is an editorial application of the single machine-translation row, not an additional stage-specific RAISE rating. Additional contextual source: [Cochrane Handbook §21.11](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-21#section-21-11)."
         },
         {
           "id": "google-translate--certainty-of-evidence-assessment--translation-of-inputs-to-human-certainty-judgement--generative-and-other-machine-learning-approaches",
@@ -1919,7 +1919,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "The explicit translation recommendation remains Human verification required, but this is the most indirect of the five derived stage associations. No direct performance evidence for certainty judgement is asserted. Errors in translated outcomes, methods or context can propagate into the assessment, so verify the source meaning and retain human judgement. Translation access is not itself evidence that a GRADE/CERQual conclusion is valid.",
           "officialUrlMd": "[Google Translate](https://translate.google.com/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10. Stage placement is an editorial application of the single machine-translation row, not an additional stage-specific RAISE rating. Additional contextual source: [Cochrane Handbook §21.12](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-21)."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10. Stage placement is an editorial application of the single machine-translation row, not an additional stage-specific RAISE rating. Additional contextual source: [Cochrane Handbook §21.12](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-21#section-21-12)."
         }
       ]
     },
