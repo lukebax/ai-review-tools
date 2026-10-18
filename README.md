@@ -16,7 +16,8 @@ connection is required to explore the map; outgoing source/tool links require in
 
 The explanations below the filters introduce RAISE, then this map and its sources,
 followed by review stages, AI categories and recommendation colours. Each expandable section
-has a distinct heading bar and border, with larger reading text and subordinate internal headings. The stage descriptions are a workflow
+starts collapsed and has a distinct heading bar and border, with larger reading text and subordinate internal headings. Use **Expand all** or
+**Collapse all** above these sections, or open and close each heading individually. The stage descriptions are a workflow
 adaptation of RAISE 3 v4; the AI explanation preserves the four-family/three-group
 distinction and translation qualifications. The remaining sections explain differing recommendations,
 practical safeguards, coverage limits and keyboard use. Methods described by RAISE without

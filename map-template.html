@@ -334,6 +334,7 @@ select{min-width:190px;max-width:260px}
 .empty-state h2{font-size:18px;margin:0 0 8px}
 .empty-state p{margin:0 0 18px}
 .page-foot{margin-top:28px;border-top:1px solid var(--line);padding-top:20px;font-size:14px;line-height:1.65;color:#405868}
+.guidance-actions{display:flex;flex-wrap:wrap;gap:8px;max-width:1000px;margin:0 0 16px}
 .scope-details{max-width:1000px;margin:16px 0;border:1px solid #cbd8e2;border-radius:8px;background:#fff;scroll-margin-top:16px}
 .scope-details>summary{cursor:pointer;color:#203f52;background:#edf3f7;border-radius:7px;font-size:18px;font-weight:700;line-height:1.4;padding:15px 20px}
 .scope-details>summary:hover{background:#e5eef4}
@@ -481,6 +482,7 @@ h1{font-size:23px}
 <div class="map-meta"><div id="result-count" role="status" aria-live="polite"></div><div class="map-options"><label><input id="roomier" type="checkbox"> Roomier columns</label><a href="#map-scroll">Back to map ↑</a></div></div>
 <footer class="page-foot">
 <p class="source-note" id="guidance-source-note"></p>
+<div class="guidance-actions" role="group" aria-label="Expand or collapse the guidance sections"><button type="button" class="plain-button" id="expand-guidance">Expand all</button><button type="button" class="plain-button" id="collapse-guidance">Collapse all</button></div>
 <details class="scope-details" id="about-raise"><summary>About RAISE</summary>
 <div class="disclosure-body"><p><strong>RAISE</strong> means <strong>Responsible use of AI in evidence SynthEsis</strong>. Its three papers help the review community use AI responsibly, build and evaluate tools, and select tools for particular tasks.</p>
 <p>It brings together expertise from Cochrane, Campbell, UCL’s EPPI Centre and others, with open consultation. <a href="https://www.cochrane.org/about-us/news/cochrane-announces-selected-ai-tools-innovative-platform-study" target="_blank" rel="noopener noreferrer">Cochrane advises its authors to follow RAISE</a>.</p>
@@ -699,6 +701,14 @@ function updateFilters(){
  renderLegend();renderMap();renderDrawer();
 }
 function resetFilters(){state.search='';state.group='';state.stage='';state.recommendations.clear();byId('tool-search').value='';byId('group-filter').value='';byId('stage-filter').value='';updateFilters();}
+const guidanceSections=Array.from(document.querySelectorAll('.page-foot > .scope-details'));
+const guidanceIds=guidanceSections.map(section=>section.id).join(' ');
+for(const [id,open] of [['expand-guidance',true],['collapse-guidance',false]]){
+ const button=byId(id);
+ button.setAttribute('aria-controls',guidanceIds);
+ button.addEventListener('click',()=>{guidanceSections.forEach(section=>{section.open=open;});});
+}
+
 byId('tool-search').addEventListener('input',e=>{state.search=e.target.value.trim();updateFilters();});
 byId('group-filter').addEventListener('change',e=>{state.group=e.target.value;updateFilters();});
 byId('stage-filter').addEventListener('change',e=>{state.stage=e.target.value;updateFilters();});
