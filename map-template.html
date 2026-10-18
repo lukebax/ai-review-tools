@@ -471,16 +471,16 @@ h1{font-size:23px}
 <footer class="page-foot">
 <p class="source-note" id="guidance-source-note"></p>
 <details class="scope-details" id="about-raise"><summary>About RAISE</summary>
-<p><strong>RAISE</strong> stands for <strong>Responsible use of AI in evidence SynthEsis</strong>. It is an international initiative to help researchers use AI while maintaining trustworthy evidence reviews. Its three papers cover responsibilities across the review community, building and evaluating tools, and selecting and using them.</p>
-<p>The recommendations bring together expertise from organisations including Cochrane, Campbell and UCL’s EPPI Centre, with open consultation and feedback. <a href="https://www.cochrane.org/about-us/news/cochrane-announces-selected-ai-tools-innovative-platform-study" target="_blank" rel="noopener noreferrer">Cochrane advises its authors to follow RAISE</a>. This provides a practical basis for deciding when AI may help and what evaluation or checking is needed.</p>
-<p><strong>RAISE is living guidance.</strong> The documents are revised as evidence develops and the author team has capacity; updates do not follow a fixed schedule. The current documents remain <strong>drafts for consultation and revision</strong>. The <a href="https://doi.org/10.17605/OSF.IO/FWAUD" target="_blank" rel="noopener noreferrer">RAISE collection</a> provides the guidance and its version history.</p>
+<p><strong>RAISE</strong> means <strong>Responsible use of AI in evidence SynthEsis</strong>. Its three papers help the review community use AI responsibly, build and evaluate tools, and select tools for particular tasks.</p>
+<p>It brings together expertise from Cochrane, Campbell, UCL’s EPPI Centre and others, with open consultation. <a href="https://www.cochrane.org/about-us/news/cochrane-announces-selected-ai-tools-innovative-platform-study" target="_blank" rel="noopener noreferrer">Cochrane advises its authors to follow RAISE</a>.</p>
+<p><strong>It is living guidance:</strong> the current documents are drafts for consultation and revision. Updates depend on new evidence and the authors’ capacity, with no fixed schedule. The <a href="https://doi.org/10.17605/OSF.IO/FWAUD" target="_blank" rel="noopener noreferrer">RAISE collection</a> holds the guidance and version history.</p>
 </details>
 <details class="scope-details" id="about-map"><summary>About this map and its sources</summary>
 <p>An independent adaptation by <strong>Luke Baxter</strong> of <strong>RAISE 3 Table 2</strong>, covering <span id="scope-tool-count"></span> named tools, features and resources across eight review stages. It is not an official RAISE publication or a live product catalogue.</p>
 <ul class="guidance-checklist">
 <li><strong>Read recommendations by task.</strong> RAISE often rates a task and technology type, rather than evaluating each product separately. Cell details identify interpretations and implementation qualifications.</li>
 <li><strong>Some stages are adapted.</strong> Writing a manuscript groups text-generation tasks. Google Translate and DeepL’s five translation-support placements are interpretations, not separate validations. The stage and AI-category explanations below give the details.</li>
-<li><strong>Some uses sit outside the map.</strong> Cross-stage workflows and chatbot interaction are explained below. Two unnamed Table 2 examples are omitted: regex-based reporting-quality assessment and hybrid named-entity extraction. Both require validation within the review.</li>
+<li><strong>Columns represent named tools.</strong> RAISE also describes two methods without naming a tool for either. These have no separate columns. They and the uses that span or sit outside review stages are explained under “What does the map leave out?” below.</li>
 <li><strong>Tool links explain features.</strong> They do not establish validation, RAISE endorsement or current service availability. Links were checked in October 2026.</li>
 </ul>
 <p id="guidance-version-note"></p>
@@ -490,51 +490,71 @@ h1{font-size:23px}
 <p><strong>Colours:</strong> Balanced by default; optional <a href="https://colorbrewer2.org/#type=diverging&amp;scheme=RdYlBu&amp;n=5" target="_blank" rel="noopener noreferrer">ColorBrewer RdYlBu</a> by Cynthia Brewer, Mark Harrower and The Pennsylvania State University (<a href="https://github.com/axismaps/colorbrewer/blob/master/LICENCE.txt" target="_blank" rel="noopener noreferrer">licence</a>).</p>
 </details>
 <details class="scope-details" id="review-stage-explanations"><summary>What do the review stages mean?</summary>
-<p>The rows organise review tasks into eight stages. They describe the work, not permission to automate it: recommendations apply to the specific functions in each cell. Reviews can revisit stages rather than follow a rigid sequence.</p>
+<p>The eight rows describe review tasks. Reviews can revisit stages; the rows do not imply permission to automate them.</p>
 <dl class="orientation-definitions">
-<dt>Writing a protocol</dt><dd>Plan the review: refine the question, explore the topic, estimate resources and set out the intended methods before carrying out the review.</dd>
-<dt>The Search</dt><dd>Find potentially relevant studies: scope the literature, develop search strategies, adapt queries for different databases, run searches and retrieve records, follow citation links, check that known relevant studies are found and remove duplicates.</dd>
-<dt>Screening for relevance</dt><dd>Decide which studies meet the eligibility criteria using titles, abstracts and full reports. Tools may prioritise records or support inclusion decisions; stopping before all records are screened is a separate methodological choice.</dd>
-<dt>Quality assessment</dt><dd>Assess individual studies’ reporting and risk of bias. Tools may locate relevant information and support structured judgements. Reporting completeness and risk of bias are distinct assessments.</dd>
-<dt>Data extraction</dt><dd>Collect study information needed for the review: populations, interventions, methods and results. Tasks include locating relevant passages, extracting numerical results and reading values from figures.</dd>
-<dt>Data synthesis</dt><dd>Bring evidence together through appropriate quantitative or qualitative analysis. Tasks also include visual evidence maps and analysis-code support. Summarising text alone does not constitute a methodologically sound synthesis.</dd>
-<dt>Certainty of evidence assessment</dt><dd>Judge confidence in a body of evidence or synthesised finding using an appropriate framework. This goes beyond appraising individual studies; tools may organise information, while reviewers remain responsible for the judgement.</dd>
-<dt>Writing a manuscript</dt><dd>Communicate the review through structured drafting, language revision and plain-language explanations of human-written findings. These tasks report the review; they do not replace its analysis or interpretation.</dd>
+<dt>Writing a protocol</dt><dd>Plan the review: refine the question, explore the topic, estimate resources and specify methods before starting.</dd>
+<dt>The Search</dt><dd>Find studies: scope the literature, design and adapt database searches, retrieve records, follow citations, check known studies are found and remove duplicates.</dd>
+<dt>Screening for relevance</dt><dd>Check titles, abstracts and full reports against eligibility criteria. Prioritising records and deciding to stop screening early are separate choices.</dd>
+<dt>Quality assessment</dt><dd>Assess study reporting and risk of bias. Complete reporting does not necessarily mean low risk of bias.</dd>
+<dt>Data extraction</dt><dd>Collect study details and results, including information in text, tables and figures.</dd>
+<dt>Data synthesis</dt><dd>Bring findings together through quantitative or qualitative analysis. Tools may also help with evidence maps or analysis code. Text summaries alone do not establish a sound synthesis.</dd>
+<dt>Certainty of evidence assessment</dt><dd>Judge confidence in the combined evidence or synthesised finding, using an appropriate framework. This goes beyond assessing individual studies; reviewers remain responsible.</dd>
+<dt>Writing a manuscript</dt><dd>Draft and revise the report, including plain-language summaries of human-written findings. Writing assistance does not replace analysis or interpretation.</dd>
 </dl>
-<p>These headings adapt <a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, Table 2 (pp.12–19)</a>. The first seven correspond to its review-task sections; <strong>Writing a manuscript</strong> groups drafting, revisions and plain-language summaries from its broader Text Generation section. Machine translation supports five stages, as explained in the relevant cells. Cross-stage workflows and chatbot interaction are described separately below.</p>
+<p>The first seven rows follow <a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, Table 2 (pp.12–19)</a>. <strong>Writing a manuscript</strong> groups drafting, revisions and plain-language summaries from its Text Generation section. Translation supports five stages, as qualified in those cells.</p>
 </details>
 <details class="scope-details" id="ai-category-explanations"><summary>What do the AI categories mean?</summary>
-<p>The columns group tools by the technology used for the listed function. RAISE describes four core families; this map combines supervised and unsupervised learning into one group, giving three display categories.</p>
+<p>RAISE describes four technology families. This map combines supervised and unsupervised learning, giving three column groups:</p>
 <dl class="orientation-definitions">
-<dt>Rule-based algorithms (symbolic AI)</dt><dd>Follow human-specified rules or procedures, such as matching reference fields to find duplicates or converting a database query. Symbolic AI works with explicitly represented knowledge and rules. RAISE’s broad rule-based group also includes conventional statistical and visualisation software; this does not make every statistical calculation AI.</dd>
-<dt>Supervised and unsupervised machine learning</dt><dd><strong>Supervised learning</strong> learns from labelled examples to predict labels, rank records or locate information in reports. <strong>Unsupervised learning</strong> finds structure without predefined labels, for example by clustering related papers or modelling topics. Classification and clustering are useful examples, not complete definitions.</dd>
-<dt>Generative large language models (LLMs)</dt><dd>Use large neural-network models trained on extensive data to generate text or code in response to prompts. They can also be used for screening or extraction. Here, chatbots and agentic systems are modes of LLM use: chatbots provide conversational interaction, while agentic systems can plan and carry out multiple steps.</dd>
+<dt>Rule-based algorithms (symbolic AI)</dt><dd>Follow explicit rules, such as matching references or converting search queries. Symbolic AI represents knowledge and rules explicitly. RAISE’s broad group also includes conventional statistics and visualisation; not every statistical calculation is AI.</dd>
+<dt>Supervised and unsupervised machine learning</dt><dd><strong>Supervised learning</strong> learns from labelled examples to classify, rank or locate information. <strong>Unsupervised learning</strong> finds patterns without predefined labels, such as clusters of papers or topics. Classification and clustering are examples, not complete definitions.</dd>
+<dt>Generative large language models (LLMs)</dt><dd>Neural-network models trained on extensive data to generate text or code; they can also support screening and extraction. Chatbots provide conversation; agentic systems can plan and carry out multiple steps. RAISE treats these as modes of LLM use.</dd>
 </dl>
-<p>LLMs are themselves machine-learning models, and tools may combine methods. These are practical display groups. <strong>Google Translate and DeepL</strong> retain RAISE’s broader label <strong>Generative and other machine learning approaches</strong>; their placement here does not imply exclusively LLM-based implementations.</p>
-<p>Sources: <a href="https://osf.io/y26pj" target="_blank" rel="noopener noreferrer">RAISE 2 v4, pp.6–7</a> and <a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, p.3 and Table 2</a>. For background on explicit rules, probabilistic and neural approaches, see the <a href="https://plato.stanford.edu/entries/artificial-intelligence/" target="_blank" rel="noopener noreferrer">Stanford Encyclopedia of Philosophy, §§3.2–3.4 and 4.1</a>.</p>
+<p>LLMs are also machine learning, and tools can combine methods. <strong>Google Translate and DeepL</strong> retain RAISE’s broader label, <strong>Generative and other machine learning approaches</strong>; placing them here does not mean they use only LLMs.</p>
+<p>Sources: <a href="https://osf.io/y26pj" target="_blank" rel="noopener noreferrer">RAISE 2 v4, pp.6–7</a>; <a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, p.3 and Table 2</a>. Background on symbolic, probabilistic and neural approaches: <a href="https://plato.stanford.edu/entries/artificial-intelligence/" target="_blank" rel="noopener noreferrer">Stanford Encyclopedia of Philosophy, §§3.2–3.4 and 4.1</a>.</p>
 </details>
-<details class="scope-details"><summary>What do the recommendations mean?</summary>
+<details class="scope-details" id="recommendation-explanations"><summary>What do the recommendations mean?</summary>
+<p>These apply to the specified task or workflow, not every use of a product. Reviewers remain responsible for the work.</p>
 <dl class="recommendation-definitions" id="recommendation-definitions"></dl>
-<p>These descriptions paraphrase RAISE 3 Table 1. Diagonal halves identify two recommendations for different functions or workflows; they do not show proportions, confidence or importance.</p></details>
-<details class="scope-details"><summary>Before using a tool</summary>
-<p>A recommendation colour is a starting point for a methodological decision. RAISE asks review teams to consider the specific task, evidence, people and workflow involved.</p>
+<p>Adapted from <a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, Table 1 (p.11)</a>. Diagonal halves show different recommendations for different functions or workflows—not proportions, confidence or importance.</p></details>
+<details class="scope-details" id="different-recommendations"><summary>Why can recommendations differ within a review stage?</summary>
+<p>A stage contains different tasks. In <strong>Data synthesis</strong>:</p>
 <ul class="guidance-checklist">
-<li><strong>Plan the task and acceptable performance.</strong> Define what the tool will do. Where validation is required, prespecify a task-specific performance threshold and an appropriate benchmark. Evaluate the configured human–AI workflow, including checking and correction effort. For generative models, assess repeated-run stability and consequential errors, including unsupported outputs and missing information. Ensure the team has the methodological skills, time and resources to carry out that evaluation, and a plan if the threshold is not met. If sufficiently robust within-review validation cannot be assured, RAISE limits use to exploratory or supplementary purposes.</li>
-<li><strong>Separate development from evaluation.</strong> Use suitable held-out material to evaluate performance; do not use the same examples to tune the procedure and then claim independent validation. Match the evaluation to the review’s population, documents and decisions. If evaluation results are used to retune the procedure, use fresh independent material to assess the revised version.</li>
-<li><strong>Make verification meaningful.</strong> Where human verification is required, a suitably qualified person must check the relevant outputs against the source evidence, with enough time and access to identify and correct errors. Plausibility and fluent wording are insufficient. Human checking can miss or introduce errors, and AI suggestions can anchor a reviewer’s judgement; verification does not itself guarantee accuracy.</li>
-<li><strong>Monitor changes and make the work reproducible.</strong> Record the tool and model version, settings, prompts, inputs, outputs, dates and human interventions as relevant. Reassess performance after material updates or changes in the task or workflow.</li>
-<li><strong>Report and protect the work.</strong> Disclose substantial AI use and its methodological consequences, including evaluation and limitations. Check confidentiality, data handling, permissions and copyright before supplying material to a service. Consider the tool’s environmental and social costs, accessibility and likely benefit alongside its performance.</li>
-<li><strong>Keep the review’s methodological requirements.</strong> AI use does not waive applicable standards for searching, selection, appraisal, analysis or reporting. The review team remains accountable for the resulting work.</li>
+<li>Chatbot entries cover code drafting and troubleshooting with human checking.</li>
+<li>MAXQDA and NVivo cover qualitative-analysis assistance requiring validation.</li>
+<li>Red entries concern direct synthesis across studies.</li>
+<li>Google Translate and DeepL translate material for reviewers; they do not perform the synthesis.</li>
+</ul>
+<p>RAISE leaves some uncertainty about where coding or theme assistance becomes a complete qualitative synthesis. Read MAXQDA and NVivo’s cell qualifications alongside the wider synthesis restrictions. These are task-specific recommendations, not competing ratings of whole products.</p></details>
+<details class="scope-details" id="before-using"><summary>Before using a tool</summary>
+<p>Choose a defined use and a workable review procedure, rather than relying on a colour alone.</p>
+<ul class="guidance-checklist">
+<li><strong>Plan performance checks.</strong> Where validation is required, set a task-specific threshold and benchmark in advance. Test the actual human–AI workflow, including checking and correction effort. For generative models, check consistency across runs and consequential errors, including unsupported outputs and missing information. Ensure sufficient skills, time, resources and a fallback plan. If robust within-review validation cannot be assured, limit use to exploratory or supplementary purposes.</li>
+<li><strong>Test independently.</strong> Evaluate on unseen material that matches the review’s population, documents and decisions. Keep tuning examples separate; if results lead to further tuning, evaluate again on fresh independent material.</li>
+<li><strong>Check outputs carefully.</strong> Where verification is required, a qualified person needs time and source access to find and correct errors. Fluent wording is insufficient. Checking can miss or introduce errors, and AI suggestions can influence judgement; checking does not guarantee accuracy.</li>
+<li><strong>Record and reassess.</strong> Keep relevant versions, settings, prompts, inputs, outputs, dates and human interventions. Reassess after material changes to the tool, task or workflow.</li>
+<li><strong>Report and protect.</strong> Disclose substantial AI use, evaluation, limitations and effects on the methods. Check confidentiality, data handling, permissions and copyright. Weigh environmental and social costs, accessibility and likely benefit.</li>
+<li><strong>Keep review standards.</strong> Requirements for searching, selection, appraisal, analysis and reporting still apply. The review team remains accountable.</li>
 </ul><p id="before-use-sources"></p></details>
 
-<details class="scope-details" id="outside-scope-details"><summary>Uses outside the eight review stages</summary>
-<p>RAISE 3 Table 2 also includes interaction with existing evidence synthesis data and workflows linking review stages. These uses are documented separately so they are not assigned to an unsuitable stage in the map.</p>
-<p><strong>Autonomous end-to-end review workflows:</strong> RAISE lists Elicit and Perplexity as examples of agentic workflows that execute multiple evidence-synthesis tasks, with or without human input or refinement at intermediate stages. These workflows may produce a report summarising findings across studies. RAISE rates this use <strong>Not acceptable for use</strong>: errors can accumulate across stages, and generative AI is not reliable for the cross-study summarisation involved in producing a complete evidence synthesis (RAISE 3 version 4, Table 2 p.19). This is a restriction on the described end-to-end synthesis use, not a product-wide rating or a ban on every linked sequence of software tasks.</p>
+<details class="scope-details" id="outside-scope-details"><summary>What does the map leave out?</summary>
+<p>Some Table 2 entries describe methods without a tool name; others span stages or concern interacting with existing evidence. They are explained here rather than given unsuitable columns or rows.</p>
+<section class="outside-scope-tool"><h3>Two methods without a named tool</h3>
+<ul class="guidance-checklist">
+<li><strong>Checking study reporting with rules:</strong> search preclinical reports for prescribed text patterns (“regular expressions” or “regex”). The results prompt human assessment rather than settle the judgement.</li>
+<li><strong>Extracting study details with rules and AI:</strong> rules find candidate information, then a language model filters it. RAISE links a <a href="https://aclanthology.org/2024.bionlp-1.39/" target="_blank" rel="noopener noreferrer">research example extracting intervention details</a>, rather than naming a separate product.</li>
+</ul>
+<p>Both <strong>require validation within the review</strong> (<a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, Table 2, pp.15–16</a>). They have no separate tool columns because Table 2 names methods rather than products here. STEED and Pre-ROB have their own columns.</p></section>
+<section class="outside-scope-tool"><h3>End-to-end evidence-synthesis workflows</h3>
+<p>RAISE lists Elicit and Perplexity for workflows linking review tasks to produce a report across studies, <strong>with or without intermediate human input</strong>. This use is <strong>Not acceptable for use</strong>: errors can accumulate, and generative AI is unreliable for the cross-study summarisation needed for a complete synthesis. This is not a ban on every function of those tools or every linked sequence of tasks (<a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, Table 2, p.19</a>).</p></section>
 <div id="outside-scope-tools"></div></details>
-<details class="scope-details"><summary>Why can recommendations differ within the same review stage?</summary>
-<p>A review stage can contain different functions and workflows. In Data synthesis, the chatbot entries describe checked code drafting and troubleshooting; MAXQDA and NVivo describe qualitative-analysis assistance requiring validation within the review; the red entries describe direct cross-study synthesis. Google Translate and DeepL translate inputs for human reviewers; they do not themselves perform synthesis. These are different uses, rather than competing judgements of whole products.</p>
-<p>RAISE does not fully define the boundary between assistance with codes or themes and a complete qualitative synthesis. The recommendation for MAXQDA or NVivo should therefore be read alongside the specific function, the wider synthesis restrictions and its qualifications. Selecting a cell shows every function or workflow in that cell, even when only one recommendation matches a filter.</p></details>
-<details class="scope-details"><summary>Using the map with a keyboard</summary><p>Tab to the map, then to a cell. Use the arrow keys to move between cells; Home and End move to the first and last tool in a row. Enter or Space opens the cell’s details. Escape closes the details and returns focus to that cell. On narrower screens, the details panel behaves as a dialog; close it to return to the map.</p></details>
+
+<details class="scope-details" id="keyboard-help"><summary>Using the map with a keyboard</summary>
+<ul class="guidance-checklist">
+<li><strong>Move:</strong> Tab to a map cell; use arrow keys between cells. Home/End reach the first/last tool in a row.</li>
+<li><strong>Open:</strong> Enter or Space shows the cell’s details.</li>
+<li><strong>Close:</strong> Escape closes details and returns focus to the cell. On narrow screens, close the dialog to return to the map.</li>
+</ul></details>
 </footer>
 </main>
 <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
@@ -624,7 +644,7 @@ function renderReferenceInformation(){
  byId('scope-tool-count').textContent=DATA.tools.length;
  byId('guidance-links').innerHTML=sourceLink('RAISE 1','RAISE 1 · recommendations and authorship')+' · '+sourceLink('RAISE 2','RAISE 2 · building and evaluating tools')+' · '+sourceLink('RAISE 3','RAISE 3 · selecting and using tools')+' · '+sourceLink('Responsible handover form','Responsible-handover form')+' · '+sourceLink('Worked handover example','Worked handover example')+' · '+sourceLink('RAISE collection','Full RAISE collection');
  byId('adaptation-attribution').innerHTML='RAISE guidance: James Thomas, Kaitlyn Hair, Anna Noel-Storr and colleagues (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>; full authorship in RAISE 1). This map paraphrases and reorganises the guidance and adds interactivity, without implying author endorsement.';
- byId('outside-scope-tools').innerHTML=(DATA.outsideScopeTools??[]).map(tool=>'<section class="outside-scope-tool"><h3>'+esc(tool.name)+'</h3>'+tool.functions.map((f,i)=>(f.stage?field('Context outside the stage map',f.stage):'')+functionDetail(f,i,tool.functions.length)).join('')+'</section>').join('');
+ byId('outside-scope-tools').innerHTML=(DATA.outsideScopeTools??[]).map(tool=>'<section class="outside-scope-tool"><h3>'+esc(tool.name)+': chatting with evidence</h3>'+tool.functions.map(f=>markdown(f.descriptionMd)+'<p><strong>'+esc(REC.get(f.recommendation).label)+'.</strong></p>'+markdown(f.whyRecommendationMd)+markdown(f.whyCategoryMd)+markdown(f.officialUrlMd)+'<p>Sources: '+sourceLink('RAISE 3','RAISE 3 v4, p.3 and Table 2, p.19')+'; '+sourceLink('RAISE 2','RAISE 2 v4, pp.6–8')+'.</p>').join('')+'</section>').join('');
 }
 
 function renderDrawer(){

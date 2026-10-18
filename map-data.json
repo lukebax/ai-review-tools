@@ -19,31 +19,31 @@
       "id": "acceptable",
       "label": "Acceptable for use",
       "color": "#2FA572",
-      "description": "Outputs may enter the review workflow directly when their limitations and potential biases are acknowledged and addressed. This applies to the specified use, with the review team retaining responsibility."
+      "description": "Outputs may be used directly when their limitations and potential biases are acknowledged and addressed."
     },
     {
       "id": "verification",
       "label": "Human verification required",
       "color": "#A2CF80",
-      "description": "A human must carefully check the output before it is used. The required checking varies, but typically involves reading the entire output and making any necessary amendments. Fluent or plausible wording does not demonstrate accuracy."
+      "description": "A human must carefully check outputs before use—typically the entire output—and correct them as needed. Fluent or plausible wording does not demonstrate accuracy."
     },
     {
       "id": "validation",
       "label": "Requires validation within the review",
       "color": "#F3CE55",
-      "description": "Evaluate performance within the intended review against a prespecified, task-specific threshold and an appropriate benchmark. The configured task and workflow must meet that standard; previous use elsewhere or a few convincing examples are insufficient."
+      "description": "Test the intended task and workflow within this review against a task-specific threshold set in advance and an appropriate benchmark. They must meet that standard; previous use elsewhere or convincing examples are insufficient."
     },
     {
       "id": "exploratory",
       "label": "Exploratory and supplementary use",
       "color": "#F29B56",
-      "description": "Outputs can help develop ideas or provide a starting point, with extensive human refinement before use in a review task. Alternatively, they may supplement established processes without replacing them."
+      "description": "Use outputs to develop ideas, with extensive human refinement before review use, or to supplement established processes without replacing them."
     },
     {
       "id": "unacceptable",
       "label": "Not acceptable for use",
       "color": "#DE6262",
-      "description": "For the specified use, current outputs have sufficiently serious limitations that they should not be relied upon. This is a recommendation about that use, not a prohibition on every function of the named product."
+      "description": "Outputs have serious limitations for the specified use and should not be relied upon."
     }
   ],
   "stages": [
@@ -2073,12 +2073,12 @@
           "id": "infranodus--chatbot-enabled-interaction--interacting-with-evidence-synthesis-data--conversational-technologies",
           "stage": "Chatbot-enabled interaction",
           "functionName": "Interacting with evidence synthesis data using a chatbot",
-          "descriptionMd": "Ask conversational questions about evidence-synthesis data or documents, such as the contents of an evidence map. RAISE lists this as a separate interaction use, outside the eight review stages shown in the matrix.",
+          "descriptionMd": "Ask questions about existing evidence-synthesis data or documents, such as an evidence map. RAISE treats this interaction separately from the review stages.",
           "aiCategoryMd": "**Conversational or ‘Chatbot’ technologies**",
-          "whyCategoryMd": "RAISE 3 describes conversational and agentic systems as modes of LLM use. Here the mapped feature is a conversational interface to data or documents, not every InfraNodus network-analysis or visualisation function. Network gaps in supplied text do not by themselves establish gaps in the real-world research evidence.",
+          "whyCategoryMd": "RAISE treats **chatbot interaction** as a mode of LLM use. This recommendation concerns that feature, not all InfraNodus network-analysis functions. Gaps in a text network do not establish gaps in the research evidence.",
           "recommendation": "exploratory",
-          "whyRecommendationMd": "RAISE limits this interaction to exploratory and supplementary use. It highlights difficulties verifying answer accuracy and completeness and constraining responses to the intended data, with consequences for accuracy, safety and bias. Generated answers should not replace inspection of the underlying records or be accepted as established synthesis findings.",
-          "officialUrlMd": "[InfraNodus — official product](https://infranodus.com/). The provider describes AI-assisted text exploration and related knowledge-graph functions; the RAISE recommendation here concerns chatbot-enabled interaction.",
+          "whyRecommendationMd": "Answers can be inaccurate, incomplete or stray beyond the supplied data, creating risks to accuracy, safety and bias. Check the underlying records; do not treat generated answers as established synthesis findings.",
+          "officialUrlMd": "[InfraNodus — official product](https://infranodus.com/) describes its text-exploration and knowledge-graph features.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 19; modes of use, p. 3. RAISE 2 v4 (25 August 2026), pp. 6–8."
         }
       ]

@@ -17,7 +17,9 @@ connection is required to explore the map; outgoing source/tool links require in
 The explanations below the filters introduce RAISE, then this map and its sources,
 followed by review stages, AI categories and recommendation colours. The stage descriptions are a workflow
 adaptation of RAISE 3 v4; the AI explanation preserves the four-family/three-group
-distinction and translation qualifications.
+distinction and translation qualifications. The remaining sections explain differing recommendations,
+practical safeguards, coverage limits and keyboard use. Methods described by RAISE without
+a named tool are explained under “What does the map leave out?”, rather than added as tool columns.
 
 Select a cell to read its full function-specific explanations. Recommendation
 filters match either category in mixed cells and preserve both colours. Balanced
