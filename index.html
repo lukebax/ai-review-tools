@@ -420,13 +420,13 @@ h1{font-size:23px}
 
 .source-note{margin:0;font-size:12px;line-height:1.6;color:#526c7a}
 
-.recommendation-definitions{margin:12px 0 16px;max-width:900px;display:grid;grid-template-columns:minmax(180px,250px) 1fr;gap:10px 20px}
+.recommendation-definitions,.orientation-definitions{margin:12px 0 16px;max-width:900px;display:grid;grid-template-columns:minmax(180px,250px) 1fr;gap:10px 20px}
 
-.recommendation-definitions dt{font-weight:600;color:#304d5e;display:flex;gap:8px;align-items:flex-start}
+.recommendation-definitions dt,.orientation-definitions dt{font-weight:600;color:#304d5e;display:flex;gap:8px;align-items:flex-start}
 
 .recommendation-definitions dt .swatch{margin-top:3px}
 
-.recommendation-definitions dd{margin:0;color:#526c7a;line-height:1.6}
+.recommendation-definitions dd,.orientation-definitions dd{margin:0;color:#526c7a;line-height:1.6}
 
 .drawer-backdrop{display:none}
 
@@ -439,8 +439,8 @@ h1{font-size:23px}
 }
 
 @media(max-width:600px){.legend-hint{display:block;margin:4px 0 0}
-.recommendation-definitions{grid-template-columns:1fr;gap:5px}
-.recommendation-definitions dd{margin-bottom:10px}
+.recommendation-definitions,.orientation-definitions{grid-template-columns:1fr;gap:5px}
+.recommendation-definitions dd,.orientation-definitions dd{margin-bottom:10px}
 .map-meta{flex-wrap:wrap}
 .map-options{white-space:normal;flex-wrap:wrap}
 .legend-button{font-size:12px}
@@ -470,6 +470,30 @@ h1{font-size:23px}
 <div class="map-meta"><div id="result-count" role="status" aria-live="polite"></div><div class="map-options"><label><input id="roomier" type="checkbox"> Roomier columns</label><a href="#map-scroll">Back to map ↑</a></div></div>
 <footer class="page-foot">
 <p class="source-note" id="guidance-source-note"></p>
+<details class="scope-details" id="review-stage-explanations"><summary>What do the review stages mean?</summary>
+<p>The rows organise review tasks into eight stages. They describe the work, not permission to automate it: recommendations apply to the specific functions in each cell. Reviews can revisit stages rather than follow a rigid sequence.</p>
+<dl class="orientation-definitions">
+<dt>Writing a protocol</dt><dd>Plan the review: refine the question, explore the topic, estimate resources and set out the intended methods before carrying out the review.</dd>
+<dt>The Search</dt><dd>Find potentially relevant studies: scope the literature, develop search strategies, adapt queries for different databases, run searches and retrieve records, follow citation links, check that known relevant studies are found and remove duplicates.</dd>
+<dt>Screening for relevance</dt><dd>Decide which studies meet the eligibility criteria using titles, abstracts and full reports. Tools may prioritise records or support inclusion decisions; stopping before all records are screened is a separate methodological choice.</dd>
+<dt>Quality assessment</dt><dd>Assess individual studies’ reporting and risk of bias. Tools may locate relevant information and support structured judgements. Reporting completeness and risk of bias are distinct assessments.</dd>
+<dt>Data extraction</dt><dd>Collect study information needed for the review: populations, interventions, methods and results. Tasks include locating relevant passages, extracting numerical results and reading values from figures.</dd>
+<dt>Data synthesis</dt><dd>Bring evidence together through appropriate quantitative or qualitative analysis. Tasks also include visual evidence maps and analysis-code support. Summarising text alone does not constitute a methodologically sound synthesis.</dd>
+<dt>Certainty of evidence assessment</dt><dd>Judge confidence in a body of evidence or synthesised finding using an appropriate framework. This goes beyond appraising individual studies; tools may organise information, while reviewers remain responsible for the judgement.</dd>
+<dt>Writing a manuscript</dt><dd>Communicate the review through structured drafting, language revision and plain-language explanations of human-written findings. These tasks report the review; they do not replace its analysis or interpretation.</dd>
+</dl>
+<p>These headings adapt <a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, Table 2 (pp.12–19)</a>. The first seven correspond to its review-task sections; <strong>Writing a manuscript</strong> groups drafting, revisions and plain-language summaries from its broader Text Generation section. Machine translation supports five stages, as explained in the relevant cells. Cross-stage workflows and chatbot interaction are described separately below.</p>
+</details>
+<details class="scope-details" id="ai-category-explanations"><summary>What do the AI categories mean?</summary>
+<p>The columns group tools by the technology used for the listed function. RAISE describes four core families; this map combines supervised and unsupervised learning into one group, giving three display categories.</p>
+<dl class="orientation-definitions">
+<dt>Rule-based algorithms (symbolic AI)</dt><dd>Follow human-specified rules or procedures, such as matching reference fields to find duplicates or converting a database query. Symbolic AI works with explicitly represented knowledge and rules. RAISE’s broad rule-based group also includes conventional statistical and visualisation software; this does not make every statistical calculation AI.</dd>
+<dt>Supervised and unsupervised machine learning</dt><dd><strong>Supervised learning</strong> learns from labelled examples to predict labels, rank records or locate information in reports. <strong>Unsupervised learning</strong> finds structure without predefined labels, for example by clustering related papers or modelling topics. Classification and clustering are useful examples, not complete definitions.</dd>
+<dt>Generative large language models (LLMs)</dt><dd>Use large neural-network models trained on extensive data to generate text or code in response to prompts. They can also be used for screening or extraction. Here, chatbots and agentic systems are modes of LLM use: chatbots provide conversational interaction, while agentic systems can plan and carry out multiple steps.</dd>
+</dl>
+<p>LLMs are themselves machine-learning models, and tools may combine methods. These are practical display groups. <strong>Google Translate and DeepL</strong> retain RAISE’s broader label <strong>Generative and other machine learning approaches</strong>; their placement here does not imply exclusively LLM-based implementations.</p>
+<p>Sources: <a href="https://osf.io/y26pj" target="_blank" rel="noopener noreferrer">RAISE 2 v4, pp.6–7</a> and <a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, p.3 and Table 2</a>. For background on explicit rules, probabilistic and neural approaches, see the <a href="https://plato.stanford.edu/entries/artificial-intelligence/" target="_blank" rel="noopener noreferrer">Stanford Encyclopedia of Philosophy, §§3.2–3.4 and 4.1</a>.</p>
+</details>
 <details class="scope-details"><summary>What do the recommendations mean?</summary>
 <dl class="recommendation-definitions" id="recommendation-definitions"></dl>
 <p>These descriptions paraphrase RAISE 3 Table 1. Diagonal halves identify two recommendations for different functions or workflows; they do not show proportions, confidence or importance.</p></details>
@@ -487,8 +511,7 @@ h1{font-size:23px}
 <p><strong>RAISE</strong> means Responsible use of AI in Evidence Synthesis. This is an independent interactive adaptation of the RAISE guidance by <strong>James Thomas, Kaitlyn Hair, Anna Noel-Storr and colleagues</strong>, with the full authorship listed in RAISE 1. It focuses on named tools, features and resources in RAISE 3 Table 2 and is not an official RAISE publication or a live product catalogue. Two unnamed method examples are not shown as product columns: regex-based reporting-quality assessment (rule-based; p.15) and hybrid named-entity extraction (p.16), both requiring validation within the review.</p>
 <p id="guidance-version-note"></p>
 <p>Function descriptions, recommendation definitions and explanations are paraphrases. RAISE often provides a rationale for a task and technology category rather than a separate evaluation of every named tool. Editorial interpretation is identified in the explanations. Official tool documentation helps explain mechanisms and features; it does not independently establish validation or RAISE endorsement. Page references identify RAISE 3 version 4 unless another source is named.</p>
-<p>RAISE distinguishes four core technology families: <strong>rule-based, unsupervised, supervised and generative</strong> approaches. Agentic and conversational/chatbot systems are modes of LLM use, rather than additional core technology families. This map uses three display groups: <strong>Rule-based algorithms (symbolic AI)</strong>, <strong>Supervised and unsupervised machine learning</strong>, and <strong>Generative large language models (LLMs)</strong>. The LLM group includes agentic and conversational uses. These are practical groupings of the listed functions; LLMs are themselves machine-learning models. Rule-based functions apply specified rules or structured procedures; supervised methods learn from labelled examples; unsupervised methods identify patterns without those labels; generative models produce content. Each function’s source classification remains in its details.</p>
-<p><strong>Google Translate and DeepL</strong> are display exceptions in the LLM group. RAISE gives their translation function the broader source label “Generative and other machine learning approaches”, retained in their details; this placement does not imply that these tools are exclusively LLM-based. Some named entries are frameworks or resources rather than standalone AI products. Generic platforms and separately named features remain distinct.</p>
+<p>The AI-category explanation above describes the display groupings and the Google Translate/DeepL exceptions. Each function’s source classification and implementation qualifications remain in its details. Some named entries are frameworks or resources rather than standalone AI products. Generic platforms and separately named features remain distinct.</p>
 <p>“Writing a manuscript” includes Drafting, Revisions and Plain language summaries. <span id="scope-tool-count"></span> tools, features and resources are mapped across the eight review stages. Google Translate and DeepL support human screening, quality assessment, data extraction, data synthesis and certainty assessment. These five stage associations are derived applications of RAISE’s translation function, not five separate tool validations. Translation is not shown under protocol writing, searching or manuscript writing. White cells mean no listed use within this map’s scope; they do not demonstrate absent evidence, inability or a recommendation against use.</p>
 <p>The explanations retain implementation qualifications, including STEED and WebPlotDigitizer AI features. Tool links lead to applications, official documentation, developer repositories or identified project papers. Links were checked in October 2026; a repository or documentation link does not establish current hosted-service availability.</p>
 <p id="guidance-links"></p>
