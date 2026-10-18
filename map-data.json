@@ -59,15 +59,15 @@
   "groups": [
     {
       "id": "rule-based",
-      "label": "Rule-based"
+      "label": "Rule-based algorithms (symbolic AI)"
     },
     {
       "id": "classifiers",
-      "label": "Classifiers"
+      "label": "Supervised and unsupervised machine learning"
     },
     {
       "id": "generative",
-      "label": "Generative LLMs and Agentic AI"
+      "label": "Generative large language models (LLMs)"
     }
   ],
   "tools": [
@@ -1423,7 +1423,7 @@
           "functionName": "Translation to support eligibility screening",
           "descriptionMd": "Translate titles, abstracts or relevant report passages so a human reviewer can assess eligibility. DeepL supplies a language-access aid; it does not make the inclusion decision.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the combined generative navigation group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
+          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the LLM navigation group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
           "recommendation": "verification",
           "whyRecommendationMd": "RAISE explicitly requires human verification for machine translation of non-English studies and warns that complex tasks may not be sufficiently accurate. Applying that one recommendation to this review stage is a source-aligned editorial association, not a separate RAISE stage-specific rating or a performance validation of DeepL. Ambiguous translated eligibility information needs clarification; do not exclude a potentially relevant study solely because machine wording is unclear.",
           "officialUrlMd": "[DeepL Translator](https://www.deepl.com/en/translator). The official service provides text and document translation. No claim of universal accuracy across languages, document types or product versions is implied.",
@@ -1435,7 +1435,7 @@
           "functionName": "Translation to support human appraisal",
           "descriptionMd": "Translate methods or reporting passages needed by a human applying an appropriate appraisal or risk-of-bias method. The translated text is an input to that judgement, not an automated quality assessment.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the combined generative navigation group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
+          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the LLM navigation group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
           "recommendation": "verification",
           "whyRecommendationMd": "RAISE explicitly requires human verification for machine translation of non-English studies and warns that complex tasks may not be sufficiently accurate. Applying that one recommendation to this review stage is a source-aligned editorial association, not a separate RAISE stage-specific rating or a performance validation of DeepL. Check consequential methodological wording against reliable source-language interpretation before treating a safeguard as absent or a study as biased.",
           "officialUrlMd": "[DeepL Translator](https://www.deepl.com/en/translator). The official service provides text and document translation. No claim of universal accuracy across languages, document types or product versions is implied.",
@@ -1447,7 +1447,7 @@
           "functionName": "Translation to support human data extraction",
           "descriptionMd": "Translate report passages from which humans extract study characteristics, outcomes or results. Translation does not itself populate and validate a structured extraction form.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the combined generative navigation group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
+          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the LLM navigation group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
           "recommendation": "verification",
           "whyRecommendationMd": "RAISE explicitly requires human verification for machine translation of non-English studies and warns that complex tasks may not be sufficiently accurate. Applying that one recommendation to this review stage is a source-aligned editorial association, not a separate RAISE stage-specific rating or a performance validation of DeepL. Check outcome names, groups, time points, denominators, units and statistical quantities against reliable source-language meaning. A readable translation does not verify the extracted data.",
           "officialUrlMd": "[DeepL Translator](https://www.deepl.com/en/translator). The official service provides text and document translation. No claim of universal accuracy across languages, document types or product versions is implied.",
@@ -1459,7 +1459,7 @@
           "functionName": "Translation of inputs to human synthesis",
           "descriptionMd": "Make source findings and contextual passages accessible to the human synthesis team. Verified translated information can inform the chosen quantitative or qualitative method; the translator does not pool effects, generate established themes or decide the conclusion across studies.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the combined generative navigation group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
+          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the LLM navigation group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
           "recommendation": "verification",
           "whyRecommendationMd": "RAISE explicitly requires human verification for machine translation of non-English studies and warns that complex tasks may not be sufficiently accurate. Applying that one recommendation to this review stage is a source-aligned editorial association, not a separate RAISE stage-specific rating or a performance validation of DeepL. Check numerical meaning and qualitative or cultural context. Translation assists access to inputs; it does not pool effects, establish themes or produce the cross-study conclusion.",
           "officialUrlMd": "[DeepL Translator](https://www.deepl.com/en/translator). The official service provides text and document translation. No claim of universal accuracy across languages, document types or product versions is implied.",
@@ -1471,7 +1471,7 @@
           "functionName": "Translation of inputs to human certainty judgement",
           "descriptionMd": "Provide checked translations of study information or explanations used by humans applying GRADE or CERQual. This may reuse passages translated earlier in the review rather than introduce a separate translation operation; DeepL does not rate certainty.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the combined generative navigation group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
+          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the LLM navigation group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
           "recommendation": "verification",
           "whyRecommendationMd": "RAISE explicitly requires human verification for machine translation of non-English studies and warns that complex tasks may not be sufficiently accurate. Applying that one recommendation to this review stage is a source-aligned editorial association, not a separate RAISE stage-specific rating or a performance validation of DeepL. This is an indirect supporting use, potentially reusing passages translated earlier. Humans retain the certainty judgement; a checked translation is not validation of a GRADE or CERQual assessment.",
           "officialUrlMd": "[DeepL Translator](https://www.deepl.com/en/translator). The official service provides text and document translation. No claim of universal accuracy across languages, document types or product versions is implied.",
@@ -1867,7 +1867,7 @@
           "functionName": "Translation to support eligibility screening",
           "descriptionMd": "Translate titles, abstracts or relevant report passages so a human reviewer can assess eligibility. Google Translate supplies a language-access aid; it does not make the inclusion decision.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement under the combined generative navigation group is an explicit display exception, not a claim that every Translate language, mode or historical implementation is a generative LLM. Google's later feature descriptions do not retrospectively fix the model used in older evaluations.",
+          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement under the LLM navigation group is an explicit display exception, not a claim that every Translate language, mode or historical implementation is a generative LLM. Google's later feature descriptions do not retrospectively fix the model used in older evaluations.",
           "recommendation": "verification",
           "whyRecommendationMd": "Table 2 explicitly requires human verification for translation of non-English studies. Applying that one translation recommendation to this stage is a derived association, not a separately validated screening recommendation. Cochrane guidance supports translation-assisted eligibility assessment. Ambiguous machine wording should prompt clarification rather than a confident exclusion; verification concerns source-language meaning, not just fluent English.",
           "officialUrlMd": "[Google Translate](https://translate.google.com/). RAISE's cited empirical sources include [Balk et al. (2013)](https://link.springer.com/article/10.1186/2046-4053-2-97) and [Jackson et al. (2019)](https://doi.org/10.7326/M19-0891); historical evaluations do not establish current performance across all modes and languages.",
@@ -1879,7 +1879,7 @@
           "functionName": "Translation to support human appraisal",
           "descriptionMd": "Translate methods or reporting passages needed by a human applying an appropriate appraisal or risk-of-bias method. The translated text is an input to that judgement, not an automated quality assessment.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement under the combined generative navigation group is an explicit display exception, not a claim that every Translate language, mode or historical implementation is a generative LLM. Google's later feature descriptions do not retrospectively fix the model used in older evaluations.",
+          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement under the LLM navigation group is an explicit display exception, not a claim that every Translate language, mode or historical implementation is a generative LLM. Google's later feature descriptions do not retrospectively fix the model used in older evaluations.",
           "recommendation": "verification",
           "whyRecommendationMd": "Human verification required is RAISE's explicit translation recommendation; its application to this appraisal context is derived. An apparently absent or unclear safeguard may reflect a translation error. Check consequential methodological meaning against reliable source-language interpretation before treating it as a study limitation. No direct validation of Google Translate's ability to judge bias is claimed.",
           "officialUrlMd": "[Google Translate](https://translate.google.com/).",
@@ -1891,7 +1891,7 @@
           "functionName": "Translation to support human data extraction",
           "descriptionMd": "Translate report passages from which humans extract study characteristics, outcomes or results. Translation does not itself populate and validate a structured extraction form.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement under the combined generative navigation group is an explicit display exception, not a claim that every Translate language, mode or historical implementation is a generative LLM. Google's later feature descriptions do not retrospectively fix the model used in older evaluations.",
+          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement under the LLM navigation group is an explicit display exception, not a claim that every Translate language, mode or historical implementation is a generative LLM. Google's later feature descriptions do not retrospectively fix the model used in older evaluations.",
           "recommendation": "verification",
           "whyRecommendationMd": "RAISE explicitly requires verification of translation outputs; using that recommendation in this extraction context is a derived stage association. Its cited extraction research reports material accuracy limitations, with outcomes/results more problematic than simpler design/intervention information. Check outcome identities, groups, time points, denominators, units and statistical quantities against reliable source-language meaning. Older language-specific evaluations do not guarantee current extraction or final-review accuracy.",
           "officialUrlMd": "[Google Translate](https://translate.google.com/).",
@@ -1903,7 +1903,7 @@
           "functionName": "Translation of inputs to human synthesis",
           "descriptionMd": "Make source findings and contextual passages accessible to the human synthesis team. Verified translated information can inform the chosen quantitative or qualitative method; the translator does not pool effects, generate established themes or decide the conclusion across studies.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement under the combined generative navigation group is an explicit display exception, not a claim that every Translate language, mode or historical implementation is a generative LLM. Google's later feature descriptions do not retrospectively fix the model used in older evaluations.",
+          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement under the LLM navigation group is an explicit display exception, not a claim that every Translate language, mode or historical implementation is a generative LLM. Google's later feature descriptions do not retrospectively fix the model used in older evaluations.",
           "recommendation": "verification",
           "whyRecommendationMd": "RAISE's verification requirement applies to the translation, with this downstream stage association derived. Numerical meaning and qualitative/cultural context require particular care. A readable translation does not establish compatible studies, correct analytical inputs or valid interpretation. This supporting use must not be read as permission for machine-generated cross-study synthesis, which RAISE treats separately.",
           "officialUrlMd": "[Google Translate](https://translate.google.com/).",
@@ -1915,7 +1915,7 @@
           "functionName": "Translation of inputs to human certainty judgement",
           "descriptionMd": "Provide checked translations of study information or explanations used by humans applying GRADE or CERQual. This may reuse passages translated earlier in the review rather than introduce a separate translation operation; Google Translate does not rate certainty.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement under the combined generative navigation group is an explicit display exception, not a claim that every Translate language, mode or historical implementation is a generative LLM. Google's later feature descriptions do not retrospectively fix the model used in older evaluations.",
+          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement under the LLM navigation group is an explicit display exception, not a claim that every Translate language, mode or historical implementation is a generative LLM. Google's later feature descriptions do not retrospectively fix the model used in older evaluations.",
           "recommendation": "verification",
           "whyRecommendationMd": "The explicit translation recommendation remains Human verification required, but this is the most indirect of the five derived stage associations. No direct performance evidence for certainty judgement is asserted. Errors in translated outcomes, methods or context can propagate into the assessment, so verify the source meaning and retain human judgement. Translation access is not itself evidence that a GRADE/CERQual conclusion is valid.",
           "officialUrlMd": "[Google Translate](https://translate.google.com/).",

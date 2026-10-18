@@ -270,6 +270,8 @@ h1{font-size:28px;letter-spacing:-.035em;line-height:1.16;margin:0 0 6px;font-we
 .control{display:flex;flex-direction:column;gap:5px}
 .control label{font-size:12px;font-weight:650;color:#4b626f}
 .search-control{flex:1 1 220px;max-width:320px}
+.group-control{flex:0 1 360px;min-width:0}
+#group-filter{width:100%;max-width:none;min-width:0}
 .search-wrap{position:relative}
 .search-icon{position:absolute;left:11px;top:11px;color:#82939f;width:16px;height:16px;pointer-events:none}
 input[type=search],select{height:38px;background:white;color:var(--ink);border:1px solid #cbd6de;border-radius:5px;padding:7px 10px;min-width:0}
@@ -293,9 +295,9 @@ select{min-width:190px;max-width:260px}
 .map-table{border-collapse:separate;border-spacing:0;table-layout:fixed;width:calc(var(--stage-width) + var(--visible-tools)*var(--cell-width));color:#243746;font-size:12px}
 .map-table th,.map-table td{padding:0;border-right:1px solid #e2e8ed;border-bottom:1px solid #e2e8ed}
 .map-table thead th{position:sticky;z-index:3}
-.group-row th{top:0;overflow:hidden;text-overflow:ellipsis;height:34px;background:var(--header);color:#29465b;font-weight:650;font-size:13px;text-align:center;white-space:nowrap}
+.group-row th{top:0;height:44px;padding:6px 8px;background:var(--header);color:#29465b;font-weight:650;font-size:13px;line-height:1.25;text-align:center;white-space:normal;overflow-wrap:break-word}
 .group-row th.corner{z-index:6;left:0;width:var(--stage-width);min-width:var(--stage-width);background:#fff;vertical-align:bottom;text-align:left;padding:12px;font-size:14px;border-bottom-color:#dce4e9}
-.tool-row th{top:34px;height:240px;min-width:var(--cell-width);width:var(--cell-width);background:var(--outer);vertical-align:middle;font-weight:400;overflow:hidden}
+.tool-row th{top:var(--group-header-height,44px);height:240px;min-width:var(--cell-width);width:var(--cell-width);background:var(--outer);vertical-align:middle;font-weight:400;overflow:hidden}
 .tool-row th.middle{background:var(--middle)}
 .tool-label{display:flex;justify-content:center;align-items:center;height:239px;padding:6px 0}
 .tool-label span{display:block;white-space:nowrap;writing-mode:vertical-rl;transform:rotate(180deg);font-size:11px;line-height:1.1;letter-spacing:0}
@@ -392,6 +394,7 @@ h1{font-size:25px}
 h1{font-size:23px}
 .toolbar{gap:9px}
 .control{flex:1 1 170px}
+.group-control{flex-basis:100%}
 .control select{max-width:none;width:100%}
 .legend-button{font-size:10px}
 .map-table tbody th{font-size:12px}
@@ -462,7 +465,7 @@ h1{font-size:23px}
 <fieldset class="legend" id="recommendation-key" aria-describedby="recommendation-help"><legend>RAISE use recommendations <span class="legend-hint">Select one or more to highlight matching cells</span></legend><div class="legend-options" id="recommendation-filters"></div><p class="key-note" id="recommendation-help">Multiple selections match <strong>any</strong> selected recommendation. Split cells keep both colours. Recommendations apply to the specified function or workflow, not to every use of a tool. Faded, hatched cells do not match the active recommendation filter; their details remain available.</p></fieldset>
 <div class="map-caption" id="map-meaning"><span class="caption-key"><svg class="mixed-swatch" aria-hidden="true" viewBox="0 0 100 100"><rect width="100" height="100" fill="var(--rec-verification)"/><path d="M100 0V100H0Z" fill="var(--rec-exploratory)"/></svg>Split cell: different functions or workflows have different recommendations.</span><span class="caption-key"><span class="empty-swatch" aria-hidden="true"></span>White cell: no use listed within this map’s scope.</span></div>
 <section class="map-controls" id="map-filters" aria-label="Search and filters" tabindex="-1">
-<div class="toolbar"><div class="control search-control"><label for="tool-search">Find a tool</label><div class="search-wrap"><svg class="search-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.7" cy="10.7" r="6.7"/><path d="m16 16 4.6 4.6"/></svg><input type="search" id="tool-search" placeholder="Search tool names" autocomplete="off"></div></div><div class="control"><label for="group-filter">AI category</label><select id="group-filter"><option value="">All AI categories</option></select></div><div class="control"><label for="stage-filter">Review stage</label><select id="stage-filter"><option value="">All review stages</option></select></div><button class="plain-button" id="reset-filters">Reset filters</button></div>
+<div class="toolbar"><div class="control search-control"><label for="tool-search">Find a tool</label><div class="search-wrap"><svg class="search-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.7" cy="10.7" r="6.7"/><path d="m16 16 4.6 4.6"/></svg><input type="search" id="tool-search" placeholder="Search tool names" autocomplete="off"></div></div><div class="control group-control"><label for="group-filter">AI category</label><select id="group-filter"><option value="">All AI categories</option></select></div><div class="control"><label for="stage-filter">Review stage</label><select id="stage-filter"><option value="">All review stages</option></select></div><button class="plain-button" id="reset-filters">Reset filters</button></div>
 </section>
 <div class="map-meta"><div id="result-count" role="status" aria-live="polite"></div><div class="map-options"><label><input id="roomier" type="checkbox"> Roomier columns</label><a href="#map-scroll">Back to map ↑</a></div></div>
 <footer class="page-foot">
@@ -484,8 +487,8 @@ h1{font-size:23px}
 <p><strong>RAISE</strong> means Responsible use of AI in Evidence Synthesis. This is an independent interactive adaptation of the RAISE guidance by <strong>James Thomas, Kaitlyn Hair, Anna Noel-Storr and colleagues</strong>, with the full authorship listed in RAISE 1. It focuses on named tools, features and resources in RAISE 3 Table 2 and is not an official RAISE publication or a live product catalogue. Two unnamed method examples are not shown as product columns: regex-based reporting-quality assessment (rule-based; p.15) and hybrid named-entity extraction (p.16), both requiring validation within the review.</p>
 <p id="guidance-version-note"></p>
 <p>Function descriptions, recommendation definitions and explanations are paraphrases. RAISE often provides a rationale for a task and technology category rather than a separate evaluation of every named tool. Editorial interpretation is identified in the explanations. Official tool documentation helps explain mechanisms and features; it does not independently establish validation or RAISE endorsement. Page references identify RAISE 3 version 4 unless another source is named.</p>
-<p>RAISE distinguishes four core technology families: <strong>rule-based, unsupervised, supervised and generative</strong> approaches. Agentic and conversational/chatbot systems are modes of LLM use, rather than additional core technology families. This map’s three display groups combine supervised and unsupervised approaches as <strong>Classifiers</strong>, and group generative LLMs with agentic AI. Rule-based functions apply specified rules or structured procedures; supervised methods learn from labelled examples; unsupervised methods identify patterns without those labels; generative models produce content. Each function’s source classification remains in its details.</p>
-<p><strong>Google Translate and DeepL</strong> are display exceptions in the combined generative group. Their broader source label, “Generative and other machine learning approaches”, is retained in their details. Some named entries are frameworks or resources rather than standalone AI products. Generic platforms and separately named features remain distinct.</p>
+<p>RAISE distinguishes four core technology families: <strong>rule-based, unsupervised, supervised and generative</strong> approaches. Agentic and conversational/chatbot systems are modes of LLM use, rather than additional core technology families. This map uses three display groups: <strong>Rule-based algorithms (symbolic AI)</strong>, <strong>Supervised and unsupervised machine learning</strong>, and <strong>Generative large language models (LLMs)</strong>. The LLM group includes agentic and conversational uses. These are practical groupings of the listed functions; LLMs are themselves machine-learning models. Rule-based functions apply specified rules or structured procedures; supervised methods learn from labelled examples; unsupervised methods identify patterns without those labels; generative models produce content. Each function’s source classification remains in its details.</p>
+<p><strong>Google Translate and DeepL</strong> are display exceptions in the LLM group. RAISE gives their translation function the broader source label “Generative and other machine learning approaches”, retained in their details; this placement does not imply that these tools are exclusively LLM-based. Some named entries are frameworks or resources rather than standalone AI products. Generic platforms and separately named features remain distinct.</p>
 <p>“Writing a manuscript” includes Drafting, Revisions and Plain language summaries. <span id="scope-tool-count"></span> tools, features and resources are mapped across the eight review stages. Google Translate and DeepL support human screening, quality assessment, data extraction, data synthesis and certainty assessment. These five stage associations are derived applications of RAISE’s translation function, not five separate tool validations. Translation is not shown under protocol writing, searching or manuscript writing. White cells mean no listed use within this map’s scope; they do not demonstrate absent evidence, inability or a recommendation against use.</p>
 <p>The explanations retain implementation qualifications, including STEED and WebPlotDigitizer AI features. Tool links lead to applications, official documentation, developer repositories or identified project papers. Links were checked in October 2026; a repository or documentation link does not establish current hosted-service availability.</p>
 <p id="guidance-links"></p>
@@ -561,6 +564,8 @@ function resizeMap(){
  const maxWidth=tools.length<=4?260:tools.length<=12?80:42;
  const fitted=Math.max(tools.length<=4?110:16,Math.min(maxWidth,(width-rowWidth-4)/Math.max(tools.length,1)));
  byId('map-table').style.setProperty('--cell-width',(state.roomier?Math.max(38,fitted):fitted)+'px');
+ const header=byId('map-head').querySelector('.group-row');
+ if(header)byId('map-table').style.setProperty('--group-header-height',header.getBoundingClientRect().height+'px');
 }
 function ensureCellVisible(button){
  if(!button)return;
@@ -599,7 +604,7 @@ function renderDrawer(){
  byId('drawer-count').textContent=cell.functions.length?cell.functions.length+' '+(cell.functions.length===1?'function or workflow':'functions or workflows')+' in this review stage':'No listed use within this map’s scope';
  byId('drawer-summary').innerHTML=cell.categories.map(id=>{const r=REC.get(id);return '<span class="recommendation-label" style="--recommendation-color:'+recommendationColor(r.id)+'">'+esc(r.label)+'</span>';}).join('');
  let content=!matches(cell)?'<p class="outside-filter">This cell is outside the current recommendation filter. Its complete details remain visible.</p>':'';
- if(tool.mappingBasis&&cell.functions.length)content+='<p class="outside-filter">This stage placement is a derived application of RAISE’s recommendation for translating non-English studies. '+esc(tool.name)+' supports human work; it does not perform the review judgement or analysis. RAISE classifies this function as <strong>Generative and other machine learning approaches</strong>, a broader class than the combined display group.</p>';
+ if(tool.mappingBasis&&cell.functions.length)content+='<p class="outside-filter">This stage placement is a derived application of RAISE’s recommendation for translating non-English studies. '+esc(tool.name)+' supports human work; it does not perform the review judgement or analysis. RAISE classifies this function as <strong>Generative and other machine learning approaches</strong>, a broader class than the LLM display group. This placement does not imply that the tool is exclusively LLM-based.</p>';
  if(!cell.functions.length)content+='<div class="unlisted"><h3>No explicit listed use in this map</h3><p>This map does not list this tool for this review stage. A white cell does not establish that evidence is absent, that the tool cannot do the task, or that RAISE recommends against it.</p></div>';
  cell.functions.forEach((f,i)=>{content+=functionDetail(f,i,cell.functions.length);});
  content+='<div class="drawer-source">Based on '+esc(DATA.meta.guidanceVersion)+'. '+esc(DATA.meta.snapshotQualification)+' Page references identify this version unless another source is named.<br>'+sourceLink('RAISE 3','Open RAISE 3')+' · '+sourceLink('RAISE collection','RAISE collection')+'</div>';

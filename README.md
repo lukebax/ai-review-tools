@@ -66,10 +66,14 @@ RAISE recommendations apply to specified functions and workflows, not whole prod
 White cells mean no listed use within this map's scope. Diagonal halves distinguish
 recommendations for different functions/workflows, not proportions or certainty.
 
-This map paraphrases and reorganises the guidance, combines display categories,
-and identifies editorial interpretation. Google Translate and DeepL appear in five
+This map paraphrases and reorganises the guidance and identifies editorial interpretation.
+Its three display groups are Rule-based algorithms (symbolic AI), Supervised and
+unsupervised machine learning, and Generative large language models (LLMs).
+Agentic and conversational uses sit within the LLM group; these are practical
+groupings rather than mutually exclusive technology families. Google Translate and DeepL appear in five
 derived translation-support stages and retain their broader source technology label
-in their details. “Writing a manuscript” covers drafting, revisions and plain-language
+in their details; placing them in the LLM group does not imply exclusively LLM-based
+implementations. “Writing a manuscript” covers drafting, revisions and plain-language
 summaries. End-to-end review workflows and chatbot interaction are explained outside
 the matrix. The guide is not an official RAISE publication or a live product catalogue.
 Check new guidance versions and the intended review procedure before relying on a
