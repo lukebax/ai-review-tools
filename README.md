@@ -20,7 +20,9 @@ starts collapsed and has a distinct heading bar and border, with larger reading 
 **Collapse all** above these sections, or open and close each heading individually. The stage descriptions are a workflow
 adaptation of RAISE 3 v4; the AI explanation preserves the four-family/three-group
 distinction and translation qualifications. The remaining sections explain differing recommendations,
-practical safeguards, coverage limits and keyboard use. Methods described by RAISE without
+why some uses are not acceptable, practical safeguards, coverage limits and keyboard use.
+The synthesis explanation distinguishes statistical analysis, checked coding assistance and
+agentic workflows, while preserving the guidance’s evidence limits and source links. Methods described by RAISE without
 a named tool are explained under “What does the map leave out?”, rather than added as tool columns.
 
 Select a cell to read its full function-specific explanations. Recommendation

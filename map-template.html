@@ -541,6 +541,18 @@ h1{font-size:23px}
 </ul>
 <p>RAISE leaves some uncertainty about where coding or theme assistance becomes a complete qualitative synthesis. Read MAXQDA and NVivo’s cell qualifications alongside the wider synthesis restrictions. These are task-specific recommendations, not competing ratings of whole products.</p></div>
 </details>
+<details class="scope-details" id="not-acceptable-explanation"><summary>Why are some uses not acceptable?</summary>
+<div class="disclosure-body"><p><strong>The restricted use is relying on an LLM to produce the synthesis of findings across studies.</strong> RAISE says these outputs should not be used in a formal review. Its examples include Google AI Mode, Elicit, Perplexity and Asta; the recommendation applies to the task, not every use of those products.</p>
+<p><strong>Synthesis requires methodological judgement.</strong> Reviewers need to decide whether studies can be combined, how to account for their differences and how robust the conclusions are. A fluent summary does not establish that this work has happened. Narrative synthesis needs this care too.</p>
+<ul class="guidance-checklist">
+<li><strong>Statistical software:</strong> packages such as meta and metafor perform specified calculations on supplied data. This is <strong>Acceptable for use</strong>, with reviewers responsible for the data, analytical choices and interpretation.</li>
+<li><strong>LLM coding assistance:</strong> drafting or troubleshooting analysis code is <strong>Human verification required</strong>. A knowledgeable person must check the code and outputs; running without errors is insufficient.</li>
+</ul>
+<p><strong>Agentic describes how work is done.</strong> An agent can plan, use tools and adapt within one task, with human oversight. RAISE lists some agentic search support as <strong>Exploratory and supplementary use</strong>. Its separate restriction concerns workflows producing a complete synthesis, <strong>with or without intermediate human input</strong>: errors can accumulate, and checkpoints alone do not establish reliability.</p>
+<p><strong>Evidence and its limits.</strong> RAISE combines performance studies with reasoning about system design; it has not demonstrated that every named product fails every workflow. <a href="https://link.springer.com/article/10.1007/s41669-024-00476-9" target="_blank" rel="noopener noreferrer">Reason et al., cited by RAISE</a>, found promising results for carefully configured workflows using checked analysis code. Separately, <a href="https://aclanthology.org/2023.acl-short.119/" target="_blank" rel="noopener noreferrer">Shaib et al.</a> found that cross-study conclusions often disagreed with expert-written syntheses in an older GPT-3 workflow. These studies have limited settings; neither settles performance for all current tools. RAISE’s reference for multi-document summarisation difficulty is a <a href="https://stm-assoc.org/document/stm-generative-ai-paper-2023/" target="_blank" rel="noopener noreferrer">publishing white paper</a>, rather than a direct synthesis experiment.</p>
+<p><strong>The boundary depends on the task.</strong> Summarising part of a report or explaining findings from a completed human synthesis differs from deriving the review’s conclusions. RAISE leaves some uncertainty between qualitative-analysis assistance and substantive synthesis; see the MAXQDA and NVivo qualifications.</p>
+<p>Sources: <a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, pp.3–4, 8–11 and Table 2, pp.13, 17, 19</a>; <a href="https://osf.io/y26pj" target="_blank" rel="noopener noreferrer">RAISE 2 v4, pp.6–8</a>. This explanation adds interpretation and separately identified research to the guidance.</p></div>
+</details>
 <details class="scope-details" id="before-using"><summary>Before using a tool</summary>
 <div class="disclosure-body"><p>Choose a defined use and a workable review procedure, rather than relying on a colour alone.</p>
 <ul class="guidance-checklist">
@@ -562,7 +574,8 @@ h1{font-size:23px}
 </ul>
 <p>Both <strong>require validation within the review</strong> (<a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, Table 2, pp.15–16</a>). They have no separate tool columns because Table 2 names methods rather than products here. STEED and Pre-ROB have their own columns.</p></section>
 <section class="outside-scope-tool"><h3>End-to-end evidence-synthesis workflows</h3>
-<p>RAISE lists Elicit and Perplexity for workflows linking review tasks to produce a report across studies, <strong>with or without intermediate human input</strong>. This use is <strong>Not acceptable for use</strong>: errors can accumulate, and generative AI is unreliable for the cross-study summarisation needed for a complete synthesis. This is not a ban on every function of those tools or every linked sequence of tasks (<a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, Table 2, p.19</a>).</p></section>
+<p>RAISE lists Elicit and Perplexity for workflows producing a complete evidence synthesis, <strong>with or without intermediate human input</strong>. These span review stages and are <strong>Not acceptable for use</strong> (<a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, Table 2, p.19</a>).</p>
+<button type="button" class="plain-button" id="open-synthesis-explanation" aria-controls="not-acceptable-explanation">Read the synthesis explanation</button></section>
 <div id="outside-scope-tools"></div></div>
 </details>
 
@@ -708,6 +721,13 @@ for(const [id,open] of [['expand-guidance',true],['collapse-guidance',false]]){
  button.setAttribute('aria-controls',guidanceIds);
  button.addEventListener('click',()=>{guidanceSections.forEach(section=>{section.open=open;});});
 }
+
+byId('open-synthesis-explanation').addEventListener('click',()=>{
+ const section=byId('not-acceptable-explanation');
+ section.open=true;
+ section.querySelector('summary').focus({preventScroll:true});
+ section.scrollIntoView({block:'start'});
+});
 
 byId('tool-search').addEventListener('input',e=>{state.search=e.target.value.trim();updateFilters();});
 byId('group-filter').addEventListener('change',e=>{state.group=e.target.value;updateFilters();});
