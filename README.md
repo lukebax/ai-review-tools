@@ -8,7 +8,9 @@ InfraNodus has a separate explanation outside the eight-stage map.
 
 ## View the map
 
-Open **[index.html](index.html)** in Chrome or another modern browser. It contains
+**[Open the live interactive map](https://lukebax.github.io/ai-review-tools/)**
+
+For a local copy, open **[index.html](index.html)** in Chrome or another modern browser. It contains
 the data, styling and interaction code. No installation, server or internet
 connection is required to explore the map; outgoing source/tool links require internet.
 
@@ -45,7 +47,7 @@ recommendation categories: review the display convention before adding such a ca
 | `map-data.json`, `map-template.html`, `build.py` | Editable sources and standard-library build |
 | `README.md`, `AGENTS.md` | Use, maintenance and contribution guidance |
 | `LICENSE`, `CONTENT-LICENSE.md`, `THIRD_PARTY_NOTICES.md`, `LICENSES/` | Scoped licences and source acknowledgements |
-| `.nojekyll` | Disable Jekyll processing for a future static Pages deployment |
+| `.nojekyll` | Disable Jekyll processing for static Pages deployment |
 
 All required project files are versioned. There are no private/local-only source
 dependencies, downloaded PDF libraries or ignored project files. Temporary inspection
@@ -73,10 +75,10 @@ the matrix. The guide is not an official RAISE publication or a live product cat
 Check new guidance versions and the intended review procedure before relying on a
 recommendation. Official documentation explains features; it does not prove validation.
 
-## Optional GitHub Pages publication
+## GitHub Pages configuration and updates
 
-For a future authorised publication, use a public repository's **Settings → Pages →
-Deploy from a branch → main → /(root)**. The finished `index.html` is the website.
+The site's publishing configuration is **Settings → Pages → Deploy from a branch →
+main → /(root)**. The finished `index.html` is the website.
 The Python script is for local editing; this setup does not run it on GitHub.
 
 After editing sources, regenerate and inspect the HTML, then commit and push the
