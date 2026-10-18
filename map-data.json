@@ -3,7 +3,7 @@
     "title": "AI tools across review stages",
     "guidanceVersion": "RAISE 3 draft v4.0, 23 September 2026",
     "auditDate": "18 October 2026",
-    "snapshotQualification": "RAISE 3 v4 p. 3 calls Table 2 a September 2026 snapshot; the p. 12 caption still says February 2026. This guide identifies the exact document version rather than treating the table as a live product catalogue.",
+    "snapshotQualification": "RAISE 3 v4 p. 3 calls Table 2 a September 2026 snapshot; the p. 12 caption still says February 2026. This map identifies the exact document version rather than treating the table as a live product catalogue.",
     "sourceUrls": {
       "RAISE 1": "https://osf.io/d5ajy",
       "RAISE 2": "https://osf.io/y26pj",
@@ -31,13 +31,13 @@
       "id": "validation",
       "label": "Requires validation within the review",
       "color": "#F3CE55",
-      "description": "Test the intended task and workflow within this review against a task-specific threshold set in advance and an appropriate benchmark. They must meet that standard; previous use elsewhere or convincing examples are insufficient."
+      "description": "Test the intended task and workflow within this review against a task-specific threshold set in advance and an appropriate benchmark. The workflow must meet that standard; previous use elsewhere or convincing examples are insufficient."
     },
     {
       "id": "exploratory",
       "label": "Exploratory and supplementary use",
       "color": "#F29B56",
-      "description": "Use outputs to develop ideas, with extensive human refinement before review use, or to supplement established processes without replacing them."
+      "description": "Use outputs to develop ideas, with extensive human refinement before using them in a review, or to supplement established processes without replacing them."
     },
     {
       "id": "unacceptable",
@@ -118,7 +118,7 @@
           "id": "cinema--certainty-of-evidence-assessment--certainty-of-evidence-assessment--rule-based",
           "stage": "Certainty of evidence assessment",
           "functionName": "Certainty of evidence assessment",
-          "descriptionMd": "Assist assessment of confidence in network meta-analysis findings. The official documentation describes a structured framework covering within-study bias, reporting bias, indirectness, imprecision, heterogeneity and incoherence, including a contribution matrix that shows how studies inform network estimates.",
+          "descriptionMd": "Assist with assessing confidence in network meta-analysis findings. The official documentation describes a structured framework covering within-study bias, reporting bias, indirectness, imprecision, heterogeneity and incoherence, including a contribution matrix that shows how studies inform network estimates.",
           "aiCategoryMd": "**Rule-based**",
           "whyCategoryMd": "RAISE groups it with tools that implement established certainty-assessment frameworks. Prespecified calculations and structured presentation support reviewers' assessments; this is distinct from asking an LLM to invent or independently deliver a final certainty rating.",
           "recommendation": "acceptable",
@@ -139,9 +139,9 @@
           "functionName": "Citation chasing",
           "descriptionMd": "Obtain references cited by known relevant papers and papers that cite them, to discover potentially eligible studies missed by the main keyword search. The official implementation describes forward and backward retrieval using bibliographic citation data.",
           "aiCategoryMd": "**Rule-based**",
-          "whyCategoryMd": "This function follows recorded citation relationships and API requests according to a defined procedure. It retrieves linked records for reviewer consideration, rather than generating an account of which studies ought to exist or independently deciding eligibility.",
+          "whyCategoryMd": "This function follows recorded citation relationships and sends requests through database software interfaces (APIs) according to a defined procedure. It retrieves linked records for reviewer consideration, rather than generating an account of which studies ought to exist or independently deciding eligibility.",
           "recommendation": "acceptable",
-          "whyRecommendationMd": "RAISE says citation chasing is useful where keyword indexing is weak. It also warns that results depend on the citation database's coverage and can favour older or heavily cited work. Interpretation: its value is as an additional search route with explicit seeds and sources, while the reviewer still evaluates the retrieved evidence and documents the search.",
+          "whyRecommendationMd": "RAISE says citation chasing is useful where keyword indexing is weak. It also warns that results depend on the citation database's coverage and can favour older or heavily cited work. Interpretation: its value is as an additional search route with documented starting papers and data sources, while the reviewer still evaluates the retrieved evidence and documents the search.",
           "officialUrlMd": "[citationchaser developer repository](https://github.com/nealhaddaway/citationchaser), linking the [web application named in RAISE](https://estech.shinyapps.io/citationchaser/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, pp. 13–14 (citation-chasing rationale and example-list continuation). General study-identification background, pp. 4–5."
         }
@@ -175,7 +175,7 @@
           "id": "connected-papers--the-search--citation-chasing--rule-based",
           "stage": "The Search",
           "functionName": "Citation chasing",
-          "descriptionMd": "Citation chasing, as classified in RAISE: use a known paper to find related literature beyond the original keyword results. Its official explanation is more precise than the broad row label: the visual connections reflect similarity based on co-citation and bibliographic coupling, and the graph is not simply a tree of direct citations.",
+          "descriptionMd": "Citation chasing, as classified in RAISE: use a known paper to find related literature beyond the original keyword results. Its official explanation is more precise than the broad row label: the visual connections reflect similarity based on co-citation (being cited together) and bibliographic coupling (sharing references), and the graph is not simply a tree of direct citations.",
           "aiCategoryMd": "**Rule-based**",
           "whyCategoryMd": "RAISE assigns this search use to its rule-based row. Interpretation: citation relationships and a specified graph-similarity procedure offer an identifiable retrieval mechanism. This should not be expanded into a claim that every part of the current product is fixed-rule-only or that every displayed edge means one paper cites another.",
           "recommendation": "acceptable",
@@ -198,7 +198,7 @@
           "aiCategoryMd": "**Rule-based**",
           "whyCategoryMd": "RAISE describes such applications as executing underlying R or Python calculations on effect estimates and summary statistics using user-defined parameters. Established statistical models perform the pooling; text generation is not the synthesis mechanism.",
           "recommendation": "acceptable",
-          "whyRecommendationMd": "RAISE requires documented, adjustable statistical parameters and reviewers who can choose appropriate analyses. It also stresses input-data quality. Interpretation: automating computation is acceptable when the method and assumptions remain accountable to the reviewer. The recommendation does not decide whether studies should be pooled or select an appropriate model on the user's behalf.",
+          "whyRecommendationMd": "RAISE requires documented, adjustable statistical parameters and reviewers who can choose appropriate analyses. It also stresses input-data quality. Interpretation: automating computation is acceptable when the reviewer remains responsible for the method and assumptions. The recommendation does not decide whether studies should be pooled or select an appropriate model on the user's behalf.",
           "officialUrlMd": "[CRSU meta-analysis apps, University of Glasgow](https://www.gla.ac.uk/research/az/crsu/apps/). The verified official suite uses **CRSU**.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, pp. 8–9."
         }
@@ -215,7 +215,7 @@
           "functionName": "Duplicate removal",
           "descriptionMd": "Duplicate removal from bibliographic search results. The developer describes a dedicated automated deduplication product. Only this Table 2 function is represented here.",
           "aiCategoryMd": "**Rule-based**",
-          "whyCategoryMd": "RAISE places this deduplication use in its rule-based category. The [published 2022 implementation](https://doi.org/10.1186/s13643-022-02045-9) describes NLP preprocessing, metadata normalisation, similarity comparisons and expert-derived rules for identifying duplicates. This supports the specific matching function shown here; it is not a complete audit of every component in the current proprietary product.",
+          "whyCategoryMd": "RAISE places this deduplication use in its rule-based category. The [published 2022 implementation](https://doi.org/10.1186/s13643-022-02045-9) describes preprocessing using natural language processing (NLP), metadata normalisation, similarity comparisons and expert-derived rules for identifying duplicates. This supports the specific matching function shown here; it is not a complete audit of every component in the current proprietary product.",
           "recommendation": "acceptable",
           "whyRecommendationMd": "RAISE cites the maturity of validated deduplication approaches, while warning that domain-specific matching logic may not generalise. Interpretation: check the product's evidence and the input records' suitability, and retain transparent duplicate decisions where possible. RAISE's row does not substantiate vendor performance claims for every dataset.",
           "officialUrlMd": "[Deduklick, Risklick](https://www.risklick.ch/deduklick). The official product spelling is **Deduklick**.",
@@ -255,7 +255,7 @@
           "aiCategoryMd": "**Rule-based**",
           "whyCategoryMd": "The listed task is executing a specified retrieval/import procedure. RAISE expressly distinguishes individual functions within multipurpose review platforms: EPPI-Reviewer's classifiers or generative features should not be assigned the same category merely because they share a platform name.",
           "recommendation": "acceptable",
-          "whyRecommendationMd": "RAISE notes that programmatic retrieval is available through some platforms and that database API access is incomplete. Interpretation: a known query and documented import route can be incorporated transparently, but access, database coverage and successful transfer still need checking. Retrieving citation metadata does not imply obtaining all full texts or demonstrating the completeness of the review search.",
+          "whyRecommendationMd": "RAISE notes that programmatic retrieval is available through some platforms and that database access through software interfaces (APIs) is incomplete. Interpretation: a known query and documented import route can be incorporated transparently, but access, database coverage and successful transfer still need checking. Retrieving citation metadata does not imply obtaining all full texts or demonstrating the completeness of the review search.",
           "officialUrlMd": "[EPPI-Reviewer official help](https://eppi.ioe.ac.uk/cms/er4/Help/FAQ).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; API-assisted retrieval discussion, p. 4; coverage and access limitations, p. 5."
         }
@@ -346,11 +346,11 @@
           "id": "nested-knowledge--the-search--citation-retrieval--rule-based",
           "stage": "The Search",
           "functionName": "Citation retrieval",
-          "descriptionMd": "The platform can execute searches through supported database APIs and import bibliographic search files; these are ways to bring records into a review workspace. These details are described in its official documentation.",
+          "descriptionMd": "The platform can execute searches through supported database software interfaces (APIs) and import bibliographic search files; these are ways to bring records into a review workspace. These details are described in its official documentation.",
           "aiCategoryMd": "**Rule-based**",
           "whyCategoryMd": "This entry covers the defined search-execution and record-transfer function. The separately listed Smart Search feature has an agentic classification. That feature and other AI functions do not share the generic platform's rule-based citation-retrieval classification.",
           "recommendation": "acceptable",
-          "whyRecommendationMd": "RAISE says retrieval can be programmatic or platform-mediated, but API access is not universal. Interpretation: reviewers should document database, query, date and transfer route, check restrictions and verify that expected records were imported. The favourable category does not mean all databases are covered, that full text is always obtained, or that an automated search is inherently comprehensive.",
+          "whyRecommendationMd": "RAISE says retrieval can be automated or carried out through a review platform, but API access is not universal. Interpretation: reviewers should document database, query, date and transfer route, check restrictions and verify that expected records were imported. The favourable category does not mean all databases are covered, that full text is always obtained, or that an automated search is inherently comprehensive.",
           "officialUrlMd": "[Nested Knowledge literature-search documentation](https://about.nested-knowledge.com/docs/search/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; API-assisted retrieval discussion, p. 4; coverage and access limitations, p. 5."
         }
@@ -422,7 +422,7 @@
           "id": "searchbuildr--the-search--search-strategy-development--rule-based",
           "stage": "The Search",
           "functionName": "Search strategy development",
-          "descriptionMd": "The developers describe finding overrepresented terms in a set of relevant references so that information specialists can incorporate them into Boolean searches. The application supports text analysis of free-text terms and controlled vocabulary.",
+          "descriptionMd": "The developers describe finding overrepresented terms in a set of relevant references so that information specialists can incorporate them into Boolean searches (which combine terms using operators such as AND and OR). The application supports text analysis of free-text terms and controlled vocabulary (standardised indexing terms).",
           "aiCategoryMd": "**Rule-based**",
           "whyCategoryMd": "The listed operation applies explicit quantitative text-analysis procedures to a supplied reference set. It assists a reviewer in selecting candidate terms; it does not independently create and certify a complete systematic-review search.",
           "recommendation": "acceptable",
@@ -441,7 +441,7 @@
           "id": "systematic-online-living-evidence-summaries--screening-for-relevance--study-selection--rule-based",
           "stage": "Screening for relevance",
           "functionName": "Study selection",
-          "descriptionMd": "Study selection using domain-specific PICO dictionaries. Table 2 names SOLES parenthetically as an example where such dictionaries are used. The coloured cell refers to manually constructed regular-expression rules that identify study characteristics, particularly in full text; it does not represent every component of a SOLES workflow.",
+          "descriptionMd": "Study selection using domain-specific population, intervention, comparison and outcome (PICO) dictionaries. Table 2 names Systematic Online Living Evidence Summaries (SOLES) parenthetically as an example where such dictionaries are used. The coloured cell refers to manually constructed regular-expression rules that identify study characteristics, particularly in full text; it does not represent every component of a SOLES workflow.",
           "aiCategoryMd": "**Rule-based**",
           "whyCategoryMd": "These dictionaries encode terms and matching patterns chosen by people, rather than learning a classifier from labelled examples. SOLES itself is a broader framework that may combine several technologies, not a single universal rule-based screening application.",
           "recommendation": "validation",
@@ -464,7 +464,7 @@
           "aiCategoryMd": "**Rule-based**",
           "whyCategoryMd": "The specified function concerns carrying out a retrieval procedure and transferring records. The category does not describe the whole platform or imply that every named TERA feature has the same mechanism and recommendation.",
           "recommendation": "acceptable",
-          "whyRecommendationMd": "RAISE notes that not every database provides an API. Interpretation: a platform can reduce manual record handling when the underlying sources, queries and limits are known, but users still need to check coverage, successful transfer and provenance. This entry does not establish unrestricted database access, automatic full-text availability, or the completeness of a search.",
+          "whyRecommendationMd": "RAISE notes that not every database provides a software interface (API) for automated retrieval. Interpretation: a platform can reduce manual record handling when the underlying sources, queries and limits are known, but users still need to check coverage, successful transfer and provenance. This entry does not establish unrestricted database access, automatic full-text availability, or the completeness of a search.",
           "officialUrlMd": "[TERA](https://tera-tools.com/) and its [official help directory](https://tera-tools.com/help/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; API-assisted retrieval discussion, p. 4; coverage and access limitations, p. 5."
         }
@@ -483,7 +483,7 @@
           "aiCategoryMd": "**Rule-based**",
           "whyCategoryMd": "RAISE places Deduplicator in the row for metadata matching according to prescribed similarity criteria. This describes the deduplication function, rather than every function available elsewhere in TERA.",
           "recommendation": "acceptable",
-          "whyRecommendationMd": "RAISE describes deduplication as mature and notes low false-positive rates among validated tools, but warns that specialised matching logic may not generalise. Interpretation: use matching appropriate to the input records, consider the consequences of deleting a genuine distinct report, and retain duplicate-pair evidence where available. The Table 2 recommendation is not a guarantee that every proposed duplicate can be accepted without attention to context.",
+          "whyRecommendationMd": "RAISE describes deduplication as mature and notes low false-positive rates among validated tools, but warns that specialised matching logic may not generalise. Interpretation: use matching appropriate to the input records, consider the consequences of deleting a genuinely distinct report, and retain duplicate-pair evidence where available. The Table 2 recommendation is not a guarantee that every proposed duplicate can be accepted without attention to context.",
           "officialUrlMd": "[TERA official tool/help directory](https://tera-tools.com/help/), which lists the named feature.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, pp. 5–6."
         }
@@ -498,11 +498,11 @@
           "id": "tera-polyglot--the-search--query-translation--rule-based",
           "stage": "The Search",
           "functionName": "Query translation",
-          "descriptionMd": "Adapt an existing bibliographic search to another database/platform's syntax. This concerns the command language used to express the strategy, rather than translating study text or automatically establishing that the strategy's concepts are suitable. RAISE 2 notes that syntax translators do not translate controlled vocabularies such as MeSH or CINAHL headings; these must be selected and checked separately.",
+          "descriptionMd": "Adapt an existing bibliographic search to the search syntax used by another database or platform. This concerns the command language used to express the strategy, rather than translating study text or automatically establishing that the strategy's concepts are suitable. RAISE 2 notes that syntax translators do not translate controlled vocabularies such as MeSH or CINAHL headings; these must be selected and checked separately.",
           "aiCategoryMd": "**Rule-based**",
           "whyCategoryMd": "RAISE places the feature in its rule-based query-translation row. Interpretation: predefined conversions between search conventions can automate repetitive syntax changes. They do not remove the need to understand database-specific indexing and search behaviour.",
           "recommendation": "verification",
-          "whyRecommendationMd": "RAISE identifies changing database interfaces, uneven maintenance/validation and limited specialist-database coverage as vulnerabilities. Reviewers should check the complete translated query, correct unsupported or outdated syntax, and establish that the intended concepts and retrieval behaviour are preserved. This stronger verification requirement is why Polyglot differs from the generally acceptable rule-based search functions around it.",
+          "whyRecommendationMd": "RAISE identifies changing database interfaces, uneven maintenance and validation, and limited specialist-database coverage as vulnerabilities. Reviewers should check the complete translated query, correct unsupported or outdated syntax, and establish that the intended concepts and retrieval behaviour are preserved. This stronger verification requirement is why Polyglot differs from the generally acceptable rule-based search functions around it.",
           "officialUrlMd": "[TERA Polyglot](https://tera-tools.com/polyglot), the application linked in RAISE, and the [official help directory](https://tera-tools.com/help/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, pp. 4–5. RAISE 2 v4 (25 August 2026), p. 17 describes the controlled-vocabulary limitation."
         }
@@ -517,7 +517,7 @@
           "id": "tera-review-wizard--writing-a-manuscript--drafting--rule-based",
           "stage": "Writing a manuscript",
           "functionName": "Drafting",
-          "descriptionMd": "Help structure and draft the review’s methods section using supplied information and a template. RAISE Table 2 places this structured-reporting function under “Text Generation”; this guide presents it under “Writing a manuscript”. It does not imply autonomous interpretation of review results.",
+          "descriptionMd": "Help structure and draft the review’s methods section using supplied information and a template. RAISE Table 2 places this structured-reporting function under “Text Generation”; this map presents it under “Writing a manuscript”. It does not imply autonomous interpretation of review results.",
           "aiCategoryMd": "**Rule-based**",
           "whyCategoryMd": "RAISE describes a template tool: predefined structure supports the report, rather than a general-purpose LLM generating substantive conclusions from the evidence. Interpretation: standardised fields and text scaffolding can organise information supplied by the review team.",
           "recommendation": "acceptable",
@@ -574,7 +574,7 @@
           "id": "yale-mesh-analyzer--the-search--search-strategy-development--rule-based",
           "stage": "The Search",
           "functionName": "Search strategy development",
-          "descriptionMd": "The application retrieves metadata for supplied PubMed identifiers and arranges indexing terms in a comparison grid. The official help explains that reviewers can inspect MeSH terms, variants and indexing differences to understand why known articles were retrieved or missed.",
+          "descriptionMd": "The application retrieves metadata for supplied PubMed identifiers and arranges indexing terms in a comparison grid. The official help explains that reviewers can inspect Medical Subject Headings (MeSH), variants and indexing differences to understand why known articles were retrieved or missed.",
           "aiCategoryMd": "**Rule-based**",
           "whyCategoryMd": "This is a specified retrieval, sorting and display procedure applied to existing bibliographic metadata. RAISE groups it with keyword/controlled-vocabulary analysis; it helps the searcher see term patterns rather than independently reasoning that a complete strategy has been achieved.",
           "recommendation": "acceptable",
@@ -595,7 +595,7 @@
           "functionName": "Exploring the literature",
           "descriptionMd": "Cluster supplied literature into topics to help reviewers identify themes and areas of interest while developing a protocol.",
           "aiCategoryMd": "**Unsupervised**",
-          "whyCategoryMd": "RAISE specifically assigns **Unsupervised**, rather than supervised classifier. It discovers structure in the supplied text without needing reviewers to label examples as eligible/ineligible. Clustering and labelling groups is distinct from deciding which studies belong in a review or generating an evidence-based answer.",
+          "whyCategoryMd": "RAISE assigns this function to **Unsupervised** learning rather than supervised classification. It discovers structure in the supplied text without needing reviewers to label examples as eligible or ineligible. Clustering and labelling groups is distinct from deciding which studies belong in a review or generating an evidence-based answer.",
           "recommendation": "acceptable",
           "whyRecommendationMd": "RAISE 3 v4 explicitly lists topic exploration during protocol development as acceptable. Clusters can help orient the review team, which remains responsible for question choice, protocol decisions and subsequent comprehensive searching; this is not validation of every cluster or an automated evidence synthesis.",
           "officialUrlMd": "[Carrot2 search-results clustering](https://search.carrot2.org/). [Developer documentation/source](https://github.com/carrot2/carrot2) confirms that it groups related documents and labels the groups. The search interface requires JavaScript.",
@@ -607,7 +607,7 @@
           "functionName": "Scoping the literature",
           "descriptionMd": "Groups search results or other supplied documents into topic clusters, helping a reviewer recognise themes, terminology and possible areas of interest.",
           "aiCategoryMd": "**Unsupervised**",
-          "whyCategoryMd": "RAISE specifically assigns **Unsupervised**, rather than supervised classifier. It discovers structure in the supplied text without needing reviewers to label examples as eligible/ineligible. Clustering and labelling groups is distinct from deciding which studies belong in a review or generating an evidence-based answer.",
+          "whyCategoryMd": "RAISE assigns this function to **Unsupervised** learning rather than supervised classification. It discovers structure in the supplied text without needing reviewers to label examples as eligible or ineligible. Clustering and labelling groups is distinct from deciding which studies belong in a review or generating an evidence-based answer.",
           "recommendation": "acceptable",
           "whyRecommendationMd": "The table explicitly describes rapid topic exploration. **Interpretation:** using clusters to orient the researcher leaves formal search design and eligibility decisions with the team. It does not certify exhaustive retrieval, valid thematic synthesis, or the quality of every cluster. The general acceptable category still requires limitations and potential biases to be accounted for. This recommendation applies to the exploratory function described above.",
           "officialUrlMd": "[Carrot2 search-results clustering](https://search.carrot2.org/). [Developer documentation/source](https://github.com/carrot2/carrot2) confirms that it groups related documents and labels the groups. The search interface requires JavaScript.",
@@ -659,7 +659,7 @@
           "aiCategoryMd": "**Supervised prioritised screening algorithms where early stopping is used**",
           "whyCategoryMd": "Supervised algorithms learn relevance from reviewer-labelled records and update the screening order. Early stopping adds a decision to leave some records unread; that is distinct from merely changing their order.",
           "recommendation": "validation",
-          "whyRecommendationMd": "RAISE requires within-review validation when screening stops early. The team must assess the configured algorithm and stopping procedure against prespecified requirements for sensitivity, using suitable review records. A high yield near the start or a run of irrelevant records does not establish that the unscreened remainder contains no relevant studies. Time savings may be small when maximum sensitivity is required.",
+          "whyRecommendationMd": "RAISE requires within-review validation when screening stops early. The team must assess the configured algorithm and stopping procedure against prespecified requirements for sensitivity (the proportion of all relevant records identified), using suitable review records. A high yield near the start or a run of irrelevant records does not establish that the unscreened remainder contains no relevant studies. Time savings may be small when maximum sensitivity is required.",
           "officialUrlMd": "[Current Abstrackr application](https://abstrackr.com/) · [Current screening-model documentation](https://docs.abstrackr.com/docs/reference/ml-scoring).\n\nThe [former Brown-hosted service](http://abstrackr.cebm.brown.edu/) carries a deprecation and migration notice. The [original developer repository](https://github.com/bwallace/abstrackr-web) and [2012 deployment paper](https://doi.org/10.1145/2110363.2110464) document the earlier implementation. Current documentation describes a model trained on the project's human screening labels. This explains the supervised mechanism; it does not establish that a current model or stopping procedure has been validated for the intended review.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 15; supporting discussion, pp. 6–7."
         },
@@ -671,7 +671,7 @@
           "aiCategoryMd": "**Supervised machine learning**",
           "whyCategoryMd": "These models predict labels or scores from learned examples. This is a separate use from choosing the next record to screen, although the same software can support both.",
           "recommendation": "validation",
-          "whyRecommendationMd": "**Explicit rationale:** performance depends on the relevance and quality of training/validation data; the required volume and diversity vary with the concept being classified. Evaluate the chosen prediction procedure on suitable unseen review records. Classification and prioritised screening are distinct methodological roles; listing them is not a separate product-wide endorsement of each feature.",
+          "whyRecommendationMd": "**Explicit rationale:** performance depends on the relevance and quality of training and validation data; the required volume and diversity vary with the concept being classified. Evaluate the chosen prediction procedure on suitable unseen review records. Classification and prioritised screening are distinct methodological roles; listing them is not a separate product-wide endorsement of each feature.",
           "officialUrlMd": "[Current Abstrackr application](https://abstrackr.com/) · [Current screening-model documentation](https://docs.abstrackr.com/docs/reference/ml-scoring).\n\nThese links identify the current service and its supervised screening mechanism. The RAISE recommendation concerns the specified workflow; current documentation does not establish validation of a particular model, configuration or stopping procedure.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 15; supporting discussion, pp. 6–7."
         },
@@ -679,7 +679,7 @@
           "id": "abstrackr--screening-for-relevance--prioritised-screening-without-early-stopping--supervised-prioritised-screening-algorithms",
           "stage": "Screening for relevance",
           "functionName": "Prioritised screening without early stopping",
-          "descriptionMd": "Uses human screening decisions to order remaining citations so that likely relevant material appears earlier. Reviewers still screen every record; the algorithm does not exclude the unread tail.",
+          "descriptionMd": "Uses human screening decisions to order remaining citations so that likely relevant material appears earlier. Reviewers still screen every record; the algorithm does not exclude the records at the end of the queue.",
           "aiCategoryMd": "**Supervised prioritised screening algorithms without early stopping**",
           "whyCategoryMd": "Supervised algorithms use reviewer-labelled records to predict relevance and organise the human screening queue. In this use they change the order of assessment, not which records receive assessment.",
           "recommendation": "acceptable",
@@ -714,7 +714,7 @@
           "aiCategoryMd": "**Supervised prioritised screening algorithms where early stopping is used**",
           "whyCategoryMd": "RAISE classifies this as supervised prioritised screening. The developer describes active learning from the review team’s earlier decisions to sort citations by likely relevance. This function is distinct from other Covidence automation features.",
           "recommendation": "validation",
-          "whyRecommendationMd": "RAISE requires within-review validation when early stopping leaves records unread. Evaluate the configured workflow and stopping procedure against prespecified sensitivity requirements; a low recent yield does not establish that the remaining records contain no eligible studies. This recommendation addresses a use of prioritisation, not a claim that Covidence supplies a validated stopping rule.",
+          "whyRecommendationMd": "RAISE requires within-review validation when early stopping leaves records unread. Evaluate the configured workflow and stopping procedure against prespecified requirements for sensitivity (the proportion of all relevant records identified); finding few eligible records among those screened recently does not establish that the remaining records contain no eligible studies. This recommendation addresses a use of prioritisation, not a claim that Covidence supplies a validated stopping rule.",
           "officialUrlMd": "[Covidence](https://www.covidence.org/). Its [Most relevant sorting documentation](https://support.covidence.org/help/ai-feature-most-relevant-sorting) identifies EPPI-Centre active learning from prior reviewer screening decisions.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 15; screening discussion, pp. 6–7. RAISE 2 v4 (25 August 2026), pp. 7 and 18."
         }
@@ -731,7 +731,7 @@
           "functionName": "Named entity extraction",
           "descriptionMd": "Identifies and proposes structured items from publications, such as populations, exposures, species or study characteristics. Dextr lets users verify entries and connect related entities, including multiple experiments or exposures within one report.",
           "aiCategoryMd": "**Supervised machine learning**",
-          "whyCategoryMd": "RAISE places this use under **Supervised machine learning**, referring to learned entity identification/extraction. That assignment is not a claim that every component in today's Dextr is a conventional classifier, or that its newer LLM features have the same evidence base.",
+          "whyCategoryMd": "RAISE places this use under **Supervised machine learning**, referring to models trained to identify and extract entities. That assignment is not a claim that every component in today's Dextr is a conventional classifier, or that its newer LLM features have the same evidence base.",
           "recommendation": "validation",
           "whyRecommendationMd": "**Explicit rationale:** performance depends on domain and training corpora. The narrative says evaluations commonly use domain-specific datasets under controlled conditions, and new review applications need context-specific evaluation. **Interpretation:** identifying a plausible entity is insufficient if the wrong exposure, group or experiment is linked to it; validation should cover the intended extraction workflow.",
           "officialUrlMd": "[NIEHS Dextr project](https://www.niehs.nih.gov/research/atniehs/labs/iha/projects/dextr). RAISE links the [original evaluation](https://pubmed.ncbi.nlm.nih.gov/34920276/). The current NIEHS page, reviewed June 2026, describes a mixture of machine learning, LLM and regular-expression features; the entry here preserves the particular RAISE row.",
@@ -752,7 +752,7 @@
           "aiCategoryMd": "**Supervised prioritised screening algorithms where early stopping is used**",
           "whyCategoryMd": "Supervised algorithms learn relevance from reviewer-labelled records and update the screening order. Early stopping adds a decision to leave some records unread; that is distinct from merely changing their order.",
           "recommendation": "validation",
-          "whyRecommendationMd": "RAISE requires within-review validation when screening stops early. The team must assess the configured algorithm and stopping procedure against prespecified requirements for sensitivity, using suitable review records. A high yield near the start or a run of irrelevant records does not establish that the unscreened remainder contains no relevant studies. Time savings may be small when maximum sensitivity is required.",
+          "whyRecommendationMd": "RAISE requires within-review validation when screening stops early. The team must assess the configured algorithm and stopping procedure against prespecified requirements for sensitivity (the proportion of all relevant records identified), using suitable review records. A high yield near the start or a run of irrelevant records does not establish that the unscreened remainder contains no relevant studies. Time savings may be small when maximum sensitivity is required.",
           "officialUrlMd": "[EPPI-Reviewer automation documentation](https://eppi.ioe.ac.uk/cms/er4/Help/Automation-tools-in-EPPI-Reviewer). See also its [Priority Screening guide](https://eppi.ioe.ac.uk/CMS/Portals/35/Manuals/ER%20Web%20-%20Priority%20Screening.pdf).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 15; supporting discussion, pp. 6–7."
         },
@@ -760,7 +760,7 @@
           "id": "eppi-reviewer-prioritised-screening--screening-for-relevance--prioritised-screening-without-early-stopping--supervised-prioritised-screening-algorithms",
           "stage": "Screening for relevance",
           "functionName": "Prioritised screening without early stopping",
-          "descriptionMd": "Uses human screening decisions to order remaining citations so that likely relevant material appears earlier. Reviewers still screen every record; the algorithm does not exclude the unread tail.",
+          "descriptionMd": "Uses human screening decisions to order remaining citations so that likely relevant material appears earlier. Reviewers still screen every record; the algorithm does not exclude the records at the end of the queue.",
           "aiCategoryMd": "**Supervised prioritised screening algorithms without early stopping**",
           "whyCategoryMd": "Supervised algorithms use reviewer-labelled records to predict relevance and organise the human screening queue. In this use they change the order of assessment, not which records receive assessment.",
           "recommendation": "acceptable",
@@ -783,7 +783,7 @@
           "aiCategoryMd": "**Supervised machine learning**",
           "whyCategoryMd": "These models learn a mapping from labelled text to a prediction. Unlike prioritised screening, this entry concerns the prediction model itself, rather than the ongoing ordering of a screening queue.",
           "recommendation": "validation",
-          "whyRecommendationMd": "**Explicit rationale:** appropriate training and validation data determine performance; complex concepts can require more varied examples, and title/abstract training does not automatically transfer to other material. RAISE further warns that a well-developed classifier can be unsuitable outside its validated record type or domain. This row does not confer one shared performance claim on all EPPI-Reviewer models, including its separately evaluated pre-built classifiers.",
+          "whyRecommendationMd": "**Explicit rationale:** appropriate training and validation data determine performance; complex concepts can require more varied examples, and training on titles and abstracts does not automatically transfer to other material. RAISE further warns that a well-developed classifier can be unsuitable outside its validated record type or domain. This row does not confer one shared performance claim on all EPPI-Reviewer models, including its separately evaluated pre-built classifiers.",
           "officialUrlMd": "[EPPI-Reviewer machine-learning guide](https://eppi.ioe.ac.uk/cms/Portals/35/Manuals/Machine%20learning%20in%20EPPI-Reviewer%20v_10.1%20web%20version.pdf), particularly its section on building bespoke classifiers. This is a platform capability, not a separate standalone product.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 15; screening discussion, pp. 6–7; record-type and domain generalisability, p. 22."
         }
@@ -798,9 +798,9 @@
           "id": "pre-rob--quality-assessment--reporting-quality--supervised-classifiers",
           "stage": "Quality assessment",
           "functionName": "Reporting quality",
-          "descriptionMd": "Identifies reporting of items such as random allocation, blinded outcome assessment, animal exclusions, conflicts of interest and animal-welfare compliance. Reporting a safeguard and demonstrating low overall risk of bias are different propositions.",
+          "descriptionMd": "Identifies reporting of items such as random allocation, blinded outcome assessment, animal exclusions, conflicts of interest and animal-welfare compliance. Reporting a safeguard does not establish low overall risk of bias.",
           "aiCategoryMd": "**Supervised machine learning**",
-          "whyCategoryMd": "These models predict item-level outputs using learned neural models; the repository names CNN/attention/HAN/BERT approaches. A BERT-based classifier is not thereby a generative conversational LLM. RAISE places this function under **Reporting quality**, although the repository uses risk-of-bias terminology.",
+          "whyCategoryMd": "Trained neural models predict outputs for individual reporting items; the repository lists convolutional neural networks (CNNs), attention-based models, hierarchical attention networks (HANs) and BERT approaches. A BERT-based classifier is not thereby a generative conversational LLM. RAISE places this function under **Reporting quality**, although the repository uses risk-of-bias terminology.",
           "recommendation": "validation",
           "whyRecommendationMd": "**Explicit rationale:** performance depends heavily on the training corpus and domain. The critical-appraisal narrative also explains the difficulty of defining reliable reference judgements. **Interpretation:** validate the actual reporting items and study domain before using predictions in a review, and avoid upgrading detection of relevant sentences into an independently established bias judgement.",
           "officialUrlMd": "[RAISE-linked Pre-ROB repository](https://github.com/camaradesuk/pre-rob). It describes neural models that predict reporting scores and retrieve sentences for preclinical risk-of-bias-related items.",
@@ -817,23 +817,23 @@
           "id": "robotreviewer--quality-assessment--risk-of-bias-assessment--supervised-classifiers",
           "stage": "Quality assessment",
           "functionName": "Risk of bias assessment",
-          "descriptionMd": "Proposes assessments for selected domains of the original Cochrane RoB 1 framework and highlights supporting text to assist human appraisal. This conventional RobotReviewer function is not a validated RoB 2 assessment.",
+          "descriptionMd": "Proposes assessments for selected domains of the original Cochrane risk-of-bias (RoB 1) framework and highlights supporting text to assist human appraisal. This conventional RobotReviewer function is not a validated RoB 2 assessment.",
           "aiCategoryMd": "**Supervised machine learning**",
           "whyCategoryMd": "RAISE assigns **Supervised machine learning**: trained models make task-specific predictions from trial reports. This entry concerns that appraisal function, not autonomous synthesis or all possible versions/features.",
           "recommendation": "validation",
           "whyRecommendationMd": "**Explicit rationale:** training corpus and domain strongly affect performance; critical appraisal is judgement-dependent and reference assessors can disagree. The reported prior evaluation in the narrative does not establish universal accuracy. **Interpretation:** use a suitable independent assessment procedure to evaluate the outputs for the intended review and appraisal framework. The appraisal instrument matters: evidence for original RoB 1 domains does not establish validity for RoB 2 or another instrument. Cochrane’s risk-of-bias workshop explicitly distinguishes these comparisons.",
-          "officialUrlMd": "[RobotReviewer developer repository](https://github.com/ijmarshall/robotreviewer). It documents PDF annotation for PICO characteristics and likely biases. A [project website](https://www.robotreviewer.net/) is also provided; current service availability is separate from the documented method.",
+          "officialUrlMd": "[RobotReviewer developer repository](https://github.com/ijmarshall/robotreviewer). It documents PDF annotation for population, intervention, comparison and outcome (PICO) characteristics and likely biases. A [project website](https://www.robotreviewer.net/) is also provided; current service availability is separate from the documented method.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 16; supporting discussion, p. 8. Cochrane AI methods risk-of-bias workshop slides, pp. 26–28, identify the RobotReviewer comparisons as RoB 1 domains D1–D4; the linked developer documentation identifies the conventional implementation."
         },
         {
           "id": "robotreviewer--data-extraction--named-entity-extraction--supervised-classifiers",
           "stage": "Data extraction",
           "functionName": "Named entity extraction",
-          "descriptionMd": "Annotates population, intervention/comparator and outcome information in trial PDFs.",
+          "descriptionMd": "Annotates population, intervention, comparator and outcome information in trial PDFs.",
           "aiCategoryMd": "**Supervised machine learning**",
-          "whyCategoryMd": "RAISE's **Supervised machine learning** row covers learned identification of PICO/PECO content; it is separate from predicting risk-of-bias assessments.",
+          "whyCategoryMd": "RAISE's **Supervised machine learning** row covers learned identification of population, intervention or exposure, comparator and outcome (PICO/PECO) information; it is separate from predicting risk-of-bias assessments.",
           "recommendation": "validation",
-          "whyRecommendationMd": "**Explicit rationale:** domain and training corpora affect extraction performance. **Interpretation:** good performance on one output does not establish the accuracy of the other; assess extraction for the variables and reports actually used.",
+          "whyRecommendationMd": "**Explicit rationale:** domain and training corpora affect extraction performance. **Interpretation:** good performance on one task does not establish accuracy on another; assess extraction for the variables and reports actually used.",
           "officialUrlMd": "[RobotReviewer developer repository](https://github.com/ijmarshall/robotreviewer).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 16; supporting discussion, p. 7."
         }
@@ -853,7 +853,7 @@
           "whyCategoryMd": "This is RAISE's assignment. The developer describes trained detection algorithms, but the material checked does not establish a complete training design for every current component. This is not evidence that all its features use one model.",
           "recommendation": "validation",
           "whyRecommendationMd": "**Explicit rationale:** appraisal performance depends strongly on training corpus and domain. **Interpretation:** validation must also ask whether the product's narrower reporting outputs answer the review's actual bias-assessment question. A detected statement about randomisation does not by itself establish adequate randomisation.",
-          "officialUrlMd": "[SciScore](https://sciscore.com/). The developer describes automated methods-reporting, rigor and resource-identifier checks, with editors and reviewers retaining scientific judgement.",
+          "officialUrlMd": "[SciScore](https://sciscore.com/). The developer describes automated methods-reporting, rigour and resource-identifier checks, with editors and reviewers retaining scientific judgement.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 16; supporting discussion, p. 8. Additional contextual source: [developer scope statement](https://sciscore.com/)."
         }
       ]
@@ -871,7 +871,7 @@
           "aiCategoryMd": "**Supervised machine learning**",
           "whyCategoryMd": "RAISE lists STEED as **Supervised machine learning**; this map retains that assignment. **Qualification:** its [published methods](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0311358) and linked code describe rule-based text matching (regular expressions), rather than a learned classifier.",
           "recommendation": "validation",
-          "whyRecommendationMd": "**Explicit rationale for the table row:** corpus/domain dependence. The neighbouring rule-based reporting-quality row also requires local validation. **Interpretation:** detecting a matching phrase is sensitive to wording and article context, and establishes reporting rather than actual experimental conduct. Neither taxonomy interpretation supplies permission to use it as a definitive appraisal without relevant validation.",
+          "whyRecommendationMd": "**Explicit rationale for the table row:** performance depends on the training data and review context. The neighbouring rule-based reporting-quality row also requires local validation. **Interpretation:** detecting a matching phrase is sensitive to wording and article context, and establishes reporting rather than actual experimental conduct. Neither classification justifies treating its output as a definitive appraisal without relevant validation.",
           "officialUrlMd": "[Auto-STEED repository linked by RAISE](https://github.com/Ineichen-Group/Auto-STEED), including its [R implementation](https://github.com/Ineichen-Group/Auto-STEED/blob/main/STEED_clean.R).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, pp. 15–16; supporting discussion, p. 8."
         }
@@ -886,11 +886,11 @@
           "id": "urse--certainty-of-evidence-assessment--certainty-of-evidence-assessment--supervised-classifiers",
           "stage": "Certainty of evidence assessment",
           "functionName": "Certainty of evidence assessment",
-          "descriptionMd": "Combines outputs in a pipeline to propose evidence-quality ratings. It is research software for semiautomation, not a statement that contextual GRADE judgement has been solved. The repository requires RobotReviewer integration.",
+          "descriptionMd": "Combines outputs in a pipeline to propose evidence-quality ratings. It is research software for partial automation, not a statement that contextual GRADE judgement has been solved. The repository requires RobotReviewer integration.",
           "aiCategoryMd": "**Supervised machine learning**",
           "whyCategoryMd": "RAISE describes supervised machine-learning tools linked in a pipeline; this map retains that assignment. **Qualification:** URSE combines RobotReviewer’s learned components with [fixed extraction and scoring rules](https://github.com/alisson-mfc/urse/blob/main/server/controllers/comparators.py). It is a hybrid system, rather than a single trained classifier that assigns the final certainty rating.",
           "recommendation": "exploratory",
-          "whyRecommendationMd": "**RAISE narrative:** URSE is described as proof-of-concept; such tools cannot be applied independently without stringent manual checking, which limits efficiency gains. **Separate evaluation context:** Its linked proof-of-concept evaluation concerns an adapted GRADE workflow; the authors themselves withhold support for full automation. **Interpretation:** URSE may inform exploration or add a checked supplementary output while established human certainty assessment remains in place. This is the exploratory/supplementary category, rather than the within-review-validation category used for many classifier uses.",
+          "whyRecommendationMd": "**RAISE narrative:** URSE is described as proof-of-concept; such tools cannot be applied independently without stringent manual checking, which limits efficiency gains. **Separate evaluation context:** Its linked proof-of-concept evaluation concerns an adapted GRADE workflow; the authors themselves withhold support for full automation. **Interpretation:** URSE may inform exploration or add a checked supplementary output while established human certainty assessment remains in place. This is the exploratory and supplementary category, rather than the within-review-validation category used for many classifier uses.",
           "officialUrlMd": "[URSE author repository](https://github.com/alisson-mfc/urse). The [RAISE-cited proof-of-concept article](https://pubmed.ncbi.nlm.nih.gov/40194821/) identifies that repository and describes an adaptation of GRADE for reviews with meta-analyses of randomised trials.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 9."
         }
@@ -909,7 +909,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model produces the cross-study account, even if agents also retrieve sources.",
           "recommendation": "unacceptable",
-          "whyRecommendationMd": "Fluent text does not establish compatible studies, correct transformations, appropriate weighting or treatment of uncertainty and heterogeneity. This restriction differs from checked code assistance.",
+          "whyRecommendationMd": "Fluent text does not establish that studies are compatible, transformations are correct, or weighting and treatment of uncertainty and heterogeneity are appropriate. This restriction differs from checked code assistance.",
           "officialUrlMd": "[https://asta.allen.ai/](https://asta.allen.ai/)\n\nThe table names **Asta** for the cross-study synthesis uses described here. **Asta Find Papers** names a separate, narrower search function. Ai2's [official agent overview](https://allenai.org/asta/agents) distinguishes finding papers from summarising literature. That helps identify the functions; it does not establish that either satisfies formal evidence-synthesis standards.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, pp. 8–9."
         },
@@ -936,7 +936,7 @@
           "id": "asta-find-papers--the-search--exploring-the-literature--agentic-ai",
           "stage": "The Search",
           "functionName": "Scoping the literature",
-          "descriptionMd": "Use Asta Find Papers for early topic familiarisation, terminology and candidate papers.",
+          "descriptionMd": "Use Asta Find Papers to become familiar with a topic and identify terminology and candidate papers.",
           "aiCategoryMd": "**Agentic AI**",
           "whyCategoryMd": "Agentic AI develops, refines and performs searches from a natural-language request.",
           "recommendation": "exploratory",
@@ -967,11 +967,11 @@
           "id": "chatgpt--writing-a-protocol--question-formulation--generative-llms",
           "stage": "Writing a protocol",
           "functionName": "Question formulation",
-          "descriptionMd": "Suggest candidate review questions from a topic or background.",
+          "descriptionMd": "Suggest candidate review questions from a topic or background information.",
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates question wording from prompts, rather than applying fixed rules.",
           "recommendation": "verification",
-          "whyRecommendationMd": "Suggestions may be irrelevant, incomplete, biased or duplicate existing reviews. Check their scope and originality before adoption.",
+          "whyRecommendationMd": "Suggestions may be irrelevant, incomplete or biased, or may duplicate existing reviews. Check their scope and originality before adoption.",
           "officialUrlMd": "[https://chatgpt.com/](https://chatgpt.com/)\n\nA general-purpose conversational AI service. The [official application](https://chatgpt.com/) is the navigation link. RAISE names ChatGPT as an example across the functions listed in this guide without fixing a model, subscription, prompt or interface. These are proposed uses of generated outputs, not claims that a dedicated validated systematic-review feature exists for each task.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; supporting discussion, p. 4."
         },
@@ -995,7 +995,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates query text from prompts, rather than executing a fixed query.",
           "recommendation": "exploratory",
-          "whyRecommendationMd": "RAISE considers generated strategies inadequate to replace established development. Quality depends on prompts and databases; use specialist input to develop and check any starting material.",
+          "whyRecommendationMd": "RAISE considers generated strategies inadequate to replace established methods for developing searches. Quality depends on prompts and databases; use specialist input to develop and check any starting material.",
           "officialUrlMd": "[https://chatgpt.com/](https://chatgpt.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 13; supporting discussion, pp. 4–5."
         },
@@ -1017,7 +1017,7 @@
           "functionName": "Study selection",
           "descriptionMd": "Apply inclusion and exclusion criteria to citations or reports and propose relevance judgements.",
           "aiCategoryMd": "**Generative LLMs**",
-          "whyCategoryMd": "The model generates decisions from prompted text interpretation, unlike the separately listed dedicated classifiers.",
+          "whyCategoryMd": "The model interprets text in response to prompts and generates decisions, unlike the separately listed dedicated classifiers.",
           "recommendation": "validation",
           "whyRecommendationMd": "Complex criteria, prompts and examples affect performance. Evaluate the actual screening procedure on relevant review material before relying on its decisions; an explanation is not validation.",
           "officialUrlMd": "[https://chatgpt.com/](https://chatgpt.com/).",
@@ -1031,7 +1031,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates interpretive assessments rather than checking only fixed reporting features.",
           "recommendation": "validation",
-          "whyRecommendationMd": "Incomplete or ambiguous reports can produce invented or overconfident judgements. Evaluate performance in the review’s context; careful prompting and human verification remain necessary and do not resolve genuinely missing evidence.",
+          "whyRecommendationMd": "Incomplete or ambiguous reports can lead to invented or overconfident judgements. Evaluate performance in the review’s context; careful prompting and human verification remain necessary and do not resolve genuinely missing evidence.",
           "officialUrlMd": "[https://chatgpt.com/](https://chatgpt.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 16; supporting discussion, p. 8."
         },
@@ -1053,7 +1053,7 @@
           "functionName": "Quantitative extraction",
           "descriptionMd": "Extract numerical data, retaining the corresponding outcome and study group.",
           "aiCategoryMd": "**Generative LLMs**",
-          "whyCategoryMd": "The model generates requested field values from document interpretation, rather than importing structured data.",
+          "whyCategoryMd": "The model generates requested field values by interpreting documents, rather than importing structured data.",
           "recommendation": "validation",
           "whyRecommendationMd": "Values may be wrong, missing or invented. Assess numerical accuracy and consequences of error in the intended workflow, including human checking, before using the data for analysis.",
           "officialUrlMd": "[https://chatgpt.com/](https://chatgpt.com/).",
@@ -1067,7 +1067,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates source code; the subsequent execution is a separate computational step.",
           "recommendation": "verification",
-          "whyRecommendationMd": "Someone with coding and analytical knowledge must check the intended operation and results. Code that runs may still perform an inappropriate analysis. Applying RAISE’s general restriction, asking this same chatbot to generate the formal cross-study findings instead would be a not-acceptable use. That is an application of the general principle, rather than an additional named red occurrence in Table 2.",
+          "whyRecommendationMd": "Someone with coding and analytical knowledge must check the intended operation and results. Code that runs may still perform an inappropriate analysis. Applying RAISE’s general restriction, asking this same chatbot to generate the formal cross-study findings instead would fall under **Not acceptable for use**. This applies the general principle; Table 2 does not list this chatbot separately for that use.",
           "officialUrlMd": "[https://chatgpt.com/](https://chatgpt.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, pp. 8–9."
         },
@@ -1103,7 +1103,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates accessible wording from an existing synthesis, rather than determining its findings.",
           "recommendation": "verification",
-          "whyRecommendationMd": "Check all output for changed meanings and unsupported claims, retaining uncertainty. This concerns communicating established conclusions, not accepting an automatically generated synthesis of separate studies.",
+          "whyRecommendationMd": "Check all output for changes in meaning and unsupported claims, and ensure uncertainty is retained. This concerns communicating established conclusions, not accepting an automatically generated synthesis of separate studies.",
           "officialUrlMd": "[https://chatgpt.com/](https://chatgpt.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10."
         }
@@ -1118,11 +1118,11 @@
           "id": "claude--writing-a-protocol--question-formulation--generative-llms",
           "stage": "Writing a protocol",
           "functionName": "Question formulation",
-          "descriptionMd": "Suggest candidate review questions from a topic or background.",
+          "descriptionMd": "Suggest candidate review questions from a topic or background information.",
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates question wording from prompts, rather than applying fixed rules.",
           "recommendation": "verification",
-          "whyRecommendationMd": "Suggestions may be irrelevant, incomplete, biased or duplicate existing reviews. Check their scope and originality before adoption.",
+          "whyRecommendationMd": "Suggestions may be irrelevant, incomplete or biased, or may duplicate existing reviews. Check their scope and originality before adoption.",
           "officialUrlMd": "[https://claude.ai/](https://claude.ai/)\n\nAnthropic's general-purpose AI assistant; the [official overview](https://claude.com/product/overview) links to the application. RAISE names Claude without a particular model or deployment. Its current product also offers broader task execution, but the classifications shown here concern the specified prompted language-model functions, not every capability currently sold under the Claude name.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; supporting discussion, p. 4."
         },
@@ -1146,7 +1146,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates query text from prompts, rather than executing a fixed query.",
           "recommendation": "exploratory",
-          "whyRecommendationMd": "RAISE considers generated strategies inadequate to replace established development. Quality depends on prompts and databases; use specialist input to develop and check any starting material.",
+          "whyRecommendationMd": "RAISE considers generated strategies inadequate to replace established methods for developing searches. Quality depends on prompts and databases; use specialist input to develop and check any starting material.",
           "officialUrlMd": "[https://claude.ai/](https://claude.ai/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 13; supporting discussion, pp. 4–5."
         },
@@ -1168,7 +1168,7 @@
           "functionName": "Study selection",
           "descriptionMd": "Apply inclusion and exclusion criteria to citations or reports and propose relevance judgements.",
           "aiCategoryMd": "**Generative LLMs**",
-          "whyCategoryMd": "The model generates decisions from prompted text interpretation, unlike the separately listed dedicated classifiers.",
+          "whyCategoryMd": "The model interprets text in response to prompts and generates decisions, unlike the separately listed dedicated classifiers.",
           "recommendation": "validation",
           "whyRecommendationMd": "Complex criteria, prompts and examples affect performance. Evaluate the actual screening procedure on relevant review material before relying on its decisions; an explanation is not validation.",
           "officialUrlMd": "[https://claude.ai/](https://claude.ai/).",
@@ -1182,7 +1182,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates interpretive assessments rather than checking only fixed reporting features.",
           "recommendation": "validation",
-          "whyRecommendationMd": "Incomplete or ambiguous reports can produce invented or overconfident judgements. Evaluate performance in the review’s context; careful prompting and human verification remain necessary and do not resolve genuinely missing evidence.",
+          "whyRecommendationMd": "Incomplete or ambiguous reports can lead to invented or overconfident judgements. Evaluate performance in the review’s context; careful prompting and human verification remain necessary and do not resolve genuinely missing evidence.",
           "officialUrlMd": "[https://claude.ai/](https://claude.ai/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 16; supporting discussion, p. 8."
         },
@@ -1204,7 +1204,7 @@
           "functionName": "Quantitative extraction",
           "descriptionMd": "Extract numerical data, retaining the corresponding outcome and study group.",
           "aiCategoryMd": "**Generative LLMs**",
-          "whyCategoryMd": "The model generates requested field values from document interpretation, rather than importing structured data.",
+          "whyCategoryMd": "The model generates requested field values by interpreting documents, rather than importing structured data.",
           "recommendation": "validation",
           "whyRecommendationMd": "Values may be wrong, missing or invented. Assess numerical accuracy and consequences of error in the intended workflow, including human checking, before using the data for analysis.",
           "officialUrlMd": "[https://claude.ai/](https://claude.ai/).",
@@ -1218,7 +1218,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates source code; the subsequent execution is a separate computational step.",
           "recommendation": "verification",
-          "whyRecommendationMd": "Someone with coding and analytical knowledge must check the intended operation and results. Code that runs may still perform an inappropriate analysis. Applying RAISE’s general restriction, asking this same chatbot to generate the formal cross-study findings instead would be a not-acceptable use. That is an application of the general principle, rather than an additional named red occurrence in Table 2.",
+          "whyRecommendationMd": "Someone with coding and analytical knowledge must check the intended operation and results. Code that runs may still perform an inappropriate analysis. Applying RAISE’s general restriction, asking this same chatbot to generate the formal cross-study findings instead would fall under **Not acceptable for use**. This applies the general principle; Table 2 does not list this chatbot separately for that use.",
           "officialUrlMd": "[https://claude.ai/](https://claude.ai/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, pp. 8–9."
         },
@@ -1254,7 +1254,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates accessible wording from an existing synthesis, rather than determining its findings.",
           "recommendation": "verification",
-          "whyRecommendationMd": "Check all output for changed meanings and unsupported claims, retaining uncertainty. This concerns communicating established conclusions, not accepting an automatically generated synthesis of separate studies.",
+          "whyRecommendationMd": "Check all output for changes in meaning and unsupported claims, and ensure uncertainty is retained. This concerns communicating established conclusions, not accepting an automatically generated synthesis of separate studies.",
           "officialUrlMd": "[https://claude.ai/](https://claude.ai/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10."
         }
@@ -1269,11 +1269,11 @@
           "id": "copilot--writing-a-protocol--question-formulation--generative-llms",
           "stage": "Writing a protocol",
           "functionName": "Question formulation",
-          "descriptionMd": "Suggest candidate review questions from a topic or background.",
+          "descriptionMd": "Suggest candidate review questions from a topic or background information.",
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates question wording from prompts, rather than applying fixed rules.",
           "recommendation": "verification",
-          "whyRecommendationMd": "Suggestions may be irrelevant, incomplete, biased or duplicate existing reviews. Check their scope and originality before adoption.",
+          "whyRecommendationMd": "Suggestions may be irrelevant, incomplete or biased, or may duplicate existing reviews. Check their scope and originality before adoption.",
           "officialUrlMd": "[Microsoft Copilot](https://copilot.com/)\n\nRAISE 1 v4 (p. 7) identifies Microsoft CoPilot as a tool using LLM technology; RAISE 3 Table 2 spells the example “CoPilot” without specifying an edition, model or deployment. The link points to Microsoft’s general-purpose assistant. This task-specific guidance does not establish validation for every Copilot product or edition.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; supporting discussion, p. 4. Product identification: RAISE 1 v4, p. 7."
         },
@@ -1297,7 +1297,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates query text from prompts, rather than executing a fixed query.",
           "recommendation": "exploratory",
-          "whyRecommendationMd": "RAISE considers generated strategies inadequate to replace established development. Quality depends on prompts and databases; use specialist input to develop and check any starting material.",
+          "whyRecommendationMd": "RAISE considers generated strategies inadequate to replace established methods for developing searches. Quality depends on prompts and databases; use specialist input to develop and check any starting material.",
           "officialUrlMd": "[https://copilot.com/](https://copilot.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 13; supporting discussion, pp. 4–5."
         },
@@ -1319,7 +1319,7 @@
           "functionName": "Study selection",
           "descriptionMd": "Apply inclusion and exclusion criteria to citations or reports and propose relevance judgements.",
           "aiCategoryMd": "**Generative LLMs**",
-          "whyCategoryMd": "The model generates decisions from prompted text interpretation, unlike the separately listed dedicated classifiers.",
+          "whyCategoryMd": "The model interprets text in response to prompts and generates decisions, unlike the separately listed dedicated classifiers.",
           "recommendation": "validation",
           "whyRecommendationMd": "Complex criteria, prompts and examples affect performance. Evaluate the actual screening procedure on relevant review material before relying on its decisions; an explanation is not validation.",
           "officialUrlMd": "[https://copilot.com/](https://copilot.com/).",
@@ -1333,7 +1333,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates interpretive assessments rather than checking only fixed reporting features.",
           "recommendation": "validation",
-          "whyRecommendationMd": "Incomplete or ambiguous reports can produce invented or overconfident judgements. Evaluate performance in the review’s context; careful prompting and human verification remain necessary and do not resolve genuinely missing evidence.",
+          "whyRecommendationMd": "Incomplete or ambiguous reports can lead to invented or overconfident judgements. Evaluate performance in the review’s context; careful prompting and human verification remain necessary and do not resolve genuinely missing evidence.",
           "officialUrlMd": "[https://copilot.com/](https://copilot.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 16; supporting discussion, p. 8."
         },
@@ -1355,7 +1355,7 @@
           "functionName": "Quantitative extraction",
           "descriptionMd": "Extract numerical data, retaining the corresponding outcome and study group.",
           "aiCategoryMd": "**Generative LLMs**",
-          "whyCategoryMd": "The model generates requested field values from document interpretation, rather than importing structured data.",
+          "whyCategoryMd": "The model generates requested field values by interpreting documents, rather than importing structured data.",
           "recommendation": "validation",
           "whyRecommendationMd": "Values may be wrong, missing or invented. Assess numerical accuracy and consequences of error in the intended workflow, including human checking, before using the data for analysis.",
           "officialUrlMd": "[https://copilot.com/](https://copilot.com/).",
@@ -1369,7 +1369,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates source code; the subsequent execution is a separate computational step.",
           "recommendation": "verification",
-          "whyRecommendationMd": "Someone with coding and analytical knowledge must check the intended operation and results. Code that runs may still perform an inappropriate analysis. Applying RAISE’s general restriction, asking this same chatbot to generate the formal cross-study findings instead would be a not-acceptable use. That is an application of the general principle, rather than an additional named red occurrence in Table 2.",
+          "whyRecommendationMd": "Someone with coding and analytical knowledge must check the intended operation and results. Code that runs may still perform an inappropriate analysis. Applying RAISE’s general restriction, asking this same chatbot to generate the formal cross-study findings instead would fall under **Not acceptable for use**. This applies the general principle; Table 2 does not list this chatbot separately for that use.",
           "officialUrlMd": "[https://copilot.com/](https://copilot.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, pp. 8–9."
         },
@@ -1405,7 +1405,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates accessible wording from an existing synthesis, rather than determining its findings.",
           "recommendation": "verification",
-          "whyRecommendationMd": "Check all output for changed meanings and unsupported claims, retaining uncertainty. This concerns communicating established conclusions, not accepting an automatically generated synthesis of separate studies.",
+          "whyRecommendationMd": "Check all output for changes in meaning and unsupported claims, and ensure uncertainty is retained. This concerns communicating established conclusions, not accepting an automatically generated synthesis of separate studies.",
           "officialUrlMd": "[https://copilot.com/](https://copilot.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10."
         }
@@ -1423,9 +1423,9 @@
           "functionName": "Translation to support eligibility screening",
           "descriptionMd": "Translate titles, abstracts or relevant report passages so a human reviewer can assess eligibility. DeepL supplies a language-access aid; it does not make the inclusion decision.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the LLM navigation group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
+          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the LLM column group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
           "recommendation": "verification",
-          "whyRecommendationMd": "RAISE explicitly requires human verification for machine translation of non-English studies and warns that complex tasks may not be sufficiently accurate. Applying that one recommendation to this review stage is a source-aligned editorial association, not a separate RAISE stage-specific rating or a performance validation of DeepL. Ambiguous translated eligibility information needs clarification; do not exclude a potentially relevant study solely because machine wording is unclear.",
+          "whyRecommendationMd": "RAISE explicitly requires human verification for machine translation of non-English studies and warns that complex tasks may not be sufficiently accurate. Applying that recommendation to this stage is this map’s interpretation of RAISE, not a separate stage-specific RAISE rating or validation of DeepL’s performance. Ambiguous translated eligibility information needs clarification; do not exclude a potentially relevant study solely because machine-translated wording is unclear.",
           "officialUrlMd": "[DeepL Translator](https://www.deepl.com/en/translator). The official service provides text and document translation. No claim of universal accuracy across languages, document types or product versions is implied.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; translation discussion, p. 10. The five review-stage placements derive from this single translation row. The cited translation evidence does not establish each current DeepL mode’s performance."
         },
@@ -1435,9 +1435,9 @@
           "functionName": "Translation to support human appraisal",
           "descriptionMd": "Translate methods or reporting passages needed by a human applying an appropriate appraisal or risk-of-bias method. The translated text is an input to that judgement, not an automated quality assessment.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the LLM navigation group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
+          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the LLM column group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
           "recommendation": "verification",
-          "whyRecommendationMd": "RAISE explicitly requires human verification for machine translation of non-English studies and warns that complex tasks may not be sufficiently accurate. Applying that one recommendation to this review stage is a source-aligned editorial association, not a separate RAISE stage-specific rating or a performance validation of DeepL. Check consequential methodological wording against reliable source-language interpretation before treating a safeguard as absent or a study as biased.",
+          "whyRecommendationMd": "RAISE explicitly requires human verification for machine translation of non-English studies and warns that complex tasks may not be sufficiently accurate. Applying that recommendation to this stage is this map’s interpretation of RAISE, not a separate stage-specific RAISE rating or validation of DeepL’s performance. Check methodological wording that could affect the assessment against a reliable interpretation of the original text before treating a safeguard as absent or a study as biased.",
           "officialUrlMd": "[DeepL Translator](https://www.deepl.com/en/translator). The official service provides text and document translation. No claim of universal accuracy across languages, document types or product versions is implied.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; translation discussion, p. 10. The five review-stage placements derive from this single translation row. The cited translation evidence does not establish each current DeepL mode’s performance."
         },
@@ -1447,9 +1447,9 @@
           "functionName": "Translation to support human data extraction",
           "descriptionMd": "Translate report passages from which humans extract study characteristics, outcomes or results. Translation does not itself populate and validate a structured extraction form.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the LLM navigation group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
+          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the LLM column group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
           "recommendation": "verification",
-          "whyRecommendationMd": "RAISE explicitly requires human verification for machine translation of non-English studies and warns that complex tasks may not be sufficiently accurate. Applying that one recommendation to this review stage is a source-aligned editorial association, not a separate RAISE stage-specific rating or a performance validation of DeepL. Check outcome names, groups, time points, denominators, units and statistical quantities against reliable source-language meaning. A readable translation does not verify the extracted data.",
+          "whyRecommendationMd": "RAISE explicitly requires human verification for machine translation of non-English studies and warns that complex tasks may not be sufficiently accurate. Applying that recommendation to this stage is this map’s interpretation of RAISE, not a separate stage-specific RAISE rating or validation of DeepL’s performance. Check outcome names, groups, time points, denominators, units and statistical quantities against a reliable interpretation of the original text. A readable translation does not verify the extracted data.",
           "officialUrlMd": "[DeepL Translator](https://www.deepl.com/en/translator). The official service provides text and document translation. No claim of universal accuracy across languages, document types or product versions is implied.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; translation discussion, p. 10. The five review-stage placements derive from this single translation row. The cited translation evidence does not establish each current DeepL mode’s performance."
         },
@@ -1457,11 +1457,11 @@
           "id": "deepl--data-synthesis--translation-of-inputs-to-human-synthesis--generative-and-other-machine-learning-approaches",
           "stage": "Data synthesis",
           "functionName": "Translation of inputs to human synthesis",
-          "descriptionMd": "Make source findings and contextual passages accessible to the human synthesis team. Verified translated information can inform the chosen quantitative or qualitative method; the translator does not pool effects, generate established themes or decide the conclusion across studies.",
+          "descriptionMd": "Make source findings and contextual passages accessible to the human synthesis team. Verified translated information can inform the chosen quantitative or qualitative method; the translator does not pool effects, establish themes or decide the conclusion across studies.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the LLM navigation group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
+          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the LLM column group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
           "recommendation": "verification",
-          "whyRecommendationMd": "RAISE explicitly requires human verification for machine translation of non-English studies and warns that complex tasks may not be sufficiently accurate. Applying that one recommendation to this review stage is a source-aligned editorial association, not a separate RAISE stage-specific rating or a performance validation of DeepL. Check numerical meaning and qualitative or cultural context. Translation assists access to inputs; it does not pool effects, establish themes or produce the cross-study conclusion.",
+          "whyRecommendationMd": "RAISE explicitly requires human verification for machine translation of non-English studies and warns that complex tasks may not be sufficiently accurate. Applying that recommendation to this stage is this map’s interpretation of RAISE, not a separate stage-specific RAISE rating or validation of DeepL’s performance. Check numerical meaning and qualitative or cultural context. Translation assists access to inputs; it does not pool effects, establish themes or produce the cross-study conclusion.",
           "officialUrlMd": "[DeepL Translator](https://www.deepl.com/en/translator). The official service provides text and document translation. No claim of universal accuracy across languages, document types or product versions is implied.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; translation discussion, p. 10. The five review-stage placements derive from this single translation row. The cited translation evidence does not establish each current DeepL mode’s performance."
         },
@@ -1471,9 +1471,9 @@
           "functionName": "Translation of inputs to human certainty judgement",
           "descriptionMd": "Provide checked translations of study information or explanations used by humans applying GRADE or CERQual. This may reuse passages translated earlier in the review rather than introduce a separate translation operation; DeepL does not rate certainty.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the LLM navigation group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
+          "whyCategoryMd": "RAISE gives machine translation this mixed-technology label. Placement in the LLM column group is a display exception, not a claim about every DeepL model, language or deployment. The mapped function is translation of study text, not the separate DeepL Write product or automated evidence appraisal. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but that does not validate accuracy for a particular review task.",
           "recommendation": "verification",
-          "whyRecommendationMd": "RAISE explicitly requires human verification for machine translation of non-English studies and warns that complex tasks may not be sufficiently accurate. Applying that one recommendation to this review stage is a source-aligned editorial association, not a separate RAISE stage-specific rating or a performance validation of DeepL. This is an indirect supporting use, potentially reusing passages translated earlier. Humans retain the certainty judgement; a checked translation is not validation of a GRADE or CERQual assessment.",
+          "whyRecommendationMd": "RAISE explicitly requires human verification for machine translation of non-English studies and warns that complex tasks may not be sufficiently accurate. Applying that recommendation to this stage is this map’s interpretation of RAISE, not a separate stage-specific RAISE rating or validation of DeepL’s performance. This is an indirect supporting use, potentially reusing passages translated earlier. Humans remain responsible for judging certainty; a checked translation is not validation of a GRADE or CERQual assessment.",
           "officialUrlMd": "[DeepL Translator](https://www.deepl.com/en/translator). The official service provides text and document translation. No claim of universal accuracy across languages, document types or product versions is implied.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; translation discussion, p. 10. The five review-stage placements derive from this single translation row. The cited translation evidence does not establish each current DeepL mode’s performance."
         }
@@ -1488,11 +1488,11 @@
           "id": "deepseek--writing-a-protocol--question-formulation--generative-llms",
           "stage": "Writing a protocol",
           "functionName": "Question formulation",
-          "descriptionMd": "Suggest candidate review questions from a topic or background.",
+          "descriptionMd": "Suggest candidate review questions from a topic or background information.",
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates question wording from prompts, rather than applying fixed rules.",
           "recommendation": "verification",
-          "whyRecommendationMd": "Suggestions may be irrelevant, incomplete, biased or duplicate existing reviews. Check their scope and originality before adoption.",
+          "whyRecommendationMd": "Suggestions may be irrelevant, incomplete or biased, or may duplicate existing reviews. Check their scope and originality before adoption.",
           "officialUrlMd": "[https://www.deepseek.com/](https://www.deepseek.com/)\n\nDeepSeek is named as a general-purpose LLM example. The official provider page is the navigation link; RAISE does not specify a model or interface. **Its only named Search function in this mapping is query translation:** unlike the other four general assistants, DeepSeek is absent from the search-strategy-development example list on p.13. That omission is not a claim that it cannot generate strategies.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; supporting discussion, p. 4."
         },
@@ -1526,7 +1526,7 @@
           "functionName": "Study selection",
           "descriptionMd": "Apply inclusion and exclusion criteria to citations or reports and propose relevance judgements.",
           "aiCategoryMd": "**Generative LLMs**",
-          "whyCategoryMd": "The model generates decisions from prompted text interpretation, unlike the separately listed dedicated classifiers.",
+          "whyCategoryMd": "The model interprets text in response to prompts and generates decisions, unlike the separately listed dedicated classifiers.",
           "recommendation": "validation",
           "whyRecommendationMd": "Complex criteria, prompts and examples affect performance. Evaluate the actual screening procedure on relevant review material before relying on its decisions; an explanation is not validation.",
           "officialUrlMd": "[https://www.deepseek.com/](https://www.deepseek.com/).",
@@ -1540,7 +1540,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates interpretive assessments rather than checking only fixed reporting features.",
           "recommendation": "validation",
-          "whyRecommendationMd": "Incomplete or ambiguous reports can produce invented or overconfident judgements. Evaluate performance in the review’s context; careful prompting and human verification remain necessary and do not resolve genuinely missing evidence.",
+          "whyRecommendationMd": "Incomplete or ambiguous reports can lead to invented or overconfident judgements. Evaluate performance in the review’s context; careful prompting and human verification remain necessary and do not resolve genuinely missing evidence.",
           "officialUrlMd": "[https://www.deepseek.com/](https://www.deepseek.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 16; supporting discussion, p. 8."
         },
@@ -1562,7 +1562,7 @@
           "functionName": "Quantitative extraction",
           "descriptionMd": "Extract numerical data, retaining the corresponding outcome and study group.",
           "aiCategoryMd": "**Generative LLMs**",
-          "whyCategoryMd": "The model generates requested field values from document interpretation, rather than importing structured data.",
+          "whyCategoryMd": "The model generates requested field values by interpreting documents, rather than importing structured data.",
           "recommendation": "validation",
           "whyRecommendationMd": "Values may be wrong, missing or invented. Assess numerical accuracy and consequences of error in the intended workflow, including human checking, before using the data for analysis.",
           "officialUrlMd": "[https://www.deepseek.com/](https://www.deepseek.com/).",
@@ -1576,7 +1576,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates source code; the subsequent execution is a separate computational step.",
           "recommendation": "verification",
-          "whyRecommendationMd": "Someone with coding and analytical knowledge must check the intended operation and results. Code that runs may still perform an inappropriate analysis. Applying RAISE’s general restriction, asking this same chatbot to generate the formal cross-study findings instead would be a not-acceptable use. That is an application of the general principle, rather than an additional named red occurrence in Table 2.",
+          "whyRecommendationMd": "Someone with coding and analytical knowledge must check the intended operation and results. Code that runs may still perform an inappropriate analysis. Applying RAISE’s general restriction, asking this same chatbot to generate the formal cross-study findings instead would fall under **Not acceptable for use**. This applies the general principle; Table 2 does not list this chatbot separately for that use.",
           "officialUrlMd": "[https://www.deepseek.com/](https://www.deepseek.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, pp. 8–9."
         },
@@ -1612,7 +1612,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates accessible wording from an existing synthesis, rather than determining its findings.",
           "recommendation": "verification",
-          "whyRecommendationMd": "Check all output for changed meanings and unsupported claims, retaining uncertainty. This concerns communicating established conclusions, not accepting an automatically generated synthesis of separate studies.",
+          "whyRecommendationMd": "Check all output for changes in meaning and unsupported claims, and ensure uncertainty is retained. This concerns communicating established conclusions, not accepting an automatically generated synthesis of separate studies.",
           "officialUrlMd": "[https://www.deepseek.com/](https://www.deepseek.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10."
         }
@@ -1627,7 +1627,7 @@
           "id": "elicit--the-search--exploring-the-literature--agentic-ai",
           "stage": "The Search",
           "functionName": "Scoping the literature",
-          "descriptionMd": "Use Elicit for early topic familiarisation, terminology and candidate papers.",
+          "descriptionMd": "Use Elicit to become familiar with a topic and identify terminology and candidate papers.",
           "aiCategoryMd": "**Agentic AI**",
           "whyCategoryMd": "Agentic AI develops, refines and performs searches from a natural-language request.",
           "recommendation": "exploratory",
@@ -1655,7 +1655,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model produces the cross-study account, even if agents also retrieve sources.",
           "recommendation": "unacceptable",
-          "whyRecommendationMd": "Fluent text does not establish compatible studies, correct transformations, appropriate weighting or treatment of uncertainty and heterogeneity. This restriction differs from checked code assistance.",
+          "whyRecommendationMd": "Fluent text does not establish that studies are compatible, transformations are correct, or weighting and treatment of uncertainty and heterogeneity are appropriate. This restriction differs from checked code assistance.",
           "officialUrlMd": "[https://elicit.com/](https://elicit.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, pp. 8–9."
         },
@@ -1682,11 +1682,11 @@
           "id": "gemini--writing-a-protocol--question-formulation--generative-llms",
           "stage": "Writing a protocol",
           "functionName": "Question formulation",
-          "descriptionMd": "Suggest candidate review questions from a topic or background.",
+          "descriptionMd": "Suggest candidate review questions from a topic or background information.",
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates question wording from prompts, rather than applying fixed rules.",
           "recommendation": "verification",
-          "whyRecommendationMd": "Suggestions may be irrelevant, incomplete, biased or duplicate existing reviews. Check their scope and originality before adoption.",
+          "whyRecommendationMd": "Suggestions may be irrelevant, incomplete or biased, or may duplicate existing reviews. Check their scope and originality before adoption.",
           "officialUrlMd": "[https://gemini.google.com/](https://gemini.google.com/)\n\nGoogle's general-purpose AI assistant, reached through the official application. RAISE names Gemini without fixing a model, subscription or retrieval configuration. The functions listed in this guide describe prompted LLM uses; they should not be treated as independent benchmarks of today's Gemini service. **Gemini and Google AI Mode are named separately** in RAISE Table 2.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; supporting discussion, p. 4."
         },
@@ -1710,7 +1710,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates query text from prompts, rather than executing a fixed query.",
           "recommendation": "exploratory",
-          "whyRecommendationMd": "RAISE considers generated strategies inadequate to replace established development. Quality depends on prompts and databases; use specialist input to develop and check any starting material.",
+          "whyRecommendationMd": "RAISE considers generated strategies inadequate to replace established methods for developing searches. Quality depends on prompts and databases; use specialist input to develop and check any starting material.",
           "officialUrlMd": "[https://gemini.google.com/](https://gemini.google.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 13; supporting discussion, pp. 4–5."
         },
@@ -1732,7 +1732,7 @@
           "functionName": "Study selection",
           "descriptionMd": "Apply inclusion and exclusion criteria to citations or reports and propose relevance judgements.",
           "aiCategoryMd": "**Generative LLMs**",
-          "whyCategoryMd": "The model generates decisions from prompted text interpretation, unlike the separately listed dedicated classifiers.",
+          "whyCategoryMd": "The model interprets text in response to prompts and generates decisions, unlike the separately listed dedicated classifiers.",
           "recommendation": "validation",
           "whyRecommendationMd": "Complex criteria, prompts and examples affect performance. Evaluate the actual screening procedure on relevant review material before relying on its decisions; an explanation is not validation.",
           "officialUrlMd": "[https://gemini.google.com/](https://gemini.google.com/).",
@@ -1746,7 +1746,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates interpretive assessments rather than checking only fixed reporting features.",
           "recommendation": "validation",
-          "whyRecommendationMd": "Incomplete or ambiguous reports can produce invented or overconfident judgements. Evaluate performance in the review’s context; careful prompting and human verification remain necessary and do not resolve genuinely missing evidence.",
+          "whyRecommendationMd": "Incomplete or ambiguous reports can lead to invented or overconfident judgements. Evaluate performance in the review’s context; careful prompting and human verification remain necessary and do not resolve genuinely missing evidence.",
           "officialUrlMd": "[https://gemini.google.com/](https://gemini.google.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 16; supporting discussion, p. 8."
         },
@@ -1768,7 +1768,7 @@
           "functionName": "Quantitative extraction",
           "descriptionMd": "Extract numerical data, retaining the corresponding outcome and study group.",
           "aiCategoryMd": "**Generative LLMs**",
-          "whyCategoryMd": "The model generates requested field values from document interpretation, rather than importing structured data.",
+          "whyCategoryMd": "The model generates requested field values by interpreting documents, rather than importing structured data.",
           "recommendation": "validation",
           "whyRecommendationMd": "Values may be wrong, missing or invented. Assess numerical accuracy and consequences of error in the intended workflow, including human checking, before using the data for analysis.",
           "officialUrlMd": "[https://gemini.google.com/](https://gemini.google.com/).",
@@ -1782,7 +1782,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates source code; the subsequent execution is a separate computational step.",
           "recommendation": "verification",
-          "whyRecommendationMd": "Someone with coding and analytical knowledge must check the intended operation and results. Code that runs may still perform an inappropriate analysis. Applying RAISE’s general restriction, asking this same chatbot to generate the formal cross-study findings instead would be a not-acceptable use. That is an application of the general principle, rather than an additional named red occurrence in Table 2.",
+          "whyRecommendationMd": "Someone with coding and analytical knowledge must check the intended operation and results. Code that runs may still perform an inappropriate analysis. Applying RAISE’s general restriction, asking this same chatbot to generate the formal cross-study findings instead would fall under **Not acceptable for use**. This applies the general principle; Table 2 does not list this chatbot separately for that use.",
           "officialUrlMd": "[https://gemini.google.com/](https://gemini.google.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, pp. 8–9."
         },
@@ -1818,7 +1818,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model generates accessible wording from an existing synthesis, rather than determining its findings.",
           "recommendation": "verification",
-          "whyRecommendationMd": "Check all output for changed meanings and unsupported claims, retaining uncertainty. This concerns communicating established conclusions, not accepting an automatically generated synthesis of separate studies.",
+          "whyRecommendationMd": "Check all output for changes in meaning and unsupported claims, and ensure uncertainty is retained. This concerns communicating established conclusions, not accepting an automatically generated synthesis of separate studies.",
           "officialUrlMd": "[https://gemini.google.com/](https://gemini.google.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10."
         }
@@ -1837,7 +1837,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model produces the cross-study account, even if agents also retrieve sources.",
           "recommendation": "unacceptable",
-          "whyRecommendationMd": "Fluent text does not establish compatible studies, correct transformations, appropriate weighting or treatment of uncertainty and heterogeneity. This restriction differs from checked code assistance.",
+          "whyRecommendationMd": "Fluent text does not establish that studies are compatible, transformations are correct, or weighting and treatment of uncertainty and heterogeneity are appropriate. This restriction differs from checked code assistance.",
           "officialUrlMd": "[https://search.google/ways-to-search/ai-mode/](https://search.google/ways-to-search/ai-mode/)\n\n[Google describes](https://search.google/ways-to-search/ai-mode/) AI-generated answers with web links and follow-up questions. In these two Table 2 rows, the relevant output is the generated cross-study conclusion, so RAISE's literal class is **Generative LLMs**, even if the current search service also orchestrates retrieval. This entry is not a blanket judgement about ordinary web searching.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, pp. 8–9."
         },
@@ -1867,9 +1867,9 @@
           "functionName": "Translation to support eligibility screening",
           "descriptionMd": "Translate titles, abstracts or relevant report passages so a human reviewer can assess eligibility. Google Translate supplies a language-access aid; it does not make the inclusion decision.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement under the LLM navigation group is an explicit display exception, not a claim that every Translate language, mode or historical implementation is a generative LLM. Google's later feature descriptions do not retrospectively fix the model used in older evaluations.",
+          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement in the LLM column group is an explicit display exception, not a claim that every Google Translate language, mode or historical implementation uses a generative LLM. Google's later feature descriptions do not establish which model was used in older evaluations.",
           "recommendation": "verification",
-          "whyRecommendationMd": "Table 2 explicitly requires human verification for translation of non-English studies. Applying that one translation recommendation to this stage is a derived association, not a separately validated screening recommendation. Cochrane guidance supports translation-assisted eligibility assessment. Ambiguous machine wording should prompt clarification rather than a confident exclusion; verification concerns source-language meaning, not just fluent English.",
+          "whyRecommendationMd": "Table 2 explicitly requires human verification for translation of non-English studies. Applying that one translation recommendation to this stage is a derived association, not a separately validated screening recommendation. Cochrane guidance supports translation-assisted eligibility assessment. Ambiguous machine-translated wording should prompt clarification rather than a confident exclusion; verification concerns source-language meaning, not just fluent English.",
           "officialUrlMd": "[Google Translate](https://translate.google.com/). RAISE's cited empirical sources include [Balk et al. (2013)](https://link.springer.com/article/10.1186/2046-4053-2-97) and [Jackson et al. (2019)](https://doi.org/10.7326/M19-0891); historical evaluations do not establish current performance across all modes and languages.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10. Stage placement is an editorial application of the single machine-translation row, not an additional stage-specific RAISE rating. Additional contextual source: [Cochrane Handbook §4.4.5](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-04#section-4-4-5) and [EPOC guidance](https://journals.sagepub.com/doi/10.1177/16094069211061950)."
         },
@@ -1879,9 +1879,9 @@
           "functionName": "Translation to support human appraisal",
           "descriptionMd": "Translate methods or reporting passages needed by a human applying an appropriate appraisal or risk-of-bias method. The translated text is an input to that judgement, not an automated quality assessment.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement under the LLM navigation group is an explicit display exception, not a claim that every Translate language, mode or historical implementation is a generative LLM. Google's later feature descriptions do not retrospectively fix the model used in older evaluations.",
+          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement in the LLM column group is an explicit display exception, not a claim that every Google Translate language, mode or historical implementation uses a generative LLM. Google's later feature descriptions do not establish which model was used in older evaluations.",
           "recommendation": "verification",
-          "whyRecommendationMd": "Human verification required is RAISE's explicit translation recommendation; its application to this appraisal context is derived. An apparently absent or unclear safeguard may reflect a translation error. Check consequential methodological meaning against reliable source-language interpretation before treating it as a study limitation. No direct validation of Google Translate's ability to judge bias is claimed.",
+          "whyRecommendationMd": "Human verification required is RAISE's explicit translation recommendation; its application to this appraisal context is derived. An apparently absent or unclear safeguard may reflect a translation error. Check methodological wording that could affect the assessment against a reliable interpretation of the original text before treating an apparent shortcoming as a study limitation. No direct validation of Google Translate's ability to judge bias is claimed.",
           "officialUrlMd": "[Google Translate](https://translate.google.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10. Stage placement is an editorial application of the single machine-translation row, not an additional stage-specific RAISE rating. Additional contextual source: [Cochrane Handbook §5.3.2](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-05#section-5-3-2) distinguishes collecting methodological information from assessing it."
         },
@@ -1891,9 +1891,9 @@
           "functionName": "Translation to support human data extraction",
           "descriptionMd": "Translate report passages from which humans extract study characteristics, outcomes or results. Translation does not itself populate and validate a structured extraction form.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement under the LLM navigation group is an explicit display exception, not a claim that every Translate language, mode or historical implementation is a generative LLM. Google's later feature descriptions do not retrospectively fix the model used in older evaluations.",
+          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement in the LLM column group is an explicit display exception, not a claim that every Google Translate language, mode or historical implementation uses a generative LLM. Google's later feature descriptions do not establish which model was used in older evaluations.",
           "recommendation": "verification",
-          "whyRecommendationMd": "RAISE explicitly requires verification of translation outputs; using that recommendation in this extraction context is a derived stage association. Its cited extraction research reports material accuracy limitations, with outcomes/results more problematic than simpler design/intervention information. Check outcome identities, groups, time points, denominators, units and statistical quantities against reliable source-language meaning. Older language-specific evaluations do not guarantee current extraction or final-review accuracy.",
+          "whyRecommendationMd": "RAISE explicitly requires verification of translation outputs; using that recommendation in this extraction context is a derived stage association. Its cited extraction research reports material accuracy limitations, with outcomes and results more problematic than simpler information on study design or interventions. Check outcome identities, groups, time points, denominators, units and statistical quantities against a reliable interpretation of the original text. Older language-specific evaluations do not guarantee current extraction or final-review accuracy.",
           "officialUrlMd": "[Google Translate](https://translate.google.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10. Stage placement is an editorial application of the single machine-translation row, not an additional stage-specific RAISE rating. Additional contextual source: [Balk et al. (2013)](https://link.springer.com/article/10.1186/2046-4053-2-97). The stage association is derived from the translation function."
         },
@@ -1901,11 +1901,11 @@
           "id": "google-translate--data-synthesis--translation-of-inputs-to-human-synthesis--generative-and-other-machine-learning-approaches",
           "stage": "Data synthesis",
           "functionName": "Translation of inputs to human synthesis",
-          "descriptionMd": "Make source findings and contextual passages accessible to the human synthesis team. Verified translated information can inform the chosen quantitative or qualitative method; the translator does not pool effects, generate established themes or decide the conclusion across studies.",
+          "descriptionMd": "Make source findings and contextual passages accessible to the human synthesis team. Verified translated information can inform the chosen quantitative or qualitative method; the translator does not pool effects, establish themes or decide the conclusion across studies.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement under the LLM navigation group is an explicit display exception, not a claim that every Translate language, mode or historical implementation is a generative LLM. Google's later feature descriptions do not retrospectively fix the model used in older evaluations.",
+          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement in the LLM column group is an explicit display exception, not a claim that every Google Translate language, mode or historical implementation uses a generative LLM. Google's later feature descriptions do not establish which model was used in older evaluations.",
           "recommendation": "verification",
-          "whyRecommendationMd": "RAISE's verification requirement applies to the translation, with this downstream stage association derived. Numerical meaning and qualitative/cultural context require particular care. A readable translation does not establish compatible studies, correct analytical inputs or valid interpretation. This supporting use must not be read as permission for machine-generated cross-study synthesis, which RAISE treats separately.",
+          "whyRecommendationMd": "RAISE's verification requirement applies to translation; its placement in this later review stage is this map’s interpretation. Numerical meaning and qualitative or cultural context require particular care. A readable translation does not establish that studies are compatible, analytical inputs are correct or interpretation is valid. This supporting use must not be read as permission for machine-generated cross-study synthesis, which RAISE treats separately.",
           "officialUrlMd": "[Google Translate](https://translate.google.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10. Stage placement is an editorial application of the single machine-translation row, not an additional stage-specific RAISE rating. Additional contextual source: [Cochrane Handbook §21.11](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-21#section-21-11)."
         },
@@ -1915,9 +1915,9 @@
           "functionName": "Translation of inputs to human certainty judgement",
           "descriptionMd": "Provide checked translations of study information or explanations used by humans applying GRADE or CERQual. This may reuse passages translated earlier in the review rather than introduce a separate translation operation; Google Translate does not rate certainty.",
           "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement under the LLM navigation group is an explicit display exception, not a claim that every Translate language, mode or historical implementation is a generative LLM. Google's later feature descriptions do not retrospectively fix the model used in older evaluations.",
+          "whyCategoryMd": "RAISE's exact mixed-technology label is retained. Placement in the LLM column group is an explicit display exception, not a claim that every Google Translate language, mode or historical implementation uses a generative LLM. Google's later feature descriptions do not establish which model was used in older evaluations.",
           "recommendation": "verification",
-          "whyRecommendationMd": "The explicit translation recommendation remains Human verification required, but this is the most indirect of the five derived stage associations. No direct performance evidence for certainty judgement is asserted. Errors in translated outcomes, methods or context can propagate into the assessment, so verify the source meaning and retain human judgement. Translation access is not itself evidence that a GRADE/CERQual conclusion is valid.",
+          "whyRecommendationMd": "The explicit translation recommendation remains Human verification required, but this is the most indirect of the five derived stage associations. No direct performance evidence for certainty judgement is asserted. Errors in translated outcomes, methods or context can propagate into the assessment, so verify the source meaning and retain human judgement. Access through translation is not itself evidence that a GRADE or CERQual conclusion is valid.",
           "officialUrlMd": "[Google Translate](https://translate.google.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10. Stage placement is an editorial application of the single machine-translation row, not an additional stage-specific RAISE rating. Additional contextual source: [Cochrane Handbook §21.12](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-21#section-21-12)."
         }
@@ -1955,7 +1955,7 @@
           "aiCategoryMd": "**Agentic AI**",
           "whyCategoryMd": "Agentic AI coordinates a sequence of search-development steps rather than generating one static response.",
           "recommendation": "exploratory",
-          "whyRecommendationMd": "Retain specialist development and checking rather than replacing established search methods. The row gives little specific evaluation detail; the narrative warns against substituting generated strategies. Official documentation describes a PubMed-focused feature.",
+          "whyRecommendationMd": "Retain specialist input to develop and check searches rather than replacing established search methods. The row gives little specific evaluation detail; the narrative warns against substituting generated strategies. Official documentation describes a PubMed-focused feature.",
           "officialUrlMd": "[https://about.nested-knowledge.com/docs/smart-search/](https://about.nested-knowledge.com/docs/smart-search/)\n\nThis is the named Smart Search feature, not all of Nested Knowledge. Its [official documentation](https://about.nested-knowledge.com/docs/smart-search/) describes refining a question through dialogue, generating candidate PubMed queries, and allowing users to inspect and finalise them. Vendor-reported validation is separate evidence and does not replace the category assigned in RAISE's dated table.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 13; supporting discussion, pp. 4–5."
         }
@@ -1993,7 +1993,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model produces the cross-study account, even if agents also retrieve sources.",
           "recommendation": "unacceptable",
-          "whyRecommendationMd": "Fluent text does not establish compatible studies, correct transformations, appropriate weighting or treatment of uncertainty and heterogeneity. This restriction differs from checked code assistance.",
+          "whyRecommendationMd": "Fluent text does not establish that studies are compatible, transformations are correct, or weighting and treatment of uncertainty and heterogeneity are appropriate. This restriction differs from checked code assistance.",
           "officialUrlMd": "[https://www.perplexity.ai/](https://www.perplexity.ai/)\n\nPerplexity's [official search documentation](https://www.perplexity.ai/help-center/en/articles/10352903-what-is-pro-search) describes generated answers drawn from multiple sources, with links for checking. The uses described here concern asking those generated answers to stand as a cross-study synthesis. Table 2 assigns these rows to **Generative LLMs**; retrieval orchestration elsewhere in the product does not alter that literal assignment.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, pp. 8–9."
         },
@@ -2020,12 +2020,12 @@
           "id": "undermind--the-search--exploring-the-literature--agentic-ai",
           "stage": "The Search",
           "functionName": "Scoping the literature",
-          "descriptionMd": "Use Undermind for early topic familiarisation, terminology and candidate papers.",
+          "descriptionMd": "Use Undermind to become familiar with a topic and identify terminology and candidate papers.",
           "aiCategoryMd": "**Agentic AI**",
           "whyCategoryMd": "Agentic AI develops, refines and performs searches from a natural-language request.",
           "recommendation": "exploratory",
           "whyRecommendationMd": "RAISE 3 v4 limits agentic scoping to exploratory and supplementary use. Search choices and available data sources constrain the results, and users need to guide the agent. It may help early familiarisation but should not be relied on for formal evidence retrieval.",
-          "officialUrlMd": "[https://www.undermind.ai/](https://www.undermind.ai/)\n\nRAISE names Undermind for agentic exploration and supplementary retrieval. Its [official site](https://www.undermind.ai/) describes literature-search assistance and iterative research interaction. The live page's performance claims concern its own current benchmarks; they are not substituted for RAISE's September 2026 v4 evidence-synthesis recommendations or evidence that a particular review has retrieved every eligible study.",
+          "officialUrlMd": "[https://www.undermind.ai/](https://www.undermind.ai/)\n\nRAISE names Undermind for agentic exploration and supplementary retrieval. Its [official site](https://www.undermind.ai/) describes literature-search assistance and iterative research interaction. The live page's performance claims concern its own current benchmarks; they do not replace RAISE's September 2026 v4 evidence-synthesis recommendations or establish that a particular review has retrieved every eligible study.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 13; supporting discussion, p. 5."
         },
         {
@@ -2055,7 +2055,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "“Generative LLMs” is RAISE’s assignment to the AI-feature row; the current model architecture is not independently confirmed here.",
           "recommendation": "verification",
-          "whyRecommendationMd": "Clearly defined figures may permit useful assistance, but humans must inspect axes, points and values. More complex images remain a research question.",
+          "whyRecommendationMd": "Clearly defined figures may permit useful assistance, but humans must inspect axes, points and values. Extraction from more complex images remains a research question.",
           "officialUrlMd": "[https://automeris.io/](https://automeris.io/)\n\nRAISE's name refers specifically to the AI-assisted component of **WebPlotDigitizer**, not all digitisation algorithms. The [official documentation](https://automeris.io/docs/) describes computer vision combined with manual inputs; the [official repository](https://github.com/automeris-io/WebPlotDigitizer/blob/master/README.md) distinguishes its closed AI Assist component. These public descriptions do not establish that every current extraction algorithm is an LLM. The displayed category is RAISE's assignment, not an independent architecture audit.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17 (image extraction, human correction and oversight, and the limitation concerning complex images)."
         }
@@ -2077,7 +2077,7 @@
           "aiCategoryMd": "**Conversational or ‘Chatbot’ technologies**",
           "whyCategoryMd": "RAISE treats **chatbot interaction** as a mode of LLM use. This recommendation concerns that feature, not all InfraNodus network-analysis functions. Gaps in a text network do not establish gaps in the research evidence.",
           "recommendation": "exploratory",
-          "whyRecommendationMd": "Answers can be inaccurate, incomplete or stray beyond the supplied data, creating risks to accuracy, safety and bias. Check the underlying records; do not treat generated answers as established synthesis findings.",
+          "whyRecommendationMd": "Answers can be inaccurate, incomplete or stray beyond the supplied data, raising concerns about accuracy, safety and bias. Check the underlying records; do not treat generated answers as established synthesis findings.",
           "officialUrlMd": "[InfraNodus — official product](https://infranodus.com/) describes its text-exploration and knowledge-graph features.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 19; modes of use, p. 3. RAISE 2 v4 (25 August 2026), pp. 6–8."
         }

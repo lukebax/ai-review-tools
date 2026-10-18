@@ -333,14 +333,23 @@ select{min-width:190px;max-width:260px}
 .empty-state{text-align:center;padding:70px 24px;color:#526c7a}
 .empty-state h2{font-size:18px;margin:0 0 8px}
 .empty-state p{margin:0 0 18px}
-.page-foot{margin-top:22px;border-top:1px solid var(--line);padding-top:16px;font-size:12px;color:var(--muted)}
-.scope-details{max-width:1000px;margin-top:12px}
-.scope-details summary{cursor:pointer;color:#294e65;font-size:13px;font-weight:600;padding:4px 0}
-.scope-details p{max-width:900px;margin:10px 0;line-height:1.6}
-.guidance-checklist{max-width:900px;margin:12px 0;padding-left:22px;line-height:1.6}
-.guidance-checklist li{margin:8px 0}
-.outside-scope-tool{max-width:900px;margin:18px 0}
-.outside-scope-tool>h3{font-size:17px;color:var(--ink);margin:0 0 6px}
+.page-foot{margin-top:28px;border-top:1px solid var(--line);padding-top:20px;font-size:14px;line-height:1.65;color:#405868}
+.scope-details{max-width:1000px;margin:16px 0;border:1px solid #cbd8e2;border-radius:8px;background:#fff;scroll-margin-top:16px}
+.scope-details>summary{cursor:pointer;color:#203f52;background:#edf3f7;border-radius:7px;font-size:18px;font-weight:700;line-height:1.4;padding:15px 20px}
+.scope-details>summary:hover{background:#e5eef4}
+.scope-details>summary::marker{content:"▸\00a0\00a0";color:#486a80;font-size:.8em}
+.scope-details[open]>summary::marker{content:"▾\00a0\00a0"}
+.scope-details[open]>summary{border-bottom:1px solid #cbd8e2;border-radius:7px 7px 0 0}
+.disclosure-body{padding:16px 22px 20px}
+.disclosure-body>:first-child{margin-top:0}
+.disclosure-body>:last-child{margin-bottom:0}
+.scope-details p{max-width:90ch;margin:12px 0;line-height:1.65;overflow-wrap:anywhere}
+.guidance-checklist{max-width:90ch;margin:14px 0;padding-left:22px;line-height:1.65}
+.guidance-checklist li{margin:10px 0;padding-left:2px}
+.outside-scope-tool{max-width:90ch;margin:22px 0 0}
+.outside-scope-tool+.outside-scope-tool,.outside-scope-tool+#outside-scope-tools{max-width:90ch;border-top:1px solid var(--line);padding-top:20px;margin-top:22px}
+#outside-scope-tools>.outside-scope-tool:first-child{margin-top:0}
+.outside-scope-tool>h3{font-size:16px;line-height:1.4;font-weight:650;color:var(--ink);margin:0 0 10px}
 .outside-scope-tool .function-detail{padding:16px 0}
 .drawer{position:fixed;z-index:10;right:0;top:0;bottom:0;width:var(--drawer-width);background:white;border-left:1px solid #cbd9e2;box-shadow:-14px 0 40px #1d3a5111;display:none;flex-direction:column}
 .drawer.open{display:flex}
@@ -357,15 +366,15 @@ select{min-width:190px;max-width:260px}
 .function-detail h3{font-size:18px;letter-spacing:-.015em;line-height:1.3;font-weight:650;margin:0 0 14px}
 .function-number{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#627482;margin:0 0 5px}
 .field{margin:0 0 17px}
-.field h4{font-size:11px;line-height:1.3;text-transform:uppercase;letter-spacing:.04em;color:#526c7a;margin:0 0 6px;font-weight:650}
-.field-content{font-size:13px;line-height:1.65;color:#304d5e;overflow-wrap:anywhere}
+.field h4{font-size:12px;line-height:1.3;text-transform:uppercase;letter-spacing:.04em;color:#526c7a;margin:0 0 6px;font-weight:650}
+.field-content{font-size:14px;line-height:1.65;color:#304d5e;overflow-wrap:anywhere}
 .field-content p{margin:0 0 9px}
 .field-content p:last-child{margin-bottom:0}
 .field-content code{font-size:12px;white-space:pre-wrap;background:#f0f4f6;padding:1px 3px;border-radius:3px}
 .recommendation-label{display:inline-flex;align-items:flex-start;gap:7px;border-left:3px solid var(--recommendation-color);padding:6px 9px;color:#29465b;background:#f3f6f8;font-size:12px;font-weight:600}
 .recommendation-label .swatch{margin-top:2px;width:10px;height:10px}
-.drawer-source{font-size:11px;color:#526c7a;padding-top:8px;line-height:1.7}
-.outside-filter{font-size:11px;padding:9px 12px;background:#f0f4f7;color:#536d7d;margin:16px 0 0}
+.drawer-source{font-size:12px;color:#526c7a;padding-top:8px;line-height:1.7}
+.outside-filter{font-size:12px;padding:9px 12px;background:#f0f4f7;color:#536d7d;margin:16px 0 0}
 .unlisted{padding:26px 0}
 .unlisted h3{font-size:18px;margin:0 0 10px}
 .unlisted p{font-size:13px;color:#536d7d;line-height:1.7}
@@ -401,7 +410,9 @@ h1{font-size:23px}
 .drawer-head{padding-left:22px}
 .drawer-body{padding-left:22px;padding-right:22px}
 .map-meta{align-items:flex-start}
-.page-foot{flex-wrap:wrap}
+.scope-details>summary{font-size:17px;padding:14px 16px}
+.disclosure-body{padding:16px}
+.outside-scope-tool>h3{font-size:15px}
 .map-caption{font-size:10px}
 }
 
@@ -418,7 +429,7 @@ h1{font-size:23px}
 
 .key-note{font-size:12px;color:#526c7a;margin:9px 0 0;line-height:1.55}
 
-.source-note{margin:0;font-size:12px;line-height:1.6;color:#526c7a}
+.source-note{max-width:1000px;margin:0 0 18px;font-size:13px;line-height:1.6;color:#526c7a}
 
 .recommendation-definitions,.orientation-definitions{margin:12px 0 16px;max-width:900px;display:grid;grid-template-columns:minmax(180px,250px) 1fr;gap:10px 20px}
 
@@ -426,7 +437,7 @@ h1{font-size:23px}
 
 .recommendation-definitions dt .swatch{margin-top:3px}
 
-.recommendation-definitions dd,.orientation-definitions dd{margin:0;color:#526c7a;line-height:1.6}
+.recommendation-definitions dd,.orientation-definitions dd{margin:0;color:#405868;line-height:1.6}
 
 .drawer-backdrop{display:none}
 
@@ -459,8 +470,8 @@ h1{font-size:23px}
 <a class="skip-link" href="#map-filters">Skip to search and filters</a>
 <main class="workspace" id="workspace">
 <noscript><p class="unlisted">Enable JavaScript in your browser to view the map and explore its tool details.</p></noscript>
-<header class="page-head"><div class="head-copy"><h1>AI tools across review stages</h1><p class="intro">Explore the listed uses and the recommendations. Select a cell to read the full function-specific explanation.</p></div><label class="palette-switch"><input id="accessible-palette" type="checkbox" role="switch"><span>Colour-blind-friendly colours</span></label></header>
-<p id="map-keyboard-help" class="sr-only">In the map, use arrow keys to move between cells. Press Enter or Space to open full details, and Escape to close them. Wider columns can be scrolled horizontally; vertical scrolling moves the page.</p>
+<header class="page-head"><div class="head-copy"><h1>AI tools across review stages</h1><p class="intro">Explore the listed tool uses and RAISE recommendations. Select a cell to read the full explanation for each function or workflow.</p></div><label class="palette-switch"><input id="accessible-palette" type="checkbox" role="switch"><span>Colour-blind-friendly colours</span></label></header>
+<p id="map-keyboard-help" class="sr-only">In the map, use arrow keys to move between cells. Press Enter or Space to open full details, and Escape to close them. Scroll the map horizontally if needed; vertical scrolling moves the page.</p>
 <div class="map-scroll" id="map-scroll" tabindex="0" role="region" aria-label="AI tool uses by review stage" aria-describedby="map-keyboard-help map-meaning"><table class="map-table" id="map-table"><caption class="sr-only">AI tool uses by review stage. Colour identifies recommendation categories. Cells with two recommendations use diagonal halves. Read the recommendation key immediately after the table.</caption><thead id="map-head"></thead><tbody id="map-body"></tbody></table><div class="empty-state" id="empty-state" hidden><h2>No tools match these filters</h2><p>Try another tool name or clear the filters.</p><button class="plain-button" id="empty-reset">Reset filters</button></div></div>
 <fieldset class="legend" id="recommendation-key" aria-describedby="recommendation-help"><legend>RAISE use recommendations <span class="legend-hint">Select one or more to highlight matching cells</span></legend><div class="legend-options" id="recommendation-filters"></div><p class="key-note" id="recommendation-help">Multiple selections match <strong>any</strong> selected recommendation. Split cells keep both colours. Recommendations apply to the specified function or workflow, not to every use of a tool. Faded, hatched cells do not match the active recommendation filter; their details remain available.</p></fieldset>
 <div class="map-caption" id="map-meaning"><span class="caption-key"><svg class="mixed-swatch" aria-hidden="true" viewBox="0 0 100 100"><rect width="100" height="100" fill="var(--rec-verification)"/><path d="M100 0V100H0Z" fill="var(--rec-exploratory)"/></svg>Split cell: different functions or workflows have different recommendations.</span><span class="caption-key"><span class="empty-swatch" aria-hidden="true"></span>White cell: no use listed within this map’s scope.</span></div>
@@ -471,29 +482,29 @@ h1{font-size:23px}
 <footer class="page-foot">
 <p class="source-note" id="guidance-source-note"></p>
 <details class="scope-details" id="about-raise"><summary>About RAISE</summary>
-<p><strong>RAISE</strong> means <strong>Responsible use of AI in evidence SynthEsis</strong>. Its three papers help the review community use AI responsibly, build and evaluate tools, and select tools for particular tasks.</p>
+<div class="disclosure-body"><p><strong>RAISE</strong> means <strong>Responsible use of AI in evidence SynthEsis</strong>. Its three papers help the review community use AI responsibly, build and evaluate tools, and select tools for particular tasks.</p>
 <p>It brings together expertise from Cochrane, Campbell, UCL’s EPPI Centre and others, with open consultation. <a href="https://www.cochrane.org/about-us/news/cochrane-announces-selected-ai-tools-innovative-platform-study" target="_blank" rel="noopener noreferrer">Cochrane advises its authors to follow RAISE</a>.</p>
-<p><strong>It is living guidance:</strong> the current documents are drafts for consultation and revision. Updates depend on new evidence and the authors’ capacity, with no fixed schedule. The <a href="https://doi.org/10.17605/OSF.IO/FWAUD" target="_blank" rel="noopener noreferrer">RAISE collection</a> holds the guidance and version history.</p>
+<p><strong>It is living guidance:</strong> the current documents are drafts for consultation and revision. Updates depend on new evidence and the authors’ capacity, with no fixed schedule. The <a href="https://doi.org/10.17605/OSF.IO/FWAUD" target="_blank" rel="noopener noreferrer">RAISE collection</a> holds the guidance and version history.</p></div>
 </details>
 <details class="scope-details" id="about-map"><summary>About this map and its sources</summary>
-<p>An independent adaptation by <strong>Luke Baxter</strong> of <strong>RAISE 3 Table 2</strong>, covering <span id="scope-tool-count"></span> named tools, features and resources across eight review stages. It is not an official RAISE publication or a live product catalogue.</p>
+<div class="disclosure-body"><p>An independent adaptation by <strong>Luke Baxter</strong> of <strong>RAISE 3 Table 2</strong>, covering <span id="scope-tool-count"></span> named tools, features and resources across eight review stages. It is not an official RAISE publication or a live product catalogue.</p>
 <ul class="guidance-checklist">
 <li><strong>Read recommendations by task.</strong> RAISE often rates a task and technology type, rather than evaluating each product separately. Cell details identify interpretations and implementation qualifications.</li>
 <li><strong>Some stages are adapted.</strong> Writing a manuscript groups text-generation tasks. Google Translate and DeepL’s five translation-support placements are interpretations, not separate validations. The stage and AI-category explanations below give the details.</li>
-<li><strong>Columns represent named tools.</strong> RAISE also describes two methods without naming a tool for either. These have no separate columns. They and the uses that span or sit outside review stages are explained under “What does the map leave out?” below.</li>
+<li><strong>Columns represent named tools, features and resources.</strong> RAISE also describes two methods without naming a tool for either. These have no separate columns. They and the uses that span or sit outside review stages are explained under “What does the map leave out?” below.</li>
 <li><strong>Tool links explain features.</strong> They do not establish validation, RAISE endorsement or current service availability. Links were checked in October 2026.</li>
 </ul>
 <p id="guidance-version-note"></p>
 <p id="guidance-links"></p>
 <p id="adaptation-attribution"></p>
 <p><strong>Map credits:</strong> © 2026 Luke Baxter. Original code: <a href="https://opensource.org/license/mit" target="_blank" rel="noopener noreferrer">MIT</a>; original text and curated data: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>. Third-party terms still apply.</p>
-<p><strong>Colours:</strong> Balanced by default; optional <a href="https://colorbrewer2.org/#type=diverging&amp;scheme=RdYlBu&amp;n=5" target="_blank" rel="noopener noreferrer">ColorBrewer RdYlBu</a> by Cynthia Brewer, Mark Harrower and The Pennsylvania State University (<a href="https://github.com/axismaps/colorbrewer/blob/master/LICENCE.txt" target="_blank" rel="noopener noreferrer">licence</a>).</p>
+<p><strong>Colours:</strong> Balanced by default; optional <a href="https://colorbrewer2.org/#type=diverging&amp;scheme=RdYlBu&amp;n=5" target="_blank" rel="noopener noreferrer">ColorBrewer RdYlBu</a> by Cynthia Brewer, Mark Harrower and The Pennsylvania State University (<a href="https://github.com/axismaps/colorbrewer/blob/master/LICENCE.txt" target="_blank" rel="noopener noreferrer">licence</a>).</p></div>
 </details>
 <details class="scope-details" id="review-stage-explanations"><summary>What do the review stages mean?</summary>
-<p>The eight rows describe review tasks. Reviews can revisit stages; the rows do not imply permission to automate them.</p>
+<div class="disclosure-body"><p>The eight rows describe review tasks. Reviews can revisit stages; the rows do not imply permission to automate them.</p>
 <dl class="orientation-definitions">
 <dt>Writing a protocol</dt><dd>Plan the review: refine the question, explore the topic, estimate resources and specify methods before starting.</dd>
-<dt>The Search</dt><dd>Find studies: scope the literature, design and adapt database searches, retrieve records, follow citations, check known studies are found and remove duplicates.</dd>
+<dt>The Search</dt><dd>Find studies: scope the literature, design and adapt database searches, retrieve records, follow citations, check that known studies are found and remove duplicates.</dd>
 <dt>Screening for relevance</dt><dd>Check titles, abstracts and full reports against eligibility criteria. Prioritising records and deciding to stop screening early are separate choices.</dd>
 <dt>Quality assessment</dt><dd>Assess study reporting and risk of bias. Complete reporting does not necessarily mean low risk of bias.</dd>
 <dt>Data extraction</dt><dd>Collect study details and results, including information in text, tables and figures.</dd>
@@ -501,44 +512,47 @@ h1{font-size:23px}
 <dt>Certainty of evidence assessment</dt><dd>Judge confidence in the combined evidence or synthesised finding, using an appropriate framework. This goes beyond assessing individual studies; reviewers remain responsible.</dd>
 <dt>Writing a manuscript</dt><dd>Draft and revise the report, including plain-language summaries of human-written findings. Writing assistance does not replace analysis or interpretation.</dd>
 </dl>
-<p>The first seven rows follow <a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, Table 2 (pp.12–19)</a>. <strong>Writing a manuscript</strong> groups drafting, revisions and plain-language summaries from its Text Generation section. Translation supports five stages, as qualified in those cells.</p>
+<p>The first seven rows follow <a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, Table 2 (pp.12–19)</a>. <strong>Writing a manuscript</strong> groups drafting, revisions and plain-language summaries from its Text Generation section. Translation supports five stages, as qualified in those cells.</p></div>
 </details>
 <details class="scope-details" id="ai-category-explanations"><summary>What do the AI categories mean?</summary>
-<p>RAISE describes four technology families. This map combines supervised and unsupervised learning, giving three column groups:</p>
+<div class="disclosure-body"><p>RAISE describes four technology families. This map combines supervised and unsupervised learning, giving three column groups:</p>
 <dl class="orientation-definitions">
 <dt>Rule-based algorithms (symbolic AI)</dt><dd>Follow explicit rules, such as matching references or converting search queries. Symbolic AI represents knowledge and rules explicitly. RAISE’s broad group also includes conventional statistics and visualisation; not every statistical calculation is AI.</dd>
 <dt>Supervised and unsupervised machine learning</dt><dd><strong>Supervised learning</strong> learns from labelled examples to classify, rank or locate information. <strong>Unsupervised learning</strong> finds patterns without predefined labels, such as clusters of papers or topics. Classification and clustering are examples, not complete definitions.</dd>
 <dt>Generative large language models (LLMs)</dt><dd>Neural-network models trained on extensive data to generate text or code; they can also support screening and extraction. Chatbots provide conversation; agentic systems can plan and carry out multiple steps. RAISE treats these as modes of LLM use.</dd>
 </dl>
-<p>LLMs are also machine learning, and tools can combine methods. <strong>Google Translate and DeepL</strong> retain RAISE’s broader label, <strong>Generative and other machine learning approaches</strong>; placing them here does not mean they use only LLMs.</p>
-<p>Sources: <a href="https://osf.io/y26pj" target="_blank" rel="noopener noreferrer">RAISE 2 v4, pp.6–7</a>; <a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, p.3 and Table 2</a>. Background on symbolic, probabilistic and neural approaches: <a href="https://plato.stanford.edu/entries/artificial-intelligence/" target="_blank" rel="noopener noreferrer">Stanford Encyclopedia of Philosophy, §§3.2–3.4 and 4.1</a>.</p>
+<p>LLMs are also machine-learning models, and tools can combine methods. <strong>Google Translate and DeepL</strong> retain RAISE’s broader label, <strong>Generative and other machine learning approaches</strong>; placing them here does not mean they use only LLMs.</p>
+<p>Sources: <a href="https://osf.io/y26pj" target="_blank" rel="noopener noreferrer">RAISE 2 v4, pp.6–7</a>; <a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, p.3 and Table 2</a>. Background on symbolic, probabilistic and neural approaches: <a href="https://plato.stanford.edu/entries/artificial-intelligence/" target="_blank" rel="noopener noreferrer">Stanford Encyclopedia of Philosophy, §§3.2–3.4 and 4.1</a>.</p></div>
 </details>
 <details class="scope-details" id="recommendation-explanations"><summary>What do the recommendations mean?</summary>
-<p>These apply to the specified task or workflow, not every use of a product. Reviewers remain responsible for the work.</p>
+<div class="disclosure-body"><p>These apply to the specified task or workflow, not every use of a product. Reviewers remain responsible for the work.</p>
 <dl class="recommendation-definitions" id="recommendation-definitions"></dl>
-<p>Adapted from <a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, Table 1 (p.11)</a>. Diagonal halves show different recommendations for different functions or workflows—not proportions, confidence or importance.</p></details>
+<p>Adapted from <a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, Table 1 (p.11)</a>. Diagonal halves show different recommendations for different functions or workflows—not proportions, confidence or importance.</p></div>
+</details>
 <details class="scope-details" id="different-recommendations"><summary>Why can recommendations differ within a review stage?</summary>
-<p>A stage contains different tasks. In <strong>Data synthesis</strong>:</p>
+<div class="disclosure-body"><p>A stage contains different tasks. In <strong>Data synthesis</strong>:</p>
 <ul class="guidance-checklist">
 <li>Chatbot entries cover code drafting and troubleshooting with human checking.</li>
 <li>MAXQDA and NVivo cover qualitative-analysis assistance requiring validation.</li>
-<li>Red entries concern direct synthesis across studies.</li>
+<li>Entries labelled “Not acceptable for use” concern direct synthesis across studies.</li>
 <li>Google Translate and DeepL translate material for reviewers; they do not perform the synthesis.</li>
 </ul>
-<p>RAISE leaves some uncertainty about where coding or theme assistance becomes a complete qualitative synthesis. Read MAXQDA and NVivo’s cell qualifications alongside the wider synthesis restrictions. These are task-specific recommendations, not competing ratings of whole products.</p></details>
+<p>RAISE leaves some uncertainty about where coding or theme assistance becomes a complete qualitative synthesis. Read MAXQDA and NVivo’s cell qualifications alongside the wider synthesis restrictions. These are task-specific recommendations, not competing ratings of whole products.</p></div>
+</details>
 <details class="scope-details" id="before-using"><summary>Before using a tool</summary>
-<p>Choose a defined use and a workable review procedure, rather than relying on a colour alone.</p>
+<div class="disclosure-body"><p>Choose a defined use and a workable review procedure, rather than relying on a colour alone.</p>
 <ul class="guidance-checklist">
-<li><strong>Plan performance checks.</strong> Where validation is required, set a task-specific threshold and benchmark in advance. Test the actual human–AI workflow, including checking and correction effort. For generative models, check consistency across runs and consequential errors, including unsupported outputs and missing information. Ensure sufficient skills, time, resources and a fallback plan. If robust within-review validation cannot be assured, limit use to exploratory or supplementary purposes.</li>
+<li><strong>Plan performance checks.</strong> Where validation is required, set a task-specific threshold and benchmark in advance. Test the actual human–AI workflow, including checking and correction effort. For generative models, check consistency across runs and look for consequential errors, including unsupported outputs and missing information. Ensure sufficient skills, time, resources and a fallback plan. If robust within-review validation cannot be assured, limit use to exploratory or supplementary purposes.</li>
 <li><strong>Test independently.</strong> Evaluate on unseen material that matches the review’s population, documents and decisions. Keep tuning examples separate; if results lead to further tuning, evaluate again on fresh independent material.</li>
 <li><strong>Check outputs carefully.</strong> Where verification is required, a qualified person needs time and source access to find and correct errors. Fluent wording is insufficient. Checking can miss or introduce errors, and AI suggestions can influence judgement; checking does not guarantee accuracy.</li>
 <li><strong>Record and reassess.</strong> Keep relevant versions, settings, prompts, inputs, outputs, dates and human interventions. Reassess after material changes to the tool, task or workflow.</li>
 <li><strong>Report and protect.</strong> Disclose substantial AI use, evaluation, limitations and effects on the methods. Check confidentiality, data handling, permissions and copyright. Weigh environmental and social costs, accessibility and likely benefit.</li>
 <li><strong>Keep review standards.</strong> Requirements for searching, selection, appraisal, analysis and reporting still apply. The review team remains accountable.</li>
-</ul><p id="before-use-sources"></p></details>
+</ul><p id="before-use-sources"></p></div>
+</details>
 
 <details class="scope-details" id="outside-scope-details"><summary>What does the map leave out?</summary>
-<p>Some Table 2 entries describe methods without a tool name; others span stages or concern interacting with existing evidence. They are explained here rather than given unsuitable columns or rows.</p>
+<div class="disclosure-body"><p>Some Table 2 entries describe methods without a tool name; others span stages or concern interacting with existing evidence. These are explained here because they do not fit the map’s tool columns and eight review-stage rows.</p>
 <section class="outside-scope-tool"><h3>Two methods without a named tool</h3>
 <ul class="guidance-checklist">
 <li><strong>Checking study reporting with rules:</strong> search preclinical reports for prescribed text patterns (“regular expressions” or “regex”). The results prompt human assessment rather than settle the judgement.</li>
@@ -547,14 +561,16 @@ h1{font-size:23px}
 <p>Both <strong>require validation within the review</strong> (<a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, Table 2, pp.15–16</a>). They have no separate tool columns because Table 2 names methods rather than products here. STEED and Pre-ROB have their own columns.</p></section>
 <section class="outside-scope-tool"><h3>End-to-end evidence-synthesis workflows</h3>
 <p>RAISE lists Elicit and Perplexity for workflows linking review tasks to produce a report across studies, <strong>with or without intermediate human input</strong>. This use is <strong>Not acceptable for use</strong>: errors can accumulate, and generative AI is unreliable for the cross-study summarisation needed for a complete synthesis. This is not a ban on every function of those tools or every linked sequence of tasks (<a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, Table 2, p.19</a>).</p></section>
-<div id="outside-scope-tools"></div></details>
+<div id="outside-scope-tools"></div></div>
+</details>
 
 <details class="scope-details" id="keyboard-help"><summary>Using the map with a keyboard</summary>
-<ul class="guidance-checklist">
+<div class="disclosure-body"><ul class="guidance-checklist">
 <li><strong>Move:</strong> Tab to a map cell; use arrow keys between cells. Home/End reach the first/last tool in a row.</li>
 <li><strong>Open:</strong> Enter or Space shows the cell’s details.</li>
 <li><strong>Close:</strong> Escape closes details and returns focus to the cell. On narrow screens, close the dialog to return to the map.</li>
-</ul></details>
+</ul></div>
+</details>
 </footer>
 </main>
 <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true"></div>
@@ -604,10 +620,10 @@ function renderMap(){
  byId('map-table').style.setProperty('--visible-tools',tools.length);
  byId('map-table').querySelectorAll('colgroup').forEach(c=>c.remove());
  byId('map-table').querySelector('thead').insertAdjacentHTML('beforebegin','<colgroup><col style="width:var(--stage-width)"></colgroup>'+groups.map(g=>'<colgroup>'+g.tools.map(()=>'<col style="width:var(--cell-width)">').join('')+'</colgroup>').join(''));
- byId('map-head').innerHTML='<tr class="group-row"><th class="corner" scope="col" rowspan="2">Review stage</th>'+groups.map((g,i)=>'<th scope="colgroup" title="'+esc(g.label)+'" colspan="'+g.tools.length+'" class="'+(i<groups.length-1?'group-end':'')+'">'+esc(g.label)+'</th>').join('')+'</tr><tr class="tool-row">'+tools.map(t=>'<th scope="col" data-tool="'+t.id+'" class="'+(t.groupId==='classifiers'?'middle ':'')+(ends.has(t.id)?'group-end ':'')+(state.selected?.tool===t.id?'active-tool':'')+'" title="'+esc(t.name+(t.mappingBasis?'; broader source AI class; translation-support stage placements are derived':''))+'"><div class="tool-label"><span class="'+(t.name.length>40?'long-name':'')+'">'+esc(t.name)+'</span></div></th>').join('')+'</tr>';
+ byId('map-head').innerHTML='<tr class="group-row"><th class="corner" scope="col" rowspan="2">Review stage</th>'+groups.map((g,i)=>'<th scope="colgroup" title="'+esc(g.label)+'" colspan="'+g.tools.length+'" class="'+(i<groups.length-1?'group-end':'')+'">'+esc(g.label)+'</th>').join('')+'</tr><tr class="tool-row">'+tools.map(t=>'<th scope="col" data-tool="'+t.id+'" class="'+(t.groupId==='classifiers'?'middle ':'')+(ends.has(t.id)?'group-end ':'')+(state.selected?.tool===t.id?'active-tool':'')+'" title="'+esc(t.name+(t.mappingBasis?'; RAISE uses a broader AI category; translation-support stages are interpretations of its guidance':''))+'"><div class="tool-label"><span class="'+(t.name.length>40?'long-name':'')+'">'+esc(t.name)+'</span></div></th>').join('')+'</tr>';
  let count=0,mixed=0;
- byId('map-body').innerHTML=stages.map(stage=>'<tr><th scope="row" class="'+(state.selected?.stage===stage?'active-stage':'')+'">'+esc(stage)+'</th>'+tools.map(tool=>{const cell=cellMap.get(tool.id+'|'+stage),match=matches(cell),selected=state.selected?.tool===tool.id&&state.selected?.stage===stage;if(cell.functions.length&&match){count++;if(cell.categories.length===2)mixed++;}const label=tool.name+'; '+GROUP.get(tool.groupId).label+'; '+stage+'; '+(cell.categories.length?cell.categories.map(id=>REC.get(id).label).join(' and '):'No explicit listed use in this map')+(tool.mappingBasis&&cell.functions.length?'; translation support; stage placement derived from RAISE guidance':'');return'<td class="'+(ends.has(tool.id)?'group-end':'')+'"><button type="button" class="cell-button '+(!cell.functions.length?'empty ':'')+(!match?'filtered-out':'')+'" data-tool="'+tool.id+'" data-stage="'+esc(stage)+'" data-categories="'+cell.categories.join(',')+'" tabindex="'+(tool.id+'|'+stage===tabKey?'0':'-1')+'" aria-label="'+esc(label)+'" title="'+esc(label)+'" aria-pressed="'+selected+'">'+cellPaint(cell)+'<span class="filtered-mark" aria-hidden="true"></span></button></td>';}).join('')+'</tr>').join('');
- byId('result-count').innerHTML='<strong>'+count+' '+(state.recommendations.size?'matching':'mapped')+' '+(count===1?'cell':'cells')+'</strong> · '+tools.length+' '+(tools.length===1?'tool':'tools')+' · '+stages.length+' '+(stages.length===1?'stage':'stages')+' <span>('+mixed+' split'+(state.recommendations.size?'; matches any selected recommendation':'')+')</span>';
+ byId('map-body').innerHTML=stages.map(stage=>'<tr><th scope="row" class="'+(state.selected?.stage===stage?'active-stage':'')+'">'+esc(stage)+'</th>'+tools.map(tool=>{const cell=cellMap.get(tool.id+'|'+stage),match=matches(cell),selected=state.selected?.tool===tool.id&&state.selected?.stage===stage;if(cell.functions.length&&match){count++;if(cell.categories.length===2)mixed++;}const label=tool.name+'; '+GROUP.get(tool.groupId).label+'; '+stage+'; '+(cell.categories.length?cell.categories.map(id=>REC.get(id).label).join(' and '):'No listed use within this map’s scope')+(tool.mappingBasis&&cell.functions.length?'; translation support; stage placement derived from RAISE guidance':'');return'<td class="'+(ends.has(tool.id)?'group-end':'')+'"><button type="button" class="cell-button '+(!cell.functions.length?'empty ':'')+(!match?'filtered-out':'')+'" data-tool="'+tool.id+'" data-stage="'+esc(stage)+'" data-categories="'+cell.categories.join(',')+'" tabindex="'+(tool.id+'|'+stage===tabKey?'0':'-1')+'" aria-label="'+esc(label)+'" title="'+esc(label)+'" aria-pressed="'+selected+'">'+cellPaint(cell)+'<span class="filtered-mark" aria-hidden="true"></span></button></td>';}).join('')+'</tr>').join('');
+ byId('result-count').innerHTML='<strong>'+count+' '+(state.recommendations.size?'matching':'mapped')+' '+(count===1?'cell':'cells')+'</strong> · '+tools.length+' '+(tools.length===1?'tool':'tools')+' · '+stages.length+' '+(stages.length===1?'stage':'stages')+' <span>('+mixed+' split '+(mixed===1?'cell':'cells')+(state.recommendations.size?'; matches any selected recommendation':'')+')</span>';
  resizeMap();
 }
 function resizeMap(){
@@ -640,7 +656,7 @@ function renderReferenceInformation(){
  byId('guidance-source-note').innerHTML='An independent interactive adaptation of '+sourceLink('RAISE 3','RAISE 3: Living guidance for selecting and using AI evidence synthesis tools')+'. '+esc(DATA.meta.guidanceVersion)+'.';
  byId('recommendation-definitions').innerHTML=DATA.recommendations.map(r=>'<dt><span class="swatch" style="background:'+recommendationColor(r.id)+'" aria-hidden="true"></span>'+esc(r.label)+'</dt><dd>'+esc(r.description)+'</dd>').join('');
  byId('before-use-sources').innerHTML='Source: '+sourceLink('RAISE 1','RAISE 1 version 4')+', pp.19–20; '+sourceLink('RAISE 2','RAISE 2 version 4')+', pp.8–15, 22; '+sourceLink('RAISE 3','RAISE 3 version 4')+', pp.20–33. These are practical summaries of the guidance, not an additional recommendation category.';
- byId('guidance-version-note').innerHTML='<strong>Source versions:</strong> RAISE 1 and 3 v4 (23 September 2026); RAISE 2 v4 (25 August 2026). Page references mean RAISE 3 v4 unless stated otherwise. Its Table 2 snapshot date is inconsistent: September in the text, February in the caption.';
+ byId('guidance-version-note').innerHTML='<strong>Source versions:</strong> RAISE 1 and 3 v4 (23 September 2026); RAISE 2 v4 (25 August 2026). Page references mean RAISE 3 v4 unless stated otherwise. RAISE 3 gives two different snapshot dates for Table 2: September in the text and February in the caption.';
  byId('scope-tool-count').textContent=DATA.tools.length;
  byId('guidance-links').innerHTML=sourceLink('RAISE 1','RAISE 1 · recommendations and authorship')+' · '+sourceLink('RAISE 2','RAISE 2 · building and evaluating tools')+' · '+sourceLink('RAISE 3','RAISE 3 · selecting and using tools')+' · '+sourceLink('Responsible handover form','Responsible-handover form')+' · '+sourceLink('Worked handover example','Worked handover example')+' · '+sourceLink('RAISE collection','Full RAISE collection');
  byId('adaptation-attribution').innerHTML='RAISE guidance: James Thomas, Kaitlyn Hair, Anna Noel-Storr and colleagues (<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>; full authorship in RAISE 1). This map paraphrases and reorganises the guidance and adds interactivity, without implying author endorsement.';
@@ -655,9 +671,9 @@ function renderDrawer(){
  byId('drawer-stage').textContent=cell.stage;
  byId('drawer-count').textContent=cell.functions.length?cell.functions.length+' '+(cell.functions.length===1?'function or workflow':'functions or workflows')+' in this review stage':'No listed use within this map’s scope';
  byId('drawer-summary').innerHTML=cell.categories.map(id=>{const r=REC.get(id);return '<span class="recommendation-label" style="--recommendation-color:'+recommendationColor(r.id)+'">'+esc(r.label)+'</span>';}).join('');
- let content=!matches(cell)?'<p class="outside-filter">This cell is outside the current recommendation filter. Its complete details remain visible.</p>':'';
+ let content=!matches(cell)?'<p class="outside-filter">This cell does not match the selected recommendations. Its full details remain available.</p>':'';
  if(tool.mappingBasis&&cell.functions.length)content+='<p class="outside-filter">This stage placement is a derived application of RAISE’s recommendation for translating non-English studies. '+esc(tool.name)+' supports human work; it does not perform the review judgement or analysis. RAISE classifies this function as <strong>Generative and other machine learning approaches</strong>, a broader class than the LLM display group. This placement does not imply that the tool is exclusively LLM-based.</p>';
- if(!cell.functions.length)content+='<div class="unlisted"><h3>No explicit listed use in this map</h3><p>This map does not list this tool for this review stage. A white cell does not establish that evidence is absent, that the tool cannot do the task, or that RAISE recommends against it.</p></div>';
+ if(!cell.functions.length)content+='<div class="unlisted"><h3>No listed use within this map’s scope</h3><p>This map does not list this tool for this review stage. A white cell does not establish that evidence is absent, that the tool cannot do the task, or that RAISE recommends against it.</p></div>';
  cell.functions.forEach((f,i)=>{content+=functionDetail(f,i,cell.functions.length);});
  content+='<div class="drawer-source">Based on '+esc(DATA.meta.guidanceVersion)+'. '+esc(DATA.meta.snapshotQualification)+' Page references identify this version unless another source is named.<br>'+sourceLink('RAISE 3','Open RAISE 3')+' · '+sourceLink('RAISE collection','RAISE collection')+'</div>';
  byId('drawer-body').innerHTML=content;
