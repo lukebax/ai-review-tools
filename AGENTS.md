@@ -8,6 +8,11 @@ public source data, not a place for private source libraries or unrelated files.
   or blanket ignore rules. Use an operating-system temporary directory for inspection output.
 - Preserve the precise RAISE source version, task-specific recommendations, identified
   interpretations and attribution. Inspect successor guidance before changing the source baseline.
+- When refining content, preserve established task boundaries, implementation qualifications and
+  useful independently sourced details. Keep RAISE statements, editorial interpretation and product
+  evidence distinct. A citation correction should not erase a supported explanation. Reverse an
+  earlier substantive conclusion only when new evidence or a demonstrated error justifies it, and
+  record the reason in the change description. Do not repeat completed audits without a new trigger.
 - Keep the eight-stage scope and separate outside-stage explanations unless the maintainer
   authorises a scope change. A new third recommendation within one cell requires a reviewed
   visual convention; do not silently omit it or choose one category.

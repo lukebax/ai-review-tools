@@ -105,7 +105,7 @@
           "recommendation": "acceptable",
           "whyRecommendationMd": "RAISE explicitly preserves human certainty judgements. Interpretation: a structured template can organise and document those judgements without delegating them to an opaque generative system. The recommendation therefore concerns assistance with applying a framework, not automated adjudication of qualitative findings or a claim that CERQual itself is AI software.",
           "officialUrlMd": "[GRADE-CERQual](https://www.cerqual.org/). The coordinating team's site separately links the [iSoQ application](https://isoq.epistemonikos.org/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 9."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18 (template support; humans retain certainty judgements). General certainty-assessment background, p. 9; product-specific details are attributed to the linked official resources."
         }
       ]
     },
@@ -124,7 +124,7 @@
           "recommendation": "acceptable",
           "whyRecommendationMd": "RAISE's stated boundary is that humans still make certainty judgements. Interpretation: CINeMA can make the inputs and assessment pathway more organised and inspectable, while reviewers remain responsible for evaluating concerns and the resulting confidence rating. The Table 2 entry is not a blanket endorsement of an unattended pipeline from raw studies to recommendations.",
           "officialUrlMd": "[CINeMA](https://cinema.med.auth.gr/). The [University of Bern development repository](https://github.com/esm-ispm-unibe-ch/cinema) documents the application.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 9."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18 (template support; humans retain certainty judgements). General certainty-assessment background, p. 9; product-specific details are attributed to the linked official resources."
         }
       ]
     },
@@ -143,7 +143,7 @@
           "recommendation": "acceptable",
           "whyRecommendationMd": "RAISE says citation chasing is useful where keyword indexing is weak. It also warns that results depend on the citation database's coverage and can favour older or heavily cited work. Interpretation: its value is as an additional search route with explicit seeds and sources, while the reviewer still evaluates the retrieved evidence and documents the search.",
           "officialUrlMd": "[citationchaser developer repository](https://github.com/nealhaddaway/citationchaser), linking the [web application named in RAISE](https://estech.shinyapps.io/citationchaser/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, pp. 13–14; supporting discussion, pp. 4–5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, pp. 13–14 (citation-chasing rationale and example-list continuation). General study-identification background, pp. 4–5."
         }
       ]
     },
@@ -162,7 +162,7 @@
           "recommendation": "acceptable",
           "whyRecommendationMd": "Table 2 describes the matching-based workflow but gives no separate CiteSource-specific rationale. Interpretation: it offers a transparent check of a concrete benchmark. Coverage is conditional on the benchmark's quality: retrieving every article in a small or biased reference set does not prove that a search retrieves all relevant literature. Reviewers must still judge the strategy and benchmark.",
           "officialUrlMd": "[CiteSource documentation](https://eshackathon.github.io/CiteSource/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, pp. 4–5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14 (query validation). The benchmark-quality limitation is editorial interpretation of the reference-set check."
         }
       ]
     },
@@ -181,7 +181,7 @@
           "recommendation": "acceptable",
           "whyRecommendationMd": "RAISE values discovery of studies missed by keywords but flags citation-index coverage and citation bias. A related-paper graph can support additional discovery; it does not demonstrate comprehensive retrieval or remove the need to screen candidates.",
           "officialUrlMd": "[Connected Papers](https://www.connectedpapers.com/) and its [official explanation](https://www.connectedpapers.com/about).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, pp. 13–14; supporting discussion, pp. 4–5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, pp. 13–14 (citation-chasing rationale and example-list continuation). General study-identification background, pp. 4–5."
         }
       ]
     },
@@ -238,7 +238,7 @@
           "recommendation": "acceptable",
           "whyRecommendationMd": "RAISE 3 v4 explicitly describes visualisations of study characteristics, including evidence-and-gap maps. Interpretation: rendering reviewer-generated coding can be checked against its underlying data. Reviewers remain responsible for the coding, map dimensions, filters and interpretation; a visually empty cell does not by itself establish absence of relevant research.",
           "officialUrlMd": "[EPPI Centre documentation and application link](https://eppi.ioe.ac.uk/cms/er4/EPPI-Mapper).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, p. 9."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17 (visual synthesis). The explanation of checkable rendering and the caution about empty cells are editorial interpretation of that row."
         }
       ]
     },
@@ -257,7 +257,7 @@
           "recommendation": "acceptable",
           "whyRecommendationMd": "RAISE notes that programmatic retrieval is available through some platforms and that database API access is incomplete. Interpretation: a known query and documented import route can be incorporated transparently, but access, database coverage and successful transfer still need checking. Retrieving citation metadata does not imply obtaining all full texts or demonstrating the completeness of the review search.",
           "officialUrlMd": "[EPPI-Reviewer official help](https://eppi.ioe.ac.uk/cms/er4/Help/FAQ).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, p. 5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; API-assisted retrieval discussion, p. 4; coverage and access limitations, p. 5."
         }
       ]
     },
@@ -276,7 +276,7 @@
           "recommendation": "acceptable",
           "whyRecommendationMd": "RAISE 3 v4 explicitly describes visualisations of study characteristics, including evidence-and-gap maps. Interpretation: rendering reviewer-generated coding can be checked against its underlying data. Reviewers remain responsible for the coding, map dimensions, filters and interpretation; a visually empty cell does not by itself establish absence of relevant research.",
           "officialUrlMd": "[EviAtlas developer repository](https://github.com/ESHackathon/eviatlas), linking its Shiny application.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, p. 9."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17 (visual synthesis). The explanation of checkable rendering and the caution about empty cells are editorial interpretation of that row."
         }
       ]
     },
@@ -295,7 +295,7 @@
           "recommendation": "acceptable",
           "whyRecommendationMd": "RAISE's explicit condition is that humans still make certainty judgements. Interpretation: standardised recording can help users apply and report the framework consistently, but reviewers must assess the underlying evidence and justify their ratings. A well-completed template is not evidence that every substantive judgement is sound, and the recommendation does not endorse automated certainty assessment across all platform functions.",
           "officialUrlMd": "[GRADEpro](https://www.gradepro.org/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 9."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18 (template support; humans retain certainty judgements). General certainty-assessment background, p. 9; product-specific details are attributed to the linked official resources."
         }
       ]
     },
@@ -352,7 +352,7 @@
           "recommendation": "acceptable",
           "whyRecommendationMd": "RAISE says retrieval can be programmatic or platform-mediated, but API access is not universal. Interpretation: reviewers should document database, query, date and transfer route, check restrictions and verify that expected records were imported. The favourable category does not mean all databases are covered, that full text is always obtained, or that an automated search is inherently comprehensive.",
           "officialUrlMd": "[Nested Knowledge literature-search documentation](https://about.nested-knowledge.com/docs/search/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, p. 5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; API-assisted retrieval discussion, p. 4; coverage and access limitations, p. 5."
         }
       ]
     },
@@ -409,7 +409,7 @@
           "recommendation": "acceptable",
           "whyRecommendationMd": "RAISE says citation-linked discovery can find studies missed by keyword searches, with limitations from citation-database coverage and bias toward older or frequently cited work. Interpretation: use it as a documented additional discovery route and screen the resulting candidates. Personalised recommendations are not proof that all relevant studies have been retrieved.",
           "officialUrlMd": "[ResearchRabbit features](https://www.researchrabbit.ai/features).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, pp. 13–14; supporting discussion, pp. 4–5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, pp. 13–14 (citation-chasing rationale and example-list continuation). General study-identification background, pp. 4–5."
         }
       ]
     },
@@ -466,7 +466,7 @@
           "recommendation": "acceptable",
           "whyRecommendationMd": "RAISE notes that not every database provides an API. Interpretation: a platform can reduce manual record handling when the underlying sources, queries and limits are known, but users still need to check coverage, successful transfer and provenance. This entry does not establish unrestricted database access, automatic full-text availability, or the completeness of a search.",
           "officialUrlMd": "[TERA](https://tera-tools.com/) and its [official help directory](https://tera-tools.com/help/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, p. 5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; API-assisted retrieval discussion, p. 4; coverage and access limitations, p. 5."
         }
       ]
     },
@@ -498,13 +498,13 @@
           "id": "tera-polyglot--the-search--query-translation--rule-based",
           "stage": "The Search",
           "functionName": "Query translation",
-          "descriptionMd": "Adapt an existing bibliographic search to another database/platform's syntax. This concerns the command language used to express the strategy, rather than translating study text or automatically establishing that the strategy's concepts are suitable.",
+          "descriptionMd": "Adapt an existing bibliographic search to another database/platform's syntax. This concerns the command language used to express the strategy, rather than translating study text or automatically establishing that the strategy's concepts are suitable. RAISE 2 notes that syntax translators do not translate controlled vocabularies such as MeSH or CINAHL headings; these must be selected and checked separately.",
           "aiCategoryMd": "**Rule-based**",
           "whyCategoryMd": "RAISE places the feature in its rule-based query-translation row. Interpretation: predefined conversions between search conventions can automate repetitive syntax changes. They do not remove the need to understand database-specific indexing and search behaviour.",
           "recommendation": "verification",
           "whyRecommendationMd": "RAISE identifies changing database interfaces, uneven maintenance/validation and limited specialist-database coverage as vulnerabilities. Reviewers should check the complete translated query, correct unsupported or outdated syntax, and establish that the intended concepts and retrieval behaviour are preserved. This stronger verification requirement is why Polyglot differs from the generally acceptable rule-based search functions around it.",
           "officialUrlMd": "[TERA Polyglot](https://tera-tools.com/polyglot), the application linked in RAISE, and the [official help directory](https://tera-tools.com/help/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, pp. 4–5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, pp. 4–5. RAISE 2 v4 (25 August 2026), p. 17 describes the controlled-vocabulary limitation."
         }
       ]
     },
@@ -523,7 +523,7 @@
           "recommendation": "acceptable",
           "whyRecommendationMd": "RAISE states the structured-reporting role but provides little additional justification in the row. Interpretation: an inspectable template can assist reporting while users supply the actual methods and findings. Reviewers must ensure that the resulting text accurately describes their review; acceptance of templating does not authorise invented methods, synthesis or conclusions.",
           "officialUrlMd": "[TERA official tool/help directory](https://tera-tools.com/help/), which lists the named feature. A [researcher’s TERA training presentation](https://www.ebm-netzwerk.de/de/medien/pdf/ebm2025-k-02-02-thomas.pdf) identifies methods-section drafting as the specific role.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18 (rule-based structured reporting). The methods-section specificity comes from the separately linked TERA training presentation; the accountability caveat is editorial interpretation."
         }
       ]
     },
@@ -542,7 +542,7 @@
           "recommendation": "acceptable",
           "whyRecommendationMd": "Table 2 supplies the operational description but no separate product-specific justification. Interpretation: a reference-set comparison provides concrete evidence about a query's behaviour. It is limited by the benchmark: passing the check does not establish complete retrieval outside that set. Information specialists still need to assess concepts, database syntax and whether refinements discard genuinely relevant studies.",
           "officialUrlMd": "[TERA official tool/help directory](https://tera-tools.com/help/), which lists the named feature.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, pp. 4–5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14 (query validation). The benchmark-quality limitation is editorial interpretation of the reference-set check."
         }
       ]
     },
@@ -599,7 +599,7 @@
           "recommendation": "acceptable",
           "whyRecommendationMd": "RAISE 3 v4 explicitly lists topic exploration during protocol development as acceptable. Clusters can help orient the review team, which remains responsible for question choice, protocol decisions and subsequent comprehensive searching; this is not validation of every cluster or an automated evidence synthesis.",
           "officialUrlMd": "[Carrot2 search-results clustering](https://search.carrot2.org/). [Developer documentation/source](https://github.com/carrot2/carrot2) confirms that it groups related documents and labels the groups. The search interface requires JavaScript.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; supporting discussion, p. 4."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; technology classes, p. 3. RAISE 2 v4 (25 August 2026), p. 6 explains unsupervised learning and topic modelling."
         },
         {
           "id": "carrot2--the-search--exploring-the-literature--unsupervised",
@@ -611,7 +611,7 @@
           "recommendation": "acceptable",
           "whyRecommendationMd": "The table explicitly describes rapid topic exploration. **Interpretation:** using clusters to orient the researcher leaves formal search design and eligibility decisions with the team. It does not certify exhaustive retrieval, valid thematic synthesis, or the quality of every cluster. The general acceptable category still requires limitations and potential biases to be accounted for. This recommendation applies to the exploratory function described above.",
           "officialUrlMd": "[Carrot2 search-results clustering](https://search.carrot2.org/). [Developer documentation/source](https://github.com/carrot2/carrot2) confirms that it groups related documents and labels the groups. The search interface requires JavaScript.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; supporting discussion, p. 4."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; technology classes, p. 3. RAISE 2 v4 (25 August 2026), p. 6 explains unsupervised learning and topic modelling."
         }
       ]
     },
@@ -630,7 +630,7 @@
           "recommendation": "acceptable",
           "whyRecommendationMd": "RAISE explicitly lists topic exploration as acceptable for this task. Interpretation: topic clusters can orient the team, which retains control of the review question, search strategy and eligibility decisions. This does not establish exhaustive retrieval, valid qualitative synthesis or the acceptability of every SWIFT-Review feature.",
           "officialUrlMd": "[SWIFT-Review — developer page](https://www.sciome.com/swift-review/). The developer describes a text-mining workbench with topic exploration and other features; the mapped recommendation is specifically for the topic-modelling function.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; protocol/search discussion, p. 4. RAISE 2 v4 (25 August 2026), p. 6 explains unsupervised learning."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; technology classes, p. 3. RAISE 2 v4 (25 August 2026), p. 6 explains unsupervised learning and topic modelling."
         },
         {
           "id": "swift-review--the-search--scoping-the-literature--unsupervised",
@@ -642,7 +642,7 @@
           "recommendation": "acceptable",
           "whyRecommendationMd": "RAISE explicitly lists topic exploration as acceptable for this task. Interpretation: topic clusters can orient the team, which retains control of the review question, search strategy and eligibility decisions. This does not establish exhaustive retrieval, valid qualitative synthesis or the acceptability of every SWIFT-Review feature.",
           "officialUrlMd": "[SWIFT-Review — developer page](https://www.sciome.com/swift-review/). The developer describes a text-mining workbench with topic exploration and other features; the mapped recommendation is specifically for the topic-modelling function.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; protocol/search discussion, p. 4. RAISE 2 v4 (25 August 2026), p. 6 explains unsupervised learning."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; technology classes, p. 3. RAISE 2 v4 (25 August 2026), p. 6 explains unsupervised learning and topic modelling."
         }
       ]
     },
@@ -655,7 +655,7 @@
           "id": "abstrackr--screening-for-relevance--study-selection-by-prioritised-screening--supervised-prioritised-screening-algorithms",
           "stage": "Screening for relevance",
           "functionName": "Prioritised screening with early stopping",
-          "descriptionMd": "Uses human screening decisions to rank remaining citations, then applies a stopping procedure before every record has been manually screened.",
+          "descriptionMd": "Uses human screening decisions to rank remaining citations. In this workflow the review team stops before every record has been manually screened, adding a stopping decision to prioritisation.",
           "aiCategoryMd": "**Supervised prioritised screening algorithms where early stopping is used**",
           "whyCategoryMd": "Supervised algorithms learn relevance from reviewer-labelled records and update the screening order. Early stopping adds a decision to leave some records unread; that is distinct from merely changing their order.",
           "recommendation": "validation",
@@ -748,7 +748,7 @@
           "id": "eppi-reviewer-prioritised-screening--screening-for-relevance--study-selection--supervised-prioritised-screening-algorithms",
           "stage": "Screening for relevance",
           "functionName": "Prioritised screening with early stopping",
-          "descriptionMd": "Uses human screening decisions to rank remaining citations, then applies a stopping procedure before every record has been manually screened.",
+          "descriptionMd": "Uses human screening decisions to rank remaining citations. In this workflow the review team stops before every record has been manually screened, adding a stopping decision to prioritisation.",
           "aiCategoryMd": "**Supervised prioritised screening algorithms where early stopping is used**",
           "whyCategoryMd": "Supervised algorithms learn relevance from reviewer-labelled records and update the screening order. Early stopping adds a decision to leave some records unread; that is distinct from merely changing their order.",
           "recommendation": "validation",
@@ -785,7 +785,7 @@
           "recommendation": "validation",
           "whyRecommendationMd": "**Explicit rationale:** appropriate training and validation data determine performance; complex concepts can require more varied examples, and title/abstract training does not automatically transfer to other material. RAISE further warns that a well-developed classifier can be unsuitable outside its validated record type or domain. This row does not confer one shared performance claim on all EPPI-Reviewer models, including its separately evaluated pre-built classifiers.",
           "officialUrlMd": "[EPPI-Reviewer machine-learning guide](https://eppi.ioe.ac.uk/cms/Portals/35/Manuals/Machine%20learning%20in%20EPPI-Reviewer%20v_10.1%20web%20version.pdf), particularly its section on building bespoke classifiers. This is a platform capability, not a separate standalone product.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 15; supporting discussion, pp. 6–7."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 15; screening discussion, pp. 6–7; record-type and domain generalisability, p. 22."
         }
       ]
     },
@@ -890,7 +890,7 @@
           "aiCategoryMd": "**Supervised machine learning**",
           "whyCategoryMd": "RAISE assigns **Supervised machine learning**, describing multiple tools linked into a pipeline. This is distinct from a generative LLM writing a convincing certainty judgement, and it does not imply every pipeline component is a classifier.",
           "recommendation": "exploratory",
-          "whyRecommendationMd": "**Explicit narrative:** URSE is proof-of-concept and cannot be applied independently without stringent manual checking, limiting efficiency gains. Its cited evaluation concerns an adapted GRADE workflow; the authors themselves withhold support for full automation. **Interpretation:** it may inform exploration or add a checked supplementary output, while established human certainty assessment remains in place. This is the exploratory/supplementary category, rather than the within-review-validation category used for many classifier uses.",
+          "whyRecommendationMd": "**RAISE narrative:** URSE is described as proof-of-concept; such tools cannot be applied independently without stringent manual checking, which limits efficiency gains. **Separate evaluation context:** Its linked proof-of-concept evaluation concerns an adapted GRADE workflow; the authors themselves withhold support for full automation. **Interpretation:** URSE may inform exploration or add a checked supplementary output while established human certainty assessment remains in place. This is the exploratory/supplementary category, rather than the within-review-validation category used for many classifier uses.",
           "officialUrlMd": "[URSE author repository](https://github.com/alisson-mfc/urse). The [RAISE-cited proof-of-concept article](https://pubmed.ncbi.nlm.nih.gov/40194821/) identifies that repository and describes an adaptation of GRADE for reviews with meta-analyses of randomised trials.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 9."
         }
@@ -985,7 +985,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "A familiar format does not establish sound methods. Inspect and correct the whole draft; the team retains responsibility for its methodological commitments.",
           "officialUrlMd": "[https://chatgpt.com/](https://chatgpt.com/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; supporting discussion, p. 4."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12 (generative protocol drafting); Table 1, p. 11 (human verification); general protocol-development background, p. 4."
         },
         {
           "id": "chatgpt--the-search--search-strategy-development--generative-llms",
@@ -1009,7 +1009,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "RAISE requires every generated translation to receive line-by-line specialist checking. Verify destination syntax, controlled vocabulary, operators, field codes and preservation of the intended concepts and relationships. A query that executes successfully is not necessarily equivalent to the original strategy.",
           "officialUrlMd": "[https://chatgpt.com/](https://chatgpt.com/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, pp. 4–5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14 (generative query translation and line-by-line specialist checking); Table 1, p. 11 (human-verification definition)."
         },
         {
           "id": "chatgpt--screening-for-relevance--study-selection--generative-llms",
@@ -1093,7 +1093,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "Inspect the entire revision for changes to scientific meaning, numbers and qualifications. Fluency does not guarantee fidelity, and an omitted condition may materially alter what the manuscript claims.",
           "officialUrlMd": "[https://chatgpt.com/](https://chatgpt.com/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18 (revisions); Table 1, p. 11 (human verification normally requires reading the entirety of the output). Related text-generation background, p. 10."
         },
         {
           "id": "chatgpt--writing-a-manuscript--plain-language-summaries--generative-llms",
@@ -1136,7 +1136,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "A familiar format does not establish sound methods. Inspect and correct the whole draft; the team retains responsibility for its methodological commitments.",
           "officialUrlMd": "[https://claude.ai/](https://claude.ai/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; supporting discussion, p. 4."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12 (generative protocol drafting); Table 1, p. 11 (human verification); general protocol-development background, p. 4."
         },
         {
           "id": "claude--the-search--search-strategy-development--generative-llms",
@@ -1160,7 +1160,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "RAISE requires every generated translation to receive line-by-line specialist checking. Verify destination syntax, controlled vocabulary, operators, field codes and preservation of the intended concepts and relationships. A query that executes successfully is not necessarily equivalent to the original strategy.",
           "officialUrlMd": "[https://claude.ai/](https://claude.ai/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, pp. 4–5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14 (generative query translation and line-by-line specialist checking); Table 1, p. 11 (human-verification definition)."
         },
         {
           "id": "claude--screening-for-relevance--study-selection--generative-llms",
@@ -1244,7 +1244,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "Inspect the entire revision for changes to scientific meaning, numbers and qualifications. Fluency does not guarantee fidelity, and an omitted condition may materially alter what the manuscript claims.",
           "officialUrlMd": "[https://claude.ai/](https://claude.ai/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18 (revisions); Table 1, p. 11 (human verification normally requires reading the entirety of the output). Related text-generation background, p. 10."
         },
         {
           "id": "claude--writing-a-manuscript--plain-language-summaries--generative-llms",
@@ -1274,7 +1274,7 @@
           "whyCategoryMd": "The model generates question wording from prompts, rather than applying fixed rules.",
           "recommendation": "verification",
           "whyRecommendationMd": "Suggestions may be irrelevant, incomplete, biased or duplicate existing reviews. Check their scope and originality before adoption.",
-          "officialUrlMd": "[Microsoft Copilot](https://copilot.com/)\n\nRAISE 1 v4 identifies Microsoft Copilot among the chatbot interfaces; RAISE 3 Table 2 spells the example “CoPilot” without specifying an edition, model or deployment. The link points to Microsoft’s general-purpose assistant. This task-specific guidance does not establish validation for every Copilot product or edition.",
+          "officialUrlMd": "[Microsoft Copilot](https://copilot.com/)\n\nRAISE 1 v4 (p. 7) identifies Microsoft CoPilot as a tool using LLM technology; RAISE 3 Table 2 spells the example “CoPilot” without specifying an edition, model or deployment. The link points to Microsoft’s general-purpose assistant. This task-specific guidance does not establish validation for every Copilot product or edition.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; supporting discussion, p. 4. Product identification: RAISE 1 v4, p. 7."
         },
         {
@@ -1287,7 +1287,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "A familiar format does not establish sound methods. Inspect and correct the whole draft; the team retains responsibility for its methodological commitments.",
           "officialUrlMd": "[https://copilot.com/](https://copilot.com/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; supporting discussion, p. 4."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12 (generative protocol drafting); Table 1, p. 11 (human verification); general protocol-development background, p. 4."
         },
         {
           "id": "copilot--the-search--search-strategy-development--generative-llms",
@@ -1311,7 +1311,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "RAISE requires every generated translation to receive line-by-line specialist checking. Verify destination syntax, controlled vocabulary, operators, field codes and preservation of the intended concepts and relationships. A query that executes successfully is not necessarily equivalent to the original strategy.",
           "officialUrlMd": "[https://copilot.com/](https://copilot.com/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, pp. 4–5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14 (generative query translation and line-by-line specialist checking); Table 1, p. 11 (human-verification definition)."
         },
         {
           "id": "copilot--screening-for-relevance--study-selection--generative-llms",
@@ -1395,7 +1395,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "Inspect the entire revision for changes to scientific meaning, numbers and qualifications. Fluency does not guarantee fidelity, and an omitted condition may materially alter what the manuscript claims.",
           "officialUrlMd": "[https://copilot.com/](https://copilot.com/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18 (revisions); Table 1, p. 11 (human verification normally requires reading the entirety of the output). Related text-generation background, p. 10."
         },
         {
           "id": "copilot--writing-a-manuscript--plain-language-summaries--generative-llms",
@@ -1506,7 +1506,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "A familiar format does not establish sound methods. Inspect and correct the whole draft; the team retains responsibility for its methodological commitments.",
           "officialUrlMd": "[https://www.deepseek.com/](https://www.deepseek.com/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; supporting discussion, p. 4."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12 (generative protocol drafting); Table 1, p. 11 (human verification); general protocol-development background, p. 4."
         },
         {
           "id": "deepseek--the-search--query-translation--generative-llms",
@@ -1518,7 +1518,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "RAISE requires every generated translation to receive line-by-line specialist checking. Verify destination syntax, controlled vocabulary, operators, field codes and preservation of the intended concepts and relationships. A query that executes successfully is not necessarily equivalent to the original strategy.",
           "officialUrlMd": "[https://www.deepseek.com/](https://www.deepseek.com/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, pp. 4–5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14 (generative query translation and line-by-line specialist checking); Table 1, p. 11 (human-verification definition)."
         },
         {
           "id": "deepseek--screening-for-relevance--study-selection--generative-llms",
@@ -1602,7 +1602,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "Inspect the entire revision for changes to scientific meaning, numbers and qualifications. Fluency does not guarantee fidelity, and an omitted condition may materially alter what the manuscript claims.",
           "officialUrlMd": "[https://www.deepseek.com/](https://www.deepseek.com/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18 (revisions); Table 1, p. 11 (human verification normally requires reading the entirety of the output). Related text-generation background, p. 10."
         },
         {
           "id": "deepseek--writing-a-manuscript--plain-language-summaries--generative-llms",
@@ -1700,7 +1700,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "A familiar format does not establish sound methods. Inspect and correct the whole draft; the team retains responsibility for its methodological commitments.",
           "officialUrlMd": "[https://gemini.google.com/](https://gemini.google.com/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12; supporting discussion, p. 4."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 12 (generative protocol drafting); Table 1, p. 11 (human verification); general protocol-development background, p. 4."
         },
         {
           "id": "gemini--the-search--search-strategy-development--generative-llms",
@@ -1724,7 +1724,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "RAISE requires every generated translation to receive line-by-line specialist checking. Verify destination syntax, controlled vocabulary, operators, field codes and preservation of the intended concepts and relationships. A query that executes successfully is not necessarily equivalent to the original strategy.",
           "officialUrlMd": "[https://gemini.google.com/](https://gemini.google.com/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, pp. 4–5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14 (generative query translation and line-by-line specialist checking); Table 1, p. 11 (human-verification definition)."
         },
         {
           "id": "gemini--screening-for-relevance--study-selection--generative-llms",
@@ -1808,7 +1808,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "Inspect the entire revision for changes to scientific meaning, numbers and qualifications. Fluency does not guarantee fidelity, and an omitted condition may materially alter what the manuscript claims.",
           "officialUrlMd": "[https://gemini.google.com/](https://gemini.google.com/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18 (revisions); Table 1, p. 11 (human verification normally requires reading the entirety of the output). Related text-generation background, p. 10."
         },
         {
           "id": "gemini--writing-a-manuscript--plain-language-summaries--generative-llms",
@@ -2057,7 +2057,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "Clearly defined figures may permit useful assistance, but humans must inspect axes, points and values. More complex images remain a research question.",
           "officialUrlMd": "[https://automeris.io/](https://automeris.io/)\n\nRAISE's name refers specifically to the AI-assisted component of **WebPlotDigitizer**, not all digitisation algorithms. The [official documentation](https://automeris.io/docs/) describes computer vision combined with manual inputs; the [official repository](https://github.com/automeris-io/WebPlotDigitizer/blob/master/README.md) distinguishes its closed AI Assist component. These public descriptions do not establish that every current extraction algorithm is an LLM. The displayed category is RAISE's assignment, not an independent architecture audit.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, p. 7."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17 (image extraction, human correction and oversight, and the limitation concerning complex images)."
         }
       ]
     }
