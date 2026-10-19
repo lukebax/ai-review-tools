@@ -376,6 +376,15 @@ select{min-width:190px;max-width:260px}
 .recommendation-label .swatch{margin-top:2px;width:10px;height:10px}
 .drawer-source{font-size:12px;color:#526c7a;padding-top:8px;line-height:1.7}
 .outside-filter{font-size:12px;padding:9px 12px;background:#f0f4f7;color:#536d7d;margin:16px 0 0}
+.cell-requirements{margin:16px 0 0;border:1px solid var(--line);border-radius:5px;color:#304d5e;font-size:13px;line-height:1.6}
+.cell-requirements>summary{padding:10px 12px;cursor:pointer;font-weight:600;background:#f4f7fa;border-radius:4px}
+.cell-requirements[open]>summary{border-bottom:1px solid var(--line)}
+.cell-requirements-body{padding:10px 12px}
+.cell-requirements-body p{margin:0 0 10px}
+.cell-requirements-body p:last-child{margin-bottom:0}
+.cell-requirements dl{margin:0}
+.cell-requirements dt{font-weight:600;margin:10px 0 4px}
+.cell-requirements dd{margin:0 0 10px}
 .unlisted{padding:26px 0}
 .unlisted h3{font-size:18px;margin:0 0 10px}
 .unlisted p{font-size:13px;color:#536d7d;line-height:1.7}
@@ -546,10 +555,10 @@ h1{font-size:23px}
 <details class="scope-details" id="before-using"><summary>Before using a tool</summary>
 <div class="disclosure-body"><p>A colour alone cannot establish suitability. Plan how the team will evaluate the specific use, detect errors and remain accountable.</p>
 <ol class="guidance-checklist">
-<li><strong>Plan the use.</strong> Before supplying material, check confidentiality, data handling, permissions and copyright. Where validation is required, set a task-specific threshold and benchmark in advance. Evaluate the actual human–AI workflow, including checking and correction effort. Ensure sufficient skills, time, resources and a fallback.</li>
-<li><strong>Test independently.</strong> Use unseen material matching the review’s population, documents and decisions. Keep tuning examples separate; further tuning requires testing on fresh independent material. For generative models, assess consistency across runs and consequential errors, including unsupported outputs and missing information. Where robust within-review validation is required but cannot be assured, limit use to exploratory or supplementary purposes.</li>
+<li><strong>Plan the use.</strong> Before supplying material, check confidentiality, data handling, permissions and copyright. Where validation is required, set a task-specific threshold and benchmark in advance, and evaluate the actual human–AI workflow, including checking and correction effort. Ensure sufficient skills, time, resources and a fallback.</li>
+<li><strong>Keep performance tests independent.</strong> When testing performance, use unseen material matching the review’s population, documents and decisions. Keep tuning examples separate; further tuning requires testing on fresh independent material. For generative models, assess consistency across runs and consequential errors, including unsupported outputs and missing information. Where robust within-review validation is required but cannot be assured, limit use to exploratory or supplementary purposes.</li>
 <li><strong>Make verification workable.</strong> Where verification is required, a qualified person needs time and source access to correct errors; fluent wording is insufficient. Checking can miss or introduce errors, and AI suggestions can influence judgement, so verification does not guarantee accuracy.</li>
-<li><strong>Document and reassess.</strong> Record relevant versions, settings, prompts, inputs, outputs, dates and human interventions. Disclose substantial AI use, evaluation, limitations and effects on methods. Reassess after material changes to the tool, task or workflow.</li>
+<li><strong>Document and reassess.</strong> Record relevant versions, settings, prompts, inputs, outputs, dates and human interventions. Disclose substantial AI use, evaluation, limitations and effects on methods. Monitor performance during use and reassess after changes to the tool, prompts, task or workflow.</li>
 <li><strong>Meet wider responsibilities.</strong> Weigh environmental and social costs, accessibility and likely benefit. Standards for searching, selection, appraisal, analysis and reporting still apply; the review team remains accountable.</li>
 </ol><p id="before-use-sources"></p></div>
 </details>
@@ -653,7 +662,7 @@ function functionDetail(f,index,total){
 function renderReferenceInformation(){
  byId('guidance-source-note').innerHTML='An independent interactive adaptation of '+sourceLink('RAISE 3','RAISE 3: Living guidance for selecting and using AI evidence synthesis tools')+'. '+esc(DATA.meta.guidanceVersion)+'.';
  byId('recommendation-definitions').innerHTML=DATA.recommendations.map(r=>'<dt><span class="swatch" style="background:'+recommendationColor(r.id)+'" aria-hidden="true"></span>'+esc(r.label)+'</dt><dd>'+esc(r.description)+'</dd>').join('');
- byId('before-use-sources').innerHTML='Source: '+sourceLink('RAISE 1','RAISE 1 version 4')+', pp.19–20; '+sourceLink('RAISE 2','RAISE 2 version 4')+', pp.8–15, 22; '+sourceLink('RAISE 3','RAISE 3 version 4')+', pp.20–33. These are practical summaries of the guidance, not an additional recommendation category.';
+ byId('before-use-sources').innerHTML='Source: '+sourceLink('RAISE 1','RAISE 1 version 4')+', pp.19–20; '+sourceLink('RAISE 2','RAISE 2 version 4')+', pp.8–15, 18–19, 22; '+sourceLink('RAISE 3','RAISE 3 version 4')+', pp.20–33. These are practical summaries of the guidance, not an additional recommendation category.';
  byId('guidance-version-note').innerHTML='<strong>Source versions:</strong> RAISE 1 and 3 v4 (23 September 2026); RAISE 2 v4 (25 August 2026). Page references mean RAISE 3 v4 unless stated otherwise. RAISE 3 gives two different snapshot dates for Table 2: September in the text and February in the caption.';
  byId('scope-tool-count').textContent=DATA.tools.length;
  byId('guidance-links').innerHTML=sourceLink('RAISE 1','RAISE 1 · recommendations and authorship')+' · '+sourceLink('RAISE 2','RAISE 2 · building and evaluating tools')+' · '+sourceLink('RAISE 3','RAISE 3 · selecting and using tools')+' · '+sourceLink('Responsible handover form','Responsible-handover form')+' · '+sourceLink('Worked handover example','Worked handover example')+' · '+sourceLink('RAISE collection','Full RAISE collection');
@@ -670,8 +679,9 @@ function renderDrawer(){
  byId('drawer-count').textContent=cell.functions.length?cell.functions.length+' '+(cell.functions.length===1?'function or workflow':'functions or workflows')+' in this review stage':'No listed use within this map’s scope';
  byId('drawer-summary').innerHTML=cell.categories.map(id=>{const r=REC.get(id);return '<span class="recommendation-label" style="--recommendation-color:'+recommendationColor(r.id)+'">'+esc(r.label)+'</span>';}).join('');
  let content=!matches(cell)?'<p class="outside-filter">This cell does not match the selected recommendations. Its full details remain available.</p>':'';
- if(tool.mappingBasis&&cell.functions.length)content+='<p class="outside-filter"><strong>Translation support.</strong> '+esc(tool.name)+' helps a human reviewer read source material; it does not make the review judgement or perform the analysis. This map applies RAISE’s translation recommendation to this stage, rather than claiming a separate stage-specific RAISE rating. The source label, <strong>Generative and other machine learning approaches</strong>, is broader than LLMs. Placement in the LLM display group does not imply an exclusively LLM-based implementation.</p>';
+ if(tool.mappingBasis&&cell.functions.length)content+='<p class="outside-filter"><strong>Translation support.</strong> This cell applies RAISE’s machine-translation recommendation to a review stage. The function details explain the stage interpretation and broader AI-category label.</p>';
  if(!cell.functions.length)content+='<div class="unlisted"><h3>No listed use within this map’s scope</h3><p>This map does not list this tool for this review stage. A white cell does not establish that evidence is absent, that the tool cannot do the task, or that RAISE recommends against it.</p></div>';
+ if(cell.functions.length)content+='<details class="cell-requirements"><summary>'+(cell.categories.length===1?'What does this recommendation require?':'What do these recommendations require?')+'</summary><div class="cell-requirements-body"><p>Each definition applies to the function or workflow carrying that recommendation below.</p><dl>'+cell.categories.map(id=>{const r=REC.get(id);return '<dt>'+esc(r.label)+'</dt><dd data-rec="'+esc(id)+'">'+esc(r.description)+'</dd>';}).join('')+'</dl><p>Definitions adapted from '+sourceLink('RAISE 3','RAISE 3 v4, Table 1 (p.11)')+'.</p></div></details>';
  cell.functions.forEach((f,i)=>{content+=functionDetail(f,i,cell.functions.length);});
  content+='<div class="drawer-source">Based on '+esc(DATA.meta.guidanceVersion)+'. '+esc(DATA.meta.snapshotQualification)+' Page references identify this version unless another source is named.<br>'+sourceLink('RAISE 3','Open RAISE 3')+' · '+sourceLink('RAISE collection','RAISE collection')+'</div>';
  byId('drawer-body').innerHTML=content;
@@ -726,7 +736,7 @@ byId('drawer-backdrop').addEventListener('click',()=>closeDrawer());
 document.addEventListener('keydown',e=>{
  if(e.key==='Escape'&&state.selected){e.preventDefault();closeDrawer();return;}
  if(e.key==='Tab'&&state.selected&&window.innerWidth<=1100){
-  const drawer=byId('details-drawer'),items=Array.from(drawer.querySelectorAll('a[href],button:not([disabled]),[tabindex="0"]'));
+  const drawer=byId('details-drawer'),items=Array.from(drawer.querySelectorAll('a[href],button:not([disabled]),summary,[tabindex="0"]')).filter(item=>item.getClientRects().length>0);
   const first=items[0],last=items.at(-1),active=document.activeElement;
   if(e.shiftKey&&(active===first||!items.includes(active))){e.preventDefault();last?.focus();}
   else if(!e.shiftKey&&(active===last||!items.includes(active))){e.preventDefault();first?.focus();}
