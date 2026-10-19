@@ -117,23 +117,27 @@ the public URL updates after a successful deployment. Pushing source changes wit
 regenerating `index.html` does not update the displayed map. Local commits alone do
 not publish anything. See [GitHub's Pages instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
-## Stable checkpoint and experiments
+## Current baseline and recovery
 
-The tag **[stable-2026-10-19](https://github.com/lukebax/ai-review-tools/tree/stable-2026-10-19)**
-marks the tested three-category map before the four-category display change. It includes the complete
-editable project and generated HTML. The map content matches commit `76c413b`;
-this checkpoint also updates the maintenance documentation.
+The accepted baseline is the current four-family map with a two-level header:
+Machine Learning is the visual parent of separate Unsupervised and Supervised
+families. Map-content commit `8f836a9` includes the completed source-label clarifications.
+Continue from the current `main` branch; later documentation-only commits do not
+necessarily change the HTML.
 
-Start experimental work on a separate `codex/` branch and inspect the rebuilt HTML
-locally. Keep the published `main` version in place until the experiment is ready
-to publish. A tag does not move as later commits are added.
+All required map files and editable sources are tracked. A fresh clone or source
+ZIP recovers the complete project; the private presentation workspace is not required.
+Rebuild with `python3 build.py` and verify with `python3 build.py --check`.
 
-To inspect the checkpoint without changing a working copy, download its source ZIP
-or check it out in a separate directory. If a published experiment needs undoing,
-first preserve its work in Git, then restore the tagged files in a new commit,
-rebuild/check and push that commit to `main`. Pages will deploy the restored map.
-Prefer this explicit restoration over rewriting shared Git history. All necessary
-map files are tracked; the separate presentation workspace is not needed for recovery.
+The historical tag
+**[stable-2026-10-19](https://github.com/lukebax/ai-review-tools/tree/stable-2026-10-19)**
+preserves the earlier three-category map at `3df295d`, with map content matching
+`76c413b`. It is a historical recovery point, not the current accepted baseline.
+The `codex/four-ai-categories` and `codex/two-level-headings` branches also preserve
+earlier iterations; they are not active work queues. No rollback is planned.
+If a rollback is explicitly requested, preserve the current work and restore the
+chosen revision in a new commit, then rebuild, check and publish with authorisation.
+Do not rewrite shared Git history.
 
 ## Licences
 
