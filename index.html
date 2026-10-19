@@ -243,7 +243,7 @@ the original map software or explanatory content.
 <title>AI tools across review stages</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2329465b'/%3E%3Cpath d='M8 8h6v6H8zm10 0h6v6h-6zM8 18h6v6H8zm10 0h6v6h-6z' fill='%23fff'/%3E%3C/svg%3E">
 <style>
-:root{color-scheme:light;--ink:#203746;--muted:#627482;--line:#dce4e9;--paper:#fff;--page:#f7f9fa;--header:#e2eaf0;--outer:#f4f7fa;--middle:#eff4f8;--divider:#8a9eae;--stage-width:220px;--drawer-width:520px;--cell-width:26px;--row-height:clamp(28px,calc((100svh - 380px)/8),44px);--focus:#126c9b}
+:root{color-scheme:light;--ink:#203746;--muted:#627482;--line:#dce4e9;--paper:#fff;--page:#f7f9fa;--header:#e2eaf0;--outer:#f4f7fa;--divider:#8a9eae;--stage-width:220px;--drawer-width:520px;--cell-width:26px;--row-height:clamp(28px,calc((100svh - 380px)/8),44px);--focus:#126c9b}
 
 *{box-sizing:border-box}
 body{margin:0;color:var(--ink);background:var(--page);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:14px;line-height:1.45}
@@ -292,16 +292,16 @@ select{min-width:190px;max-width:260px}
 .map-options{display:flex;align-items:center;gap:5px;white-space:nowrap}
 .map-options input{accent-color:#365d76}
 .map-scroll{scroll-margin-top:16px;isolation:isolate;position:relative;width:100%;height:auto;max-height:none;overflow-x:auto;overflow-y:hidden;border:1px solid #d7e1e7;background:white;border-radius:6px;}
-.map-table{border-collapse:separate;border-spacing:0;table-layout:fixed;width:calc(var(--stage-width) + var(--visible-tools)*var(--cell-width));color:#243746;font-size:12px}
+.map-table{border-collapse:separate;border-spacing:0;table-layout:fixed;width:var(--table-width);color:#243746;font-size:12px}
 .map-table th,.map-table td{padding:0;border-right:1px solid #e2e8ed;border-bottom:1px solid #e2e8ed}
 .map-table thead th{position:sticky;z-index:3}
 .group-row th{top:0;height:44px;padding:6px 8px;background:var(--header);color:#29465b;font-weight:650;font-size:13px;line-height:1.25;text-align:center;white-space:normal;overflow-wrap:break-word}
 .has-subgroups .group-row th:not(.corner){height:26px;padding:3px 8px}
-.subgroup-row th{top:var(--primary-header-height,26px);height:22px;padding:3px 4px;background:var(--header);color:#29465b;font-weight:600;font-size:clamp(9px,calc(var(--cell-width)*.5),11px);line-height:1.2;text-align:center;white-space:normal}
-.subgroup-row th.short-label{padding:3px 0;white-space:nowrap}
+.group-row #family-machine-learning{border-bottom:0}
+.subgroup-row th{top:var(--primary-header-height,26px);height:24px;padding:3px 4px;border-top:2px solid var(--divider);background:var(--header);color:#29465b;font-weight:600;font-size:12px;line-height:1.2;text-align:center;white-space:normal}
+.subgroup-row th.short-label{padding:3px 0;font-size:11px;white-space:nowrap}
 .group-row th.corner{z-index:6;left:0;width:var(--stage-width);min-width:var(--stage-width);background:#fff;vertical-align:bottom;text-align:left;padding:12px;font-size:14px;border-bottom-color:#dce4e9}
 .tool-row th{top:var(--group-header-height,44px);height:240px;min-width:var(--cell-width);width:var(--cell-width);background:var(--outer);vertical-align:middle;font-weight:400;overflow:hidden}
-.tool-row th.alternate-group{background:var(--middle)}
 .tool-label{display:flex;justify-content:center;align-items:center;height:239px;padding:6px 0}
 .tool-label span{display:block;white-space:nowrap;writing-mode:vertical-rl;transform:rotate(180deg);font-size:11px;line-height:1.1;letter-spacing:0}
 .tool-label .long-name{font-size:10px}
@@ -626,8 +626,7 @@ function renderMap(){
  byId('map-table').hidden=!tools.length;byId('empty-state').hidden=!!tools.length;
  byId('map-scroll').classList.toggle('compact-map',tools.length>0&&tools.length<=4);
  const groups=DATA.groups.map(g=>({...g,tools:tools.filter(t=>t.groupId===g.id)})).filter(g=>g.tools.length);
- const ends=new Set(groups.map(g=>g.tools.at(-1).id));
- const alternateGroups=new Set(DATA.groups.filter((g,i)=>i%2===1).map(g=>g.id));
+ const ends=new Set(groups.slice(0,-1).map(g=>g.tools.at(-1).id));
  const mlGroups=groups.filter(g=>ML_GROUPS.has(g.id)),hasSubgroups=mlGroups.length>0;
  byId('map-table').classList.toggle('has-subgroups',hasSubgroups);
  const familyHeading=(g,subgroup=false)=>'<th id="family-'+esc(g.id)+'" scope="colgroup" data-group="'+esc(g.id)+'" aria-label="'+esc(g.label)+'" title="'+esc(g.label)+'" colspan="'+g.tools.length+'"'+(subgroup?' headers="family-machine-learning"':(hasSubgroups?' rowspan="2"':''))+' class="'+(groups.indexOf(g)<groups.length-1?'group-end':'')+'"><span class="group-label">'+esc(g.headerLabel??g.label)+'</span></th>';
@@ -641,10 +640,9 @@ function renderMap(){
  const activeVisible=state.selected&&tools.some(t=>t.id===state.selected.tool)&&stages.includes(state.selected.stage);
  const rememberedVisible=state.focusCell&&tools.some(t=>t.id===state.focusCell.tool)&&stages.includes(state.focusCell.stage);
  const tabKey=activeVisible?state.selected.tool+'|'+state.selected.stage:rememberedVisible?state.focusCell.tool+'|'+state.focusCell.stage:(tools[0]?.id+'|'+stages[0]);
- byId('map-table').style.setProperty('--visible-tools',tools.length);
  byId('map-table').querySelectorAll('colgroup').forEach(c=>c.remove());
- byId('map-table').querySelector('thead').insertAdjacentHTML('beforebegin','<colgroup><col style="width:var(--stage-width)"></colgroup>'+groups.map(g=>'<colgroup>'+g.tools.map(()=>'<col style="width:var(--cell-width)">').join('')+'</colgroup>').join(''));
- byId('map-head').innerHTML='<tr class="group-row"><th class="corner" scope="col" rowspan="'+(hasSubgroups?3:2)+'">Review stage</th>'+bands.map(b=>b.html).join('')+'</tr>'+(hasSubgroups?'<tr class="subgroup-row">'+mlGroups.map(g=>familyHeading(g,true)).join('')+'</tr>':'')+'<tr class="tool-row">'+tools.map(t=>'<th id="tool-'+esc(t.id)+'" scope="col" headers="'+categoryHeaderIds(t)+'" data-tool="'+t.id+'" class="'+(alternateGroups.has(t.groupId)?'alternate-group ':'')+(ends.has(t.id)?'group-end ':'')+(state.selected?.tool===t.id?'active-tool':'')+'" title="'+esc(t.name+(t.mappingBasis?'; RAISE uses a broader AI category; translation-support stages are interpretations of its guidance':''))+'"><div class="tool-label"><span class="'+(t.name.length>40?'long-name':'')+'">'+esc(t.name)+'</span></div></th>').join('')+'</tr>';
+ byId('map-table').querySelector('thead').insertAdjacentHTML('beforebegin','<colgroup><col style="width:var(--stage-width)"></colgroup>'+groups.map(g=>'<colgroup>'+g.tools.map(()=>'<col style="width:var('+(g.id==='unsupervised'?'--unsup-width':'--cell-width')+')">').join('')+'</colgroup>').join(''));
+ byId('map-head').innerHTML='<tr class="group-row"><th class="corner" scope="col" rowspan="'+(hasSubgroups?3:2)+'">Review stage</th>'+bands.map(b=>b.html).join('')+'</tr>'+(hasSubgroups?'<tr class="subgroup-row">'+mlGroups.map(g=>familyHeading(g,true)).join('')+'</tr>':'')+'<tr class="tool-row">'+tools.map(t=>'<th id="tool-'+esc(t.id)+'" scope="col" headers="'+categoryHeaderIds(t)+'" data-tool="'+t.id+'" class="'+(ends.has(t.id)?'group-end ':'')+(state.selected?.tool===t.id?'active-tool':'')+'" title="'+esc(t.name+(t.mappingBasis?'; RAISE uses a broader AI category; translation-support stages are interpretations of its guidance':''))+'"><div class="tool-label"><span class="'+(t.name.length>40?'long-name':'')+'">'+esc(t.name)+'</span></div></th>').join('')+'</tr>';
  let count=0,mixed=0;
  byId('map-body').innerHTML=stages.map(stage=>'<tr><th id="stage-'+STAGES.indexOf(stage)+'" scope="row" class="'+(state.selected?.stage===stage?'active-stage':'')+'">'+esc(stage)+'</th>'+tools.map(tool=>{const cell=cellMap.get(tool.id+'|'+stage),match=matches(cell),selected=state.selected?.tool===tool.id&&state.selected?.stage===stage;if(cell.functions.length&&match){count++;if(cell.categories.length===2)mixed++;}const label=tool.name+'; '+GROUP.get(tool.groupId).label+'; '+stage+'; '+(cell.categories.length?cell.categories.map(id=>REC.get(id).label).join(' and '):'No listed use within this map’s scope')+(tool.mappingBasis&&cell.functions.length?'; translation support; stage placement derived from RAISE guidance':'');return'<td headers="stage-'+STAGES.indexOf(stage)+' '+categoryHeaderIds(tool)+' tool-'+esc(tool.id)+'" class="'+(ends.has(tool.id)?'group-end':'')+'"><button type="button" class="cell-button '+(!cell.functions.length?'empty ':'')+(!match?'filtered-out':'')+'" data-tool="'+tool.id+'" data-stage="'+esc(stage)+'" data-categories="'+cell.categories.join(',')+'" tabindex="'+(tool.id+'|'+stage===tabKey?'0':'-1')+'" aria-label="'+esc(label)+'" title="'+esc(label)+'" aria-pressed="'+selected+'">'+cellPaint(cell)+'<span class="filtered-mark" aria-hidden="true"></span></button></td>';}).join('')+'</tr>').join('');
  byId('result-count').innerHTML='<strong>'+count+' '+(state.recommendations.size?'matching':'mapped')+' '+(count===1?'cell':'cells')+'</strong> · '+tools.length+' '+(tools.length===1?'tool':'tools')+' · '+stages.length+' '+(stages.length===1?'stage':'stages')+' <span>('+mixed+' split '+(mixed===1?'cell':'cells')+(state.recommendations.size?'; matches any selected recommendation':'')+')</span>';
@@ -654,8 +652,15 @@ function resizeMap(){
  const tools=visibleTools(),scroll=byId('map-scroll');
  const width=scroll.clientWidth,rowWidth=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--stage-width'));
  const maxWidth=tools.length<=4?260:tools.length<=12?80:42;
- const fitted=Math.max(tools.length<=4?110:16,Math.min(maxWidth,(width-rowWidth-4)/Math.max(tools.length,1)));
- byId('map-table').style.setProperty('--cell-width',(state.roomier?Math.max(38,fitted):fitted)+'px');
+ const tableBorder=scroll.classList.contains('compact-map')?2:0;
+ let fitted=Math.max(tools.length<=4?110:16,Math.min(maxWidth,(width-rowWidth-tableBorder)/Math.max(tools.length,1)));
+ const unsupCount=tools.filter(t=>t.groupId==='unsupervised').length,minUnsupWidth=unsupCount?44/unsupCount:0;
+ // Reserve enough space for the larger short label without widening the full map.
+ if(unsupCount&&fitted<minUnsupWidth&&tools.length>unsupCount)fitted=Math.max(16,(width-rowWidth-tableBorder-44)/(tools.length-unsupCount));
+ const cellWidth=state.roomier?Math.max(38,fitted):fitted,unsupWidth=Math.max(minUnsupWidth,cellWidth),table=byId('map-table');
+ table.style.setProperty('--cell-width',cellWidth+'px');
+ table.style.setProperty('--unsup-width',unsupWidth+'px');
+ table.style.setProperty('--table-width',(rowWidth+(tools.length-unsupCount)*cellWidth+unsupCount*unsupWidth+tableBorder)+'px');
  // Expand the unsupervised subheading when filtering provides enough room.
  for(const heading of byId('map-head').querySelectorAll('th[data-group]')){
   const group=GROUP.get(heading.dataset.group),compact=!!group.shortLabel&&heading.getBoundingClientRect().width<100;

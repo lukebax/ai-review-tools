@@ -22,7 +22,9 @@ adaptation of RAISE 3 v4; the AI explanation introduces all four technology fami
 and the translation qualifications. The map uses a two-level header: **Rule-based Algorithms**, **Machine Learning** and
 **Generative Large Language Models (LLMs)** across the top, with **Unsup.** and
 **Supervised** beneath Machine Learning. The two outer headings span both header rows.
-The divider between the ML families starts at their subheadings. “Unsup.” expands to
+A horizontal line caps the ML subheadings, joining the outer category dividers.
+The divider between the ML families starts at their subheadings. Tool-name cells
+share one light background; stronger vertical lines mark only internal category boundaries. “Unsup.” expands to
 “Unsupervised” when space permits; filters, cell details and explanations retain the full
 four family names. The remaining sections explain differing recommendations,
 why some uses are not acceptable, practical safeguards, coverage limits and keyboard use.
