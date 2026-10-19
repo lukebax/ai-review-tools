@@ -10,7 +10,7 @@ commercially, with appropriate credit, a licence link and an indication of chang
 See the [licence deed](https://creativecommons.org/licenses/by/4.0/) and
 [full legal text](LICENSES/CC-BY-4.0.txt).
 
-Suggested attribution: “AI tools across review stages, an independent interactive
+Suggested attribution: “Navigating AI in Evidence Synthesis, an independent interactive
 adaptation by Luke Baxter of RAISE guidance by James Thomas, Kaitlyn Hair,
 Anna Noel-Storr and colleagues. Content licensed CC BY 4.0.” Link to the version
 you use, the [RAISE collection](https://doi.org/10.17605/OSF.IO/FWAUD), and the licence;

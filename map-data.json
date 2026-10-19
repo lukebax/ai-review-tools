@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "AI tools across review stages",
+    "title": "Navigating AI in Evidence Synthesis",
     "guidanceVersion": "RAISE 3 draft v4.0, 23 September 2026",
     "auditDate": "19 October 2026",
     "snapshotQualification": "RAISE 3 v4 p. 3 calls Table 2 a September 2026 snapshot; the p. 12 caption still says February 2026. This map identifies the exact document version rather than treating the table as a live product catalogue.",
@@ -31,7 +31,7 @@
       "id": "validation",
       "label": "Requires validation within the review",
       "color": "#F3CE55",
-      "description": "Test the intended task and workflow within this review against a task-specific threshold set in advance and an appropriate benchmark. The workflow must meet that standard; previous use elsewhere or convincing examples are insufficient."
+      "description": "Test the intended task and workflow within this review against a task-specific threshold set in advance and an appropriate benchmark. The workflow must meet that standard; previous use elsewhere or convincing examples are insufficient. If you cannot reliably establish that the tool meets the required standard, use it only for exploration or alongside established methods, without replacing them."
     },
     {
       "id": "exploratory",
@@ -1064,7 +1064,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model interprets numbers and their context in a document to generate entries for the requested data fields.",
           "recommendation": "validation",
-          "whyRecommendationMd": "Extracted values may be wrong, missing or invented, and must remain linked to the correct outcome and study group. These errors can affect the analysis. Evaluate the intended extraction workflow, including human checking, for numerical accuracy and the consequences of errors before using the data.",
+          "whyRecommendationMd": "Extracted values may be wrong, missing or invented, and must remain linked to the correct outcome and study group. These errors can affect the analysis. Evaluate the intended extraction workflow, including any human checking that forms part of it, for numerical accuracy and the consequences of errors before using the data.",
           "officialUrlMd": "[https://chatgpt.com/](https://chatgpt.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, p. 7."
         },
@@ -1215,7 +1215,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model interprets numbers and their context in a document to generate entries for the requested data fields.",
           "recommendation": "validation",
-          "whyRecommendationMd": "Extracted values may be wrong, missing or invented, and must remain linked to the correct outcome and study group. These errors can affect the analysis. Evaluate the intended extraction workflow, including human checking, for numerical accuracy and the consequences of errors before using the data.",
+          "whyRecommendationMd": "Extracted values may be wrong, missing or invented, and must remain linked to the correct outcome and study group. These errors can affect the analysis. Evaluate the intended extraction workflow, including any human checking that forms part of it, for numerical accuracy and the consequences of errors before using the data.",
           "officialUrlMd": "[https://claude.ai/](https://claude.ai/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, p. 7."
         },
@@ -1366,7 +1366,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model interprets numbers and their context in a document to generate entries for the requested data fields.",
           "recommendation": "validation",
-          "whyRecommendationMd": "Extracted values may be wrong, missing or invented, and must remain linked to the correct outcome and study group. These errors can affect the analysis. Evaluate the intended extraction workflow, including human checking, for numerical accuracy and the consequences of errors before using the data.",
+          "whyRecommendationMd": "Extracted values may be wrong, missing or invented, and must remain linked to the correct outcome and study group. These errors can affect the analysis. Evaluate the intended extraction workflow, including any human checking that forms part of it, for numerical accuracy and the consequences of errors before using the data.",
           "officialUrlMd": "[https://copilot.com/](https://copilot.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, p. 7."
         },
@@ -1436,7 +1436,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "RAISE requires human verification of machine translation because accuracy may be insufficient for complex tasks. If translated eligibility information is unclear, seek clarification rather than exclude a potentially relevant study solely on that wording.\n\nApplying RAISE’s translation recommendation to this stage is this map’s interpretation, not a separate stage-specific RAISE rating or validation of DeepL’s performance.",
           "officialUrlMd": "[DeepL Translator](https://www.deepl.com/en/translator). The official service provides text and document translation. No claim of universal accuracy across languages, document types or product versions is implied.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; translation discussion, p. 10. The five review-stage placements derive from this single translation row. The cited translation evidence does not establish each current DeepL mode’s performance."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; translation discussion, p. 10. The four review-stage placements derive from this single translation row. The cited translation evidence does not establish each current DeepL mode’s performance."
         },
         {
           "id": "deepl--quality-assessment--translation-to-support-human-appraisal--generative-and-other-machine-learning-approaches",
@@ -1448,7 +1448,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "RAISE requires human verification of machine translation because accuracy may be insufficient for complex tasks. Check methodological wording against a reliable interpretation of the original text before treating a safeguard as absent or a study as biased.\n\nApplying RAISE’s translation recommendation to this stage is this map’s interpretation, not a separate stage-specific RAISE rating or validation of DeepL’s performance.",
           "officialUrlMd": "[DeepL Translator](https://www.deepl.com/en/translator). The official service provides text and document translation. No claim of universal accuracy across languages, document types or product versions is implied.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; translation discussion, p. 10. The five review-stage placements derive from this single translation row. The cited translation evidence does not establish each current DeepL mode’s performance."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; translation discussion, p. 10. The four review-stage placements derive from this single translation row. The cited translation evidence does not establish each current DeepL mode’s performance."
         },
         {
           "id": "deepl--data-extraction--translation-to-support-human-data-extraction--generative-and-other-machine-learning-approaches",
@@ -1460,7 +1460,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "RAISE requires human verification of machine translation because accuracy may be insufficient for complex tasks. Check outcome names, groups, time points, denominators, units and statistical quantities against a reliable interpretation of the original text. Readable wording alone does not verify the extracted data.\n\nApplying RAISE’s translation recommendation to this stage is this map’s interpretation, not a separate stage-specific RAISE rating or validation of DeepL’s performance.",
           "officialUrlMd": "[DeepL Translator](https://www.deepl.com/en/translator). The official service provides text and document translation. No claim of universal accuracy across languages, document types or product versions is implied.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; translation discussion, p. 10. The five review-stage placements derive from this single translation row. The cited translation evidence does not establish each current DeepL mode’s performance."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; translation discussion, p. 10. The four review-stage placements derive from this single translation row. The cited translation evidence does not establish each current DeepL mode’s performance."
         },
         {
           "id": "deepl--data-synthesis--translation-of-inputs-to-human-synthesis--generative-and-other-machine-learning-approaches",
@@ -1472,19 +1472,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "RAISE requires human verification of machine translation because accuracy may be insufficient for complex tasks. Check numerical meaning and qualitative or cultural context before using translated material. This supports access to the inputs; reviewers still combine results, establish themes and decide the cross-study conclusion.\n\nApplying RAISE’s translation recommendation to this stage is this map’s interpretation, not a separate stage-specific RAISE rating or validation of DeepL’s performance.",
           "officialUrlMd": "[DeepL Translator](https://www.deepl.com/en/translator). The official service provides text and document translation. No claim of universal accuracy across languages, document types or product versions is implied.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; translation discussion, p. 10. The five review-stage placements derive from this single translation row. The cited translation evidence does not establish each current DeepL mode’s performance."
-        },
-        {
-          "id": "deepl--certainty-of-evidence-assessment--translation-of-inputs-to-human-certainty-judgement--generative-and-other-machine-learning-approaches",
-          "stage": "Certainty of evidence assessment",
-          "functionName": "Translation of inputs to human certainty judgement",
-          "descriptionMd": "Provide checked translations of study information or explanations used by humans applying GRADE or CERQual. This may reuse passages translated earlier in the review rather than introduce a separate translation operation; DeepL does not rate certainty.",
-          "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE describes machine translation as **Generative and other machine learning approaches**, which allows for a mix of technologies. DeepL appears in the LLM group as a display exception, rather than a claim about every model, language or deployment. DeepL’s [official model documentation](https://support.deepl.com/hc/en-us/articles/14241705319580-About-DeepL-s-language-model) describes LLM-based infrastructure, but does not validate accuracy for a particular review task. The mapped function is translation of study text; it excludes the separate DeepL Write product and automated evidence appraisal.",
-          "recommendation": "verification",
-          "whyRecommendationMd": "RAISE requires human verification of machine translation because accuracy may be insufficient for complex tasks. This indirect supporting use may reuse passages translated earlier in the review. Humans remain responsible for judging certainty; a checked translation does not validate a GRADE or CERQual assessment.\n\nApplying RAISE’s translation recommendation to this stage is this map’s interpretation, not a separate stage-specific RAISE rating or validation of DeepL’s performance.",
-          "officialUrlMd": "[DeepL Translator](https://www.deepl.com/en/translator). The official service provides text and document translation. No claim of universal accuracy across languages, document types or product versions is implied.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; translation discussion, p. 10. The five review-stage placements derive from this single translation row. The cited translation evidence does not establish each current DeepL mode’s performance."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; translation discussion, p. 10. The four review-stage placements derive from this single translation row. The cited translation evidence does not establish each current DeepL mode’s performance."
         }
       ]
     },
@@ -1573,7 +1561,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model interprets numbers and their context in a document to generate entries for the requested data fields.",
           "recommendation": "validation",
-          "whyRecommendationMd": "Extracted values may be wrong, missing or invented, and must remain linked to the correct outcome and study group. These errors can affect the analysis. Evaluate the intended extraction workflow, including human checking, for numerical accuracy and the consequences of errors before using the data.",
+          "whyRecommendationMd": "Extracted values may be wrong, missing or invented, and must remain linked to the correct outcome and study group. These errors can affect the analysis. Evaluate the intended extraction workflow, including any human checking that forms part of it, for numerical accuracy and the consequences of errors before using the data.",
           "officialUrlMd": "[https://www.deepseek.com/](https://www.deepseek.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, p. 7."
         },
@@ -1779,7 +1767,7 @@
           "aiCategoryMd": "**Generative LLMs**",
           "whyCategoryMd": "The model interprets numbers and their context in a document to generate entries for the requested data fields.",
           "recommendation": "validation",
-          "whyRecommendationMd": "Extracted values may be wrong, missing or invented, and must remain linked to the correct outcome and study group. These errors can affect the analysis. Evaluate the intended extraction workflow, including human checking, for numerical accuracy and the consequences of errors before using the data.",
+          "whyRecommendationMd": "Extracted values may be wrong, missing or invented, and must remain linked to the correct outcome and study group. These errors can affect the analysis. Evaluate the intended extraction workflow, including any human checking that forms part of it, for numerical accuracy and the consequences of errors before using the data.",
           "officialUrlMd": "[https://gemini.google.com/](https://gemini.google.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, p. 7."
         },
@@ -1917,18 +1905,6 @@
           "whyRecommendationMd": "Synthesis depends on understanding the source findings, including numerical meaning and qualitative or cultural context. A readable translation does not establish that studies are compatible, analytical inputs are correct or interpretation is valid, so verify the source meaning before using it.\n\nThis stage placement applies RAISE’s translation-verification requirement to supporting human synthesis. It is this map’s interpretation, not permission for machine-generated cross-study synthesis, which RAISE treats separately.",
           "officialUrlMd": "[Google Translate](https://translate.google.com/).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10. Stage placement is an editorial application of the single machine-translation row, not an additional stage-specific RAISE rating. Additional contextual source: [Cochrane Handbook §21.11](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-21#section-21-11)."
-        },
-        {
-          "id": "google-translate--certainty-of-evidence-assessment--translation-of-inputs-to-human-certainty-judgement--generative-and-other-machine-learning-approaches",
-          "stage": "Certainty of evidence assessment",
-          "functionName": "Translation of inputs to human certainty judgement",
-          "descriptionMd": "Provide checked translations of study information or explanations used by humans applying GRADE or CERQual. This may reuse passages translated earlier in the review rather than introduce a separate translation operation; Google Translate does not rate certainty.",
-          "aiCategoryMd": "**Generative and other machine learning approaches**",
-          "whyCategoryMd": "RAISE describes machine translation as **Generative and other machine learning approaches**, which allows for a mix of technologies. Google Translate appears in the LLM group as a display exception; this does not mean every language, mode or historical implementation uses a generative LLM. Google’s later feature descriptions also do not identify which model was used in older evaluations.",
-          "recommendation": "verification",
-          "whyRecommendationMd": "Errors in translated outcomes, methods or context can carry through into a certainty assessment. Verify the source meaning and retain human judgement; a checked translation does not establish that a GRADE or CERQual conclusion is valid.\n\nThe recommendation remains **Human verification required** for translation. This is the most indirect of the five stage associations and is this map’s interpretation. No direct performance evidence for Google Translate judging certainty is asserted.",
-          "officialUrlMd": "[Google Translate](https://translate.google.com/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10. Stage placement is an editorial application of the single machine-translation row, not an additional stage-specific RAISE rating. Additional contextual source: [Cochrane Handbook §21.12](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-21#section-21-12)."
         }
       ]
     },

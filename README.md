@@ -1,9 +1,9 @@
-# AI tools across review stages
+# Navigating AI in Evidence Synthesis
 
 An independent interactive guide to named tool uses and recommendations in
 **RAISE 3 draft v4.0 (23 September 2026)**. Created and maintained by Luke Baxter.
 It contains 56 named tools/features/resources across eight review stages, with
-133 function records in 98 populated cells. Twelve cells have two recommendations.
+131 function records in 96 populated cells. Twelve cells have two recommendations.
 InfraNodus has a separate explanation outside the eight-stage map.
 
 ## View the map
@@ -99,7 +99,7 @@ language models (LLMs). They contain 27, 2, 10 and 17 columns respectively.
 Carrot2 and SWIFT-Review are the unsupervised examples. STEED and URSE retain
 RAISE’s supervised assignments and the implementation qualifications in their details.
 Agentic and conversational uses sit within the LLM group; these are practical
-groupings rather than mutually exclusive technology families. Google Translate and DeepL appear in five
+groupings rather than mutually exclusive technology families. Google Translate and DeepL appear in four
 derived translation-support stages and retain their broader source technology label
 in their details; placing them in the LLM group does not imply exclusively LLM-based
 implementations. “Writing a manuscript” covers drafting, revisions and plain-language
