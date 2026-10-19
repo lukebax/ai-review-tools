@@ -50,7 +50,9 @@ licences under assets/vendor/ for direct export.
 
 - `index.html`: test slide content; do not put real talk content here by default.
 - `assets/theme.css`: map-derived presentation styling, independent of the map.
-- `assets/deck.js`: Reveal setup, tab demo and export controls.
+- `assets/deck.js`: Reveal setup, tab demo and export controls. Its script URL carries
+  a content-version query so browsers load the released code. When changing this file,
+  update the query in `index.html` to the first 12 characters of its SHA-256 hash.
 - `assets/vendor/reveal/`: fixed upstream version and original MIT licence.
 - `assets/images/earth.jpg`: NASA Apollo 17 image; see `assets/IMAGE-CREDIT.md`.
 - `../preview.py`: shared optional Python 3.9+ local preview helper.
