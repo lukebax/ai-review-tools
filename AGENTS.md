@@ -25,5 +25,8 @@ public source data, not a place for private source libraries or unrelated files.
   self-contained: no runtime network dependency, server requirement or external workspace paths.
 - Preserve the MIT software / CC BY 4.0 content distinction and third-party notices, including
   notices embedded in the distributable HTML.
-- Do not publish, push, enable Pages or change repository visibility without explicit maintainer
-  authorisation. A request to prepare or test locally does not authorise publication.
+- Luke reviews requested map updates on GitHub Pages. His standing instruction is to edit and
+  rebuild locally, verify the result, commit and push the changed sources and generated HTML,
+  then verify the Pages deployment before handing it back for review. A map-update request
+  authorises this release workflow unless he explicitly asks for local-only preparation.
+  Changing repository visibility or hosting configuration still requires explicit authorisation.

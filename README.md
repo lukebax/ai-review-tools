@@ -27,7 +27,10 @@ The divider between the ML families starts at their subheadings. Tool-name cells
 share one light background; stronger vertical lines mark only internal category boundaries. “Unsup.” expands to
 “Unsupervised” when space permits; filters, cell details and explanations retain the full
 four family names. The remaining sections explain differing recommendations,
-why some uses are not acceptable, practical safeguards, coverage limits and keyboard use.
+why some uses are not acceptable, tool suitability, coverage limits and keyboard use.
+“Is this tool suitable for my review?” uses RAISE 3’s five assessment questions in their
+original order, with concise explanations, proportionate assessment and decision outcomes
+from Section 3 (pp.23–29).
 The synthesis explanation distinguishes statistical analysis, checked coding assistance and
 agentic workflows, while preserving the guidance’s evidence limits and source links. Methods described by RAISE without
 a named tool are explained under “What does the map leave out?”, rather than added as tool columns.
@@ -111,8 +114,11 @@ The site's publishing configuration is **Settings → Pages → Deploy from a br
 main → /(root)**. The finished `index.html` is the website.
 The Python script is for local editing; this setup does not run it on GitHub.
 
-After editing sources, regenerate and inspect the HTML, then commit and push the
-updated files to the publishing branch. Pages automatically deploys that branch;
+Luke reviews changes on the live Pages site. Requested map updates therefore include
+local editing, rebuilding and verification, followed by committing and pushing the
+updated sources and generated HTML to the publishing branch. Verify the deployment
+and live result before handing it back for review. Use a local-only workflow only
+when explicitly requested. Pages automatically deploys that branch;
 the public URL updates after a successful deployment. Pushing source changes without
 regenerating `index.html` does not update the displayed map. Local commits alone do
 not publish anything. See [GitHub's Pages instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
@@ -121,9 +127,11 @@ not publish anything. See [GitHub's Pages instructions](https://docs.github.com/
 
 The accepted baseline is the current four-family map with a two-level header:
 Machine Learning is the visual parent of separate Unsupervised and Supervised
-families. Map-content commit `8f836a9` includes the completed source-label clarifications.
-Continue from the current `main` branch; later documentation-only commits do not
-necessarily change the HTML.
+families, with the completed source-label clarifications. Continue from the current
+`main` branch; documentation-only commits do not necessarily change the HTML.
+
+The map includes “Is this tool suitable for my review?”, using RAISE 3’s five assessment
+questions with concise explanations and source attribution.
 
 All required map files and editable sources are tracked. A fresh clone or source
 ZIP recovers the complete project; the private presentation workspace is not required.
