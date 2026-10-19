@@ -75,7 +75,12 @@ downloadButton.addEventListener('click',async()=>{
     const slides=[...document.querySelectorAll('section.slide')];
     for(let i=0;i<slides.length;i++){
       status.textContent=`Preparing slide ${i+1} of ${slides.length}…`;
-      const canvas=await html2canvas(slides[i],{scale:2,width:1280,height:720,backgroundColor:'#f7f9fa',logging:false});
+      const canvas=await html2canvas(slides[i],{
+        scale:2,width:1280,height:720,backgroundColor:'#f7f9fa',logging:false,
+        // Explicit spacing avoids lost word gaps in WebKit canvas text rendering.
+        // Apply only to the export clone, leaving browser and native-print layout intact.
+        onclone:document=>document.querySelectorAll('.reveal p').forEach(p=>{p.style.letterSpacing='0.01px';})
+      });
       if(i)pdf.addPage([960,540],'landscape');
       pdf.addImage(canvas.toDataURL('image/jpeg',0.95),'JPEG',0,0,960,540);
     }
