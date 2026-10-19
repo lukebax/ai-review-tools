@@ -19,8 +19,12 @@ followed by review stages, AI categories and recommendation colours. Each expand
 starts collapsed and has a distinct heading bar and border, with larger reading text and subordinate internal headings. Use **Expand all** or
 **Collapse all** above these sections, or open and close each heading individually. The stage descriptions are a workflow
 adaptation of RAISE 3 v4; the AI explanation introduces all four technology families, their overlap
-and the translation qualifications. The narrow unsupervised heading uses “UNSUP ML”;
-filters, cell details and explanations retain the full family names. The remaining sections explain differing recommendations,
+and the translation qualifications. The map uses a two-level header: **Rule-based Algorithms**, **Machine Learning** and
+**Generative Large Language Models (LLMs)** across the top, with **Unsup.** and
+**Supervised** beneath Machine Learning. The two outer headings span both header rows.
+The divider between the ML families starts at their subheadings. “Unsup.” expands to
+“Unsupervised” when space permits; filters, cell details and explanations retain the full
+four family names. The remaining sections explain differing recommendations,
 why some uses are not acceptable, practical safeguards, coverage limits and keyboard use.
 The synthesis explanation distinguishes statistical analysis, checked coding assistance and
 agentic workflows, while preserving the guidance’s evidence limits and source links. Methods described by RAISE without

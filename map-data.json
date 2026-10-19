@@ -59,20 +59,24 @@
   "groups": [
     {
       "id": "rule-based",
-      "label": "Rule-based algorithms (symbolic AI)"
+      "label": "Rule-based algorithms (symbolic AI)",
+      "headerLabel": "Rule-based Algorithms"
     },
     {
       "id": "unsupervised",
       "label": "Unsupervised machine learning",
-      "shortLabel": "UNSUP ML"
+      "shortLabel": "Unsup.",
+      "headerLabel": "Unsupervised"
     },
     {
       "id": "supervised",
-      "label": "Supervised machine learning"
+      "label": "Supervised machine learning",
+      "headerLabel": "Supervised"
     },
     {
       "id": "generative",
-      "label": "Generative large language models (LLMs)"
+      "label": "Generative large language models (LLMs)",
+      "headerLabel": "Generative Large Language Models (LLMs)"
     }
   ],
   "tools": [
