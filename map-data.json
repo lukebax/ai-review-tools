@@ -2,7 +2,7 @@
   "meta": {
     "title": "AI tools across review stages",
     "guidanceVersion": "RAISE 3 draft v4.0, 23 September 2026",
-    "auditDate": "18 October 2026",
+    "auditDate": "19 October 2026",
     "snapshotQualification": "RAISE 3 v4 p. 3 calls Table 2 a September 2026 snapshot; the p. 12 caption still says February 2026. This map identifies the exact document version rather than treating the table as a live product catalogue.",
     "sourceUrls": {
       "RAISE 1": "https://osf.io/d5ajy",
@@ -357,7 +357,7 @@
           "functionName": "Citation retrieval",
           "descriptionMd": "The platform can execute searches through supported database software interfaces (APIs) and import bibliographic search files; these are ways to bring records into a review workspace. These details are described in its official documentation.",
           "aiCategoryMd": "**Rule-based**",
-          "whyCategoryMd": "This entry covers a defined procedure for executing searches and transferring records. That explains its rule-based classification. The separately listed Smart Search feature has an agentic classification, and other AI features also require separate consideration; this category describes the citation-retrieval function, not the entire platform.",
+          "whyCategoryMd": "This entry covers a defined procedure for executing searches and transferring records. That explains its rule-based classification. The separately listed Smart Search feature uses an agentic LLM workflow, and other AI features also require separate consideration; this category describes the citation-retrieval function, not the entire platform.",
           "recommendation": "acceptable",
           "whyRecommendationMd": "RAISE recognises automated retrieval through review platforms, but notes that database software interfaces (APIs) are not universally available. Interpretation: documenting the database, query, date and transfer route makes the process traceable. Reviewers must also check access restrictions and verify that expected records were imported. The recommendation does not establish coverage of every database, full-text access or a comprehensive overall search.",
           "officialUrlMd": "[Nested Knowledge literature-search documentation](https://about.nested-knowledge.com/docs/search/).",
@@ -947,11 +947,11 @@
           "functionName": "Scoping the literature",
           "descriptionMd": "Use Asta Find Papers to become familiar with a topic and identify terminology and candidate papers.",
           "aiCategoryMd": "**Agentic AI**",
-          "whyCategoryMd": "RAISE classifies this as agentic AI because the system develops, refines and carries out searches in response to a request written in ordinary language. The agent coordinates a sequence of actions to explore the topic.",
+          "whyCategoryMd": "RAISE labels this row **Agentic AI**, a mode of generative-LLM use rather than a separate technology family. Here, the agent develops, refines and carries out searches in response to a request written in ordinary language. It coordinates actions to explore the topic.",
           "recommendation": "exploratory",
           "whyRecommendationMd": "The agent’s search choices and available data sources limit what it can find, so reviewers need to guide it at each search step. RAISE therefore limits this use to learning about a topic and supplementing established work. It should not be relied on for formal evidence retrieval.",
           "officialUrlMd": "[https://asta.allen.ai/](https://asta.allen.ai/)\n\nThis is the paper-finding function, not a second name for every Asta capability. [Ai2 describes](https://allenai.org/asta/agents) decomposing a query, searching, following citations and assessing relevance. These are useful explanatory examples of the agentic search process that RAISE classifies here, rather than independent validation of complete retrieval.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 13; supporting discussion, p. 5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 13; supporting discussion, p. 5. Technology-family and mode-of-use distinction: RAISE 3 v4, p. 3; RAISE 2 v4, pp. 6–7."
         },
         {
           "id": "asta-find-papers--the-search--citation-retrieval--agentic-ai",
@@ -959,11 +959,11 @@
           "functionName": "Citation retrieval",
           "descriptionMd": "Use Asta Find Papers to identify additional candidate studies alongside conventional searching.",
           "aiCategoryMd": "**Agentic AI**",
-          "whyCategoryMd": "RAISE classifies this as agentic AI because the system selects and carries out actions to retrieve papers. It acts on the search task, as well as generating text.",
+          "whyCategoryMd": "RAISE labels this row **Agentic AI**, a mode of generative-LLM use rather than a separate technology family. Here, the agent selects and carries out actions to retrieve papers, as well as generating text.",
           "recommendation": "exploratory",
           "whyRecommendationMd": "RAISE judges that these systems can miss too many relevant studies to replace established search strategies or sources. Use them to find supplementary papers, with human direction and verification at each search step. Finding useful papers does not show that the search found all eligible studies.",
           "officialUrlMd": "[https://asta.allen.ai/](https://asta.allen.ai/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, p. 5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, p. 5. Technology-family and mode-of-use distinction: RAISE 3 v4, p. 3; RAISE 2 v4, pp. 6–7."
         }
       ]
     },
@@ -1638,11 +1638,11 @@
           "functionName": "Scoping the literature",
           "descriptionMd": "Use Elicit to become familiar with a topic and identify terminology and candidate papers.",
           "aiCategoryMd": "**Agentic AI**",
-          "whyCategoryMd": "RAISE classifies this as agentic AI because the system develops, refines and carries out searches in response to a request written in ordinary language. The agent coordinates a sequence of actions to explore the topic.",
+          "whyCategoryMd": "RAISE labels this row **Agentic AI**, a mode of generative-LLM use rather than a separate technology family. Here, the agent develops, refines and carries out searches in response to a request written in ordinary language. It coordinates actions to explore the topic.",
           "recommendation": "exploratory",
           "whyRecommendationMd": "The agent’s search choices and available data sources limit what it can find, so reviewers need to guide it at each search step. RAISE therefore limits this use to learning about a topic and supplementing established work. It should not be relied on for formal evidence retrieval.",
           "officialUrlMd": "[https://elicit.com/](https://elicit.com/)\n\nElicit has one column but more than one mapped technological role: **agentic searching** and **generative cross-study synthesis**. The [official site](https://elicit.com/) describes multi-step research workflows, sources and generated research outputs. Current functions and vendor accuracy claims do not change this September 2026 v4 guidance; no whole-product verdict follows from any one row.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 13; supporting discussion, p. 5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 13; supporting discussion, p. 5. Technology-family and mode-of-use distinction: RAISE 3 v4, p. 3; RAISE 2 v4, pp. 6–7."
         },
         {
           "id": "elicit--the-search--citation-retrieval--agentic-ai",
@@ -1650,11 +1650,11 @@
           "functionName": "Citation retrieval",
           "descriptionMd": "Use Elicit to identify additional candidate studies alongside conventional searching.",
           "aiCategoryMd": "**Agentic AI**",
-          "whyCategoryMd": "RAISE classifies this as agentic AI because the system selects and carries out actions to retrieve papers. It acts on the search task, as well as generating text.",
+          "whyCategoryMd": "RAISE labels this row **Agentic AI**, a mode of generative-LLM use rather than a separate technology family. Here, the agent selects and carries out actions to retrieve papers, as well as generating text.",
           "recommendation": "exploratory",
           "whyRecommendationMd": "RAISE judges that these systems can miss too many relevant studies to replace established search strategies or sources. Use them to find supplementary papers, with human direction and verification at each search step. Finding useful papers does not show that the search found all eligible studies.",
           "officialUrlMd": "[https://elicit.com/](https://elicit.com/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, p. 5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, p. 5. Technology-family and mode-of-use distinction: RAISE 3 v4, p. 3; RAISE 2 v4, pp. 6–7."
         },
         {
           "id": "elicit--data-synthesis--quantitative-analysis--generative-llms",
@@ -1962,11 +1962,11 @@
           "functionName": "Search strategy development",
           "descriptionMd": "Develop candidate database search strategies from a review question, refining them through the system’s own feedback and the user’s responses.",
           "aiCategoryMd": "**Agentic AI**",
-          "whyCategoryMd": "RAISE classifies this as agentic AI because the system coordinates a sequence of search-development and refinement steps in response to feedback.",
+          "whyCategoryMd": "RAISE labels this row **Agentic AI**, a mode of generative-LLM use rather than a separate technology family. Here, the system coordinates search-development and refinement steps in response to its own feedback and the user’s responses.",
           "recommendation": "exploratory",
           "whyRecommendationMd": "RAISE warns against replacing established search-development methods with generated strategies. Use the output as a starting point for specialist refinement and checking. Table 2 provides little tool-specific evaluation detail; the official documentation describes a PubMed-focused feature, so its scope also matters when planning a wider search.",
           "officialUrlMd": "[https://about.nested-knowledge.com/docs/smart-search/](https://about.nested-knowledge.com/docs/smart-search/)\n\nThis is the named Smart Search feature, not all of Nested Knowledge. Its [official documentation](https://about.nested-knowledge.com/docs/smart-search/) describes refining a question through dialogue, generating candidate PubMed queries, and allowing users to inspect and finalise them. Vendor-reported validation is separate evidence and does not replace the category assigned in RAISE's dated table.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 13; supporting discussion, pp. 4–5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 13; supporting discussion, pp. 4–5. Technology-family and mode-of-use distinction: RAISE 3 v4, p. 3; RAISE 2 v4, pp. 6–7."
         }
       ]
     },
@@ -2031,11 +2031,11 @@
           "functionName": "Scoping the literature",
           "descriptionMd": "Use Undermind to become familiar with a topic and identify terminology and candidate papers.",
           "aiCategoryMd": "**Agentic AI**",
-          "whyCategoryMd": "RAISE classifies this as agentic AI because the system develops, refines and carries out searches in response to a request written in ordinary language. The agent coordinates a sequence of actions to explore the topic.",
+          "whyCategoryMd": "RAISE labels this row **Agentic AI**, a mode of generative-LLM use rather than a separate technology family. Here, the agent develops, refines and carries out searches in response to a request written in ordinary language. It coordinates actions to explore the topic.",
           "recommendation": "exploratory",
           "whyRecommendationMd": "The agent’s search choices and available data sources limit what it can find, so reviewers need to guide it at each search step. RAISE therefore limits this use to learning about a topic and supplementing established work. It should not be relied on for formal evidence retrieval.",
           "officialUrlMd": "[https://www.undermind.ai/](https://www.undermind.ai/)\n\nRAISE names Undermind for agentic exploration and supplementary retrieval. Its [official site](https://www.undermind.ai/) describes literature-search assistance and iterative research interaction. The live page's performance claims concern its own current benchmarks; they do not replace RAISE's September 2026 v4 evidence-synthesis recommendations or establish that a particular review has retrieved every eligible study.",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 13; supporting discussion, p. 5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 13; supporting discussion, p. 5. Technology-family and mode-of-use distinction: RAISE 3 v4, p. 3; RAISE 2 v4, pp. 6–7."
         },
         {
           "id": "undermind--the-search--citation-retrieval--agentic-ai",
@@ -2043,11 +2043,11 @@
           "functionName": "Citation retrieval",
           "descriptionMd": "Use Undermind to identify additional candidate studies alongside conventional searching.",
           "aiCategoryMd": "**Agentic AI**",
-          "whyCategoryMd": "RAISE classifies this as agentic AI because the system selects and carries out actions to retrieve papers. It acts on the search task, as well as generating text.",
+          "whyCategoryMd": "RAISE labels this row **Agentic AI**, a mode of generative-LLM use rather than a separate technology family. Here, the agent selects and carries out actions to retrieve papers, as well as generating text.",
           "recommendation": "exploratory",
           "whyRecommendationMd": "RAISE judges that these systems can miss too many relevant studies to replace established search strategies or sources. Use them to find supplementary papers, with human direction and verification at each search step. Finding useful papers does not show that the search found all eligible studies.",
           "officialUrlMd": "[https://www.undermind.ai/](https://www.undermind.ai/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, p. 5."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 14; supporting discussion, p. 5. Technology-family and mode-of-use distinction: RAISE 3 v4, p. 3; RAISE 2 v4, pp. 6–7."
         }
       ]
     },

@@ -32,7 +32,9 @@ The synthesis explanation distinguishes statistical analysis, checked coding ass
 agentic workflows, while preserving the guidance’s evidence limits and source links. Methods described by RAISE without
 a named tool are explained under “What does the map leave out?”, rather than added as tool columns.
 
-Select a cell to read its full function-specific explanations. Its collapsed
+Select a cell to read its full function-specific explanations. The panel names the
+map family above the tool; “RAISE Table 2 label” retains the source’s more specific
+terminology, including agentic modes of LLM use. Its collapsed
 recommendation control gives the relevant definitions from the same data used below
 the map; mixed cells show both definitions once. Recommendation
 filters match either category in mixed cells and preserve both colours. Balanced
@@ -80,8 +82,8 @@ neither Python nor Git.
 
 ## Guidance and interpretation
 
-The source-based content was checked on 19 October 2026; outgoing links were last
-checked on 18 October 2026. Use the exact RAISE versions and
+The source-based content and outgoing links were checked on 19 October 2026. Some
+external sites restrict automated access; a correct link does not guarantee future availability. Use the exact RAISE versions and
 qualifications described in the map and [source notices](THIRD_PARTY_NOTICES.md).
 RAISE recommendations apply to specified functions and workflows, not whole products.
 White cells mean no listed use within this map's scope. Diagonal halves distinguish
