@@ -16,6 +16,8 @@ connection is required to explore the map; outgoing source/tool links require in
 The complete map and its editable sources live together in `map/`.
 
 Select a cell to read its function-specific explanations, recommendations and sources.
+The instruction above the map links to Find a tool and Roomier columns for a closer view;
+these controls retain their existing positions below the map.
 Recommendations apply to the specified function or workflow, not to every use of a product.
 Split cells preserve both recommendations; their diagonal halves do not represent proportions
 or confidence. White cells mean no use listed within this map's scope. Recommendation filters
@@ -59,6 +61,10 @@ Use the exact RAISE versions and qualifications described in the map and
 validation, endorsement or current availability.
 
 This map paraphrases and reorganises the guidance and identifies editorial interpretation.
+Keep appropriate scientific terminology and useful technical distinctions. Brief contextual or
+parenthetical explanations support novice readers without replacing precise field terminology.
+The suitability questions and cell explanations follow this principle; do not apply a blanket
+plain-language replacement pass.
 Its four families follow RAISE v4: Rule-based algorithms (symbolic AI), Unsupervised machine
 learning, Supervised machine learning, and Generative large language models (LLMs), with
 27, 2, 10 and 17 columns respectively. Machine Learning is the visual parent of separate
@@ -83,8 +89,9 @@ review procedure before relying on a recommendation.
 
 The accepted map baseline has four families with a two-level header, the completed source-label
 clarifications, and RAISE's five assessment questions. Continue from the current `main` branch;
-documentation-only changes need not change the HTML. The current source-folder move preserves
-the generated map byte for byte at its new `/map/` URL.
+documentation-only changes need not change the HTML. The map is maintained at `/map/`.
+The clarity refinements preserve its layout, task assignments and recommendations, adding
+concise terminology explanations, navigation hints and an archived contextual citation.
 
 The historical tag
 **[stable-2026-10-19](https://github.com/lukebax/ai-review-tools/tree/stable-2026-10-19)**

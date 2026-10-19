@@ -31,7 +31,7 @@
       "id": "validation",
       "label": "Requires validation within the review",
       "color": "#F3CE55",
-      "description": "Test the intended task and workflow within this review against a task-specific threshold set in advance and an appropriate benchmark. The workflow must meet that standard; previous use elsewhere or convincing examples are insufficient. If you cannot reliably establish that the tool meets the required standard, use it only for exploration or alongside established methods, without replacing them."
+      "description": "Test the intended task and workflow within this review against a task-specific threshold (minimum acceptable performance) set in advance and an appropriate benchmark (reference for comparison). The workflow must meet that standard; previous use elsewhere or convincing examples are insufficient. If you cannot reliably establish that the tool meets the required standard, use it only for exploration or alongside established methods, without replacing them."
     },
     {
       "id": "exploratory",
@@ -127,7 +127,7 @@
           "id": "cinema--certainty-of-evidence-assessment--certainty-of-evidence-assessment--rule-based",
           "stage": "Certainty of evidence assessment",
           "functionName": "Certainty of evidence assessment",
-          "descriptionMd": "CINeMA helps reviewers assess confidence in network meta-analysis findings. Its official documentation describes a framework covering within-study bias, reporting bias, indirectness, imprecision, heterogeneity and incoherence. A contribution matrix shows how individual studies inform the network estimates.",
+          "descriptionMd": "CINeMA helps reviewers assess confidence in findings from network meta-analysis (comparisons of multiple interventions using direct and indirect evidence). Its official documentation describes a framework covering within-study bias, reporting bias, indirectness, imprecision, heterogeneity and incoherence. A contribution matrix shows how individual studies inform the network estimates.",
           "aiCategoryMd": "**Rule-based**",
           "whyCategoryMd": "RAISE groups CINeMA with tools that implement established certainty-assessment frameworks. Prespecified calculations and structured displays organise the information reviewers need to assess confidence. This support for human assessment is the rule-based function represented here; the final certainty rating remains a reviewer judgement.",
           "recommendation": "acceptable",
@@ -203,7 +203,7 @@
           "id": "crsu-meta-analysis-apps--data-synthesis--quantitative-analysis--rule-based",
           "stage": "Data synthesis",
           "functionName": "Quantitative analysis",
-          "descriptionMd": "These applications support quantitative meta-analysis. The official CRSU site describes R Shiny interfaces for statistical synthesis, visualisation and sensitivity analysis; the name covers a suite of applications rather than one algorithm.",
+          "descriptionMd": "These applications support quantitative meta-analysis. The official CRSU site describes R Shiny interfaces for statistical synthesis, visualisation and sensitivity analysis (checking whether conclusions change under different analytical choices); the name covers a suite of applications rather than one algorithm.",
           "aiCategoryMd": "**Rule-based**",
           "whyCategoryMd": "RAISE describes these applications as running underlying R or Python calculations on effect estimates and summary statistics, with parameters chosen by the user. Established statistical models determine how the results are pooled. This execution of specified analytical procedures explains the rule-based grouping.",
           "recommendation": "acceptable",
@@ -321,7 +321,7 @@
           "aiCategoryMd": "**Rule-based**",
           "whyCategoryMd": "The package runs defined statistical procedures using the data and parameters selected by the user. RAISE's rule-based category includes this conventional statistical programming: the specified model governs the calculation.",
           "recommendation": "acceptable",
-          "whyRecommendationMd": "RAISE requires documented, adjustable parameters, sound input data and sufficient analytical knowledge. Interpretation: reproducible calculations support a defensible synthesis when reviewers choose appropriate effect measures and models. They must also judge whether pooling is meaningful and interpret heterogeneity and sensitivity analyses; the software does not take over those decisions.",
+          "whyRecommendationMd": "RAISE requires documented, adjustable parameters, sound input data and sufficient analytical knowledge. Interpretation: reproducible calculations support a defensible synthesis when reviewers choose appropriate effect measures and models. They must also judge whether pooling (statistically combining study estimates) is meaningful and interpret heterogeneity (between-study variation beyond sampling error) and sensitivity analyses; the software does not take over those decisions.",
           "officialUrlMd": "[meta package on CRAN](https://cran.r-project.org/package=meta).",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 17; supporting discussion, pp. 8–9."
         }
@@ -336,7 +336,7 @@
           "id": "metafor--data-synthesis--quantitative-analysis--rule-based",
           "stage": "Data synthesis",
           "functionName": "Quantitative analysis",
-          "descriptionMd": "The developer's documentation describes R functions for effect-size calculation, fitting meta-analytic models, moderator/meta-regression analysis and plots. This entry represents RAISE's statistical-analysis use rather than every possible package operation.",
+          "descriptionMd": "The metafor R package supports meta-analysis of study results. The developer's documentation describes R functions for effect-size calculation, fitting meta-analytic models, moderator/meta-regression analysis (examining whether study characteristics are associated with effect sizes) and plots. This entry represents RAISE's statistical-analysis use rather than every possible package operation.",
           "aiCategoryMd": "**Rule-based**",
           "whyCategoryMd": "The supplied data, chosen model and statistical routines determine the calculations. RAISE's broad rule-based category includes this conventional statistical software. The package executes an analysis; reviewers develop and justify the evidence-synthesis argument.",
           "recommendation": "acceptable",
@@ -397,7 +397,7 @@
           "aiCategoryMd": "**Rule-based**",
           "whyCategoryMd": "The tool counts and tabulates terms from a specified set of PubMed records. This defined text-analysis procedure shows the language present in that sample, giving reviewers candidate terms to consider when developing the search.",
           "recommendation": "acceptable",
-          "whyRecommendationMd": "RAISE treats term-frequency analysis as a complement to other search-development methods and specialist expertise. Interpretation: patterns in the initial results can reveal useful terms, but also reflect that sample's omissions and biases. Reviewers must therefore assess the suggestions and adapt the search to each database; a PubMed-based analysis cannot establish adequate sensitivity or resolve all indexing differences.",
+          "whyRecommendationMd": "RAISE treats term-frequency analysis as a complement to other search-development methods and specialist expertise. Interpretation: patterns in the initial results can reveal useful terms, but also reflect that sample's omissions and biases. Reviewers must therefore assess the suggestions and adapt the search to each database; a PubMed-based analysis cannot establish adequate sensitivity (the proportion of relevant records retrieved) or resolve all indexing differences.",
           "officialUrlMd": "[PubReMiner, Amsterdam UMC/AMC](https://hgserver2.amc.nl/cgi-bin/miner/miner2.cgi), the application linked in RAISE.",
           "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 13; supporting discussion, pp. 4–5."
         }
@@ -809,7 +809,7 @@
           "functionName": "Reporting quality",
           "descriptionMd": "Identifies reporting of items such as random allocation, blinded outcome assessment, animal exclusions, conflicts of interest and animal-welfare compliance. Reporting a safeguard does not establish low overall risk of bias.",
           "aiCategoryMd": "**Supervised machine learning**",
-          "whyCategoryMd": "Pre-ROB uses trained neural models to predict whether individual reporting items are present. Its repository lists convolutional neural networks (CNNs), attention-based models, hierarchical attention networks (HANs) and BERT approaches. These are trained prediction methods; using BERT does not by itself make a classifier a generative conversational LLM. RAISE places this function under **Reporting quality**, although the repository uses risk-of-bias terminology.",
+          "whyCategoryMd": "Pre-ROB uses supervised neural models trained on labelled examples to predict whether individual reporting items are present. Its repository lists convolutional neural networks (CNNs), attention-based models, hierarchical attention networks (HANs) and BERT approaches (using a pretrained language model for classification). These are trained prediction methods; using BERT does not by itself make a classifier a generative conversational LLM. RAISE places this function under **Reporting quality**, although the repository uses risk-of-bias terminology.",
           "recommendation": "validation",
           "whyRecommendationMd": "RAISE explains that performance depends heavily on the training material and research domain, while reliable reference judgements for appraisal can themselves be difficult to establish. **Interpretation:** reviewers should validate predictions for the reporting items and study domain they intend to assess. Detecting a relevant sentence shows what was reported; it does not independently establish that the safeguard was adequate or that risk of bias was low.",
           "officialUrlMd": "[RAISE-linked Pre-ROB repository](https://github.com/camaradesuk/pre-rob). It describes neural models that predict reporting scores and retrieve sentences for preclinical risk-of-bias-related items.",
@@ -1904,7 +1904,7 @@
           "recommendation": "verification",
           "whyRecommendationMd": "Synthesis depends on understanding the source findings, including numerical meaning and qualitative or cultural context. A readable translation does not establish that studies are compatible, analytical inputs are correct or interpretation is valid, so verify the source meaning before using it.\n\nThis stage placement applies RAISE’s translation-verification requirement to supporting human synthesis. It is this map’s interpretation, not permission for machine-generated cross-study synthesis, which RAISE treats separately.",
           "officialUrlMd": "[Google Translate](https://translate.google.com/).",
-          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10. Stage placement is an editorial application of the single machine-translation row, not an additional stage-specific RAISE rating. Additional contextual source: [Cochrane Handbook §21.11](https://www.cochrane.org/authors/handbooks-and-manuals/handbook/current/chapter-21#section-21-11)."
+          "sourcePagesMd": "RAISE 3 v4 (23 September 2026), Table 2, p. 18; supporting discussion, p. 10. Stage placement is an editorial application of the single machine-translation row, not an additional stage-specific RAISE rating. Additional contextual source: [Cochrane Handbook v6.0 (2019), §21.11 (archived chapter)](https://eprints.whiterose.ac.uk/151565/1/Cochrane%20Handbook%2021.pdf#page=10), on preserving primary-study context during extraction and synthesis."
         }
       ]
     },

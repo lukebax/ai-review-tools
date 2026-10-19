@@ -19,6 +19,9 @@ Keep private source libraries and unrelated files out of this public repository.
   evidence distinct. A citation correction should not erase a supported explanation. Reverse an
   earlier substantive conclusion only when new evidence or a demonstrated error justifies it, and
   record the reason in the change description. Do not repeat completed audits without a new trigger.
+- Retain familiar, appropriate scientific and methodological terminology. Add brief contextual
+  or parenthetical explanations where a novice may need them; do not globally replace technical
+  terms with less precise wording or remove useful distinctions for apparent simplicity.
 - Keep the four RAISE technology families distinct in data, filters and explanations.
   Machine Learning is a visual parent for separate Unsupervised and Supervised headings,
   not a merged category. Retain Table 2 terminology separately from the map family.
