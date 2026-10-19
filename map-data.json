@@ -62,8 +62,13 @@
       "label": "Rule-based algorithms (symbolic AI)"
     },
     {
-      "id": "classifiers",
-      "label": "Supervised and unsupervised machine learning"
+      "id": "unsupervised",
+      "label": "Unsupervised machine learning",
+      "shortLabel": "UNSUP ML"
+    },
+    {
+      "id": "supervised",
+      "label": "Supervised machine learning"
     },
     {
       "id": "generative",
@@ -587,7 +592,7 @@
     {
       "id": "carrot2",
       "name": "Carrot2",
-      "groupId": "classifiers",
+      "groupId": "unsupervised",
       "functions": [
         {
           "id": "carrot2--writing-a-protocol--exploring-the-literature--unsupervised",
@@ -618,7 +623,7 @@
     {
       "id": "swift-review",
       "name": "SWIFT-Review",
-      "groupId": "classifiers",
+      "groupId": "unsupervised",
       "functions": [
         {
           "id": "swift-review--writing-a-protocol--exploring-the-literature--unsupervised",
@@ -649,7 +654,7 @@
     {
       "id": "abstrackr",
       "name": "Abstrackr",
-      "groupId": "classifiers",
+      "groupId": "supervised",
       "functions": [
         {
           "id": "abstrackr--screening-for-relevance--study-selection-by-prioritised-screening--supervised-prioritised-screening-algorithms",
@@ -692,7 +697,7 @@
     {
       "id": "covidence",
       "name": "Covidence",
-      "groupId": "classifiers",
+      "groupId": "supervised",
       "functions": [
         {
           "id": "covidence--screening-for-relevance--prioritised-screening-without-early-stopping--supervised-prioritised-screening-algorithms",
@@ -723,7 +728,7 @@
     {
       "id": "dextr",
       "name": "Dextr",
-      "groupId": "classifiers",
+      "groupId": "supervised",
       "functions": [
         {
           "id": "dextr--data-extraction--named-entity-extraction--supervised-classifiers",
@@ -742,7 +747,7 @@
     {
       "id": "eppi-reviewer-prioritised-screening",
       "name": "EPPI-Reviewer Prioritised Screening",
-      "groupId": "classifiers",
+      "groupId": "supervised",
       "functions": [
         {
           "id": "eppi-reviewer-prioritised-screening--screening-for-relevance--study-selection--supervised-prioritised-screening-algorithms",
@@ -773,7 +778,7 @@
     {
       "id": "eppi-reviewer-supervised-classifiers",
       "name": "EPPI-Reviewer Supervised Classifiers",
-      "groupId": "classifiers",
+      "groupId": "supervised",
       "functions": [
         {
           "id": "eppi-reviewer-supervised-classifiers--screening-for-relevance--study-selection--supervised-classifiers",
@@ -792,7 +797,7 @@
     {
       "id": "pre-rob",
       "name": "Pre-ROB",
-      "groupId": "classifiers",
+      "groupId": "supervised",
       "functions": [
         {
           "id": "pre-rob--quality-assessment--reporting-quality--supervised-classifiers",
@@ -811,7 +816,7 @@
     {
       "id": "robotreviewer",
       "name": "RobotReviewer",
-      "groupId": "classifiers",
+      "groupId": "supervised",
       "functions": [
         {
           "id": "robotreviewer--quality-assessment--risk-of-bias-assessment--supervised-classifiers",
@@ -842,7 +847,7 @@
     {
       "id": "sciscore",
       "name": "SciScore",
-      "groupId": "classifiers",
+      "groupId": "supervised",
       "functions": [
         {
           "id": "sciscore--quality-assessment--risk-of-bias-assessment-in-the-raise-table--supervised-classifiers",
@@ -861,7 +866,7 @@
     {
       "id": "steed",
       "name": "STEED",
-      "groupId": "classifiers",
+      "groupId": "supervised",
       "functions": [
         {
           "id": "steed--quality-assessment--reporting-quality--supervised-classifiers",
@@ -880,7 +885,7 @@
     {
       "id": "urse",
       "name": "URSE",
-      "groupId": "classifiers",
+      "groupId": "supervised",
       "functions": [
         {
           "id": "urse--certainty-of-evidence-assessment--certainty-of-evidence-assessment--supervised-classifiers",

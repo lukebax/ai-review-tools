@@ -19,7 +19,12 @@ def validate(data):
     for r in data['recommendations']:
         assert r['description'].strip() and re.fullmatch(r'#[0-9A-Fa-f]{6}', r['color'])
     assert len(data['stages']) == len(set(data['stages'])) == 8
-    groups = {g['id'] for g in data['groups']}
+    group_order = [g['id'] for g in data['groups']]
+    groups = set(group_order)
+    assert len(groups) == len(group_order) and all(g['label'].strip() for g in data['groups']), 'Group identities must be unique and named.'
+    # Header spans and cell columns must describe the same contiguous groups.
+    tool_groups = [group_order.index(t['groupId']) for t in data['tools']]
+    assert tool_groups == sorted(tool_groups), 'Tool columns must follow the display-group order.'
     ids, fn_ids, cells = set(), set(), defaultdict(set)
     counts = Counter()
     for outside, tools in ((False, data['tools']), (True, data.get('outsideScopeTools', []))):

@@ -18,8 +18,9 @@ The explanations below the filters introduce RAISE, then this map and its source
 followed by review stages, AI categories and recommendation colours. Each expandable section
 starts collapsed and has a distinct heading bar and border, with larger reading text and subordinate internal headings. Use **Expand all** or
 **Collapse all** above these sections, or open and close each heading individually. The stage descriptions are a workflow
-adaptation of RAISE 3 v4; the AI explanation preserves the four-family/three-group
-distinction and translation qualifications. The remaining sections explain differing recommendations,
+adaptation of RAISE 3 v4; the AI explanation introduces all four technology families, their overlap
+and the translation qualifications. The narrow unsupervised heading uses “UNSUP ML”;
+filters, cell details and explanations retain the full family names. The remaining sections explain differing recommendations,
 why some uses are not acceptable, practical safeguards, coverage limits and keyboard use.
 The synthesis explanation distinguishes statistical analysis, checked coding assistance and
 agentic workflows, while preserving the guidance’s evidence limits and source links. Methods described by RAISE without
@@ -81,8 +82,11 @@ White cells mean no listed use within this map's scope. Diagonal halves distingu
 recommendations for different functions/workflows, not proportions or certainty.
 
 This map paraphrases and reorganises the guidance and identifies editorial interpretation.
-Its three display groups are Rule-based algorithms (symbolic AI), Supervised and
-unsupervised machine learning, and Generative large language models (LLMs).
+Its four display groups follow RAISE v4: Rule-based algorithms (symbolic AI),
+Unsupervised machine learning, Supervised machine learning, and Generative large
+language models (LLMs). They contain 27, 2, 10 and 17 columns respectively.
+Carrot2 and SWIFT-Review are the unsupervised examples. STEED and URSE retain
+RAISE’s supervised assignments and the implementation qualifications in their details.
 Agentic and conversational uses sit within the LLM group; these are practical
 groupings rather than mutually exclusive technology families. Google Translate and DeepL appear in five
 derived translation-support stages and retain their broader source technology label
@@ -108,7 +112,7 @@ not publish anything. See [GitHub's Pages instructions](https://docs.github.com/
 ## Stable checkpoint and experiments
 
 The tag **[stable-2026-10-19](https://github.com/lukebax/ai-review-tools/tree/stable-2026-10-19)**
-marks the tested map before the next substantial experiment. It includes the complete
+marks the tested three-category map before the four-category display change. It includes the complete
 editable project and generated HTML. The map content matches commit `76c413b`;
 this checkpoint also updates the maintenance documentation.
 

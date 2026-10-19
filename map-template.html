@@ -296,9 +296,10 @@ select{min-width:190px;max-width:260px}
 .map-table th,.map-table td{padding:0;border-right:1px solid #e2e8ed;border-bottom:1px solid #e2e8ed}
 .map-table thead th{position:sticky;z-index:3}
 .group-row th{top:0;height:44px;padding:6px 8px;background:var(--header);color:#29465b;font-weight:650;font-size:13px;line-height:1.25;text-align:center;white-space:normal;overflow-wrap:break-word}
+.group-row th.short-label{padding:6px 0;font-size:clamp(8px,calc(var(--cell-width)*.5),12px);overflow-wrap:normal}
 .group-row th.corner{z-index:6;left:0;width:var(--stage-width);min-width:var(--stage-width);background:#fff;vertical-align:bottom;text-align:left;padding:12px;font-size:14px;border-bottom-color:#dce4e9}
 .tool-row th{top:var(--group-header-height,44px);height:240px;min-width:var(--cell-width);width:var(--cell-width);background:var(--outer);vertical-align:middle;font-weight:400;overflow:hidden}
-.tool-row th.middle{background:var(--middle)}
+.tool-row th.alternate-group{background:var(--middle)}
 .tool-label{display:flex;justify-content:center;align-items:center;height:239px;padding:6px 0}
 .tool-label span{display:block;white-space:nowrap;writing-mode:vertical-rl;transform:rotate(180deg);font-size:11px;line-height:1.1;letter-spacing:0}
 .tool-label .long-name{font-size:10px}
@@ -523,10 +524,11 @@ h1{font-size:23px}
 <p>This sequence adapts <a href="https://osf.io/kd9q5" target="_blank" rel="noopener noreferrer">RAISE 3 v4, Table 2 (pp.12–19)</a>: the first seven rows follow its review-task sections, while <strong>Writing a manuscript</strong> brings together drafting, revisions and plain-language summaries from Text Generation. Translation is shown where it supports human work in five stages; those cells explain the interpretation.</p></div>
 </details>
 <details class="scope-details" id="ai-category-explanations"><summary>What do the AI categories mean?</summary>
-<div class="disclosure-body"><p>The column groups show the type of AI RAISE assigns to each function. Broadly, these approaches follow explicit rules, learn patterns from data or generate text. RAISE distinguishes four technology families; this map combines supervised and unsupervised learning into one group:</p>
+<div class="disclosure-body"><p>The four column groups follow RAISE’s technology families. Broadly, these approaches follow explicit rules, find patterns, learn from labelled examples or generate text. The groups reflect RAISE’s classification of those functions, rather than every feature of a product:</p>
 <dl class="orientation-definitions">
 <dt>Rule-based algorithms (symbolic AI)</dt><dd>Follow explicit rules, such as matching references or converting search queries. Symbolic AI represents knowledge and rules explicitly. RAISE’s broad group also includes conventional statistics and visualisation; not every statistical calculation is AI.</dd>
-<dt>Supervised and unsupervised machine learning</dt><dd><strong>Supervised learning</strong> learns from labelled examples to classify, rank or locate information. <strong>Unsupervised learning</strong> finds patterns without predefined labels, such as clusters of papers or topics. Classification and clustering are examples, not complete definitions.</dd>
+<dt>Unsupervised machine learning</dt><dd>Finds patterns without predefined labels, for example clusters of papers or topics. Clustering is one use, not the full definition. The narrow map heading abbreviates this to <strong>UNSUP ML</strong>.</dd>
+<dt>Supervised machine learning</dt><dd>Learns from labelled examples to classify, rank or locate information. Classification is one use, not the full definition; a tool can also combine learned components with fixed rules.</dd>
 <dt>Generative large language models (LLMs)</dt><dd>Neural-network models trained on extensive data to generate text or code; they can also support screening and extraction. Chatbots provide conversation; agentic systems can plan and carry out multiple steps. RAISE treats these as modes of LLM use.</dd>
 </dl>
 <p>These are practical display groups: LLMs are themselves machine-learning models, and tools can combine approaches. Cell details retain RAISE’s classification for each function and explain implementation qualifications. <strong>Google Translate and DeepL</strong> are display exceptions: their source label is <strong>Generative and other machine learning approaches</strong>, so their placement does not imply exclusively LLM-based implementations.</p>
@@ -621,13 +623,14 @@ function renderMap(){
  byId('map-scroll').classList.toggle('compact-map',tools.length>0&&tools.length<=4);
  const groups=DATA.groups.map(g=>({...g,tools:tools.filter(t=>t.groupId===g.id)})).filter(g=>g.tools.length);
  const ends=new Set(groups.map(g=>g.tools.at(-1).id));
+ const alternateGroups=new Set(DATA.groups.filter((g,i)=>i%2===1).map(g=>g.id));
  const activeVisible=state.selected&&tools.some(t=>t.id===state.selected.tool)&&stages.includes(state.selected.stage);
  const rememberedVisible=state.focusCell&&tools.some(t=>t.id===state.focusCell.tool)&&stages.includes(state.focusCell.stage);
  const tabKey=activeVisible?state.selected.tool+'|'+state.selected.stage:rememberedVisible?state.focusCell.tool+'|'+state.focusCell.stage:(tools[0]?.id+'|'+stages[0]);
  byId('map-table').style.setProperty('--visible-tools',tools.length);
  byId('map-table').querySelectorAll('colgroup').forEach(c=>c.remove());
  byId('map-table').querySelector('thead').insertAdjacentHTML('beforebegin','<colgroup><col style="width:var(--stage-width)"></colgroup>'+groups.map(g=>'<colgroup>'+g.tools.map(()=>'<col style="width:var(--cell-width)">').join('')+'</colgroup>').join(''));
- byId('map-head').innerHTML='<tr class="group-row"><th class="corner" scope="col" rowspan="2">Review stage</th>'+groups.map((g,i)=>'<th scope="colgroup" title="'+esc(g.label)+'" colspan="'+g.tools.length+'" class="'+(i<groups.length-1?'group-end':'')+'">'+esc(g.label)+'</th>').join('')+'</tr><tr class="tool-row">'+tools.map(t=>'<th scope="col" data-tool="'+t.id+'" class="'+(t.groupId==='classifiers'?'middle ':'')+(ends.has(t.id)?'group-end ':'')+(state.selected?.tool===t.id?'active-tool':'')+'" title="'+esc(t.name+(t.mappingBasis?'; RAISE uses a broader AI category; translation-support stages are interpretations of its guidance':''))+'"><div class="tool-label"><span class="'+(t.name.length>40?'long-name':'')+'">'+esc(t.name)+'</span></div></th>').join('')+'</tr>';
+ byId('map-head').innerHTML='<tr class="group-row"><th class="corner" scope="col" rowspan="2">Review stage</th>'+groups.map((g,i)=>'<th scope="colgroup" data-group="'+esc(g.id)+'" aria-label="'+esc(g.label)+'" title="'+esc(g.label)+'" colspan="'+g.tools.length+'" class="'+(i<groups.length-1?'group-end':'')+'"><span class="group-label">'+esc(g.label)+'</span></th>').join('')+'</tr><tr class="tool-row">'+tools.map(t=>'<th scope="col" data-tool="'+t.id+'" class="'+(alternateGroups.has(t.groupId)?'alternate-group ':'')+(ends.has(t.id)?'group-end ':'')+(state.selected?.tool===t.id?'active-tool':'')+'" title="'+esc(t.name+(t.mappingBasis?'; RAISE uses a broader AI category; translation-support stages are interpretations of its guidance':''))+'"><div class="tool-label"><span class="'+(t.name.length>40?'long-name':'')+'">'+esc(t.name)+'</span></div></th>').join('')+'</tr>';
  let count=0,mixed=0;
  byId('map-body').innerHTML=stages.map(stage=>'<tr><th scope="row" class="'+(state.selected?.stage===stage?'active-stage':'')+'">'+esc(stage)+'</th>'+tools.map(tool=>{const cell=cellMap.get(tool.id+'|'+stage),match=matches(cell),selected=state.selected?.tool===tool.id&&state.selected?.stage===stage;if(cell.functions.length&&match){count++;if(cell.categories.length===2)mixed++;}const label=tool.name+'; '+GROUP.get(tool.groupId).label+'; '+stage+'; '+(cell.categories.length?cell.categories.map(id=>REC.get(id).label).join(' and '):'No listed use within this map’s scope')+(tool.mappingBasis&&cell.functions.length?'; translation support; stage placement derived from RAISE guidance':'');return'<td class="'+(ends.has(tool.id)?'group-end':'')+'"><button type="button" class="cell-button '+(!cell.functions.length?'empty ':'')+(!match?'filtered-out':'')+'" data-tool="'+tool.id+'" data-stage="'+esc(stage)+'" data-categories="'+cell.categories.join(',')+'" tabindex="'+(tool.id+'|'+stage===tabKey?'0':'-1')+'" aria-label="'+esc(label)+'" title="'+esc(label)+'" aria-pressed="'+selected+'">'+cellPaint(cell)+'<span class="filtered-mark" aria-hidden="true"></span></button></td>';}).join('')+'</tr>').join('');
  byId('result-count').innerHTML='<strong>'+count+' '+(state.recommendations.size?'matching':'mapped')+' '+(count===1?'cell':'cells')+'</strong> · '+tools.length+' '+(tools.length===1?'tool':'tools')+' · '+stages.length+' '+(stages.length===1?'stage':'stages')+' <span>('+mixed+' split '+(mixed===1?'cell':'cells')+(state.recommendations.size?'; matches any selected recommendation':'')+')</span>';
@@ -639,6 +642,12 @@ function resizeMap(){
  const maxWidth=tools.length<=4?260:tools.length<=12?80:42;
  const fitted=Math.max(tools.length<=4?110:16,Math.min(maxWidth,(width-rowWidth-4)/Math.max(tools.length,1)));
  byId('map-table').style.setProperty('--cell-width',(state.roomier?Math.max(38,fitted):fitted)+'px');
+ // Use the full family name when filters give a narrow group more room.
+ for(const heading of byId('map-head').querySelectorAll('th[data-group]')){
+  const group=GROUP.get(heading.dataset.group),compact=!!group.shortLabel&&heading.getBoundingClientRect().width<130;
+  heading.classList.toggle('short-label',compact);
+  heading.querySelector('.group-label').textContent=compact?group.shortLabel:group.label;
+ }
  const header=byId('map-head').querySelector('.group-row');
  if(header)byId('map-table').style.setProperty('--group-header-height',header.getBoundingClientRect().height+'px');
 }
