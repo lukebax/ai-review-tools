@@ -25,7 +25,9 @@ The synthesis explanation distinguishes statistical analysis, checked coding ass
 agentic workflows, while preserving the guidance’s evidence limits and source links. Methods described by RAISE without
 a named tool are explained under “What does the map leave out?”, rather than added as tool columns.
 
-Select a cell to read its full function-specific explanations. Recommendation
+Select a cell to read its full function-specific explanations. Its collapsed
+recommendation control gives the relevant definitions from the same data used below
+the map; mixed cells show both definitions once. Recommendation
 filters match either category in mixed cells and preserve both colours. Balanced
 is the default palette; the optional colour-blind-friendly switch selects ColorBrewer
 RdYlBu. Empty cells remain white. Use arrow keys in the map, Enter/Space to open
@@ -71,7 +73,8 @@ neither Python nor Git.
 
 ## Guidance and interpretation
 
-The sources were checked on 18 October 2026. Use the exact RAISE versions and
+The source-based content was checked on 19 October 2026; outgoing links were last
+checked on 18 October 2026. Use the exact RAISE versions and
 qualifications described in the map and [source notices](THIRD_PARTY_NOTICES.md).
 RAISE recommendations apply to specified functions and workflows, not whole products.
 White cells mean no listed use within this map's scope. Diagonal halves distinguish
@@ -101,6 +104,24 @@ updated files to the publishing branch. Pages automatically deploys that branch;
 the public URL updates after a successful deployment. Pushing source changes without
 regenerating `index.html` does not update the displayed map. Local commits alone do
 not publish anything. See [GitHub's Pages instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+
+## Stable checkpoint and experiments
+
+The tag **[stable-2026-10-19](https://github.com/lukebax/ai-review-tools/tree/stable-2026-10-19)**
+marks the tested map before the next substantial experiment. It includes the complete
+editable project and generated HTML. The map content matches commit `76c413b`;
+this checkpoint also updates the maintenance documentation.
+
+Start experimental work on a separate `codex/` branch and inspect the rebuilt HTML
+locally. Keep the published `main` version in place until the experiment is ready
+to publish. A tag does not move as later commits are added.
+
+To inspect the checkpoint without changing a working copy, download its source ZIP
+or check it out in a separate directory. If a published experiment needs undoing,
+first preserve its work in Git, then restore the tagged files in a new commit,
+rebuild/check and push that commit to `main`. Pages will deploy the restored map.
+Prefer this explicit restoration over rewriting shared Git history. All necessary
+map files are tracked; the separate presentation workspace is not needed for recovery.
 
 ## Licences
 
