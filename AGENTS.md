@@ -1,9 +1,15 @@
 # Working on ai-review-tools
 
-Read README.md before editing. This repository is a standalone static map with
-public source data, not a place for private source libraries or unrelated files.
+Read README.md and the affected component’s README before editing. This repository contains a standalone static map and a browser-presentation prototype.
+Keep private source libraries and unrelated files out of this public repository.
 
-- Edit map-data.json and map-template.html; regenerate index.html using python3 build.py.
+- Edit map/map-data.json and map/map-template.html; regenerate map/index.html using
+  python3 map/build.py. The map lives at /map/; root index.html is the landing page.
+- Keep the browser deck and its assets in presentation/. The shared root preview.py serves both components;
+  the presentation README documents PDF export. Avoid coupling the map to presentation dependencies.
+- Both components are published on GitHub Pages. The user permits URL changes when they
+  make the structure clearer; historical URLs are not a requirement. Keep each component
+  self-contained and update the landing links and documentation when paths change.
 - Keep all required project files versioned. Do not add hidden/private dependencies
   or blanket ignore rules. Use an operating-system temporary directory for inspection output.
 - Preserve the precise RAISE source version, task-specific recommendations, identified
@@ -21,8 +27,9 @@ public source data, not a place for private source libraries or unrelated files.
   visual convention; do not silently omit it or choose one category.
 - Balanced is the fresh-load default. Any palette change must update cells, diagonal halves,
   key and detail panels consistently. Keep textual recommendations and keyboard access.
-- Use python3 build.py --check, then browser-test affected interactions. Keep local viewing
-  self-contained: no runtime network dependency, server requirement or external workspace paths.
+- Use python3 map/build.py --check, then browser-test affected map interactions. Keep map
+  viewing self-contained: no runtime network dependency, server requirement or external
+  workspace paths. A local server is optional for previewing the presentation.
 - Preserve the MIT software / CC BY 4.0 content distinction and third-party notices, including
   notices embedded in the distributable HTML.
 - Luke reviews requested map updates on GitHub Pages. His standing instruction is to edit and

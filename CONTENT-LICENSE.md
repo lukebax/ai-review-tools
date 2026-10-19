@@ -2,8 +2,10 @@
 
 The original explanatory text, annotations and curated map data in this project
 are licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
-This includes `map-data.json`, explanatory prose in `map-template.html`, and that
-content as embedded in `index.html`.
+This includes `map/map-data.json`, explanatory prose in `map/map-template.html`, and that
+content as embedded in `map/index.html`, plus original explanatory copy in the landing
+page and presentation. Their interface code retains the separate MIT licence; bundled
+libraries and the NASA image retain their own terms.
 
 Original adaptation: © 2026 Luke Baxter. You may share and adapt it, including
 commercially, with appropriate credit, a licence link and an indication of changes.

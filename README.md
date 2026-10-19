@@ -1,159 +1,83 @@
-# Navigating AI in Evidence Synthesis
+# AI in evidence synthesis
 
-An independent interactive guide to named tool uses and recommendations in
-**RAISE 3 draft v4.0 (23 September 2026)**. Created and maintained by Luke Baxter.
-It contains 56 named tools/features/resources across eight review stages, with
-131 function records in 96 populated cells. Twelve cells have two recommendations.
-InfraNodus has a separate explanation outside the eight-stage map.
+Two independent browser tools, created and maintained by Luke Baxter:
 
-## View the map
+- **[Interactive map](https://lukebax.github.io/ai-review-tools/map/)** — Navigating AI in
+  Evidence Synthesis, a guide to RAISE’s recommendations. [Map instructions](map/README.md).
+- **[Presentation prototype](https://lukebax.github.io/ai-review-tools/presentation/)** —
+  four 16:9 test slides with an image, interactive tabs, keyboard navigation and PDF export.
+  [Presentation instructions](presentation/README.md). This is a format experiment, not a final talk deck.
 
-**[Open the live interactive map](https://lukebax.github.io/ai-review-tools/)**
+The **[site home](https://lukebax.github.io/ai-review-tools/)** links to both components.
 
-For a local copy, open **[index.html](index.html)** in Chrome or another modern browser. It contains
-the data, styling and interaction code. No installation, server or internet
-connection is required to explore the map; outgoing source/tool links require internet.
+## Structure
 
-The explanations below the filters introduce RAISE, then this map and its sources,
-followed by review stages, AI categories and recommendation colours. Each expandable section
-starts collapsed and has a distinct heading bar and border, with larger reading text and subordinate internal headings. Use **Expand all** or
-**Collapse all** above these sections, or open and close each heading individually. The stage descriptions are a workflow
-adaptation of RAISE 3 v4; the AI explanation introduces all four technology families, their overlap
-and the translation qualifications. The map uses a two-level header: **Rule-based Algorithms**, **Machine Learning** and
-**Generative Large Language Models (LLMs)** across the top, with **Unsup.** and
-**Supervised** beneath Machine Learning. The two outer headings span both header rows.
-A horizontal line caps the ML subheadings, joining the outer category dividers.
-The divider between the ML families starts at their subheadings. Tool-name cells
-share one light background; stronger vertical lines mark only internal category boundaries. “Unsup.” expands to
-“Unsupervised” when space permits; filters, cell details and explanations retain the full
-four family names. The remaining sections explain differing recommendations,
-why some uses are not acceptable, tool suitability, coverage limits and keyboard use.
-“Is this tool suitable for my review?” uses RAISE 3’s five assessment questions in their
-original order, with concise explanations, proportionate assessment and decision outcomes
-from Section 3 (pp.23–29).
-The synthesis explanation distinguishes statistical analysis, checked coding assistance and
-agentic workflows, while preserving the guidance’s evidence limits and source links. Methods described by RAISE without
-a named tool are explained under “What does the map leave out?”, rather than added as tool columns.
-
-Select a cell to read its full function-specific explanations. The panel names the
-map family above the tool; “RAISE Table 2 label” retains the source’s more specific
-terminology, including agentic modes of LLM use. Its collapsed
-recommendation control gives the relevant definitions from the same data used below
-the map; mixed cells show both definitions once. Recommendation
-filters match either category in mixed cells and preserve both colours. Balanced
-is the default palette; the optional colour-blind-friendly switch selects ColorBrewer
-RdYlBu. Empty cells remain white. Use arrow keys in the map, Enter/Space to open
-details and Escape to close them. The layout is optimised for desktop; narrow views
-can scroll the map horizontally.
-
-## Edit and rebuild
-
-Requirements for editing: **Python 3.9 or newer**, with no third-party packages.
-The generated HTML itself needs only a browser.
-
-1. Edit `map-data.json` for the public tool/function content and recommendation definitions.
-2. Edit `map-template.html` for the layout, styles and interaction code.
-3. Run `python3 build.py` from this directory to validate the data and regenerate `index.html`.
-4. Open the HTML and check the change. Run `python3 build.py --check` to verify the
-   finished HTML matches the sources without changing any files.
-5. Commit the changed sources and regenerated HTML together when ready.
-
-The script also works when called by its path from another directory. It reads
-only this project's data/template and writes only this project's `index.html`.
-It does not download anything or need a separate workspace. Do not edit the
-generated HTML directly. The build rejects cells containing more than two
-recommendation categories: review the display convention before adding such a case.
-
-## Project files and recovery
-
-| Files | Purpose |
+| Path | Purpose |
 |---|---|
-| `index.html` | Complete map ready to open or serve |
-| `map-data.json`, `map-template.html`, `build.py` | Editable sources and standard-library build |
-| `README.md`, `AGENTS.md` | Use, maintenance and contribution guidance |
-| `LICENSE`, `CONTENT-LICENSE.md`, `THIRD_PARTY_NOTICES.md`, `LICENSES/` | Scoped licences and source acknowledgements |
-| `.nojekyll` | Disable Jekyll processing for static Pages deployment |
+| `index.html` | Small landing page linking to the map and presentation |
+| `map/` | Complete map: data, template, build script, generated HTML and instructions |
+| `presentation/` | Complete presentation: HTML, styling, interaction code, image, bundled dependencies and instructions |
+| `preview.py` | Optional local preview server for the whole site |
+| `AGENTS.md` | Maintenance rules |
+| `LICENSE`, `CONTENT-LICENSE.md`, `THIRD_PARTY_NOTICES.md`, `LICENSES/` | Scoped licences and attribution |
+| `.nojekyll` | Static GitHub Pages publishing without Jekyll processing |
 
-All required project files are versioned. There are no private/local-only source
-dependencies, downloaded PDF libraries or ignored project files. Temporary inspection
-files should be kept outside the project.
+Each component owns its assets and works independently. Neither depends on the private
+presentation workspace. The map’s generated HTML is self-contained; the presentation’s
+required files are bundled in its own folder. A fresh clone or source ZIP contains everything
+needed to view both. A clone also includes Git history and the remote connection.
 
-A fresh clone or source ZIP contains the complete map and editable sources. Rebuild
-with `python3 build.py` and check with `python3 build.py --check`. A clone also has
-Git history and a remote connection; a ZIP contains only the files. Viewing requires
-neither Python nor Git.
+## Preview locally
 
-## Guidance and interpretation
+Open root `index.html` in a modern browser and choose a component. You can also open
+`map/index.html` or `presentation/index.html` directly. Keep the presentation’s assets with it.
 
-The source-based content and outgoing links were checked on 19 October 2026. Some
-external sites restrict automated access; a correct link does not guarantee future availability. Use the exact RAISE versions and
-qualifications described in the map and [source notices](THIRD_PARTY_NOTICES.md).
-RAISE recommendations apply to specified functions and workflows, not whole products.
-White cells mean no listed use within this map's scope. Diagonal halves distinguish
-recommendations for different functions/workflows, not proportions or certainty.
+For local HTTP preview, run from the repository root:
 
-This map paraphrases and reorganises the guidance and identifies editorial interpretation.
-Its four display groups follow RAISE v4: Rule-based algorithms (symbolic AI),
-Unsupervised machine learning, Supervised machine learning, and Generative large
-language models (LLMs). They contain 27, 2, 10 and 17 columns respectively.
-Carrot2 and SWIFT-Review are the unsupervised examples. STEED and URSE retain
-RAISE’s supervised assignments and the implementation qualifications in their details.
-Agentic and conversational uses sit within the LLM group; these are practical
-groupings rather than mutually exclusive technology families. Google Translate and DeepL appear in four
-derived translation-support stages and retain their broader source technology label
-in their details; placing them in the LLM group does not imply exclusively LLM-based
-implementations. “Writing a manuscript” covers drafting, revisions and plain-language
-summaries. End-to-end review workflows and chatbot interaction are explained outside
-the matrix. The guide is not an official RAISE publication or a live product catalogue.
-Check new guidance versions and the intended review procedure before relying on a
-recommendation. Official documentation explains features; it does not prove validation.
+```sh
+python3 preview.py
+```
 
-## GitHub Pages configuration and updates
+Open one of the printed URLs. The server binds only to this computer and does not publish
+anything. Stop it with Ctrl+C. Python 3.9+ is required for the preview helper and map build;
+viewing the HTML needs only a browser. Browsing and direct PDF export use bundled assets;
+outgoing source links require internet. See the [PDF instructions](presentation/README.md#save-a-pdf).
 
-The site's publishing configuration is **Settings → Pages → Deploy from a branch →
-main → /(root)**. The finished `index.html` is the website.
-The Python script is for local editing; this setup does not run it on GitHub.
+## Edit
 
-Luke reviews changes on the live Pages site. Requested map updates therefore include
-local editing, rebuilding and verification, followed by committing and pushing the
-updated sources and generated HTML to the publishing branch. Verify the deployment
-and live result before handing it back for review. Use a local-only workflow only
-when explicitly requested. Pages automatically deploys that branch;
-the public URL updates after a successful deployment. Pushing source changes without
-regenerating `index.html` does not update the displayed map. Local commits alone do
-not publish anything. See [GitHub's Pages instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+- **Map:** edit `map/map-data.json` or `map/map-template.html`, then run
+  `python3 map/build.py` and `python3 map/build.py --check`. The generated output is
+  `map/index.html`; do not edit it directly. See the [map guide](map/README.md).
+- **Presentation:** edit its HTML, `assets/theme.css` and `assets/deck.js`. No build step
+  is needed. Bundled dependencies have fixed versions and original licence notices.
+- **Landing page:** edit root `index.html`. It has no runtime dependencies.
 
-## Current baseline and recovery
+Keep all required project files versioned. Keep private sources, temporary inspection files,
+exports and unrelated material out of this public repository. Use the operating system’s
+temporary directory for disposable checks.
 
-The accepted baseline is the current four-family map with a two-level header:
-Machine Learning is the visual parent of separate Unsupervised and Supervised
-families, with the completed source-label clarifications. Continue from the current
-`main` branch; documentation-only commits do not necessarily change the HTML.
+## Publish and verify
 
-The map includes “Is this tool suitable for my review?”, using RAISE 3’s five assessment
-questions with concise explanations and source attribution.
+GitHub Pages is configured as **Deploy from a branch → main → /(root)**. It serves the
+landing page at the site root and each component at `/map/` or `/presentation/`. These paths
+are an organisational choice; the user permits changing URLs when that improves the layout.
 
-All required map files and editable sources are tracked. A fresh clone or source
-ZIP recovers the complete project; the private presentation workspace is not required.
-Rebuild with `python3 build.py` and verify with `python3 build.py --check`.
+For requested updates, edit locally, rebuild the map if relevant, check the affected pages,
+then commit and push the complete change to `main`. Verify the Pages deployment and live
+pages before handing them back for review. Explicit local-only instructions take precedence.
+Committing without pushing does not publish. GitHub does not run the Python map build.
 
-The historical tag
-**[stable-2026-10-19](https://github.com/lukebax/ai-review-tools/tree/stable-2026-10-19)**
-preserves the earlier three-category map at `3df295d`, with map content matching
-`76c413b`. It is a historical recovery point, not the current accepted baseline.
-The `codex/four-ai-categories` and `codex/two-level-headings` branches also preserve
-earlier iterations; they are not active work queues. No rollback is planned.
-If a rollback is explicitly requested, preserve the current work and restore the
-chosen revision in a new commit, then rebuild, check and publish with authorisation.
-Do not rewrite shared Git history.
+Verify the root links, map search/cell details/guidance, and presentation navigation/image/PDF
+as relevant to the change. Keep source-specific checks in the component instructions.
+See [GitHub’s publishing instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
 ## Licences
 
 - Original interface/build software and technical maintenance documentation:
   **[MIT](LICENSE)**, © 2026 Luke Baxter.
 - Original explanatory text, annotations and curated map data:
-  **[CC BY 4.0](CONTENT-LICENSE.md)**, including that content inside the HTML.
-- Upstream RAISE material retains its CC BY 4.0 terms and authorship. ColorBrewer
-  material retains its notices and Apache 2.0 terms. See [third-party notices](THIRD_PARTY_NOTICES.md).
+  **[CC BY 4.0](CONTENT-LICENSE.md)**, including that content inside the map HTML.
+- Upstream RAISE material retains its CC BY 4.0 terms and authorship. Bundled libraries and
+  the NASA image retain their respective terms; see [third-party notices](THIRD_PARTY_NOTICES.md).
 
-These scopes remain separate when software and content are bundled together.
+Software and content licences remain distinct when bundled in one HTML file.

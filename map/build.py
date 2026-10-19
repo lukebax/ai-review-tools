@@ -60,7 +60,7 @@ def render(data, template):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--check', action='store_true', help='Validate that index.html matches its sources without changing any files.')
+    parser.add_argument('--check', action='store_true', help='Validate that map/index.html matches its sources without changing any files.')
     args = parser.parse_args()
     data = json.loads((HERE/'map-data.json').read_text(encoding='utf-8'))
     template = (HERE/'map-template.html').read_text(encoding='utf-8')
@@ -69,11 +69,11 @@ def main():
     encoded = result.encode('utf-8')
     if args.check:
         if not output.is_file() or output.read_bytes() != encoded:
-            parser.exit(1, 'index.html is missing or stale. Run python3 build.py and check the result.\n')
-        print('index.html matches its validated sources.')
+            parser.exit(1, 'map/index.html is missing or stale. Run python3 map/build.py from the repository root and check the result.\n')
+        print('map/index.html matches its validated sources.')
     else:
         output.write_bytes(encoded)
-        print('Built index.html. Open it in a browser; no server required.')
+        print('Built map/index.html. Open it in a browser; no server required.')
     print(json.dumps(counts, indent=2))
 
 

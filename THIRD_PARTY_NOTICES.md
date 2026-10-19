@@ -39,3 +39,21 @@ upstream ColorBrewer material, not the original map code or explanatory content.
 Official tool documentation and primary publications are linked in the function
 details to support descriptions and qualifications. Linked works and tool names
 retain their owners' rights. A tool link is not a validation claim or endorsement.
+
+## Presentation prototype
+
+The `presentation/` prototype bundles [Reveal.js](https://revealjs.com/)
+version **6.0.2**, by Hakim El Hattab and contributors, under the MIT licence.
+The required distribution files are unmodified; the upstream licence and version
+record are in `presentation/assets/vendor/reveal/`. No CDN is required.
+
+The Apollo 17 Earth photograph is credited to NASA Johnson Space Center /
+Apollo 17 crew. Its official source and usage terms are recorded in
+[presentation/assets/IMAGE-CREDIT.md](presentation/assets/IMAGE-CREDIT.md).
+These third-party assets retain their respective terms.
+
+Direct local PDF export bundles html2canvas 1.4.1 (Niklas von Hertzen and
+contributors) and jsPDF 4.2.1 (James Hall, yWorks and contributors), both under
+the MIT licence. Original licence files, package URLs and verified integrity
+records accompany their unmodified distribution files in
+`presentation/assets/vendor/`.

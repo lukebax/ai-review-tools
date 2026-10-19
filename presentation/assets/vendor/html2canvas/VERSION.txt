@@ -1,0 +1,4 @@
+html2canvas 1.4.1
+https://registry.npmjs.org/html2canvas/-/html2canvas-1.4.1.tgz
+sha512-fPU6BHNpsyIhr8yyMpTLLxAbkaK8ArIBcmZIRiBLiDhjeqvXolaEmDGmELFuX9I4xDcaKKcJl+TKZLqruBbmWA==
+MIT licence; distribution unmodified.

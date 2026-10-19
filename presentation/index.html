@@ -1,0 +1,87 @@
+<!doctype html>
+<!-- Format prototype: test the agreed map-derived visual style, 16:9 canvas,
+     keyboard navigation, bundled image and static PDF. Not a draft of the talk. -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A four-slide HTML presentation prototype.">
+  <title>A different way to present — prototype</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/vendor/reveal/reset.css">
+  <link rel="stylesheet" href="assets/vendor/reveal/reveal.css">
+  <link rel="stylesheet" href="assets/theme.css">
+</head>
+<body>
+  <noscript>This presentation needs JavaScript. Enable it to navigate the slides.</noscript>
+  <nav class="deck-tools" aria-label="Presentation tools">
+    <span class="prototype-label">Prototype</span>
+    <button type="button" id="fullscreen">Full screen</button>
+    <button type="button" id="export-pdf">Export PDF</button>
+  </nav>
+  <div class="print-tools" hidden>
+    <p id="pdf-status" role="status"><strong>PDF view</strong> · Download four static slide images, or use Print for selectable text.</p>
+    <button type="button" id="download-pdf">Download PDF</button>
+    <button type="button" id="print-pdf">Print / Save PDF</button>
+    <button type="button" id="back-to-slides">Back to slides</button>
+  </div>
+  <div class="reveal">
+    <div class="slides">
+      <section class="slide cover" aria-label="A different way to present">
+        <div class="slide-layout"><div class="cover-copy">
+          <p class="eyebrow">A browser presentation</p>
+          <h1>A different way<br>to present</h1>
+          <p class="lead">The same slide format.<br>More room to explore.</p>
+          <p class="navigation-hint">Use <kbd>←</kbd> <kbd>→</kbd> to move between slides</p>
+        </div>
+        <div class="format-panel" aria-label="16 by 9 widescreen format">
+          <span class="format-number">16:9</span>
+          <span class="format-caption">A familiar canvas</span>
+          <span class="format-detail">Navy · soft blue · off-white</span>
+        </div></div>
+      </section>
+      <section class="slide image-slide" aria-label="Room for an image">
+        <div class="slide-layout"><div class="image-copy">
+          <h2>Room for<br>an image</h2>
+          <p class="lead">A photograph can carry<br>the visual story.</p>
+          <p class="support">This image is saved with the deck,<br>so it is available offline.</p>
+        </div>
+        <figure>
+          <img src="assets/images/earth.jpg" alt="Earth photographed by the Apollo 17 crew, with Africa and Antarctica visible among white cloud formations." width="1881" height="1881">
+          <figcaption>NASA Johnson Space Center / Apollo 17 crew</figcaption>
+        </figure></div>
+      </section>
+      <section class="slide interactive-slide" aria-label="Explore a point as you speak">
+        <div class="slide-layout"><div class="slide-heading">
+          <h2>Explore a point<br>as you speak</h2>
+          <p class="lead">Choose a tab to change the explanation.</p>
+        </div>
+        <div class="interaction-demo">
+          <div class="example-tabs" role="tablist" aria-label="Example explanation">
+            <button id="tab-context" type="button" role="tab" aria-controls="panel-context" aria-selected="true">Context</button>
+            <button id="tab-example" type="button" role="tab" aria-controls="panel-example" aria-selected="false" tabindex="-1">Example</button>
+            <button id="tab-takeaway" type="button" role="tab" aria-controls="panel-takeaway" aria-selected="false" tabindex="-1">Takeaway</button>
+          </div>
+          <div class="example-panel" id="panel-context" role="tabpanel" aria-labelledby="tab-context" tabindex="0"><h3>Start with the question</h3><p>Give the audience a clear reason to look, listen and think.</p></div>
+          <div class="example-panel" id="panel-example" role="tabpanel" aria-labelledby="tab-example" tabindex="0" hidden><h3>Make it concrete</h3><p>Bring in an image, a short example or something the audience can explore.</p></div>
+          <div class="example-panel" id="panel-takeaway" role="tabpanel" aria-labelledby="tab-takeaway" tabindex="0" hidden><h3>Return to the main point</h3><p>Let the interaction support the explanation, then move the story forward.</p></div>
+          <p class="interaction-note">The PDF includes all three explanations.</p>
+        </div></div>
+      </section>
+      <section class="slide closing-slide" aria-label="Take a copy with you">
+        <h2>Take a copy<br>with you</h2>
+        <p class="lead">Keep the live deck for presenting.<br>Save a PDF for sharing.</p>
+        <div class="closing-columns">
+          <div><h3>In the browser</h3><p>Move through the slides,<br>explore the tabs and go full screen.</p></div>
+          <div><h3>On the page</h3><p>Export four static pages,<br>with the image and explanations included.</p></div>
+        </div>
+        <p class="closing-note">Choose <strong>Export PDF</strong> in the toolbar to try it.</p>
+      </section>
+    </div>
+  </div>
+  <script src="assets/vendor/reveal/reveal.js"></script>
+  <script src="assets/vendor/html2canvas/html2canvas.min.js"></script>
+  <script src="assets/vendor/jspdf/jspdf.umd.min.js"></script>
+  <script src="assets/deck.js"></script>
+</body>
+</html>
