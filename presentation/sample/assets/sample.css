@@ -7,7 +7,7 @@
 .reveal .subtitle{font-size:25px;color:var(--muted);margin-top:16px}.reveal .caption{font-size:28px;color:var(--muted);line-height:1.38}
 .reveal figure{margin:0}.reveal img{margin:0;max-width:none;max-height:none;border:0;box-shadow:none}
 .reveal a{color:var(--muted);text-decoration:none}.reveal a:hover{text-decoration:underline}
-.slide-footer{position:absolute;left:64px;right:64px;bottom:25px;display:flex;justify-content:space-between;align-items:center;font-size:16px;color:var(--muted);line-height:1.2}
+.slide-footer{position:absolute;left:64px;right:64px;bottom:25px;display:flex;justify-content:flex-end;align-items:center;font-size:16px;color:var(--muted);line-height:1.2}
 .method-columns{display:grid;grid-template-columns:1fr 1fr;gap:54px;margin-top:62px}.method-column+ .method-column{padding-left:40px;border-left:1px solid var(--line)}
 .method-diagram{width:100%;height:238px;display:block;margin:24px 0 20px}.method-diagram text{font-family:var(--r-main-font);fill:var(--ink);font-size:25px}
 .method-note{border-top:1px solid var(--line);padding-top:15px;margin-top:28px!important;font-size:25px!important;color:var(--muted)}

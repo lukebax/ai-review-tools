@@ -59,6 +59,10 @@ are required. The map component itself does not depend on this sample.
 
 ## Sources and attribution
 
+Routine provenance stays here and in preparation notes. Do not add repeated
+RAISE source labels, paper links, page references or origin reminders to the
+visible slides. The full talk introduces RAISE in its relevant content.
+
 Adapted from the RAISE guidance by James Thomas, Kaitlyn Hair, Anna Noel-Storr
 and colleagues, under CC BY 4.0. See the [full project notices](../../THIRD_PARTY_NOTICES.md)
 for authorship and licences. Original software is MIT; original explanatory
