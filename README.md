@@ -8,6 +8,8 @@ Two independent browser tools, created and maintained by Luke Baxter:
   four 16:9 test slides with an image, interactive tabs, keyboard navigation and PDF export.
   [Presentation instructions](presentation/README.md). This is a format experiment, not a final talk deck.
 
+**[Current talk design sample](https://lukebax.github.io/ai-review-tools/presentation/sample/)**: four representative slides from the approved talk, with a checked PDF. [Sample details](presentation/sample/README.md).
+
 The **[site home](https://lukebax.github.io/ai-review-tools/)** links to both components.
 
 ## Structure

@@ -1,0 +1,1919 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1152 430" role="img" aria-labelledby="map-title map-description">
+<title id="map-title">AI tools across eight review stages</title>
+<desc id="map-description">Static overview of the maintained RAISE-based map: 56 tool columns in source order, grouped into rule-based algorithms, unsupervised machine learning, supervised machine learning, and generative large language models. Eight review stages run down the side. Recommendation colours and diagonal split cells match the interactive map. White cells mean no use mapped. Tool names are omitted visually in this overview; each cell retains its tool, stage and recommendation in its accessible title. The neighbouring slide key explains the five colours.</desc>
+<metadata id="map-source-metadata">{&quot;source&quot;:&quot;../../map/map-data.json&quot;,&quot;toolOrder&quot;:[&quot;asysd&quot;,&quot;grade-cerqual&quot;,&quot;cinema&quot;,&quot;citationchaser&quot;,&quot;citesource&quot;,&quot;connected-papers&quot;,&quot;crsu-meta-analysis-apps&quot;,&quot;deduklick&quot;,&quot;eppi-mapper&quot;,&quot;eppi-reviewer&quot;,&quot;eviatlas&quot;,&quot;gradepro&quot;,&quot;meta&quot;,&quot;metafor&quot;,&quot;nested-knowledge&quot;,&quot;predicter&quot;,&quot;pubreminer&quot;,&quot;researchrabbit&quot;,&quot;searchbuildr&quot;,&quot;systematic-online-living-evidence-summaries&quot;,&quot;tera&quot;,&quot;tera-deduplicator&quot;,&quot;tera-polyglot&quot;,&quot;tera-review-wizard&quot;,&quot;tera-search-refiner&quot;,&quot;tera-wordfreq&quot;,&quot;yale-mesh-analyzer&quot;,&quot;carrot2&quot;,&quot;swift-review&quot;,&quot;abstrackr&quot;,&quot;covidence&quot;,&quot;dextr&quot;,&quot;eppi-reviewer-prioritised-screening&quot;,&quot;eppi-reviewer-supervised-classifiers&quot;,&quot;pre-rob&quot;,&quot;robotreviewer&quot;,&quot;sciscore&quot;,&quot;steed&quot;,&quot;urse&quot;,&quot;asta&quot;,&quot;asta-find-papers&quot;,&quot;chatgpt&quot;,&quot;claude&quot;,&quot;copilot&quot;,&quot;deepl&quot;,&quot;deepseek&quot;,&quot;elicit&quot;,&quot;gemini&quot;,&quot;google-ai-mode&quot;,&quot;google-translate&quot;,&quot;maxqda&quot;,&quot;nested-knowledge-smart-search-tool&quot;,&quot;nvivo&quot;,&quot;perplexity&quot;,&quot;undermind&quot;,&quot;webplotdigitizer-ai-features&quot;],&quot;stageOrder&quot;:[&quot;Writing a protocol&quot;,&quot;The Search&quot;,&quot;Screening for relevance&quot;,&quot;Quality assessment&quot;,&quot;Data extraction&quot;,&quot;Data synthesis&quot;,&quot;Certainty of evidence assessment&quot;,&quot;Writing a manuscript&quot;],&quot;groupOrder&quot;:[&quot;rule-based&quot;,&quot;unsupervised&quot;,&quot;supervised&quot;,&quot;generative&quot;],&quot;groupToolCounts&quot;:{&quot;rule-based&quot;:27,&quot;unsupervised&quot;:2,&quot;supervised&quot;:10,&quot;generative&quot;:17},&quot;recommendationOrder&quot;:[&quot;acceptable&quot;,&quot;verification&quot;,&quot;validation&quot;,&quot;exploratory&quot;,&quot;unacceptable&quot;],&quot;palette&quot;:{&quot;acceptable&quot;:&quot;#2FA572&quot;,&quot;verification&quot;:&quot;#A2CF80&quot;,&quot;validation&quot;:&quot;#F3CE55&quot;,&quot;exploratory&quot;:&quot;#F29B56&quot;,&quot;unacceptable&quot;:&quot;#DE6262&quot;},&quot;populatedCells&quot;:96,&quot;mixedCells&quot;:12,&quot;blankCells&quot;:352,&quot;functionCount&quot;:131}</metadata>
+<g font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" fill="#173b52">
+<rect width="1152" height="430" fill="#f7f9fa"/>
+<rect x="258" y="51" width="431.0357" height="81" fill="#eaf0f3"/>
+<rect x="689.0357" y="51" width="31.9286" height="81" fill="#eaf0f3"/>
+<rect x="720.9643" y="51" width="159.6429" height="81" fill="#eaf0f3"/>
+<rect x="880.6071" y="51" width="271.3929" height="81" fill="#eaf0f3"/>
+<text x="473.5179" y="87" font-size="24" text-anchor="middle" font-weight="650">Rule-based</text>
+<text x="473.5179" y="114" font-size="24" text-anchor="middle" font-weight="650">algorithms</text>
+<text x="800.7857" y="74" font-size="22" text-anchor="middle" font-weight="650">Supervised</text>
+<text x="800.7857" y="99" font-size="22" text-anchor="middle" font-weight="650">machine</text>
+<text x="800.7857" y="124" font-size="22" text-anchor="middle" font-weight="650">learning</text>
+<text x="1016.3036" y="87" font-size="24" text-anchor="middle" font-weight="650">Generative large</text>
+<text x="1016.3036" y="114" font-size="24" text-anchor="middle" font-weight="650">language models</text>
+<text x="705" y="25" font-size="23" text-anchor="middle" font-weight="650">Unsupervised machine learning</text>
+<path d="M705 36V122" fill="none" stroke="#526e80" stroke-width="1.8"/>
+<path d="M701 117L705 123L709 117" fill="none" stroke="#526e80" stroke-width="1.8"/>
+<text x="0" y="117" font-size="22" text-anchor="start" font-weight="650" fill="#526e80">Review stage</text>
+<g class="stage-label" data-stage="Writing a protocol"><title>Writing a protocol</title>
+<text x="0" y="157.25" font-size="23" text-anchor="start" font-weight="500">Writing a protocol</text>
+</g>
+<g class="stage-label" data-stage="The Search"><title>The Search</title>
+<text x="0" y="191.75" font-size="23" text-anchor="start" font-weight="500">The search</text>
+</g>
+<g class="stage-label" data-stage="Screening for relevance"><title>Screening for relevance</title>
+<text x="0" y="226.25" font-size="23" text-anchor="start" font-weight="500">Screening for relevance</text>
+</g>
+<g class="stage-label" data-stage="Quality assessment"><title>Quality assessment</title>
+<text x="0" y="260.75" font-size="23" text-anchor="start" font-weight="500">Quality assessment</text>
+</g>
+<g class="stage-label" data-stage="Data extraction"><title>Data extraction</title>
+<text x="0" y="295.25" font-size="23" text-anchor="start" font-weight="500">Data extraction</text>
+</g>
+<g class="stage-label" data-stage="Data synthesis"><title>Data synthesis</title>
+<text x="0" y="329.75" font-size="23" text-anchor="start" font-weight="500">Data synthesis</text>
+</g>
+<g class="stage-label" data-stage="Certainty of evidence assessment"><title>Certainty of evidence assessment</title>
+<text x="0" y="364.25" font-size="23" text-anchor="start" font-weight="500">Certainty of evidence</text>
+</g>
+<g class="stage-label" data-stage="Writing a manuscript"><title>Writing a manuscript</title>
+<text x="0" y="398.75" font-size="23" text-anchor="start" font-weight="500">Writing a manuscript</text>
+</g>
+<g class="map-cell" data-tool="asysd" data-stage="Writing a protocol" data-recommendations="">
+<title>ASySD; Writing a protocol; No use mapped</title>
+<rect x="258" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="grade-cerqual" data-stage="Writing a protocol" data-recommendations="">
+<title>GRADE-CERQual; Writing a protocol; No use mapped</title>
+<rect x="273.9643" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="cinema" data-stage="Writing a protocol" data-recommendations="">
+<title>CINeMA; Writing a protocol; No use mapped</title>
+<rect x="289.9286" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="citationchaser" data-stage="Writing a protocol" data-recommendations="">
+<title>citationchaser; Writing a protocol; No use mapped</title>
+<rect x="305.8929" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="citesource" data-stage="Writing a protocol" data-recommendations="">
+<title>CiteSource; Writing a protocol; No use mapped</title>
+<rect x="321.8571" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="connected-papers" data-stage="Writing a protocol" data-recommendations="">
+<title>Connected Papers; Writing a protocol; No use mapped</title>
+<rect x="337.8214" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="crsu-meta-analysis-apps" data-stage="Writing a protocol" data-recommendations="">
+<title>CRSU Meta-analysis apps; Writing a protocol; No use mapped</title>
+<rect x="353.7857" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="deduklick" data-stage="Writing a protocol" data-recommendations="">
+<title>Deduklick; Writing a protocol; No use mapped</title>
+<rect x="369.75" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-mapper" data-stage="Writing a protocol" data-recommendations="">
+<title>EPPI-Mapper; Writing a protocol; No use mapped</title>
+<rect x="385.7143" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer" data-stage="Writing a protocol" data-recommendations="">
+<title>EPPI-Reviewer; Writing a protocol; No use mapped</title>
+<rect x="401.6786" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eviatlas" data-stage="Writing a protocol" data-recommendations="">
+<title>EviAtlas; Writing a protocol; No use mapped</title>
+<rect x="417.6429" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="gradepro" data-stage="Writing a protocol" data-recommendations="">
+<title>GRADEpro; Writing a protocol; No use mapped</title>
+<rect x="433.6071" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="meta" data-stage="Writing a protocol" data-recommendations="">
+<title>meta; Writing a protocol; No use mapped</title>
+<rect x="449.5714" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="metafor" data-stage="Writing a protocol" data-recommendations="">
+<title>metafor; Writing a protocol; No use mapped</title>
+<rect x="465.5357" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nested-knowledge" data-stage="Writing a protocol" data-recommendations="">
+<title>Nested Knowledge; Writing a protocol; No use mapped</title>
+<rect x="481.5" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="predicter" data-stage="Writing a protocol" data-recommendations="acceptable">
+<title>PredicTER; Writing a protocol; Acceptable for use</title>
+<rect x="497.4643" y="132" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="pubreminer" data-stage="Writing a protocol" data-recommendations="">
+<title>PubReMiner; Writing a protocol; No use mapped</title>
+<rect x="513.4286" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="researchrabbit" data-stage="Writing a protocol" data-recommendations="">
+<title>ResearchRabbit; Writing a protocol; No use mapped</title>
+<rect x="529.3929" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="searchbuildr" data-stage="Writing a protocol" data-recommendations="">
+<title>searchbuildR; Writing a protocol; No use mapped</title>
+<rect x="545.3571" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="systematic-online-living-evidence-summaries" data-stage="Writing a protocol" data-recommendations="">
+<title>Systematic Online Living Evidence Summaries; Writing a protocol; No use mapped</title>
+<rect x="561.3214" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera" data-stage="Writing a protocol" data-recommendations="">
+<title>TERA; Writing a protocol; No use mapped</title>
+<rect x="577.2857" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-deduplicator" data-stage="Writing a protocol" data-recommendations="">
+<title>TERA Deduplicator; Writing a protocol; No use mapped</title>
+<rect x="593.25" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-polyglot" data-stage="Writing a protocol" data-recommendations="">
+<title>TERA Polyglot; Writing a protocol; No use mapped</title>
+<rect x="609.2143" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-review-wizard" data-stage="Writing a protocol" data-recommendations="">
+<title>TERA Review Wizard; Writing a protocol; No use mapped</title>
+<rect x="625.1786" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-search-refiner" data-stage="Writing a protocol" data-recommendations="">
+<title>TERA Search Refiner; Writing a protocol; No use mapped</title>
+<rect x="641.1429" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-wordfreq" data-stage="Writing a protocol" data-recommendations="">
+<title>TERA WordFreq; Writing a protocol; No use mapped</title>
+<rect x="657.1071" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="yale-mesh-analyzer" data-stage="Writing a protocol" data-recommendations="">
+<title>Yale MeSH Analyzer; Writing a protocol; No use mapped</title>
+<rect x="673.0714" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="carrot2" data-stage="Writing a protocol" data-recommendations="acceptable">
+<title>Carrot2; Writing a protocol; Acceptable for use</title>
+<rect x="689.0357" y="132" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="swift-review" data-stage="Writing a protocol" data-recommendations="acceptable">
+<title>SWIFT-Review; Writing a protocol; Acceptable for use</title>
+<rect x="705" y="132" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="abstrackr" data-stage="Writing a protocol" data-recommendations="">
+<title>Abstrackr; Writing a protocol; No use mapped</title>
+<rect x="720.9643" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="covidence" data-stage="Writing a protocol" data-recommendations="">
+<title>Covidence; Writing a protocol; No use mapped</title>
+<rect x="736.9286" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="dextr" data-stage="Writing a protocol" data-recommendations="">
+<title>Dextr; Writing a protocol; No use mapped</title>
+<rect x="752.8929" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer-prioritised-screening" data-stage="Writing a protocol" data-recommendations="">
+<title>EPPI-Reviewer Prioritised Screening; Writing a protocol; No use mapped</title>
+<rect x="768.8571" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer-supervised-classifiers" data-stage="Writing a protocol" data-recommendations="">
+<title>EPPI-Reviewer Supervised Classifiers; Writing a protocol; No use mapped</title>
+<rect x="784.8214" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="pre-rob" data-stage="Writing a protocol" data-recommendations="">
+<title>Pre-ROB; Writing a protocol; No use mapped</title>
+<rect x="800.7857" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="robotreviewer" data-stage="Writing a protocol" data-recommendations="">
+<title>RobotReviewer; Writing a protocol; No use mapped</title>
+<rect x="816.75" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="sciscore" data-stage="Writing a protocol" data-recommendations="">
+<title>SciScore; Writing a protocol; No use mapped</title>
+<rect x="832.7143" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="steed" data-stage="Writing a protocol" data-recommendations="">
+<title>STEED; Writing a protocol; No use mapped</title>
+<rect x="848.6786" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="urse" data-stage="Writing a protocol" data-recommendations="">
+<title>URSE; Writing a protocol; No use mapped</title>
+<rect x="864.6429" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asta" data-stage="Writing a protocol" data-recommendations="">
+<title>Asta; Writing a protocol; No use mapped</title>
+<rect x="880.6071" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asta-find-papers" data-stage="Writing a protocol" data-recommendations="">
+<title>Asta Find Papers; Writing a protocol; No use mapped</title>
+<rect x="896.5714" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="chatgpt" data-stage="Writing a protocol" data-recommendations="verification">
+<title>ChatGPT; Writing a protocol; Human verification required</title>
+<rect x="912.5357" y="132" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="claude" data-stage="Writing a protocol" data-recommendations="verification">
+<title>Claude; Writing a protocol; Human verification required</title>
+<rect x="928.5" y="132" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="copilot" data-stage="Writing a protocol" data-recommendations="verification">
+<title>Copilot; Writing a protocol; Human verification required</title>
+<rect x="944.4643" y="132" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="deepl" data-stage="Writing a protocol" data-recommendations="">
+<title>DeepL; Writing a protocol; No use mapped</title>
+<rect x="960.4286" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="deepseek" data-stage="Writing a protocol" data-recommendations="verification">
+<title>DeepSeek; Writing a protocol; Human verification required</title>
+<rect x="976.3929" y="132" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="elicit" data-stage="Writing a protocol" data-recommendations="">
+<title>Elicit; Writing a protocol; No use mapped</title>
+<rect x="992.3571" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="gemini" data-stage="Writing a protocol" data-recommendations="verification">
+<title>Gemini; Writing a protocol; Human verification required</title>
+<rect x="1008.3214" y="132" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="google-ai-mode" data-stage="Writing a protocol" data-recommendations="">
+<title>Google AI Mode; Writing a protocol; No use mapped</title>
+<rect x="1024.2857" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="google-translate" data-stage="Writing a protocol" data-recommendations="">
+<title>Google Translate; Writing a protocol; No use mapped</title>
+<rect x="1040.25" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="maxqda" data-stage="Writing a protocol" data-recommendations="">
+<title>MAXQDA; Writing a protocol; No use mapped</title>
+<rect x="1056.2143" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nested-knowledge-smart-search-tool" data-stage="Writing a protocol" data-recommendations="">
+<title>Nested Knowledge Smart Search Tool; Writing a protocol; No use mapped</title>
+<rect x="1072.1786" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nvivo" data-stage="Writing a protocol" data-recommendations="">
+<title>NVivo; Writing a protocol; No use mapped</title>
+<rect x="1088.1429" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="perplexity" data-stage="Writing a protocol" data-recommendations="">
+<title>Perplexity; Writing a protocol; No use mapped</title>
+<rect x="1104.1071" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="undermind" data-stage="Writing a protocol" data-recommendations="">
+<title>Undermind; Writing a protocol; No use mapped</title>
+<rect x="1120.0714" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="webplotdigitizer-ai-features" data-stage="Writing a protocol" data-recommendations="">
+<title>WebPlotDigitizer AI features; Writing a protocol; No use mapped</title>
+<rect x="1136.0357" y="132" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asysd" data-stage="The Search" data-recommendations="acceptable">
+<title>ASySD; The Search; Acceptable for use</title>
+<rect x="258" y="166.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="grade-cerqual" data-stage="The Search" data-recommendations="">
+<title>GRADE-CERQual; The Search; No use mapped</title>
+<rect x="273.9643" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="cinema" data-stage="The Search" data-recommendations="">
+<title>CINeMA; The Search; No use mapped</title>
+<rect x="289.9286" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="citationchaser" data-stage="The Search" data-recommendations="acceptable">
+<title>citationchaser; The Search; Acceptable for use</title>
+<rect x="305.8929" y="166.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="citesource" data-stage="The Search" data-recommendations="acceptable">
+<title>CiteSource; The Search; Acceptable for use</title>
+<rect x="321.8571" y="166.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="connected-papers" data-stage="The Search" data-recommendations="acceptable">
+<title>Connected Papers; The Search; Acceptable for use</title>
+<rect x="337.8214" y="166.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="crsu-meta-analysis-apps" data-stage="The Search" data-recommendations="">
+<title>CRSU Meta-analysis apps; The Search; No use mapped</title>
+<rect x="353.7857" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="deduklick" data-stage="The Search" data-recommendations="acceptable">
+<title>Deduklick; The Search; Acceptable for use</title>
+<rect x="369.75" y="166.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="eppi-mapper" data-stage="The Search" data-recommendations="">
+<title>EPPI-Mapper; The Search; No use mapped</title>
+<rect x="385.7143" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer" data-stage="The Search" data-recommendations="acceptable">
+<title>EPPI-Reviewer; The Search; Acceptable for use</title>
+<rect x="401.6786" y="166.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="eviatlas" data-stage="The Search" data-recommendations="">
+<title>EviAtlas; The Search; No use mapped</title>
+<rect x="417.6429" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="gradepro" data-stage="The Search" data-recommendations="">
+<title>GRADEpro; The Search; No use mapped</title>
+<rect x="433.6071" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="meta" data-stage="The Search" data-recommendations="">
+<title>meta; The Search; No use mapped</title>
+<rect x="449.5714" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="metafor" data-stage="The Search" data-recommendations="">
+<title>metafor; The Search; No use mapped</title>
+<rect x="465.5357" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nested-knowledge" data-stage="The Search" data-recommendations="acceptable">
+<title>Nested Knowledge; The Search; Acceptable for use</title>
+<rect x="481.5" y="166.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="predicter" data-stage="The Search" data-recommendations="">
+<title>PredicTER; The Search; No use mapped</title>
+<rect x="497.4643" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="pubreminer" data-stage="The Search" data-recommendations="acceptable">
+<title>PubReMiner; The Search; Acceptable for use</title>
+<rect x="513.4286" y="166.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="researchrabbit" data-stage="The Search" data-recommendations="acceptable">
+<title>ResearchRabbit; The Search; Acceptable for use</title>
+<rect x="529.3929" y="166.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="searchbuildr" data-stage="The Search" data-recommendations="acceptable">
+<title>searchbuildR; The Search; Acceptable for use</title>
+<rect x="545.3571" y="166.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="systematic-online-living-evidence-summaries" data-stage="The Search" data-recommendations="">
+<title>Systematic Online Living Evidence Summaries; The Search; No use mapped</title>
+<rect x="561.3214" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera" data-stage="The Search" data-recommendations="acceptable">
+<title>TERA; The Search; Acceptable for use</title>
+<rect x="577.2857" y="166.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="tera-deduplicator" data-stage="The Search" data-recommendations="acceptable">
+<title>TERA Deduplicator; The Search; Acceptable for use</title>
+<rect x="593.25" y="166.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="tera-polyglot" data-stage="The Search" data-recommendations="verification">
+<title>TERA Polyglot; The Search; Human verification required</title>
+<rect x="609.2143" y="166.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="tera-review-wizard" data-stage="The Search" data-recommendations="">
+<title>TERA Review Wizard; The Search; No use mapped</title>
+<rect x="625.1786" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-search-refiner" data-stage="The Search" data-recommendations="acceptable">
+<title>TERA Search Refiner; The Search; Acceptable for use</title>
+<rect x="641.1429" y="166.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="tera-wordfreq" data-stage="The Search" data-recommendations="acceptable">
+<title>TERA WordFreq; The Search; Acceptable for use</title>
+<rect x="657.1071" y="166.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="yale-mesh-analyzer" data-stage="The Search" data-recommendations="acceptable">
+<title>Yale MeSH Analyzer; The Search; Acceptable for use</title>
+<rect x="673.0714" y="166.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="carrot2" data-stage="The Search" data-recommendations="acceptable">
+<title>Carrot2; The Search; Acceptable for use</title>
+<rect x="689.0357" y="166.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="swift-review" data-stage="The Search" data-recommendations="acceptable">
+<title>SWIFT-Review; The Search; Acceptable for use</title>
+<rect x="705" y="166.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="abstrackr" data-stage="The Search" data-recommendations="">
+<title>Abstrackr; The Search; No use mapped</title>
+<rect x="720.9643" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="covidence" data-stage="The Search" data-recommendations="">
+<title>Covidence; The Search; No use mapped</title>
+<rect x="736.9286" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="dextr" data-stage="The Search" data-recommendations="">
+<title>Dextr; The Search; No use mapped</title>
+<rect x="752.8929" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer-prioritised-screening" data-stage="The Search" data-recommendations="">
+<title>EPPI-Reviewer Prioritised Screening; The Search; No use mapped</title>
+<rect x="768.8571" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer-supervised-classifiers" data-stage="The Search" data-recommendations="">
+<title>EPPI-Reviewer Supervised Classifiers; The Search; No use mapped</title>
+<rect x="784.8214" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="pre-rob" data-stage="The Search" data-recommendations="">
+<title>Pre-ROB; The Search; No use mapped</title>
+<rect x="800.7857" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="robotreviewer" data-stage="The Search" data-recommendations="">
+<title>RobotReviewer; The Search; No use mapped</title>
+<rect x="816.75" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="sciscore" data-stage="The Search" data-recommendations="">
+<title>SciScore; The Search; No use mapped</title>
+<rect x="832.7143" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="steed" data-stage="The Search" data-recommendations="">
+<title>STEED; The Search; No use mapped</title>
+<rect x="848.6786" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="urse" data-stage="The Search" data-recommendations="">
+<title>URSE; The Search; No use mapped</title>
+<rect x="864.6429" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asta" data-stage="The Search" data-recommendations="">
+<title>Asta; The Search; No use mapped</title>
+<rect x="880.6071" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asta-find-papers" data-stage="The Search" data-recommendations="exploratory">
+<title>Asta Find Papers; The Search; Exploratory and supplementary use</title>
+<rect x="896.5714" y="166.5" width="15.9643" height="34.5" fill="#F29B56"/>
+</g>
+<g class="map-cell" data-tool="chatgpt" data-stage="The Search" data-recommendations="verification,exploratory">
+<title>ChatGPT; The Search; Human verification required and Exploratory and supplementary use</title>
+<rect x="912.5357" y="166.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+<path d="M928.5 166.5V201H912.5357Z" fill="#F29B56"/>
+</g>
+<g class="map-cell" data-tool="claude" data-stage="The Search" data-recommendations="verification,exploratory">
+<title>Claude; The Search; Human verification required and Exploratory and supplementary use</title>
+<rect x="928.5" y="166.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+<path d="M944.4643 166.5V201H928.5Z" fill="#F29B56"/>
+</g>
+<g class="map-cell" data-tool="copilot" data-stage="The Search" data-recommendations="verification,exploratory">
+<title>Copilot; The Search; Human verification required and Exploratory and supplementary use</title>
+<rect x="944.4643" y="166.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+<path d="M960.4286 166.5V201H944.4643Z" fill="#F29B56"/>
+</g>
+<g class="map-cell" data-tool="deepl" data-stage="The Search" data-recommendations="">
+<title>DeepL; The Search; No use mapped</title>
+<rect x="960.4286" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="deepseek" data-stage="The Search" data-recommendations="verification">
+<title>DeepSeek; The Search; Human verification required</title>
+<rect x="976.3929" y="166.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="elicit" data-stage="The Search" data-recommendations="exploratory">
+<title>Elicit; The Search; Exploratory and supplementary use</title>
+<rect x="992.3571" y="166.5" width="15.9643" height="34.5" fill="#F29B56"/>
+</g>
+<g class="map-cell" data-tool="gemini" data-stage="The Search" data-recommendations="verification,exploratory">
+<title>Gemini; The Search; Human verification required and Exploratory and supplementary use</title>
+<rect x="1008.3214" y="166.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+<path d="M1024.2857 166.5V201H1008.3214Z" fill="#F29B56"/>
+</g>
+<g class="map-cell" data-tool="google-ai-mode" data-stage="The Search" data-recommendations="">
+<title>Google AI Mode; The Search; No use mapped</title>
+<rect x="1024.2857" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="google-translate" data-stage="The Search" data-recommendations="">
+<title>Google Translate; The Search; No use mapped</title>
+<rect x="1040.25" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="maxqda" data-stage="The Search" data-recommendations="">
+<title>MAXQDA; The Search; No use mapped</title>
+<rect x="1056.2143" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nested-knowledge-smart-search-tool" data-stage="The Search" data-recommendations="exploratory">
+<title>Nested Knowledge Smart Search Tool; The Search; Exploratory and supplementary use</title>
+<rect x="1072.1786" y="166.5" width="15.9643" height="34.5" fill="#F29B56"/>
+</g>
+<g class="map-cell" data-tool="nvivo" data-stage="The Search" data-recommendations="">
+<title>NVivo; The Search; No use mapped</title>
+<rect x="1088.1429" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="perplexity" data-stage="The Search" data-recommendations="">
+<title>Perplexity; The Search; No use mapped</title>
+<rect x="1104.1071" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="undermind" data-stage="The Search" data-recommendations="exploratory">
+<title>Undermind; The Search; Exploratory and supplementary use</title>
+<rect x="1120.0714" y="166.5" width="15.9643" height="34.5" fill="#F29B56"/>
+</g>
+<g class="map-cell" data-tool="webplotdigitizer-ai-features" data-stage="The Search" data-recommendations="">
+<title>WebPlotDigitizer AI features; The Search; No use mapped</title>
+<rect x="1136.0357" y="166.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asysd" data-stage="Screening for relevance" data-recommendations="">
+<title>ASySD; Screening for relevance; No use mapped</title>
+<rect x="258" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="grade-cerqual" data-stage="Screening for relevance" data-recommendations="">
+<title>GRADE-CERQual; Screening for relevance; No use mapped</title>
+<rect x="273.9643" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="cinema" data-stage="Screening for relevance" data-recommendations="">
+<title>CINeMA; Screening for relevance; No use mapped</title>
+<rect x="289.9286" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="citationchaser" data-stage="Screening for relevance" data-recommendations="">
+<title>citationchaser; Screening for relevance; No use mapped</title>
+<rect x="305.8929" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="citesource" data-stage="Screening for relevance" data-recommendations="">
+<title>CiteSource; Screening for relevance; No use mapped</title>
+<rect x="321.8571" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="connected-papers" data-stage="Screening for relevance" data-recommendations="">
+<title>Connected Papers; Screening for relevance; No use mapped</title>
+<rect x="337.8214" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="crsu-meta-analysis-apps" data-stage="Screening for relevance" data-recommendations="">
+<title>CRSU Meta-analysis apps; Screening for relevance; No use mapped</title>
+<rect x="353.7857" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="deduklick" data-stage="Screening for relevance" data-recommendations="">
+<title>Deduklick; Screening for relevance; No use mapped</title>
+<rect x="369.75" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-mapper" data-stage="Screening for relevance" data-recommendations="">
+<title>EPPI-Mapper; Screening for relevance; No use mapped</title>
+<rect x="385.7143" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer" data-stage="Screening for relevance" data-recommendations="">
+<title>EPPI-Reviewer; Screening for relevance; No use mapped</title>
+<rect x="401.6786" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eviatlas" data-stage="Screening for relevance" data-recommendations="">
+<title>EviAtlas; Screening for relevance; No use mapped</title>
+<rect x="417.6429" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="gradepro" data-stage="Screening for relevance" data-recommendations="">
+<title>GRADEpro; Screening for relevance; No use mapped</title>
+<rect x="433.6071" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="meta" data-stage="Screening for relevance" data-recommendations="">
+<title>meta; Screening for relevance; No use mapped</title>
+<rect x="449.5714" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="metafor" data-stage="Screening for relevance" data-recommendations="">
+<title>metafor; Screening for relevance; No use mapped</title>
+<rect x="465.5357" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nested-knowledge" data-stage="Screening for relevance" data-recommendations="">
+<title>Nested Knowledge; Screening for relevance; No use mapped</title>
+<rect x="481.5" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="predicter" data-stage="Screening for relevance" data-recommendations="">
+<title>PredicTER; Screening for relevance; No use mapped</title>
+<rect x="497.4643" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="pubreminer" data-stage="Screening for relevance" data-recommendations="">
+<title>PubReMiner; Screening for relevance; No use mapped</title>
+<rect x="513.4286" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="researchrabbit" data-stage="Screening for relevance" data-recommendations="">
+<title>ResearchRabbit; Screening for relevance; No use mapped</title>
+<rect x="529.3929" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="searchbuildr" data-stage="Screening for relevance" data-recommendations="">
+<title>searchbuildR; Screening for relevance; No use mapped</title>
+<rect x="545.3571" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="systematic-online-living-evidence-summaries" data-stage="Screening for relevance" data-recommendations="validation">
+<title>Systematic Online Living Evidence Summaries; Screening for relevance; Requires validation within the review</title>
+<rect x="561.3214" y="201" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="tera" data-stage="Screening for relevance" data-recommendations="">
+<title>TERA; Screening for relevance; No use mapped</title>
+<rect x="577.2857" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-deduplicator" data-stage="Screening for relevance" data-recommendations="">
+<title>TERA Deduplicator; Screening for relevance; No use mapped</title>
+<rect x="593.25" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-polyglot" data-stage="Screening for relevance" data-recommendations="">
+<title>TERA Polyglot; Screening for relevance; No use mapped</title>
+<rect x="609.2143" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-review-wizard" data-stage="Screening for relevance" data-recommendations="">
+<title>TERA Review Wizard; Screening for relevance; No use mapped</title>
+<rect x="625.1786" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-search-refiner" data-stage="Screening for relevance" data-recommendations="">
+<title>TERA Search Refiner; Screening for relevance; No use mapped</title>
+<rect x="641.1429" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-wordfreq" data-stage="Screening for relevance" data-recommendations="">
+<title>TERA WordFreq; Screening for relevance; No use mapped</title>
+<rect x="657.1071" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="yale-mesh-analyzer" data-stage="Screening for relevance" data-recommendations="">
+<title>Yale MeSH Analyzer; Screening for relevance; No use mapped</title>
+<rect x="673.0714" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="carrot2" data-stage="Screening for relevance" data-recommendations="">
+<title>Carrot2; Screening for relevance; No use mapped</title>
+<rect x="689.0357" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="swift-review" data-stage="Screening for relevance" data-recommendations="">
+<title>SWIFT-Review; Screening for relevance; No use mapped</title>
+<rect x="705" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="abstrackr" data-stage="Screening for relevance" data-recommendations="acceptable,validation">
+<title>Abstrackr; Screening for relevance; Acceptable for use and Requires validation within the review</title>
+<rect x="720.9643" y="201" width="15.9643" height="34.5" fill="#2FA572"/>
+<path d="M736.9286 201V235.5H720.9643Z" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="covidence" data-stage="Screening for relevance" data-recommendations="acceptable,validation">
+<title>Covidence; Screening for relevance; Acceptable for use and Requires validation within the review</title>
+<rect x="736.9286" y="201" width="15.9643" height="34.5" fill="#2FA572"/>
+<path d="M752.8929 201V235.5H736.9286Z" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="dextr" data-stage="Screening for relevance" data-recommendations="">
+<title>Dextr; Screening for relevance; No use mapped</title>
+<rect x="752.8929" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer-prioritised-screening" data-stage="Screening for relevance" data-recommendations="acceptable,validation">
+<title>EPPI-Reviewer Prioritised Screening; Screening for relevance; Acceptable for use and Requires validation within the review</title>
+<rect x="768.8571" y="201" width="15.9643" height="34.5" fill="#2FA572"/>
+<path d="M784.8214 201V235.5H768.8571Z" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer-supervised-classifiers" data-stage="Screening for relevance" data-recommendations="validation">
+<title>EPPI-Reviewer Supervised Classifiers; Screening for relevance; Requires validation within the review</title>
+<rect x="784.8214" y="201" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="pre-rob" data-stage="Screening for relevance" data-recommendations="">
+<title>Pre-ROB; Screening for relevance; No use mapped</title>
+<rect x="800.7857" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="robotreviewer" data-stage="Screening for relevance" data-recommendations="">
+<title>RobotReviewer; Screening for relevance; No use mapped</title>
+<rect x="816.75" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="sciscore" data-stage="Screening for relevance" data-recommendations="">
+<title>SciScore; Screening for relevance; No use mapped</title>
+<rect x="832.7143" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="steed" data-stage="Screening for relevance" data-recommendations="">
+<title>STEED; Screening for relevance; No use mapped</title>
+<rect x="848.6786" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="urse" data-stage="Screening for relevance" data-recommendations="">
+<title>URSE; Screening for relevance; No use mapped</title>
+<rect x="864.6429" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asta" data-stage="Screening for relevance" data-recommendations="">
+<title>Asta; Screening for relevance; No use mapped</title>
+<rect x="880.6071" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asta-find-papers" data-stage="Screening for relevance" data-recommendations="">
+<title>Asta Find Papers; Screening for relevance; No use mapped</title>
+<rect x="896.5714" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="chatgpt" data-stage="Screening for relevance" data-recommendations="validation">
+<title>ChatGPT; Screening for relevance; Requires validation within the review</title>
+<rect x="912.5357" y="201" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="claude" data-stage="Screening for relevance" data-recommendations="validation">
+<title>Claude; Screening for relevance; Requires validation within the review</title>
+<rect x="928.5" y="201" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="copilot" data-stage="Screening for relevance" data-recommendations="validation">
+<title>Copilot; Screening for relevance; Requires validation within the review</title>
+<rect x="944.4643" y="201" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="deepl" data-stage="Screening for relevance" data-recommendations="verification">
+<title>DeepL; Screening for relevance; Human verification required</title>
+<rect x="960.4286" y="201" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="deepseek" data-stage="Screening for relevance" data-recommendations="validation">
+<title>DeepSeek; Screening for relevance; Requires validation within the review</title>
+<rect x="976.3929" y="201" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="elicit" data-stage="Screening for relevance" data-recommendations="">
+<title>Elicit; Screening for relevance; No use mapped</title>
+<rect x="992.3571" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="gemini" data-stage="Screening for relevance" data-recommendations="validation">
+<title>Gemini; Screening for relevance; Requires validation within the review</title>
+<rect x="1008.3214" y="201" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="google-ai-mode" data-stage="Screening for relevance" data-recommendations="">
+<title>Google AI Mode; Screening for relevance; No use mapped</title>
+<rect x="1024.2857" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="google-translate" data-stage="Screening for relevance" data-recommendations="verification">
+<title>Google Translate; Screening for relevance; Human verification required</title>
+<rect x="1040.25" y="201" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="maxqda" data-stage="Screening for relevance" data-recommendations="">
+<title>MAXQDA; Screening for relevance; No use mapped</title>
+<rect x="1056.2143" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nested-knowledge-smart-search-tool" data-stage="Screening for relevance" data-recommendations="">
+<title>Nested Knowledge Smart Search Tool; Screening for relevance; No use mapped</title>
+<rect x="1072.1786" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nvivo" data-stage="Screening for relevance" data-recommendations="">
+<title>NVivo; Screening for relevance; No use mapped</title>
+<rect x="1088.1429" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="perplexity" data-stage="Screening for relevance" data-recommendations="">
+<title>Perplexity; Screening for relevance; No use mapped</title>
+<rect x="1104.1071" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="undermind" data-stage="Screening for relevance" data-recommendations="">
+<title>Undermind; Screening for relevance; No use mapped</title>
+<rect x="1120.0714" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="webplotdigitizer-ai-features" data-stage="Screening for relevance" data-recommendations="">
+<title>WebPlotDigitizer AI features; Screening for relevance; No use mapped</title>
+<rect x="1136.0357" y="201" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asysd" data-stage="Quality assessment" data-recommendations="">
+<title>ASySD; Quality assessment; No use mapped</title>
+<rect x="258" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="grade-cerqual" data-stage="Quality assessment" data-recommendations="">
+<title>GRADE-CERQual; Quality assessment; No use mapped</title>
+<rect x="273.9643" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="cinema" data-stage="Quality assessment" data-recommendations="">
+<title>CINeMA; Quality assessment; No use mapped</title>
+<rect x="289.9286" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="citationchaser" data-stage="Quality assessment" data-recommendations="">
+<title>citationchaser; Quality assessment; No use mapped</title>
+<rect x="305.8929" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="citesource" data-stage="Quality assessment" data-recommendations="">
+<title>CiteSource; Quality assessment; No use mapped</title>
+<rect x="321.8571" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="connected-papers" data-stage="Quality assessment" data-recommendations="">
+<title>Connected Papers; Quality assessment; No use mapped</title>
+<rect x="337.8214" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="crsu-meta-analysis-apps" data-stage="Quality assessment" data-recommendations="">
+<title>CRSU Meta-analysis apps; Quality assessment; No use mapped</title>
+<rect x="353.7857" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="deduklick" data-stage="Quality assessment" data-recommendations="">
+<title>Deduklick; Quality assessment; No use mapped</title>
+<rect x="369.75" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-mapper" data-stage="Quality assessment" data-recommendations="">
+<title>EPPI-Mapper; Quality assessment; No use mapped</title>
+<rect x="385.7143" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer" data-stage="Quality assessment" data-recommendations="">
+<title>EPPI-Reviewer; Quality assessment; No use mapped</title>
+<rect x="401.6786" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eviatlas" data-stage="Quality assessment" data-recommendations="">
+<title>EviAtlas; Quality assessment; No use mapped</title>
+<rect x="417.6429" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="gradepro" data-stage="Quality assessment" data-recommendations="">
+<title>GRADEpro; Quality assessment; No use mapped</title>
+<rect x="433.6071" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="meta" data-stage="Quality assessment" data-recommendations="">
+<title>meta; Quality assessment; No use mapped</title>
+<rect x="449.5714" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="metafor" data-stage="Quality assessment" data-recommendations="">
+<title>metafor; Quality assessment; No use mapped</title>
+<rect x="465.5357" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nested-knowledge" data-stage="Quality assessment" data-recommendations="">
+<title>Nested Knowledge; Quality assessment; No use mapped</title>
+<rect x="481.5" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="predicter" data-stage="Quality assessment" data-recommendations="">
+<title>PredicTER; Quality assessment; No use mapped</title>
+<rect x="497.4643" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="pubreminer" data-stage="Quality assessment" data-recommendations="">
+<title>PubReMiner; Quality assessment; No use mapped</title>
+<rect x="513.4286" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="researchrabbit" data-stage="Quality assessment" data-recommendations="">
+<title>ResearchRabbit; Quality assessment; No use mapped</title>
+<rect x="529.3929" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="searchbuildr" data-stage="Quality assessment" data-recommendations="">
+<title>searchbuildR; Quality assessment; No use mapped</title>
+<rect x="545.3571" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="systematic-online-living-evidence-summaries" data-stage="Quality assessment" data-recommendations="">
+<title>Systematic Online Living Evidence Summaries; Quality assessment; No use mapped</title>
+<rect x="561.3214" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera" data-stage="Quality assessment" data-recommendations="">
+<title>TERA; Quality assessment; No use mapped</title>
+<rect x="577.2857" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-deduplicator" data-stage="Quality assessment" data-recommendations="">
+<title>TERA Deduplicator; Quality assessment; No use mapped</title>
+<rect x="593.25" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-polyglot" data-stage="Quality assessment" data-recommendations="">
+<title>TERA Polyglot; Quality assessment; No use mapped</title>
+<rect x="609.2143" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-review-wizard" data-stage="Quality assessment" data-recommendations="">
+<title>TERA Review Wizard; Quality assessment; No use mapped</title>
+<rect x="625.1786" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-search-refiner" data-stage="Quality assessment" data-recommendations="">
+<title>TERA Search Refiner; Quality assessment; No use mapped</title>
+<rect x="641.1429" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-wordfreq" data-stage="Quality assessment" data-recommendations="">
+<title>TERA WordFreq; Quality assessment; No use mapped</title>
+<rect x="657.1071" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="yale-mesh-analyzer" data-stage="Quality assessment" data-recommendations="">
+<title>Yale MeSH Analyzer; Quality assessment; No use mapped</title>
+<rect x="673.0714" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="carrot2" data-stage="Quality assessment" data-recommendations="">
+<title>Carrot2; Quality assessment; No use mapped</title>
+<rect x="689.0357" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="swift-review" data-stage="Quality assessment" data-recommendations="">
+<title>SWIFT-Review; Quality assessment; No use mapped</title>
+<rect x="705" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="abstrackr" data-stage="Quality assessment" data-recommendations="">
+<title>Abstrackr; Quality assessment; No use mapped</title>
+<rect x="720.9643" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="covidence" data-stage="Quality assessment" data-recommendations="">
+<title>Covidence; Quality assessment; No use mapped</title>
+<rect x="736.9286" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="dextr" data-stage="Quality assessment" data-recommendations="">
+<title>Dextr; Quality assessment; No use mapped</title>
+<rect x="752.8929" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer-prioritised-screening" data-stage="Quality assessment" data-recommendations="">
+<title>EPPI-Reviewer Prioritised Screening; Quality assessment; No use mapped</title>
+<rect x="768.8571" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer-supervised-classifiers" data-stage="Quality assessment" data-recommendations="">
+<title>EPPI-Reviewer Supervised Classifiers; Quality assessment; No use mapped</title>
+<rect x="784.8214" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="pre-rob" data-stage="Quality assessment" data-recommendations="validation">
+<title>Pre-ROB; Quality assessment; Requires validation within the review</title>
+<rect x="800.7857" y="235.5" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="robotreviewer" data-stage="Quality assessment" data-recommendations="validation">
+<title>RobotReviewer; Quality assessment; Requires validation within the review</title>
+<rect x="816.75" y="235.5" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="sciscore" data-stage="Quality assessment" data-recommendations="validation">
+<title>SciScore; Quality assessment; Requires validation within the review</title>
+<rect x="832.7143" y="235.5" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="steed" data-stage="Quality assessment" data-recommendations="validation">
+<title>STEED; Quality assessment; Requires validation within the review</title>
+<rect x="848.6786" y="235.5" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="urse" data-stage="Quality assessment" data-recommendations="">
+<title>URSE; Quality assessment; No use mapped</title>
+<rect x="864.6429" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asta" data-stage="Quality assessment" data-recommendations="">
+<title>Asta; Quality assessment; No use mapped</title>
+<rect x="880.6071" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asta-find-papers" data-stage="Quality assessment" data-recommendations="">
+<title>Asta Find Papers; Quality assessment; No use mapped</title>
+<rect x="896.5714" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="chatgpt" data-stage="Quality assessment" data-recommendations="validation">
+<title>ChatGPT; Quality assessment; Requires validation within the review</title>
+<rect x="912.5357" y="235.5" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="claude" data-stage="Quality assessment" data-recommendations="validation">
+<title>Claude; Quality assessment; Requires validation within the review</title>
+<rect x="928.5" y="235.5" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="copilot" data-stage="Quality assessment" data-recommendations="validation">
+<title>Copilot; Quality assessment; Requires validation within the review</title>
+<rect x="944.4643" y="235.5" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="deepl" data-stage="Quality assessment" data-recommendations="verification">
+<title>DeepL; Quality assessment; Human verification required</title>
+<rect x="960.4286" y="235.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="deepseek" data-stage="Quality assessment" data-recommendations="validation">
+<title>DeepSeek; Quality assessment; Requires validation within the review</title>
+<rect x="976.3929" y="235.5" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="elicit" data-stage="Quality assessment" data-recommendations="">
+<title>Elicit; Quality assessment; No use mapped</title>
+<rect x="992.3571" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="gemini" data-stage="Quality assessment" data-recommendations="validation">
+<title>Gemini; Quality assessment; Requires validation within the review</title>
+<rect x="1008.3214" y="235.5" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="google-ai-mode" data-stage="Quality assessment" data-recommendations="">
+<title>Google AI Mode; Quality assessment; No use mapped</title>
+<rect x="1024.2857" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="google-translate" data-stage="Quality assessment" data-recommendations="verification">
+<title>Google Translate; Quality assessment; Human verification required</title>
+<rect x="1040.25" y="235.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="maxqda" data-stage="Quality assessment" data-recommendations="">
+<title>MAXQDA; Quality assessment; No use mapped</title>
+<rect x="1056.2143" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nested-knowledge-smart-search-tool" data-stage="Quality assessment" data-recommendations="">
+<title>Nested Knowledge Smart Search Tool; Quality assessment; No use mapped</title>
+<rect x="1072.1786" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nvivo" data-stage="Quality assessment" data-recommendations="">
+<title>NVivo; Quality assessment; No use mapped</title>
+<rect x="1088.1429" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="perplexity" data-stage="Quality assessment" data-recommendations="">
+<title>Perplexity; Quality assessment; No use mapped</title>
+<rect x="1104.1071" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="undermind" data-stage="Quality assessment" data-recommendations="">
+<title>Undermind; Quality assessment; No use mapped</title>
+<rect x="1120.0714" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="webplotdigitizer-ai-features" data-stage="Quality assessment" data-recommendations="">
+<title>WebPlotDigitizer AI features; Quality assessment; No use mapped</title>
+<rect x="1136.0357" y="235.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asysd" data-stage="Data extraction" data-recommendations="">
+<title>ASySD; Data extraction; No use mapped</title>
+<rect x="258" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="grade-cerqual" data-stage="Data extraction" data-recommendations="">
+<title>GRADE-CERQual; Data extraction; No use mapped</title>
+<rect x="273.9643" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="cinema" data-stage="Data extraction" data-recommendations="">
+<title>CINeMA; Data extraction; No use mapped</title>
+<rect x="289.9286" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="citationchaser" data-stage="Data extraction" data-recommendations="">
+<title>citationchaser; Data extraction; No use mapped</title>
+<rect x="305.8929" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="citesource" data-stage="Data extraction" data-recommendations="">
+<title>CiteSource; Data extraction; No use mapped</title>
+<rect x="321.8571" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="connected-papers" data-stage="Data extraction" data-recommendations="">
+<title>Connected Papers; Data extraction; No use mapped</title>
+<rect x="337.8214" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="crsu-meta-analysis-apps" data-stage="Data extraction" data-recommendations="">
+<title>CRSU Meta-analysis apps; Data extraction; No use mapped</title>
+<rect x="353.7857" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="deduklick" data-stage="Data extraction" data-recommendations="">
+<title>Deduklick; Data extraction; No use mapped</title>
+<rect x="369.75" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-mapper" data-stage="Data extraction" data-recommendations="">
+<title>EPPI-Mapper; Data extraction; No use mapped</title>
+<rect x="385.7143" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer" data-stage="Data extraction" data-recommendations="">
+<title>EPPI-Reviewer; Data extraction; No use mapped</title>
+<rect x="401.6786" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eviatlas" data-stage="Data extraction" data-recommendations="">
+<title>EviAtlas; Data extraction; No use mapped</title>
+<rect x="417.6429" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="gradepro" data-stage="Data extraction" data-recommendations="">
+<title>GRADEpro; Data extraction; No use mapped</title>
+<rect x="433.6071" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="meta" data-stage="Data extraction" data-recommendations="">
+<title>meta; Data extraction; No use mapped</title>
+<rect x="449.5714" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="metafor" data-stage="Data extraction" data-recommendations="">
+<title>metafor; Data extraction; No use mapped</title>
+<rect x="465.5357" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nested-knowledge" data-stage="Data extraction" data-recommendations="">
+<title>Nested Knowledge; Data extraction; No use mapped</title>
+<rect x="481.5" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="predicter" data-stage="Data extraction" data-recommendations="">
+<title>PredicTER; Data extraction; No use mapped</title>
+<rect x="497.4643" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="pubreminer" data-stage="Data extraction" data-recommendations="">
+<title>PubReMiner; Data extraction; No use mapped</title>
+<rect x="513.4286" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="researchrabbit" data-stage="Data extraction" data-recommendations="">
+<title>ResearchRabbit; Data extraction; No use mapped</title>
+<rect x="529.3929" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="searchbuildr" data-stage="Data extraction" data-recommendations="">
+<title>searchbuildR; Data extraction; No use mapped</title>
+<rect x="545.3571" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="systematic-online-living-evidence-summaries" data-stage="Data extraction" data-recommendations="">
+<title>Systematic Online Living Evidence Summaries; Data extraction; No use mapped</title>
+<rect x="561.3214" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera" data-stage="Data extraction" data-recommendations="">
+<title>TERA; Data extraction; No use mapped</title>
+<rect x="577.2857" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-deduplicator" data-stage="Data extraction" data-recommendations="">
+<title>TERA Deduplicator; Data extraction; No use mapped</title>
+<rect x="593.25" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-polyglot" data-stage="Data extraction" data-recommendations="">
+<title>TERA Polyglot; Data extraction; No use mapped</title>
+<rect x="609.2143" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-review-wizard" data-stage="Data extraction" data-recommendations="">
+<title>TERA Review Wizard; Data extraction; No use mapped</title>
+<rect x="625.1786" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-search-refiner" data-stage="Data extraction" data-recommendations="">
+<title>TERA Search Refiner; Data extraction; No use mapped</title>
+<rect x="641.1429" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-wordfreq" data-stage="Data extraction" data-recommendations="">
+<title>TERA WordFreq; Data extraction; No use mapped</title>
+<rect x="657.1071" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="yale-mesh-analyzer" data-stage="Data extraction" data-recommendations="">
+<title>Yale MeSH Analyzer; Data extraction; No use mapped</title>
+<rect x="673.0714" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="carrot2" data-stage="Data extraction" data-recommendations="">
+<title>Carrot2; Data extraction; No use mapped</title>
+<rect x="689.0357" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="swift-review" data-stage="Data extraction" data-recommendations="">
+<title>SWIFT-Review; Data extraction; No use mapped</title>
+<rect x="705" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="abstrackr" data-stage="Data extraction" data-recommendations="">
+<title>Abstrackr; Data extraction; No use mapped</title>
+<rect x="720.9643" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="covidence" data-stage="Data extraction" data-recommendations="">
+<title>Covidence; Data extraction; No use mapped</title>
+<rect x="736.9286" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="dextr" data-stage="Data extraction" data-recommendations="validation">
+<title>Dextr; Data extraction; Requires validation within the review</title>
+<rect x="752.8929" y="270" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer-prioritised-screening" data-stage="Data extraction" data-recommendations="">
+<title>EPPI-Reviewer Prioritised Screening; Data extraction; No use mapped</title>
+<rect x="768.8571" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer-supervised-classifiers" data-stage="Data extraction" data-recommendations="">
+<title>EPPI-Reviewer Supervised Classifiers; Data extraction; No use mapped</title>
+<rect x="784.8214" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="pre-rob" data-stage="Data extraction" data-recommendations="">
+<title>Pre-ROB; Data extraction; No use mapped</title>
+<rect x="800.7857" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="robotreviewer" data-stage="Data extraction" data-recommendations="validation">
+<title>RobotReviewer; Data extraction; Requires validation within the review</title>
+<rect x="816.75" y="270" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="sciscore" data-stage="Data extraction" data-recommendations="">
+<title>SciScore; Data extraction; No use mapped</title>
+<rect x="832.7143" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="steed" data-stage="Data extraction" data-recommendations="">
+<title>STEED; Data extraction; No use mapped</title>
+<rect x="848.6786" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="urse" data-stage="Data extraction" data-recommendations="">
+<title>URSE; Data extraction; No use mapped</title>
+<rect x="864.6429" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asta" data-stage="Data extraction" data-recommendations="">
+<title>Asta; Data extraction; No use mapped</title>
+<rect x="880.6071" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asta-find-papers" data-stage="Data extraction" data-recommendations="">
+<title>Asta Find Papers; Data extraction; No use mapped</title>
+<rect x="896.5714" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="chatgpt" data-stage="Data extraction" data-recommendations="validation">
+<title>ChatGPT; Data extraction; Requires validation within the review</title>
+<rect x="912.5357" y="270" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="claude" data-stage="Data extraction" data-recommendations="validation">
+<title>Claude; Data extraction; Requires validation within the review</title>
+<rect x="928.5" y="270" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="copilot" data-stage="Data extraction" data-recommendations="validation">
+<title>Copilot; Data extraction; Requires validation within the review</title>
+<rect x="944.4643" y="270" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="deepl" data-stage="Data extraction" data-recommendations="verification">
+<title>DeepL; Data extraction; Human verification required</title>
+<rect x="960.4286" y="270" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="deepseek" data-stage="Data extraction" data-recommendations="validation">
+<title>DeepSeek; Data extraction; Requires validation within the review</title>
+<rect x="976.3929" y="270" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="elicit" data-stage="Data extraction" data-recommendations="">
+<title>Elicit; Data extraction; No use mapped</title>
+<rect x="992.3571" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="gemini" data-stage="Data extraction" data-recommendations="validation">
+<title>Gemini; Data extraction; Requires validation within the review</title>
+<rect x="1008.3214" y="270" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="google-ai-mode" data-stage="Data extraction" data-recommendations="">
+<title>Google AI Mode; Data extraction; No use mapped</title>
+<rect x="1024.2857" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="google-translate" data-stage="Data extraction" data-recommendations="verification">
+<title>Google Translate; Data extraction; Human verification required</title>
+<rect x="1040.25" y="270" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="maxqda" data-stage="Data extraction" data-recommendations="">
+<title>MAXQDA; Data extraction; No use mapped</title>
+<rect x="1056.2143" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nested-knowledge-smart-search-tool" data-stage="Data extraction" data-recommendations="">
+<title>Nested Knowledge Smart Search Tool; Data extraction; No use mapped</title>
+<rect x="1072.1786" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nvivo" data-stage="Data extraction" data-recommendations="">
+<title>NVivo; Data extraction; No use mapped</title>
+<rect x="1088.1429" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="perplexity" data-stage="Data extraction" data-recommendations="">
+<title>Perplexity; Data extraction; No use mapped</title>
+<rect x="1104.1071" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="undermind" data-stage="Data extraction" data-recommendations="">
+<title>Undermind; Data extraction; No use mapped</title>
+<rect x="1120.0714" y="270" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="webplotdigitizer-ai-features" data-stage="Data extraction" data-recommendations="verification">
+<title>WebPlotDigitizer AI features; Data extraction; Human verification required</title>
+<rect x="1136.0357" y="270" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="asysd" data-stage="Data synthesis" data-recommendations="">
+<title>ASySD; Data synthesis; No use mapped</title>
+<rect x="258" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="grade-cerqual" data-stage="Data synthesis" data-recommendations="">
+<title>GRADE-CERQual; Data synthesis; No use mapped</title>
+<rect x="273.9643" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="cinema" data-stage="Data synthesis" data-recommendations="">
+<title>CINeMA; Data synthesis; No use mapped</title>
+<rect x="289.9286" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="citationchaser" data-stage="Data synthesis" data-recommendations="">
+<title>citationchaser; Data synthesis; No use mapped</title>
+<rect x="305.8929" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="citesource" data-stage="Data synthesis" data-recommendations="">
+<title>CiteSource; Data synthesis; No use mapped</title>
+<rect x="321.8571" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="connected-papers" data-stage="Data synthesis" data-recommendations="">
+<title>Connected Papers; Data synthesis; No use mapped</title>
+<rect x="337.8214" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="crsu-meta-analysis-apps" data-stage="Data synthesis" data-recommendations="acceptable">
+<title>CRSU Meta-analysis apps; Data synthesis; Acceptable for use</title>
+<rect x="353.7857" y="304.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="deduklick" data-stage="Data synthesis" data-recommendations="">
+<title>Deduklick; Data synthesis; No use mapped</title>
+<rect x="369.75" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-mapper" data-stage="Data synthesis" data-recommendations="acceptable">
+<title>EPPI-Mapper; Data synthesis; Acceptable for use</title>
+<rect x="385.7143" y="304.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer" data-stage="Data synthesis" data-recommendations="">
+<title>EPPI-Reviewer; Data synthesis; No use mapped</title>
+<rect x="401.6786" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eviatlas" data-stage="Data synthesis" data-recommendations="acceptable">
+<title>EviAtlas; Data synthesis; Acceptable for use</title>
+<rect x="417.6429" y="304.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="gradepro" data-stage="Data synthesis" data-recommendations="">
+<title>GRADEpro; Data synthesis; No use mapped</title>
+<rect x="433.6071" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="meta" data-stage="Data synthesis" data-recommendations="acceptable">
+<title>meta; Data synthesis; Acceptable for use</title>
+<rect x="449.5714" y="304.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="metafor" data-stage="Data synthesis" data-recommendations="acceptable">
+<title>metafor; Data synthesis; Acceptable for use</title>
+<rect x="465.5357" y="304.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="nested-knowledge" data-stage="Data synthesis" data-recommendations="">
+<title>Nested Knowledge; Data synthesis; No use mapped</title>
+<rect x="481.5" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="predicter" data-stage="Data synthesis" data-recommendations="">
+<title>PredicTER; Data synthesis; No use mapped</title>
+<rect x="497.4643" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="pubreminer" data-stage="Data synthesis" data-recommendations="">
+<title>PubReMiner; Data synthesis; No use mapped</title>
+<rect x="513.4286" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="researchrabbit" data-stage="Data synthesis" data-recommendations="">
+<title>ResearchRabbit; Data synthesis; No use mapped</title>
+<rect x="529.3929" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="searchbuildr" data-stage="Data synthesis" data-recommendations="">
+<title>searchbuildR; Data synthesis; No use mapped</title>
+<rect x="545.3571" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="systematic-online-living-evidence-summaries" data-stage="Data synthesis" data-recommendations="">
+<title>Systematic Online Living Evidence Summaries; Data synthesis; No use mapped</title>
+<rect x="561.3214" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera" data-stage="Data synthesis" data-recommendations="">
+<title>TERA; Data synthesis; No use mapped</title>
+<rect x="577.2857" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-deduplicator" data-stage="Data synthesis" data-recommendations="">
+<title>TERA Deduplicator; Data synthesis; No use mapped</title>
+<rect x="593.25" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-polyglot" data-stage="Data synthesis" data-recommendations="">
+<title>TERA Polyglot; Data synthesis; No use mapped</title>
+<rect x="609.2143" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-review-wizard" data-stage="Data synthesis" data-recommendations="">
+<title>TERA Review Wizard; Data synthesis; No use mapped</title>
+<rect x="625.1786" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-search-refiner" data-stage="Data synthesis" data-recommendations="">
+<title>TERA Search Refiner; Data synthesis; No use mapped</title>
+<rect x="641.1429" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-wordfreq" data-stage="Data synthesis" data-recommendations="">
+<title>TERA WordFreq; Data synthesis; No use mapped</title>
+<rect x="657.1071" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="yale-mesh-analyzer" data-stage="Data synthesis" data-recommendations="">
+<title>Yale MeSH Analyzer; Data synthesis; No use mapped</title>
+<rect x="673.0714" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="carrot2" data-stage="Data synthesis" data-recommendations="">
+<title>Carrot2; Data synthesis; No use mapped</title>
+<rect x="689.0357" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="swift-review" data-stage="Data synthesis" data-recommendations="">
+<title>SWIFT-Review; Data synthesis; No use mapped</title>
+<rect x="705" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="abstrackr" data-stage="Data synthesis" data-recommendations="">
+<title>Abstrackr; Data synthesis; No use mapped</title>
+<rect x="720.9643" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="covidence" data-stage="Data synthesis" data-recommendations="">
+<title>Covidence; Data synthesis; No use mapped</title>
+<rect x="736.9286" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="dextr" data-stage="Data synthesis" data-recommendations="">
+<title>Dextr; Data synthesis; No use mapped</title>
+<rect x="752.8929" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer-prioritised-screening" data-stage="Data synthesis" data-recommendations="">
+<title>EPPI-Reviewer Prioritised Screening; Data synthesis; No use mapped</title>
+<rect x="768.8571" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer-supervised-classifiers" data-stage="Data synthesis" data-recommendations="">
+<title>EPPI-Reviewer Supervised Classifiers; Data synthesis; No use mapped</title>
+<rect x="784.8214" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="pre-rob" data-stage="Data synthesis" data-recommendations="">
+<title>Pre-ROB; Data synthesis; No use mapped</title>
+<rect x="800.7857" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="robotreviewer" data-stage="Data synthesis" data-recommendations="">
+<title>RobotReviewer; Data synthesis; No use mapped</title>
+<rect x="816.75" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="sciscore" data-stage="Data synthesis" data-recommendations="">
+<title>SciScore; Data synthesis; No use mapped</title>
+<rect x="832.7143" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="steed" data-stage="Data synthesis" data-recommendations="">
+<title>STEED; Data synthesis; No use mapped</title>
+<rect x="848.6786" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="urse" data-stage="Data synthesis" data-recommendations="">
+<title>URSE; Data synthesis; No use mapped</title>
+<rect x="864.6429" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asta" data-stage="Data synthesis" data-recommendations="unacceptable">
+<title>Asta; Data synthesis; Not acceptable for use</title>
+<rect x="880.6071" y="304.5" width="15.9643" height="34.5" fill="#DE6262"/>
+</g>
+<g class="map-cell" data-tool="asta-find-papers" data-stage="Data synthesis" data-recommendations="">
+<title>Asta Find Papers; Data synthesis; No use mapped</title>
+<rect x="896.5714" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="chatgpt" data-stage="Data synthesis" data-recommendations="verification">
+<title>ChatGPT; Data synthesis; Human verification required</title>
+<rect x="912.5357" y="304.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="claude" data-stage="Data synthesis" data-recommendations="verification">
+<title>Claude; Data synthesis; Human verification required</title>
+<rect x="928.5" y="304.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="copilot" data-stage="Data synthesis" data-recommendations="verification">
+<title>Copilot; Data synthesis; Human verification required</title>
+<rect x="944.4643" y="304.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="deepl" data-stage="Data synthesis" data-recommendations="verification">
+<title>DeepL; Data synthesis; Human verification required</title>
+<rect x="960.4286" y="304.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="deepseek" data-stage="Data synthesis" data-recommendations="verification">
+<title>DeepSeek; Data synthesis; Human verification required</title>
+<rect x="976.3929" y="304.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="elicit" data-stage="Data synthesis" data-recommendations="unacceptable">
+<title>Elicit; Data synthesis; Not acceptable for use</title>
+<rect x="992.3571" y="304.5" width="15.9643" height="34.5" fill="#DE6262"/>
+</g>
+<g class="map-cell" data-tool="gemini" data-stage="Data synthesis" data-recommendations="verification">
+<title>Gemini; Data synthesis; Human verification required</title>
+<rect x="1008.3214" y="304.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="google-ai-mode" data-stage="Data synthesis" data-recommendations="unacceptable">
+<title>Google AI Mode; Data synthesis; Not acceptable for use</title>
+<rect x="1024.2857" y="304.5" width="15.9643" height="34.5" fill="#DE6262"/>
+</g>
+<g class="map-cell" data-tool="google-translate" data-stage="Data synthesis" data-recommendations="verification">
+<title>Google Translate; Data synthesis; Human verification required</title>
+<rect x="1040.25" y="304.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-tool="maxqda" data-stage="Data synthesis" data-recommendations="validation">
+<title>MAXQDA; Data synthesis; Requires validation within the review</title>
+<rect x="1056.2143" y="304.5" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="nested-knowledge-smart-search-tool" data-stage="Data synthesis" data-recommendations="">
+<title>Nested Knowledge Smart Search Tool; Data synthesis; No use mapped</title>
+<rect x="1072.1786" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nvivo" data-stage="Data synthesis" data-recommendations="validation">
+<title>NVivo; Data synthesis; Requires validation within the review</title>
+<rect x="1088.1429" y="304.5" width="15.9643" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-tool="perplexity" data-stage="Data synthesis" data-recommendations="unacceptable">
+<title>Perplexity; Data synthesis; Not acceptable for use</title>
+<rect x="1104.1071" y="304.5" width="15.9643" height="34.5" fill="#DE6262"/>
+</g>
+<g class="map-cell" data-tool="undermind" data-stage="Data synthesis" data-recommendations="">
+<title>Undermind; Data synthesis; No use mapped</title>
+<rect x="1120.0714" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="webplotdigitizer-ai-features" data-stage="Data synthesis" data-recommendations="">
+<title>WebPlotDigitizer AI features; Data synthesis; No use mapped</title>
+<rect x="1136.0357" y="304.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asysd" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>ASySD; Certainty of evidence assessment; No use mapped</title>
+<rect x="258" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="grade-cerqual" data-stage="Certainty of evidence assessment" data-recommendations="acceptable">
+<title>GRADE-CERQual; Certainty of evidence assessment; Acceptable for use</title>
+<rect x="273.9643" y="339" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="cinema" data-stage="Certainty of evidence assessment" data-recommendations="acceptable">
+<title>CINeMA; Certainty of evidence assessment; Acceptable for use</title>
+<rect x="289.9286" y="339" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="citationchaser" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>citationchaser; Certainty of evidence assessment; No use mapped</title>
+<rect x="305.8929" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="citesource" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>CiteSource; Certainty of evidence assessment; No use mapped</title>
+<rect x="321.8571" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="connected-papers" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Connected Papers; Certainty of evidence assessment; No use mapped</title>
+<rect x="337.8214" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="crsu-meta-analysis-apps" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>CRSU Meta-analysis apps; Certainty of evidence assessment; No use mapped</title>
+<rect x="353.7857" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="deduklick" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Deduklick; Certainty of evidence assessment; No use mapped</title>
+<rect x="369.75" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-mapper" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>EPPI-Mapper; Certainty of evidence assessment; No use mapped</title>
+<rect x="385.7143" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>EPPI-Reviewer; Certainty of evidence assessment; No use mapped</title>
+<rect x="401.6786" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eviatlas" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>EviAtlas; Certainty of evidence assessment; No use mapped</title>
+<rect x="417.6429" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="gradepro" data-stage="Certainty of evidence assessment" data-recommendations="acceptable">
+<title>GRADEpro; Certainty of evidence assessment; Acceptable for use</title>
+<rect x="433.6071" y="339" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="meta" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>meta; Certainty of evidence assessment; No use mapped</title>
+<rect x="449.5714" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="metafor" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>metafor; Certainty of evidence assessment; No use mapped</title>
+<rect x="465.5357" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nested-knowledge" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Nested Knowledge; Certainty of evidence assessment; No use mapped</title>
+<rect x="481.5" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="predicter" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>PredicTER; Certainty of evidence assessment; No use mapped</title>
+<rect x="497.4643" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="pubreminer" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>PubReMiner; Certainty of evidence assessment; No use mapped</title>
+<rect x="513.4286" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="researchrabbit" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>ResearchRabbit; Certainty of evidence assessment; No use mapped</title>
+<rect x="529.3929" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="searchbuildr" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>searchbuildR; Certainty of evidence assessment; No use mapped</title>
+<rect x="545.3571" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="systematic-online-living-evidence-summaries" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Systematic Online Living Evidence Summaries; Certainty of evidence assessment; No use mapped</title>
+<rect x="561.3214" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>TERA; Certainty of evidence assessment; No use mapped</title>
+<rect x="577.2857" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-deduplicator" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>TERA Deduplicator; Certainty of evidence assessment; No use mapped</title>
+<rect x="593.25" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-polyglot" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>TERA Polyglot; Certainty of evidence assessment; No use mapped</title>
+<rect x="609.2143" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-review-wizard" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>TERA Review Wizard; Certainty of evidence assessment; No use mapped</title>
+<rect x="625.1786" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-search-refiner" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>TERA Search Refiner; Certainty of evidence assessment; No use mapped</title>
+<rect x="641.1429" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-wordfreq" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>TERA WordFreq; Certainty of evidence assessment; No use mapped</title>
+<rect x="657.1071" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="yale-mesh-analyzer" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Yale MeSH Analyzer; Certainty of evidence assessment; No use mapped</title>
+<rect x="673.0714" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="carrot2" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Carrot2; Certainty of evidence assessment; No use mapped</title>
+<rect x="689.0357" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="swift-review" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>SWIFT-Review; Certainty of evidence assessment; No use mapped</title>
+<rect x="705" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="abstrackr" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Abstrackr; Certainty of evidence assessment; No use mapped</title>
+<rect x="720.9643" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="covidence" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Covidence; Certainty of evidence assessment; No use mapped</title>
+<rect x="736.9286" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="dextr" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Dextr; Certainty of evidence assessment; No use mapped</title>
+<rect x="752.8929" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer-prioritised-screening" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>EPPI-Reviewer Prioritised Screening; Certainty of evidence assessment; No use mapped</title>
+<rect x="768.8571" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer-supervised-classifiers" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>EPPI-Reviewer Supervised Classifiers; Certainty of evidence assessment; No use mapped</title>
+<rect x="784.8214" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="pre-rob" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Pre-ROB; Certainty of evidence assessment; No use mapped</title>
+<rect x="800.7857" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="robotreviewer" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>RobotReviewer; Certainty of evidence assessment; No use mapped</title>
+<rect x="816.75" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="sciscore" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>SciScore; Certainty of evidence assessment; No use mapped</title>
+<rect x="832.7143" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="steed" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>STEED; Certainty of evidence assessment; No use mapped</title>
+<rect x="848.6786" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="urse" data-stage="Certainty of evidence assessment" data-recommendations="exploratory">
+<title>URSE; Certainty of evidence assessment; Exploratory and supplementary use</title>
+<rect x="864.6429" y="339" width="15.9643" height="34.5" fill="#F29B56"/>
+</g>
+<g class="map-cell" data-tool="asta" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Asta; Certainty of evidence assessment; No use mapped</title>
+<rect x="880.6071" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asta-find-papers" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Asta Find Papers; Certainty of evidence assessment; No use mapped</title>
+<rect x="896.5714" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="chatgpt" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>ChatGPT; Certainty of evidence assessment; No use mapped</title>
+<rect x="912.5357" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="claude" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Claude; Certainty of evidence assessment; No use mapped</title>
+<rect x="928.5" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="copilot" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Copilot; Certainty of evidence assessment; No use mapped</title>
+<rect x="944.4643" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="deepl" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>DeepL; Certainty of evidence assessment; No use mapped</title>
+<rect x="960.4286" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="deepseek" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>DeepSeek; Certainty of evidence assessment; No use mapped</title>
+<rect x="976.3929" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="elicit" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Elicit; Certainty of evidence assessment; No use mapped</title>
+<rect x="992.3571" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="gemini" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Gemini; Certainty of evidence assessment; No use mapped</title>
+<rect x="1008.3214" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="google-ai-mode" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Google AI Mode; Certainty of evidence assessment; No use mapped</title>
+<rect x="1024.2857" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="google-translate" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Google Translate; Certainty of evidence assessment; No use mapped</title>
+<rect x="1040.25" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="maxqda" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>MAXQDA; Certainty of evidence assessment; No use mapped</title>
+<rect x="1056.2143" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nested-knowledge-smart-search-tool" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Nested Knowledge Smart Search Tool; Certainty of evidence assessment; No use mapped</title>
+<rect x="1072.1786" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nvivo" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>NVivo; Certainty of evidence assessment; No use mapped</title>
+<rect x="1088.1429" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="perplexity" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Perplexity; Certainty of evidence assessment; No use mapped</title>
+<rect x="1104.1071" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="undermind" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>Undermind; Certainty of evidence assessment; No use mapped</title>
+<rect x="1120.0714" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="webplotdigitizer-ai-features" data-stage="Certainty of evidence assessment" data-recommendations="">
+<title>WebPlotDigitizer AI features; Certainty of evidence assessment; No use mapped</title>
+<rect x="1136.0357" y="339" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asysd" data-stage="Writing a manuscript" data-recommendations="">
+<title>ASySD; Writing a manuscript; No use mapped</title>
+<rect x="258" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="grade-cerqual" data-stage="Writing a manuscript" data-recommendations="">
+<title>GRADE-CERQual; Writing a manuscript; No use mapped</title>
+<rect x="273.9643" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="cinema" data-stage="Writing a manuscript" data-recommendations="">
+<title>CINeMA; Writing a manuscript; No use mapped</title>
+<rect x="289.9286" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="citationchaser" data-stage="Writing a manuscript" data-recommendations="">
+<title>citationchaser; Writing a manuscript; No use mapped</title>
+<rect x="305.8929" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="citesource" data-stage="Writing a manuscript" data-recommendations="">
+<title>CiteSource; Writing a manuscript; No use mapped</title>
+<rect x="321.8571" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="connected-papers" data-stage="Writing a manuscript" data-recommendations="">
+<title>Connected Papers; Writing a manuscript; No use mapped</title>
+<rect x="337.8214" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="crsu-meta-analysis-apps" data-stage="Writing a manuscript" data-recommendations="">
+<title>CRSU Meta-analysis apps; Writing a manuscript; No use mapped</title>
+<rect x="353.7857" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="deduklick" data-stage="Writing a manuscript" data-recommendations="">
+<title>Deduklick; Writing a manuscript; No use mapped</title>
+<rect x="369.75" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-mapper" data-stage="Writing a manuscript" data-recommendations="">
+<title>EPPI-Mapper; Writing a manuscript; No use mapped</title>
+<rect x="385.7143" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer" data-stage="Writing a manuscript" data-recommendations="">
+<title>EPPI-Reviewer; Writing a manuscript; No use mapped</title>
+<rect x="401.6786" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eviatlas" data-stage="Writing a manuscript" data-recommendations="">
+<title>EviAtlas; Writing a manuscript; No use mapped</title>
+<rect x="417.6429" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="gradepro" data-stage="Writing a manuscript" data-recommendations="">
+<title>GRADEpro; Writing a manuscript; No use mapped</title>
+<rect x="433.6071" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="meta" data-stage="Writing a manuscript" data-recommendations="">
+<title>meta; Writing a manuscript; No use mapped</title>
+<rect x="449.5714" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="metafor" data-stage="Writing a manuscript" data-recommendations="">
+<title>metafor; Writing a manuscript; No use mapped</title>
+<rect x="465.5357" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nested-knowledge" data-stage="Writing a manuscript" data-recommendations="">
+<title>Nested Knowledge; Writing a manuscript; No use mapped</title>
+<rect x="481.5" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="predicter" data-stage="Writing a manuscript" data-recommendations="">
+<title>PredicTER; Writing a manuscript; No use mapped</title>
+<rect x="497.4643" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="pubreminer" data-stage="Writing a manuscript" data-recommendations="">
+<title>PubReMiner; Writing a manuscript; No use mapped</title>
+<rect x="513.4286" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="researchrabbit" data-stage="Writing a manuscript" data-recommendations="">
+<title>ResearchRabbit; Writing a manuscript; No use mapped</title>
+<rect x="529.3929" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="searchbuildr" data-stage="Writing a manuscript" data-recommendations="">
+<title>searchbuildR; Writing a manuscript; No use mapped</title>
+<rect x="545.3571" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="systematic-online-living-evidence-summaries" data-stage="Writing a manuscript" data-recommendations="">
+<title>Systematic Online Living Evidence Summaries; Writing a manuscript; No use mapped</title>
+<rect x="561.3214" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera" data-stage="Writing a manuscript" data-recommendations="">
+<title>TERA; Writing a manuscript; No use mapped</title>
+<rect x="577.2857" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-deduplicator" data-stage="Writing a manuscript" data-recommendations="">
+<title>TERA Deduplicator; Writing a manuscript; No use mapped</title>
+<rect x="593.25" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-polyglot" data-stage="Writing a manuscript" data-recommendations="">
+<title>TERA Polyglot; Writing a manuscript; No use mapped</title>
+<rect x="609.2143" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-review-wizard" data-stage="Writing a manuscript" data-recommendations="acceptable">
+<title>TERA Review Wizard; Writing a manuscript; Acceptable for use</title>
+<rect x="625.1786" y="373.5" width="15.9643" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-tool="tera-search-refiner" data-stage="Writing a manuscript" data-recommendations="">
+<title>TERA Search Refiner; Writing a manuscript; No use mapped</title>
+<rect x="641.1429" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="tera-wordfreq" data-stage="Writing a manuscript" data-recommendations="">
+<title>TERA WordFreq; Writing a manuscript; No use mapped</title>
+<rect x="657.1071" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="yale-mesh-analyzer" data-stage="Writing a manuscript" data-recommendations="">
+<title>Yale MeSH Analyzer; Writing a manuscript; No use mapped</title>
+<rect x="673.0714" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="carrot2" data-stage="Writing a manuscript" data-recommendations="">
+<title>Carrot2; Writing a manuscript; No use mapped</title>
+<rect x="689.0357" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="swift-review" data-stage="Writing a manuscript" data-recommendations="">
+<title>SWIFT-Review; Writing a manuscript; No use mapped</title>
+<rect x="705" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="abstrackr" data-stage="Writing a manuscript" data-recommendations="">
+<title>Abstrackr; Writing a manuscript; No use mapped</title>
+<rect x="720.9643" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="covidence" data-stage="Writing a manuscript" data-recommendations="">
+<title>Covidence; Writing a manuscript; No use mapped</title>
+<rect x="736.9286" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="dextr" data-stage="Writing a manuscript" data-recommendations="">
+<title>Dextr; Writing a manuscript; No use mapped</title>
+<rect x="752.8929" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer-prioritised-screening" data-stage="Writing a manuscript" data-recommendations="">
+<title>EPPI-Reviewer Prioritised Screening; Writing a manuscript; No use mapped</title>
+<rect x="768.8571" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="eppi-reviewer-supervised-classifiers" data-stage="Writing a manuscript" data-recommendations="">
+<title>EPPI-Reviewer Supervised Classifiers; Writing a manuscript; No use mapped</title>
+<rect x="784.8214" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="pre-rob" data-stage="Writing a manuscript" data-recommendations="">
+<title>Pre-ROB; Writing a manuscript; No use mapped</title>
+<rect x="800.7857" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="robotreviewer" data-stage="Writing a manuscript" data-recommendations="">
+<title>RobotReviewer; Writing a manuscript; No use mapped</title>
+<rect x="816.75" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="sciscore" data-stage="Writing a manuscript" data-recommendations="">
+<title>SciScore; Writing a manuscript; No use mapped</title>
+<rect x="832.7143" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="steed" data-stage="Writing a manuscript" data-recommendations="">
+<title>STEED; Writing a manuscript; No use mapped</title>
+<rect x="848.6786" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="urse" data-stage="Writing a manuscript" data-recommendations="">
+<title>URSE; Writing a manuscript; No use mapped</title>
+<rect x="864.6429" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asta" data-stage="Writing a manuscript" data-recommendations="">
+<title>Asta; Writing a manuscript; No use mapped</title>
+<rect x="880.6071" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="asta-find-papers" data-stage="Writing a manuscript" data-recommendations="">
+<title>Asta Find Papers; Writing a manuscript; No use mapped</title>
+<rect x="896.5714" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="chatgpt" data-stage="Writing a manuscript" data-recommendations="verification,exploratory">
+<title>ChatGPT; Writing a manuscript; Human verification required and Exploratory and supplementary use</title>
+<rect x="912.5357" y="373.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+<path d="M928.5 373.5V408H912.5357Z" fill="#F29B56"/>
+</g>
+<g class="map-cell" data-tool="claude" data-stage="Writing a manuscript" data-recommendations="verification,exploratory">
+<title>Claude; Writing a manuscript; Human verification required and Exploratory and supplementary use</title>
+<rect x="928.5" y="373.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+<path d="M944.4643 373.5V408H928.5Z" fill="#F29B56"/>
+</g>
+<g class="map-cell" data-tool="copilot" data-stage="Writing a manuscript" data-recommendations="verification,exploratory">
+<title>Copilot; Writing a manuscript; Human verification required and Exploratory and supplementary use</title>
+<rect x="944.4643" y="373.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+<path d="M960.4286 373.5V408H944.4643Z" fill="#F29B56"/>
+</g>
+<g class="map-cell" data-tool="deepl" data-stage="Writing a manuscript" data-recommendations="">
+<title>DeepL; Writing a manuscript; No use mapped</title>
+<rect x="960.4286" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="deepseek" data-stage="Writing a manuscript" data-recommendations="verification,exploratory">
+<title>DeepSeek; Writing a manuscript; Human verification required and Exploratory and supplementary use</title>
+<rect x="976.3929" y="373.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+<path d="M992.3571 373.5V408H976.3929Z" fill="#F29B56"/>
+</g>
+<g class="map-cell" data-tool="elicit" data-stage="Writing a manuscript" data-recommendations="">
+<title>Elicit; Writing a manuscript; No use mapped</title>
+<rect x="992.3571" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="gemini" data-stage="Writing a manuscript" data-recommendations="verification,exploratory">
+<title>Gemini; Writing a manuscript; Human verification required and Exploratory and supplementary use</title>
+<rect x="1008.3214" y="373.5" width="15.9643" height="34.5" fill="#A2CF80"/>
+<path d="M1024.2857 373.5V408H1008.3214Z" fill="#F29B56"/>
+</g>
+<g class="map-cell" data-tool="google-ai-mode" data-stage="Writing a manuscript" data-recommendations="">
+<title>Google AI Mode; Writing a manuscript; No use mapped</title>
+<rect x="1024.2857" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="google-translate" data-stage="Writing a manuscript" data-recommendations="">
+<title>Google Translate; Writing a manuscript; No use mapped</title>
+<rect x="1040.25" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="maxqda" data-stage="Writing a manuscript" data-recommendations="">
+<title>MAXQDA; Writing a manuscript; No use mapped</title>
+<rect x="1056.2143" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nested-knowledge-smart-search-tool" data-stage="Writing a manuscript" data-recommendations="">
+<title>Nested Knowledge Smart Search Tool; Writing a manuscript; No use mapped</title>
+<rect x="1072.1786" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="nvivo" data-stage="Writing a manuscript" data-recommendations="">
+<title>NVivo; Writing a manuscript; No use mapped</title>
+<rect x="1088.1429" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="perplexity" data-stage="Writing a manuscript" data-recommendations="">
+<title>Perplexity; Writing a manuscript; No use mapped</title>
+<rect x="1104.1071" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="undermind" data-stage="Writing a manuscript" data-recommendations="">
+<title>Undermind; Writing a manuscript; No use mapped</title>
+<rect x="1120.0714" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-tool="webplotdigitizer-ai-features" data-stage="Writing a manuscript" data-recommendations="">
+<title>WebPlotDigitizer AI features; Writing a manuscript; No use mapped</title>
+<rect x="1136.0357" y="373.5" width="15.9643" height="34.5" fill="#ffffff"/>
+</g>
+<path d="M258 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M273.9643 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M289.9286 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M305.8929 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M321.8571 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M337.8214 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M353.7857 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M369.75 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M385.7143 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M401.6786 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M417.6429 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M433.6071 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M449.5714 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M465.5357 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M481.5 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M497.4643 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M513.4286 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M529.3929 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M545.3571 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M561.3214 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M577.2857 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M593.25 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M609.2143 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M625.1786 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M641.1429 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M657.1071 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M673.0714 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M689.0357 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M705 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M720.9643 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M736.9286 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M752.8929 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M768.8571 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M784.8214 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M800.7857 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M816.75 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M832.7143 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M848.6786 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M864.6429 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M880.6071 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M896.5714 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M912.5357 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M928.5 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M944.4643 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M960.4286 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M976.3929 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M992.3571 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M1008.3214 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M1024.2857 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M1040.25 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M1056.2143 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M1072.1786 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M1088.1429 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M1104.1071 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M1120.0714 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M1136.0357 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M1152 132V408.0" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M258 132.0H1152" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M258 166.5H1152" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M258 201.0H1152" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M258 235.5H1152" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M258 270.0H1152" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M258 304.5H1152" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M258 339.0H1152" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M258 373.5H1152" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M258 408.0H1152" stroke="#c8d6dd" stroke-width="0.8"/>
+<path d="M689.0357 51V408.0" stroke="#526e80" stroke-width="2.1"/>
+<path d="M720.9643 51V408.0" stroke="#526e80" stroke-width="2.1"/>
+<path d="M880.6071 51V408.0" stroke="#526e80" stroke-width="2.1"/>
+</g></svg>

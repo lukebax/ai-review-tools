@@ -6,6 +6,10 @@ canvas. This is a format experiment, not a draft of the evidence-synthesis talk.
 
 [Open the published prototype](https://lukebax.github.io/ai-review-tools/presentation/).
 
+## Current talk sample
+
+A separate [four-slide design sample](https://lukebax.github.io/ai-review-tools/presentation/sample/) tests the approved talk’s diagrams, map views and suitability questions. Its [README](sample/README.md) covers the checked PDF and maintenance. The technical prototype here is unchanged.
+
 ## Open locally
 
 Open `index.html` in Chrome or another modern browser. Keep the `assets/` folder
