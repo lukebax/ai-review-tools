@@ -4,11 +4,12 @@ Two independent browser tools, created and maintained by Luke Baxter:
 
 - **[Interactive map](https://lukebax.github.io/ai-review-tools/map/)** — Navigating AI in
   Evidence Synthesis, a guide to RAISE’s recommendations. [Map instructions](map/README.md).
-- **[Presentation prototype](https://lukebax.github.io/ai-review-tools/presentation/)** —
-  four 16:9 test slides with an image, interactive tabs, keyboard navigation and PDF export.
-  [Presentation instructions](presentation/README.md). This is a format experiment, not a final talk deck.
+- **[Presentation](https://lukebax.github.io/ai-review-tools/presentation/)** —
+  a 20-slide draft of Navigating AI in Evidence Synthesis, with keyboard navigation
+  and a [checked PDF](https://lukebax.github.io/ai-review-tools/presentation/navigating-ai-evidence-synthesis.pdf).
+  [Presentation instructions](presentation/README.md).
 
-**[Current talk design sample](https://lukebax.github.io/ai-review-tools/presentation/sample/)**: four representative slides from the approved talk, with a checked PDF. [Sample details](presentation/sample/README.md).
+**[Accepted design sample](https://lukebax.github.io/ai-review-tools/presentation/sample/)**: four representative slides from the approved talk, with a checked PDF. [Sample details](presentation/sample/README.md).
 
 The **[site home](https://lukebax.github.io/ai-review-tools/)** links to both components.
 
@@ -18,7 +19,7 @@ The **[site home](https://lukebax.github.io/ai-review-tools/)** links to both co
 |---|---|
 | `index.html` | Small landing page linking to the map and presentation |
 | `map/` | Complete map: data, template, build script, generated HTML and instructions |
-| `presentation/` | Complete presentation: HTML, styling, interaction code, image, bundled dependencies and instructions |
+| `presentation/` | Complete presentation: HTML, vector visuals, checked PDF, bundled dependencies and instructions |
 | `preview.py` | Optional local preview server for the whole site |
 | `AGENTS.md` | Maintenance rules |
 | `LICENSE`, `CONTENT-LICENSE.md`, `THIRD_PARTY_NOTICES.md`, `LICENSES/` | Scoped licences and attribution |
@@ -42,7 +43,7 @@ python3 preview.py
 
 Open one of the printed URLs. The server binds only to this computer and does not publish
 anything. Stop it with Ctrl+C. Python 3.9+ is required for the preview helper and map build;
-viewing the HTML needs only a browser. Browsing and direct PDF export use bundled assets;
+viewing the HTML needs only a browser. Browsing and PDF download use bundled assets;
 outgoing source links require internet. See the [PDF instructions](presentation/README.md#save-a-pdf).
 
 ## Edit
@@ -51,11 +52,13 @@ outgoing source links require internet. See the [PDF instructions](presentation/
   `python3 map/build.py` and `python3 map/build.py --check`. The generated output is
   `map/index.html`; do not edit it directly. See the [map guide](map/README.md).
 - **Presentation:** edit its HTML, `assets/theme.css` and `assets/deck.js`. No build step
-  is needed. Bundled dependencies have fixed versions and original licence notices.
+  is needed for the HTML. Regenerate derived map visuals when their data changes and
+  regenerate/check the distributed PDF after slide edits. Bundled dependencies retain
+  their fixed versions and original licence notices.
 - **Landing page:** edit root `index.html`. It has no runtime dependencies.
 
-Keep all required project files versioned. Keep private sources, temporary inspection files,
-exports and unrelated material out of this public repository. Use the operating system’s
+Keep all required project files versioned. Keep private sources, temporary inspection files
+and unrelated material out of this public repository. Use the operating system’s
 temporary directory for disposable checks.
 
 ## Publish and verify
@@ -80,6 +83,6 @@ See [GitHub’s publishing instructions](https://docs.github.com/en/pages/gettin
 - Original explanatory text, annotations and curated map data:
   **[CC BY 4.0](CONTENT-LICENSE.md)**, including that content inside the map HTML.
 - Upstream RAISE material retains its CC BY 4.0 terms and authorship. Bundled libraries and
-  the NASA image retain their respective terms; see [third-party notices](THIRD_PARTY_NOTICES.md).
+  other third-party assets retain their respective terms; see [third-party notices](THIRD_PARTY_NOTICES.md).
 
 Software and content licences remain distinct when bundled in one HTML file.

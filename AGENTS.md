@@ -1,6 +1,6 @@
 # Working on ai-review-tools
 
-Read README.md and the affected component’s README before editing. This repository contains a standalone static map and a browser-presentation prototype.
+Read README.md and the affected component’s README before editing. This repository contains a standalone static map and a browser presentation.
 Keep private source libraries and unrelated files out of this public repository.
 
 - Edit map/map-data.json and map/map-template.html; regenerate map/index.html using

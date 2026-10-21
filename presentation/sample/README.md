@@ -36,7 +36,7 @@ PDF with backgrounds, no margins and no browser headers/footers, and replace
 
 The root `python3 preview.py` server also serves this directory. Append `sample/`
 to the Presentation URL it prints; the server chooses a free local port.
-The earlier technical format prototype remains at `../index.html`.
+The complete 20-slide draft is at [the presentation URL](https://lukebax.github.io/ai-review-tools/presentation/).
 
 ## Maintain
 

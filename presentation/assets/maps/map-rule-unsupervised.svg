@@ -1,0 +1,774 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1152 430" role="img" aria-labelledby="map-title map-description">
+<title id="map-title">Rule-based and unsupervised uses in the map</title>
+<desc id="map-description">Enlarged excerpt preserving all 29 tool columns and eight stages for the rule-based and unsupervised families. The exceptions remain visible in their original colours. This selection is not a complete market census. Individual tool identities and function assignments remain in metadata.</desc>
+<metadata id="map-source-metadata">{&quot;source&quot;:&quot;../map/map-data.json&quot;,&quot;sourceSHA256&quot;:&quot;d444e1dc0115ea0c53aaf2ce296a1cf24a9f9dc0a97dc4eec6c6841b0f6fb817&quot;,&quot;sourceGroupOrder&quot;:[&quot;rule-based&quot;,&quot;unsupervised&quot;,&quot;supervised&quot;,&quot;generative&quot;],&quot;sourceToolOrder&quot;:[&quot;asysd&quot;,&quot;grade-cerqual&quot;,&quot;cinema&quot;,&quot;citationchaser&quot;,&quot;citesource&quot;,&quot;connected-papers&quot;,&quot;crsu-meta-analysis-apps&quot;,&quot;deduklick&quot;,&quot;eppi-mapper&quot;,&quot;eppi-reviewer&quot;,&quot;eviatlas&quot;,&quot;gradepro&quot;,&quot;meta&quot;,&quot;metafor&quot;,&quot;nested-knowledge&quot;,&quot;predicter&quot;,&quot;pubreminer&quot;,&quot;researchrabbit&quot;,&quot;searchbuildr&quot;,&quot;systematic-online-living-evidence-summaries&quot;,&quot;tera&quot;,&quot;tera-deduplicator&quot;,&quot;tera-polyglot&quot;,&quot;tera-review-wizard&quot;,&quot;tera-search-refiner&quot;,&quot;tera-wordfreq&quot;,&quot;yale-mesh-analyzer&quot;,&quot;carrot2&quot;,&quot;swift-review&quot;,&quot;abstrackr&quot;,&quot;covidence&quot;,&quot;dextr&quot;,&quot;eppi-reviewer-prioritised-screening&quot;,&quot;eppi-reviewer-supervised-classifiers&quot;,&quot;pre-rob&quot;,&quot;robotreviewer&quot;,&quot;sciscore&quot;,&quot;steed&quot;,&quot;urse&quot;,&quot;asta&quot;,&quot;asta-find-papers&quot;,&quot;chatgpt&quot;,&quot;claude&quot;,&quot;copilot&quot;,&quot;deepl&quot;,&quot;deepseek&quot;,&quot;elicit&quot;,&quot;gemini&quot;,&quot;google-ai-mode&quot;,&quot;google-translate&quot;,&quot;maxqda&quot;,&quot;nested-knowledge-smart-search-tool&quot;,&quot;nvivo&quot;,&quot;perplexity&quot;,&quot;undermind&quot;,&quot;webplotdigitizer-ai-features&quot;],&quot;sourceStageOrder&quot;:[&quot;Writing a protocol&quot;,&quot;The Search&quot;,&quot;Screening for relevance&quot;,&quot;Quality assessment&quot;,&quot;Data extraction&quot;,&quot;Data synthesis&quot;,&quot;Certainty of evidence assessment&quot;,&quot;Writing a manuscript&quot;],&quot;recommendationOrder&quot;:[&quot;acceptable&quot;,&quot;verification&quot;,&quot;validation&quot;,&quot;exploratory&quot;,&quot;unacceptable&quot;],&quot;palette&quot;:{&quot;acceptable&quot;:&quot;#2FA572&quot;,&quot;verification&quot;:&quot;#A2CF80&quot;,&quot;validation&quot;:&quot;#F3CE55&quot;,&quot;exploratory&quot;:&quot;#F29B56&quot;,&quot;unacceptable&quot;:&quot;#DE6262&quot;},&quot;panels&quot;:[{&quot;id&quot;:&quot;rule-unsupervised-excerpt&quot;,&quot;toolOrder&quot;:[&quot;asysd&quot;,&quot;grade-cerqual&quot;,&quot;cinema&quot;,&quot;citationchaser&quot;,&quot;citesource&quot;,&quot;connected-papers&quot;,&quot;crsu-meta-analysis-apps&quot;,&quot;deduklick&quot;,&quot;eppi-mapper&quot;,&quot;eppi-reviewer&quot;,&quot;eviatlas&quot;,&quot;gradepro&quot;,&quot;meta&quot;,&quot;metafor&quot;,&quot;nested-knowledge&quot;,&quot;predicter&quot;,&quot;pubreminer&quot;,&quot;researchrabbit&quot;,&quot;searchbuildr&quot;,&quot;systematic-online-living-evidence-summaries&quot;,&quot;tera&quot;,&quot;tera-deduplicator&quot;,&quot;tera-polyglot&quot;,&quot;tera-review-wizard&quot;,&quot;tera-search-refiner&quot;,&quot;tera-wordfreq&quot;,&quot;yale-mesh-analyzer&quot;,&quot;carrot2&quot;,&quot;swift-review&quot;],&quot;stageOrder&quot;:[&quot;Writing a protocol&quot;,&quot;The Search&quot;,&quot;Screening for relevance&quot;,&quot;Quality assessment&quot;,&quot;Data extraction&quot;,&quot;Data synthesis&quot;,&quot;Certainty of evidence assessment&quot;,&quot;Writing a manuscript&quot;],&quot;tools&quot;:[{&quot;id&quot;:&quot;asysd&quot;,&quot;name&quot;:&quot;ASySD&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;asysd--the-search--duplicate-removal--rule-based&quot;,&quot;stage&quot;:&quot;The Search&quot;,&quot;functionName&quot;:&quot;Duplicate removal&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;grade-cerqual&quot;,&quot;name&quot;:&quot;GRADE-CERQual&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;grade-cerqual--certainty-of-evidence-assessment--certainty-of-evidence-assessment--rule-based&quot;,&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;functionName&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;cinema&quot;,&quot;name&quot;:&quot;CINeMA&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;cinema--certainty-of-evidence-assessment--certainty-of-evidence-assessment--rule-based&quot;,&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;functionName&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;citationchaser&quot;,&quot;name&quot;:&quot;citationchaser&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;citationchaser--the-search--citation-chasing--rule-based&quot;,&quot;stage&quot;:&quot;The Search&quot;,&quot;functionName&quot;:&quot;Citation chasing&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;citesource&quot;,&quot;name&quot;:&quot;CiteSource&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;citesource--the-search--query-validation--rule-based&quot;,&quot;stage&quot;:&quot;The Search&quot;,&quot;functionName&quot;:&quot;Query validation&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;connected-papers&quot;,&quot;name&quot;:&quot;Connected Papers&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;connected-papers--the-search--citation-chasing--rule-based&quot;,&quot;stage&quot;:&quot;The Search&quot;,&quot;functionName&quot;:&quot;Citation chasing&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;crsu-meta-analysis-apps&quot;,&quot;name&quot;:&quot;CRSU Meta-analysis apps&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;crsu-meta-analysis-apps--data-synthesis--quantitative-analysis--rule-based&quot;,&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;functionName&quot;:&quot;Quantitative analysis&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;deduklick&quot;,&quot;name&quot;:&quot;Deduklick&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;deduklick--the-search--duplicate-removal--rule-based&quot;,&quot;stage&quot;:&quot;The Search&quot;,&quot;functionName&quot;:&quot;Duplicate removal&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;eppi-mapper&quot;,&quot;name&quot;:&quot;EPPI-Mapper&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;eppi-mapper--data-synthesis--visual-synthesis--rule-based&quot;,&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;functionName&quot;:&quot;Visual synthesis&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;eppi-reviewer&quot;,&quot;name&quot;:&quot;EPPI-Reviewer&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;eppi-reviewer--the-search--citation-retrieval--rule-based&quot;,&quot;stage&quot;:&quot;The Search&quot;,&quot;functionName&quot;:&quot;Citation retrieval&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;eviatlas&quot;,&quot;name&quot;:&quot;EviAtlas&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;eviatlas--data-synthesis--visual-synthesis--rule-based&quot;,&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;functionName&quot;:&quot;Visual synthesis&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;gradepro&quot;,&quot;name&quot;:&quot;GRADEpro&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;gradepro--certainty-of-evidence-assessment--certainty-of-evidence-assessment--rule-based&quot;,&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;functionName&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;meta&quot;,&quot;name&quot;:&quot;meta&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;meta--data-synthesis--quantitative-analysis--rule-based&quot;,&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;functionName&quot;:&quot;Quantitative analysis&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;metafor&quot;,&quot;name&quot;:&quot;metafor&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;metafor--data-synthesis--quantitative-analysis--rule-based&quot;,&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;functionName&quot;:&quot;Quantitative analysis&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;nested-knowledge&quot;,&quot;name&quot;:&quot;Nested Knowledge&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;nested-knowledge--the-search--citation-retrieval--rule-based&quot;,&quot;stage&quot;:&quot;The Search&quot;,&quot;functionName&quot;:&quot;Citation retrieval&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;predicter&quot;,&quot;name&quot;:&quot;PredicTER&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;predicter--writing-a-protocol--estimating-the-resource-requirement--rule-based&quot;,&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;functionName&quot;:&quot;Estimating the resource requirement&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;pubreminer&quot;,&quot;name&quot;:&quot;PubReMiner&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;pubreminer--the-search--search-strategy-development--rule-based&quot;,&quot;stage&quot;:&quot;The Search&quot;,&quot;functionName&quot;:&quot;Search strategy development&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;researchrabbit&quot;,&quot;name&quot;:&quot;ResearchRabbit&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;researchrabbit--the-search--citation-chasing--rule-based&quot;,&quot;stage&quot;:&quot;The Search&quot;,&quot;functionName&quot;:&quot;Citation chasing&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;searchbuildr&quot;,&quot;name&quot;:&quot;searchbuildR&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;searchbuildr--the-search--search-strategy-development--rule-based&quot;,&quot;stage&quot;:&quot;The Search&quot;,&quot;functionName&quot;:&quot;Search strategy development&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;systematic-online-living-evidence-summaries&quot;,&quot;name&quot;:&quot;Systematic Online Living Evidence Summaries&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;systematic-online-living-evidence-summaries--screening-for-relevance--study-selection--rule-based&quot;,&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;functionName&quot;:&quot;Study selection&quot;,&quot;recommendation&quot;:&quot;validation&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[&quot;validation&quot;]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;tera&quot;,&quot;name&quot;:&quot;TERA&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;tera--the-search--citation-retrieval--rule-based&quot;,&quot;stage&quot;:&quot;The Search&quot;,&quot;functionName&quot;:&quot;Citation retrieval&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;tera-deduplicator&quot;,&quot;name&quot;:&quot;TERA Deduplicator&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;tera-deduplicator--the-search--duplicate-removal--rule-based&quot;,&quot;stage&quot;:&quot;The Search&quot;,&quot;functionName&quot;:&quot;Duplicate removal&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;tera-polyglot&quot;,&quot;name&quot;:&quot;TERA Polyglot&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;tera-polyglot--the-search--query-translation--rule-based&quot;,&quot;stage&quot;:&quot;The Search&quot;,&quot;functionName&quot;:&quot;Query translation&quot;,&quot;recommendation&quot;:&quot;verification&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[&quot;verification&quot;]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;tera-review-wizard&quot;,&quot;name&quot;:&quot;TERA Review Wizard&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;tera-review-wizard--writing-a-manuscript--drafting--rule-based&quot;,&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;functionName&quot;:&quot;Drafting&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]}]},{&quot;id&quot;:&quot;tera-search-refiner&quot;,&quot;name&quot;:&quot;TERA Search Refiner&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;tera-search-refiner--the-search--query-validation--rule-based&quot;,&quot;stage&quot;:&quot;The Search&quot;,&quot;functionName&quot;:&quot;Query validation&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;tera-wordfreq&quot;,&quot;name&quot;:&quot;TERA WordFreq&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;tera-wordfreq--the-search--search-strategy-development--rule-based&quot;,&quot;stage&quot;:&quot;The Search&quot;,&quot;functionName&quot;:&quot;Search strategy development&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;yale-mesh-analyzer&quot;,&quot;name&quot;:&quot;Yale MeSH Analyzer&quot;,&quot;groupId&quot;:&quot;rule-based&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;yale-mesh-analyzer--the-search--search-strategy-development--rule-based&quot;,&quot;stage&quot;:&quot;The Search&quot;,&quot;functionName&quot;:&quot;Search strategy development&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;carrot2&quot;,&quot;name&quot;:&quot;Carrot2&quot;,&quot;groupId&quot;:&quot;unsupervised&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;carrot2--writing-a-protocol--exploring-the-literature--unsupervised&quot;,&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;functionName&quot;:&quot;Exploring the literature&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;},{&quot;id&quot;:&quot;carrot2--the-search--exploring-the-literature--unsupervised&quot;,&quot;stage&quot;:&quot;The Search&quot;,&quot;functionName&quot;:&quot;Scoping the literature&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]},{&quot;id&quot;:&quot;swift-review&quot;,&quot;name&quot;:&quot;SWIFT-Review&quot;,&quot;groupId&quot;:&quot;unsupervised&quot;,&quot;functions&quot;:[{&quot;id&quot;:&quot;swift-review--writing-a-protocol--exploring-the-literature--unsupervised&quot;,&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;functionName&quot;:&quot;Exploring the literature&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;},{&quot;id&quot;:&quot;swift-review--the-search--scoping-the-literature--unsupervised&quot;,&quot;stage&quot;:&quot;The Search&quot;,&quot;functionName&quot;:&quot;Scoping the literature&quot;,&quot;recommendation&quot;:&quot;acceptable&quot;}],&quot;cells&quot;:[{&quot;stage&quot;:&quot;Writing a protocol&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;The Search&quot;,&quot;recommendations&quot;:[&quot;acceptable&quot;]},{&quot;stage&quot;:&quot;Screening for relevance&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Quality assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data extraction&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Data synthesis&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Certainty of evidence assessment&quot;,&quot;recommendations&quot;:[]},{&quot;stage&quot;:&quot;Writing a manuscript&quot;,&quot;recommendations&quot;:[]}]}]}],&quot;neutralHighlights&quot;:[]}</metadata>
+<g font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" fill="#203746">
+<rect width="1152" height="430" fill="#f7f9fa"/>
+<rect x="258" y="51" width="832.3448" height="81" fill="#eaf0f3"/>
+<rect x="1090.3448" y="51" width="61.6552" height="81" fill="#eaf0f3"/>
+<text x="674.1724" y="87" font-size="24" text-anchor="middle" font-weight="650" fill="#203746">Rule-based</text>
+<text x="674.1724" y="114" font-size="24" text-anchor="middle" font-weight="650" fill="#203746">algorithms</text>
+<text x="1150" y="25" font-size="23" text-anchor="end" font-weight="650" fill="#203746">Unsupervised machine learning</text>
+<path d="M1121.1724 36V122M1117.1724 117L1121.1724 123L1125.1724 117" stroke="#526b7c" stroke-width="1.8" fill="none"/>
+<text x="0" y="117" font-size="22" text-anchor="start" font-weight="650" fill="#526b7c">Review stage</text>
+<g class="stage-label" data-stage="Writing a protocol"><title>Writing a protocol</title>
+<text x="0" y="157.25" font-size="23" text-anchor="start" font-weight="500" fill="#203746">Writing a protocol</text>
+</g>
+<g class="stage-label" data-stage="The Search"><title>The Search</title>
+<text x="0" y="191.75" font-size="23" text-anchor="start" font-weight="500" fill="#203746">The search</text>
+</g>
+<g class="stage-label" data-stage="Screening for relevance"><title>Screening for relevance</title>
+<text x="0" y="226.25" font-size="23" text-anchor="start" font-weight="500" fill="#203746">Screening for relevance</text>
+</g>
+<g class="stage-label" data-stage="Quality assessment"><title>Quality assessment</title>
+<text x="0" y="260.75" font-size="23" text-anchor="start" font-weight="500" fill="#203746">Quality assessment</text>
+</g>
+<g class="stage-label" data-stage="Data extraction"><title>Data extraction</title>
+<text x="0" y="295.25" font-size="23" text-anchor="start" font-weight="500" fill="#203746">Data extraction</text>
+</g>
+<g class="stage-label" data-stage="Data synthesis"><title>Data synthesis</title>
+<text x="0" y="329.75" font-size="23" text-anchor="start" font-weight="500" fill="#203746">Data synthesis</text>
+</g>
+<g class="stage-label" data-stage="Certainty of evidence assessment"><title>Certainty of evidence assessment</title>
+<text x="0" y="364.25" font-size="23" text-anchor="start" font-weight="500" fill="#203746">Certainty of evidence</text>
+</g>
+<g class="stage-label" data-stage="Writing a manuscript"><title>Writing a manuscript</title>
+<text x="0" y="398.75" font-size="23" text-anchor="start" font-weight="500" fill="#203746">Writing a manuscript</text>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="asysd" data-stage="Writing a protocol" data-recommendations=""><title>ASySD; Writing a protocol; No use mapped</title>
+<rect x="258" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="grade-cerqual" data-stage="Writing a protocol" data-recommendations=""><title>GRADE-CERQual; Writing a protocol; No use mapped</title>
+<rect x="288.8276" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="cinema" data-stage="Writing a protocol" data-recommendations=""><title>CINeMA; Writing a protocol; No use mapped</title>
+<rect x="319.6552" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="citationchaser" data-stage="Writing a protocol" data-recommendations=""><title>citationchaser; Writing a protocol; No use mapped</title>
+<rect x="350.4828" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="citesource" data-stage="Writing a protocol" data-recommendations=""><title>CiteSource; Writing a protocol; No use mapped</title>
+<rect x="381.3103" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="connected-papers" data-stage="Writing a protocol" data-recommendations=""><title>Connected Papers; Writing a protocol; No use mapped</title>
+<rect x="412.1379" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="crsu-meta-analysis-apps" data-stage="Writing a protocol" data-recommendations=""><title>CRSU Meta-analysis apps; Writing a protocol; No use mapped</title>
+<rect x="442.9655" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="deduklick" data-stage="Writing a protocol" data-recommendations=""><title>Deduklick; Writing a protocol; No use mapped</title>
+<rect x="473.7931" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eppi-mapper" data-stage="Writing a protocol" data-recommendations=""><title>EPPI-Mapper; Writing a protocol; No use mapped</title>
+<rect x="504.6207" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eppi-reviewer" data-stage="Writing a protocol" data-recommendations=""><title>EPPI-Reviewer; Writing a protocol; No use mapped</title>
+<rect x="535.4483" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eviatlas" data-stage="Writing a protocol" data-recommendations=""><title>EviAtlas; Writing a protocol; No use mapped</title>
+<rect x="566.2759" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="gradepro" data-stage="Writing a protocol" data-recommendations=""><title>GRADEpro; Writing a protocol; No use mapped</title>
+<rect x="597.1034" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="meta" data-stage="Writing a protocol" data-recommendations=""><title>meta; Writing a protocol; No use mapped</title>
+<rect x="627.931" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="metafor" data-stage="Writing a protocol" data-recommendations=""><title>metafor; Writing a protocol; No use mapped</title>
+<rect x="658.7586" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="nested-knowledge" data-stage="Writing a protocol" data-recommendations=""><title>Nested Knowledge; Writing a protocol; No use mapped</title>
+<rect x="689.5862" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="predicter" data-stage="Writing a protocol" data-recommendations="acceptable"><title>PredicTER; Writing a protocol; Acceptable for use</title>
+<rect x="720.4138" y="132" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="pubreminer" data-stage="Writing a protocol" data-recommendations=""><title>PubReMiner; Writing a protocol; No use mapped</title>
+<rect x="751.2414" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="researchrabbit" data-stage="Writing a protocol" data-recommendations=""><title>ResearchRabbit; Writing a protocol; No use mapped</title>
+<rect x="782.069" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="searchbuildr" data-stage="Writing a protocol" data-recommendations=""><title>searchbuildR; Writing a protocol; No use mapped</title>
+<rect x="812.8966" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="systematic-online-living-evidence-summaries" data-stage="Writing a protocol" data-recommendations=""><title>Systematic Online Living Evidence Summaries; Writing a protocol; No use mapped</title>
+<rect x="843.7241" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera" data-stage="Writing a protocol" data-recommendations=""><title>TERA; Writing a protocol; No use mapped</title>
+<rect x="874.5517" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-deduplicator" data-stage="Writing a protocol" data-recommendations=""><title>TERA Deduplicator; Writing a protocol; No use mapped</title>
+<rect x="905.3793" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-polyglot" data-stage="Writing a protocol" data-recommendations=""><title>TERA Polyglot; Writing a protocol; No use mapped</title>
+<rect x="936.2069" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-review-wizard" data-stage="Writing a protocol" data-recommendations=""><title>TERA Review Wizard; Writing a protocol; No use mapped</title>
+<rect x="967.0345" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-search-refiner" data-stage="Writing a protocol" data-recommendations=""><title>TERA Search Refiner; Writing a protocol; No use mapped</title>
+<rect x="997.8621" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-wordfreq" data-stage="Writing a protocol" data-recommendations=""><title>TERA WordFreq; Writing a protocol; No use mapped</title>
+<rect x="1028.6897" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="yale-mesh-analyzer" data-stage="Writing a protocol" data-recommendations=""><title>Yale MeSH Analyzer; Writing a protocol; No use mapped</title>
+<rect x="1059.5172" y="132" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="carrot2" data-stage="Writing a protocol" data-recommendations="acceptable"><title>Carrot2; Writing a protocol; Acceptable for use</title>
+<rect x="1090.3448" y="132" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="swift-review" data-stage="Writing a protocol" data-recommendations="acceptable"><title>SWIFT-Review; Writing a protocol; Acceptable for use</title>
+<rect x="1121.1724" y="132" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="asysd" data-stage="The Search" data-recommendations="acceptable"><title>ASySD; The Search; Acceptable for use</title>
+<rect x="258" y="166.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="grade-cerqual" data-stage="The Search" data-recommendations=""><title>GRADE-CERQual; The Search; No use mapped</title>
+<rect x="288.8276" y="166.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="cinema" data-stage="The Search" data-recommendations=""><title>CINeMA; The Search; No use mapped</title>
+<rect x="319.6552" y="166.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="citationchaser" data-stage="The Search" data-recommendations="acceptable"><title>citationchaser; The Search; Acceptable for use</title>
+<rect x="350.4828" y="166.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="citesource" data-stage="The Search" data-recommendations="acceptable"><title>CiteSource; The Search; Acceptable for use</title>
+<rect x="381.3103" y="166.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="connected-papers" data-stage="The Search" data-recommendations="acceptable"><title>Connected Papers; The Search; Acceptable for use</title>
+<rect x="412.1379" y="166.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="crsu-meta-analysis-apps" data-stage="The Search" data-recommendations=""><title>CRSU Meta-analysis apps; The Search; No use mapped</title>
+<rect x="442.9655" y="166.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="deduklick" data-stage="The Search" data-recommendations="acceptable"><title>Deduklick; The Search; Acceptable for use</title>
+<rect x="473.7931" y="166.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eppi-mapper" data-stage="The Search" data-recommendations=""><title>EPPI-Mapper; The Search; No use mapped</title>
+<rect x="504.6207" y="166.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eppi-reviewer" data-stage="The Search" data-recommendations="acceptable"><title>EPPI-Reviewer; The Search; Acceptable for use</title>
+<rect x="535.4483" y="166.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eviatlas" data-stage="The Search" data-recommendations=""><title>EviAtlas; The Search; No use mapped</title>
+<rect x="566.2759" y="166.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="gradepro" data-stage="The Search" data-recommendations=""><title>GRADEpro; The Search; No use mapped</title>
+<rect x="597.1034" y="166.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="meta" data-stage="The Search" data-recommendations=""><title>meta; The Search; No use mapped</title>
+<rect x="627.931" y="166.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="metafor" data-stage="The Search" data-recommendations=""><title>metafor; The Search; No use mapped</title>
+<rect x="658.7586" y="166.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="nested-knowledge" data-stage="The Search" data-recommendations="acceptable"><title>Nested Knowledge; The Search; Acceptable for use</title>
+<rect x="689.5862" y="166.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="predicter" data-stage="The Search" data-recommendations=""><title>PredicTER; The Search; No use mapped</title>
+<rect x="720.4138" y="166.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="pubreminer" data-stage="The Search" data-recommendations="acceptable"><title>PubReMiner; The Search; Acceptable for use</title>
+<rect x="751.2414" y="166.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="researchrabbit" data-stage="The Search" data-recommendations="acceptable"><title>ResearchRabbit; The Search; Acceptable for use</title>
+<rect x="782.069" y="166.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="searchbuildr" data-stage="The Search" data-recommendations="acceptable"><title>searchbuildR; The Search; Acceptable for use</title>
+<rect x="812.8966" y="166.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="systematic-online-living-evidence-summaries" data-stage="The Search" data-recommendations=""><title>Systematic Online Living Evidence Summaries; The Search; No use mapped</title>
+<rect x="843.7241" y="166.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera" data-stage="The Search" data-recommendations="acceptable"><title>TERA; The Search; Acceptable for use</title>
+<rect x="874.5517" y="166.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-deduplicator" data-stage="The Search" data-recommendations="acceptable"><title>TERA Deduplicator; The Search; Acceptable for use</title>
+<rect x="905.3793" y="166.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-polyglot" data-stage="The Search" data-recommendations="verification"><title>TERA Polyglot; The Search; Human verification required</title>
+<rect x="936.2069" y="166.5" width="30.8276" height="34.5" fill="#A2CF80"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-review-wizard" data-stage="The Search" data-recommendations=""><title>TERA Review Wizard; The Search; No use mapped</title>
+<rect x="967.0345" y="166.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-search-refiner" data-stage="The Search" data-recommendations="acceptable"><title>TERA Search Refiner; The Search; Acceptable for use</title>
+<rect x="997.8621" y="166.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-wordfreq" data-stage="The Search" data-recommendations="acceptable"><title>TERA WordFreq; The Search; Acceptable for use</title>
+<rect x="1028.6897" y="166.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="yale-mesh-analyzer" data-stage="The Search" data-recommendations="acceptable"><title>Yale MeSH Analyzer; The Search; Acceptable for use</title>
+<rect x="1059.5172" y="166.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="carrot2" data-stage="The Search" data-recommendations="acceptable"><title>Carrot2; The Search; Acceptable for use</title>
+<rect x="1090.3448" y="166.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="swift-review" data-stage="The Search" data-recommendations="acceptable"><title>SWIFT-Review; The Search; Acceptable for use</title>
+<rect x="1121.1724" y="166.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="asysd" data-stage="Screening for relevance" data-recommendations=""><title>ASySD; Screening for relevance; No use mapped</title>
+<rect x="258" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="grade-cerqual" data-stage="Screening for relevance" data-recommendations=""><title>GRADE-CERQual; Screening for relevance; No use mapped</title>
+<rect x="288.8276" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="cinema" data-stage="Screening for relevance" data-recommendations=""><title>CINeMA; Screening for relevance; No use mapped</title>
+<rect x="319.6552" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="citationchaser" data-stage="Screening for relevance" data-recommendations=""><title>citationchaser; Screening for relevance; No use mapped</title>
+<rect x="350.4828" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="citesource" data-stage="Screening for relevance" data-recommendations=""><title>CiteSource; Screening for relevance; No use mapped</title>
+<rect x="381.3103" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="connected-papers" data-stage="Screening for relevance" data-recommendations=""><title>Connected Papers; Screening for relevance; No use mapped</title>
+<rect x="412.1379" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="crsu-meta-analysis-apps" data-stage="Screening for relevance" data-recommendations=""><title>CRSU Meta-analysis apps; Screening for relevance; No use mapped</title>
+<rect x="442.9655" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="deduklick" data-stage="Screening for relevance" data-recommendations=""><title>Deduklick; Screening for relevance; No use mapped</title>
+<rect x="473.7931" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eppi-mapper" data-stage="Screening for relevance" data-recommendations=""><title>EPPI-Mapper; Screening for relevance; No use mapped</title>
+<rect x="504.6207" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eppi-reviewer" data-stage="Screening for relevance" data-recommendations=""><title>EPPI-Reviewer; Screening for relevance; No use mapped</title>
+<rect x="535.4483" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eviatlas" data-stage="Screening for relevance" data-recommendations=""><title>EviAtlas; Screening for relevance; No use mapped</title>
+<rect x="566.2759" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="gradepro" data-stage="Screening for relevance" data-recommendations=""><title>GRADEpro; Screening for relevance; No use mapped</title>
+<rect x="597.1034" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="meta" data-stage="Screening for relevance" data-recommendations=""><title>meta; Screening for relevance; No use mapped</title>
+<rect x="627.931" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="metafor" data-stage="Screening for relevance" data-recommendations=""><title>metafor; Screening for relevance; No use mapped</title>
+<rect x="658.7586" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="nested-knowledge" data-stage="Screening for relevance" data-recommendations=""><title>Nested Knowledge; Screening for relevance; No use mapped</title>
+<rect x="689.5862" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="predicter" data-stage="Screening for relevance" data-recommendations=""><title>PredicTER; Screening for relevance; No use mapped</title>
+<rect x="720.4138" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="pubreminer" data-stage="Screening for relevance" data-recommendations=""><title>PubReMiner; Screening for relevance; No use mapped</title>
+<rect x="751.2414" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="researchrabbit" data-stage="Screening for relevance" data-recommendations=""><title>ResearchRabbit; Screening for relevance; No use mapped</title>
+<rect x="782.069" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="searchbuildr" data-stage="Screening for relevance" data-recommendations=""><title>searchbuildR; Screening for relevance; No use mapped</title>
+<rect x="812.8966" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="systematic-online-living-evidence-summaries" data-stage="Screening for relevance" data-recommendations="validation"><title>Systematic Online Living Evidence Summaries; Screening for relevance; Requires validation within the review</title>
+<rect x="843.7241" y="201" width="30.8276" height="34.5" fill="#F3CE55"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera" data-stage="Screening for relevance" data-recommendations=""><title>TERA; Screening for relevance; No use mapped</title>
+<rect x="874.5517" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-deduplicator" data-stage="Screening for relevance" data-recommendations=""><title>TERA Deduplicator; Screening for relevance; No use mapped</title>
+<rect x="905.3793" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-polyglot" data-stage="Screening for relevance" data-recommendations=""><title>TERA Polyglot; Screening for relevance; No use mapped</title>
+<rect x="936.2069" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-review-wizard" data-stage="Screening for relevance" data-recommendations=""><title>TERA Review Wizard; Screening for relevance; No use mapped</title>
+<rect x="967.0345" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-search-refiner" data-stage="Screening for relevance" data-recommendations=""><title>TERA Search Refiner; Screening for relevance; No use mapped</title>
+<rect x="997.8621" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-wordfreq" data-stage="Screening for relevance" data-recommendations=""><title>TERA WordFreq; Screening for relevance; No use mapped</title>
+<rect x="1028.6897" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="yale-mesh-analyzer" data-stage="Screening for relevance" data-recommendations=""><title>Yale MeSH Analyzer; Screening for relevance; No use mapped</title>
+<rect x="1059.5172" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="carrot2" data-stage="Screening for relevance" data-recommendations=""><title>Carrot2; Screening for relevance; No use mapped</title>
+<rect x="1090.3448" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="swift-review" data-stage="Screening for relevance" data-recommendations=""><title>SWIFT-Review; Screening for relevance; No use mapped</title>
+<rect x="1121.1724" y="201" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="asysd" data-stage="Quality assessment" data-recommendations=""><title>ASySD; Quality assessment; No use mapped</title>
+<rect x="258" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="grade-cerqual" data-stage="Quality assessment" data-recommendations=""><title>GRADE-CERQual; Quality assessment; No use mapped</title>
+<rect x="288.8276" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="cinema" data-stage="Quality assessment" data-recommendations=""><title>CINeMA; Quality assessment; No use mapped</title>
+<rect x="319.6552" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="citationchaser" data-stage="Quality assessment" data-recommendations=""><title>citationchaser; Quality assessment; No use mapped</title>
+<rect x="350.4828" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="citesource" data-stage="Quality assessment" data-recommendations=""><title>CiteSource; Quality assessment; No use mapped</title>
+<rect x="381.3103" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="connected-papers" data-stage="Quality assessment" data-recommendations=""><title>Connected Papers; Quality assessment; No use mapped</title>
+<rect x="412.1379" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="crsu-meta-analysis-apps" data-stage="Quality assessment" data-recommendations=""><title>CRSU Meta-analysis apps; Quality assessment; No use mapped</title>
+<rect x="442.9655" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="deduklick" data-stage="Quality assessment" data-recommendations=""><title>Deduklick; Quality assessment; No use mapped</title>
+<rect x="473.7931" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eppi-mapper" data-stage="Quality assessment" data-recommendations=""><title>EPPI-Mapper; Quality assessment; No use mapped</title>
+<rect x="504.6207" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eppi-reviewer" data-stage="Quality assessment" data-recommendations=""><title>EPPI-Reviewer; Quality assessment; No use mapped</title>
+<rect x="535.4483" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eviatlas" data-stage="Quality assessment" data-recommendations=""><title>EviAtlas; Quality assessment; No use mapped</title>
+<rect x="566.2759" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="gradepro" data-stage="Quality assessment" data-recommendations=""><title>GRADEpro; Quality assessment; No use mapped</title>
+<rect x="597.1034" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="meta" data-stage="Quality assessment" data-recommendations=""><title>meta; Quality assessment; No use mapped</title>
+<rect x="627.931" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="metafor" data-stage="Quality assessment" data-recommendations=""><title>metafor; Quality assessment; No use mapped</title>
+<rect x="658.7586" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="nested-knowledge" data-stage="Quality assessment" data-recommendations=""><title>Nested Knowledge; Quality assessment; No use mapped</title>
+<rect x="689.5862" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="predicter" data-stage="Quality assessment" data-recommendations=""><title>PredicTER; Quality assessment; No use mapped</title>
+<rect x="720.4138" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="pubreminer" data-stage="Quality assessment" data-recommendations=""><title>PubReMiner; Quality assessment; No use mapped</title>
+<rect x="751.2414" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="researchrabbit" data-stage="Quality assessment" data-recommendations=""><title>ResearchRabbit; Quality assessment; No use mapped</title>
+<rect x="782.069" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="searchbuildr" data-stage="Quality assessment" data-recommendations=""><title>searchbuildR; Quality assessment; No use mapped</title>
+<rect x="812.8966" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="systematic-online-living-evidence-summaries" data-stage="Quality assessment" data-recommendations=""><title>Systematic Online Living Evidence Summaries; Quality assessment; No use mapped</title>
+<rect x="843.7241" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera" data-stage="Quality assessment" data-recommendations=""><title>TERA; Quality assessment; No use mapped</title>
+<rect x="874.5517" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-deduplicator" data-stage="Quality assessment" data-recommendations=""><title>TERA Deduplicator; Quality assessment; No use mapped</title>
+<rect x="905.3793" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-polyglot" data-stage="Quality assessment" data-recommendations=""><title>TERA Polyglot; Quality assessment; No use mapped</title>
+<rect x="936.2069" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-review-wizard" data-stage="Quality assessment" data-recommendations=""><title>TERA Review Wizard; Quality assessment; No use mapped</title>
+<rect x="967.0345" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-search-refiner" data-stage="Quality assessment" data-recommendations=""><title>TERA Search Refiner; Quality assessment; No use mapped</title>
+<rect x="997.8621" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-wordfreq" data-stage="Quality assessment" data-recommendations=""><title>TERA WordFreq; Quality assessment; No use mapped</title>
+<rect x="1028.6897" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="yale-mesh-analyzer" data-stage="Quality assessment" data-recommendations=""><title>Yale MeSH Analyzer; Quality assessment; No use mapped</title>
+<rect x="1059.5172" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="carrot2" data-stage="Quality assessment" data-recommendations=""><title>Carrot2; Quality assessment; No use mapped</title>
+<rect x="1090.3448" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="swift-review" data-stage="Quality assessment" data-recommendations=""><title>SWIFT-Review; Quality assessment; No use mapped</title>
+<rect x="1121.1724" y="235.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="asysd" data-stage="Data extraction" data-recommendations=""><title>ASySD; Data extraction; No use mapped</title>
+<rect x="258" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="grade-cerqual" data-stage="Data extraction" data-recommendations=""><title>GRADE-CERQual; Data extraction; No use mapped</title>
+<rect x="288.8276" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="cinema" data-stage="Data extraction" data-recommendations=""><title>CINeMA; Data extraction; No use mapped</title>
+<rect x="319.6552" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="citationchaser" data-stage="Data extraction" data-recommendations=""><title>citationchaser; Data extraction; No use mapped</title>
+<rect x="350.4828" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="citesource" data-stage="Data extraction" data-recommendations=""><title>CiteSource; Data extraction; No use mapped</title>
+<rect x="381.3103" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="connected-papers" data-stage="Data extraction" data-recommendations=""><title>Connected Papers; Data extraction; No use mapped</title>
+<rect x="412.1379" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="crsu-meta-analysis-apps" data-stage="Data extraction" data-recommendations=""><title>CRSU Meta-analysis apps; Data extraction; No use mapped</title>
+<rect x="442.9655" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="deduklick" data-stage="Data extraction" data-recommendations=""><title>Deduklick; Data extraction; No use mapped</title>
+<rect x="473.7931" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eppi-mapper" data-stage="Data extraction" data-recommendations=""><title>EPPI-Mapper; Data extraction; No use mapped</title>
+<rect x="504.6207" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eppi-reviewer" data-stage="Data extraction" data-recommendations=""><title>EPPI-Reviewer; Data extraction; No use mapped</title>
+<rect x="535.4483" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eviatlas" data-stage="Data extraction" data-recommendations=""><title>EviAtlas; Data extraction; No use mapped</title>
+<rect x="566.2759" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="gradepro" data-stage="Data extraction" data-recommendations=""><title>GRADEpro; Data extraction; No use mapped</title>
+<rect x="597.1034" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="meta" data-stage="Data extraction" data-recommendations=""><title>meta; Data extraction; No use mapped</title>
+<rect x="627.931" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="metafor" data-stage="Data extraction" data-recommendations=""><title>metafor; Data extraction; No use mapped</title>
+<rect x="658.7586" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="nested-knowledge" data-stage="Data extraction" data-recommendations=""><title>Nested Knowledge; Data extraction; No use mapped</title>
+<rect x="689.5862" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="predicter" data-stage="Data extraction" data-recommendations=""><title>PredicTER; Data extraction; No use mapped</title>
+<rect x="720.4138" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="pubreminer" data-stage="Data extraction" data-recommendations=""><title>PubReMiner; Data extraction; No use mapped</title>
+<rect x="751.2414" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="researchrabbit" data-stage="Data extraction" data-recommendations=""><title>ResearchRabbit; Data extraction; No use mapped</title>
+<rect x="782.069" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="searchbuildr" data-stage="Data extraction" data-recommendations=""><title>searchbuildR; Data extraction; No use mapped</title>
+<rect x="812.8966" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="systematic-online-living-evidence-summaries" data-stage="Data extraction" data-recommendations=""><title>Systematic Online Living Evidence Summaries; Data extraction; No use mapped</title>
+<rect x="843.7241" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera" data-stage="Data extraction" data-recommendations=""><title>TERA; Data extraction; No use mapped</title>
+<rect x="874.5517" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-deduplicator" data-stage="Data extraction" data-recommendations=""><title>TERA Deduplicator; Data extraction; No use mapped</title>
+<rect x="905.3793" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-polyglot" data-stage="Data extraction" data-recommendations=""><title>TERA Polyglot; Data extraction; No use mapped</title>
+<rect x="936.2069" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-review-wizard" data-stage="Data extraction" data-recommendations=""><title>TERA Review Wizard; Data extraction; No use mapped</title>
+<rect x="967.0345" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-search-refiner" data-stage="Data extraction" data-recommendations=""><title>TERA Search Refiner; Data extraction; No use mapped</title>
+<rect x="997.8621" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-wordfreq" data-stage="Data extraction" data-recommendations=""><title>TERA WordFreq; Data extraction; No use mapped</title>
+<rect x="1028.6897" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="yale-mesh-analyzer" data-stage="Data extraction" data-recommendations=""><title>Yale MeSH Analyzer; Data extraction; No use mapped</title>
+<rect x="1059.5172" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="carrot2" data-stage="Data extraction" data-recommendations=""><title>Carrot2; Data extraction; No use mapped</title>
+<rect x="1090.3448" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="swift-review" data-stage="Data extraction" data-recommendations=""><title>SWIFT-Review; Data extraction; No use mapped</title>
+<rect x="1121.1724" y="270" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="asysd" data-stage="Data synthesis" data-recommendations=""><title>ASySD; Data synthesis; No use mapped</title>
+<rect x="258" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="grade-cerqual" data-stage="Data synthesis" data-recommendations=""><title>GRADE-CERQual; Data synthesis; No use mapped</title>
+<rect x="288.8276" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="cinema" data-stage="Data synthesis" data-recommendations=""><title>CINeMA; Data synthesis; No use mapped</title>
+<rect x="319.6552" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="citationchaser" data-stage="Data synthesis" data-recommendations=""><title>citationchaser; Data synthesis; No use mapped</title>
+<rect x="350.4828" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="citesource" data-stage="Data synthesis" data-recommendations=""><title>CiteSource; Data synthesis; No use mapped</title>
+<rect x="381.3103" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="connected-papers" data-stage="Data synthesis" data-recommendations=""><title>Connected Papers; Data synthesis; No use mapped</title>
+<rect x="412.1379" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="crsu-meta-analysis-apps" data-stage="Data synthesis" data-recommendations="acceptable"><title>CRSU Meta-analysis apps; Data synthesis; Acceptable for use</title>
+<rect x="442.9655" y="304.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="deduklick" data-stage="Data synthesis" data-recommendations=""><title>Deduklick; Data synthesis; No use mapped</title>
+<rect x="473.7931" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eppi-mapper" data-stage="Data synthesis" data-recommendations="acceptable"><title>EPPI-Mapper; Data synthesis; Acceptable for use</title>
+<rect x="504.6207" y="304.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eppi-reviewer" data-stage="Data synthesis" data-recommendations=""><title>EPPI-Reviewer; Data synthesis; No use mapped</title>
+<rect x="535.4483" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eviatlas" data-stage="Data synthesis" data-recommendations="acceptable"><title>EviAtlas; Data synthesis; Acceptable for use</title>
+<rect x="566.2759" y="304.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="gradepro" data-stage="Data synthesis" data-recommendations=""><title>GRADEpro; Data synthesis; No use mapped</title>
+<rect x="597.1034" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="meta" data-stage="Data synthesis" data-recommendations="acceptable"><title>meta; Data synthesis; Acceptable for use</title>
+<rect x="627.931" y="304.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="metafor" data-stage="Data synthesis" data-recommendations="acceptable"><title>metafor; Data synthesis; Acceptable for use</title>
+<rect x="658.7586" y="304.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="nested-knowledge" data-stage="Data synthesis" data-recommendations=""><title>Nested Knowledge; Data synthesis; No use mapped</title>
+<rect x="689.5862" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="predicter" data-stage="Data synthesis" data-recommendations=""><title>PredicTER; Data synthesis; No use mapped</title>
+<rect x="720.4138" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="pubreminer" data-stage="Data synthesis" data-recommendations=""><title>PubReMiner; Data synthesis; No use mapped</title>
+<rect x="751.2414" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="researchrabbit" data-stage="Data synthesis" data-recommendations=""><title>ResearchRabbit; Data synthesis; No use mapped</title>
+<rect x="782.069" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="searchbuildr" data-stage="Data synthesis" data-recommendations=""><title>searchbuildR; Data synthesis; No use mapped</title>
+<rect x="812.8966" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="systematic-online-living-evidence-summaries" data-stage="Data synthesis" data-recommendations=""><title>Systematic Online Living Evidence Summaries; Data synthesis; No use mapped</title>
+<rect x="843.7241" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera" data-stage="Data synthesis" data-recommendations=""><title>TERA; Data synthesis; No use mapped</title>
+<rect x="874.5517" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-deduplicator" data-stage="Data synthesis" data-recommendations=""><title>TERA Deduplicator; Data synthesis; No use mapped</title>
+<rect x="905.3793" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-polyglot" data-stage="Data synthesis" data-recommendations=""><title>TERA Polyglot; Data synthesis; No use mapped</title>
+<rect x="936.2069" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-review-wizard" data-stage="Data synthesis" data-recommendations=""><title>TERA Review Wizard; Data synthesis; No use mapped</title>
+<rect x="967.0345" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-search-refiner" data-stage="Data synthesis" data-recommendations=""><title>TERA Search Refiner; Data synthesis; No use mapped</title>
+<rect x="997.8621" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-wordfreq" data-stage="Data synthesis" data-recommendations=""><title>TERA WordFreq; Data synthesis; No use mapped</title>
+<rect x="1028.6897" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="yale-mesh-analyzer" data-stage="Data synthesis" data-recommendations=""><title>Yale MeSH Analyzer; Data synthesis; No use mapped</title>
+<rect x="1059.5172" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="carrot2" data-stage="Data synthesis" data-recommendations=""><title>Carrot2; Data synthesis; No use mapped</title>
+<rect x="1090.3448" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="swift-review" data-stage="Data synthesis" data-recommendations=""><title>SWIFT-Review; Data synthesis; No use mapped</title>
+<rect x="1121.1724" y="304.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="asysd" data-stage="Certainty of evidence assessment" data-recommendations=""><title>ASySD; Certainty of evidence assessment; No use mapped</title>
+<rect x="258" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="grade-cerqual" data-stage="Certainty of evidence assessment" data-recommendations="acceptable"><title>GRADE-CERQual; Certainty of evidence assessment; Acceptable for use</title>
+<rect x="288.8276" y="339" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="cinema" data-stage="Certainty of evidence assessment" data-recommendations="acceptable"><title>CINeMA; Certainty of evidence assessment; Acceptable for use</title>
+<rect x="319.6552" y="339" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="citationchaser" data-stage="Certainty of evidence assessment" data-recommendations=""><title>citationchaser; Certainty of evidence assessment; No use mapped</title>
+<rect x="350.4828" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="citesource" data-stage="Certainty of evidence assessment" data-recommendations=""><title>CiteSource; Certainty of evidence assessment; No use mapped</title>
+<rect x="381.3103" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="connected-papers" data-stage="Certainty of evidence assessment" data-recommendations=""><title>Connected Papers; Certainty of evidence assessment; No use mapped</title>
+<rect x="412.1379" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="crsu-meta-analysis-apps" data-stage="Certainty of evidence assessment" data-recommendations=""><title>CRSU Meta-analysis apps; Certainty of evidence assessment; No use mapped</title>
+<rect x="442.9655" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="deduklick" data-stage="Certainty of evidence assessment" data-recommendations=""><title>Deduklick; Certainty of evidence assessment; No use mapped</title>
+<rect x="473.7931" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eppi-mapper" data-stage="Certainty of evidence assessment" data-recommendations=""><title>EPPI-Mapper; Certainty of evidence assessment; No use mapped</title>
+<rect x="504.6207" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eppi-reviewer" data-stage="Certainty of evidence assessment" data-recommendations=""><title>EPPI-Reviewer; Certainty of evidence assessment; No use mapped</title>
+<rect x="535.4483" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eviatlas" data-stage="Certainty of evidence assessment" data-recommendations=""><title>EviAtlas; Certainty of evidence assessment; No use mapped</title>
+<rect x="566.2759" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="gradepro" data-stage="Certainty of evidence assessment" data-recommendations="acceptable"><title>GRADEpro; Certainty of evidence assessment; Acceptable for use</title>
+<rect x="597.1034" y="339" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="meta" data-stage="Certainty of evidence assessment" data-recommendations=""><title>meta; Certainty of evidence assessment; No use mapped</title>
+<rect x="627.931" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="metafor" data-stage="Certainty of evidence assessment" data-recommendations=""><title>metafor; Certainty of evidence assessment; No use mapped</title>
+<rect x="658.7586" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="nested-knowledge" data-stage="Certainty of evidence assessment" data-recommendations=""><title>Nested Knowledge; Certainty of evidence assessment; No use mapped</title>
+<rect x="689.5862" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="predicter" data-stage="Certainty of evidence assessment" data-recommendations=""><title>PredicTER; Certainty of evidence assessment; No use mapped</title>
+<rect x="720.4138" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="pubreminer" data-stage="Certainty of evidence assessment" data-recommendations=""><title>PubReMiner; Certainty of evidence assessment; No use mapped</title>
+<rect x="751.2414" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="researchrabbit" data-stage="Certainty of evidence assessment" data-recommendations=""><title>ResearchRabbit; Certainty of evidence assessment; No use mapped</title>
+<rect x="782.069" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="searchbuildr" data-stage="Certainty of evidence assessment" data-recommendations=""><title>searchbuildR; Certainty of evidence assessment; No use mapped</title>
+<rect x="812.8966" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="systematic-online-living-evidence-summaries" data-stage="Certainty of evidence assessment" data-recommendations=""><title>Systematic Online Living Evidence Summaries; Certainty of evidence assessment; No use mapped</title>
+<rect x="843.7241" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera" data-stage="Certainty of evidence assessment" data-recommendations=""><title>TERA; Certainty of evidence assessment; No use mapped</title>
+<rect x="874.5517" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-deduplicator" data-stage="Certainty of evidence assessment" data-recommendations=""><title>TERA Deduplicator; Certainty of evidence assessment; No use mapped</title>
+<rect x="905.3793" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-polyglot" data-stage="Certainty of evidence assessment" data-recommendations=""><title>TERA Polyglot; Certainty of evidence assessment; No use mapped</title>
+<rect x="936.2069" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-review-wizard" data-stage="Certainty of evidence assessment" data-recommendations=""><title>TERA Review Wizard; Certainty of evidence assessment; No use mapped</title>
+<rect x="967.0345" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-search-refiner" data-stage="Certainty of evidence assessment" data-recommendations=""><title>TERA Search Refiner; Certainty of evidence assessment; No use mapped</title>
+<rect x="997.8621" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-wordfreq" data-stage="Certainty of evidence assessment" data-recommendations=""><title>TERA WordFreq; Certainty of evidence assessment; No use mapped</title>
+<rect x="1028.6897" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="yale-mesh-analyzer" data-stage="Certainty of evidence assessment" data-recommendations=""><title>Yale MeSH Analyzer; Certainty of evidence assessment; No use mapped</title>
+<rect x="1059.5172" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="carrot2" data-stage="Certainty of evidence assessment" data-recommendations=""><title>Carrot2; Certainty of evidence assessment; No use mapped</title>
+<rect x="1090.3448" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="swift-review" data-stage="Certainty of evidence assessment" data-recommendations=""><title>SWIFT-Review; Certainty of evidence assessment; No use mapped</title>
+<rect x="1121.1724" y="339" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="asysd" data-stage="Writing a manuscript" data-recommendations=""><title>ASySD; Writing a manuscript; No use mapped</title>
+<rect x="258" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="grade-cerqual" data-stage="Writing a manuscript" data-recommendations=""><title>GRADE-CERQual; Writing a manuscript; No use mapped</title>
+<rect x="288.8276" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="cinema" data-stage="Writing a manuscript" data-recommendations=""><title>CINeMA; Writing a manuscript; No use mapped</title>
+<rect x="319.6552" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="citationchaser" data-stage="Writing a manuscript" data-recommendations=""><title>citationchaser; Writing a manuscript; No use mapped</title>
+<rect x="350.4828" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="citesource" data-stage="Writing a manuscript" data-recommendations=""><title>CiteSource; Writing a manuscript; No use mapped</title>
+<rect x="381.3103" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="connected-papers" data-stage="Writing a manuscript" data-recommendations=""><title>Connected Papers; Writing a manuscript; No use mapped</title>
+<rect x="412.1379" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="crsu-meta-analysis-apps" data-stage="Writing a manuscript" data-recommendations=""><title>CRSU Meta-analysis apps; Writing a manuscript; No use mapped</title>
+<rect x="442.9655" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="deduklick" data-stage="Writing a manuscript" data-recommendations=""><title>Deduklick; Writing a manuscript; No use mapped</title>
+<rect x="473.7931" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eppi-mapper" data-stage="Writing a manuscript" data-recommendations=""><title>EPPI-Mapper; Writing a manuscript; No use mapped</title>
+<rect x="504.6207" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eppi-reviewer" data-stage="Writing a manuscript" data-recommendations=""><title>EPPI-Reviewer; Writing a manuscript; No use mapped</title>
+<rect x="535.4483" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="eviatlas" data-stage="Writing a manuscript" data-recommendations=""><title>EviAtlas; Writing a manuscript; No use mapped</title>
+<rect x="566.2759" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="gradepro" data-stage="Writing a manuscript" data-recommendations=""><title>GRADEpro; Writing a manuscript; No use mapped</title>
+<rect x="597.1034" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="meta" data-stage="Writing a manuscript" data-recommendations=""><title>meta; Writing a manuscript; No use mapped</title>
+<rect x="627.931" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="metafor" data-stage="Writing a manuscript" data-recommendations=""><title>metafor; Writing a manuscript; No use mapped</title>
+<rect x="658.7586" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="nested-knowledge" data-stage="Writing a manuscript" data-recommendations=""><title>Nested Knowledge; Writing a manuscript; No use mapped</title>
+<rect x="689.5862" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="predicter" data-stage="Writing a manuscript" data-recommendations=""><title>PredicTER; Writing a manuscript; No use mapped</title>
+<rect x="720.4138" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="pubreminer" data-stage="Writing a manuscript" data-recommendations=""><title>PubReMiner; Writing a manuscript; No use mapped</title>
+<rect x="751.2414" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="researchrabbit" data-stage="Writing a manuscript" data-recommendations=""><title>ResearchRabbit; Writing a manuscript; No use mapped</title>
+<rect x="782.069" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="searchbuildr" data-stage="Writing a manuscript" data-recommendations=""><title>searchbuildR; Writing a manuscript; No use mapped</title>
+<rect x="812.8966" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="systematic-online-living-evidence-summaries" data-stage="Writing a manuscript" data-recommendations=""><title>Systematic Online Living Evidence Summaries; Writing a manuscript; No use mapped</title>
+<rect x="843.7241" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera" data-stage="Writing a manuscript" data-recommendations=""><title>TERA; Writing a manuscript; No use mapped</title>
+<rect x="874.5517" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-deduplicator" data-stage="Writing a manuscript" data-recommendations=""><title>TERA Deduplicator; Writing a manuscript; No use mapped</title>
+<rect x="905.3793" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-polyglot" data-stage="Writing a manuscript" data-recommendations=""><title>TERA Polyglot; Writing a manuscript; No use mapped</title>
+<rect x="936.2069" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-review-wizard" data-stage="Writing a manuscript" data-recommendations="acceptable"><title>TERA Review Wizard; Writing a manuscript; Acceptable for use</title>
+<rect x="967.0345" y="373.5" width="30.8276" height="34.5" fill="#2FA572"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-search-refiner" data-stage="Writing a manuscript" data-recommendations=""><title>TERA Search Refiner; Writing a manuscript; No use mapped</title>
+<rect x="997.8621" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="tera-wordfreq" data-stage="Writing a manuscript" data-recommendations=""><title>TERA WordFreq; Writing a manuscript; No use mapped</title>
+<rect x="1028.6897" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="yale-mesh-analyzer" data-stage="Writing a manuscript" data-recommendations=""><title>Yale MeSH Analyzer; Writing a manuscript; No use mapped</title>
+<rect x="1059.5172" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="carrot2" data-stage="Writing a manuscript" data-recommendations=""><title>Carrot2; Writing a manuscript; No use mapped</title>
+<rect x="1090.3448" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<g class="map-cell" data-panel="rule-unsupervised-excerpt" data-tool="swift-review" data-stage="Writing a manuscript" data-recommendations=""><title>SWIFT-Review; Writing a manuscript; No use mapped</title>
+<rect x="1121.1724" y="373.5" width="30.8276" height="34.5" fill="#ffffff"/>
+</g>
+<path d="M258 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M288.8276 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M319.6552 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M350.4828 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M381.3103 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M412.1379 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M442.9655 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M473.7931 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M504.6207 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M535.4483 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M566.2759 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M597.1034 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M627.931 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M658.7586 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M689.5862 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M720.4138 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M751.2414 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M782.069 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M812.8966 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M843.7241 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M874.5517 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M905.3793 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M936.2069 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M967.0345 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M997.8621 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M1028.6897 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M1059.5172 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M1090.3448 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M1121.1724 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M1152 132V408" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M258 132H1152" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M258 166.5H1152" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M258 201H1152" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M258 235.5H1152" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M258 270H1152" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M258 304.5H1152" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M258 339H1152" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M258 373.5H1152" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M258 408H1152" stroke="#c8d6dd" stroke-width="0.8" fill="none"/>
+<path d="M1090.3448 51V408" stroke="#526b7c" stroke-width="2.1" fill="none"/>
+</g></svg>
