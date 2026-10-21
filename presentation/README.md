@@ -22,6 +22,41 @@ opens the slide overview. There are no tabs, hidden builds or live-map dependenc
 For HTTP preview, run `python3 preview.py` from the repository root and open the
 printed Presentation URL. The server binds only to this computer; Ctrl+C stops it.
 
+## Presenter notes
+
+Choose **Presenter notes** in the toolbar, or press **S**, to open a separate presenter
+window. It shows the current and next slides, a timer and the exact approved script
+passage for the current slide. The two pointing cues are separately labelled **not spoken**.
+Use the window's **Layout** menu to change the arrangement; the first opening uses Wide,
+with slide previews above the notes. Longer passages scroll, and each new slide starts
+at the beginning of its notes. Arrow keys in either window advance the presentation.
+
+Keep this window on the laptop and the audience window on the projector using extended
+displays, or share only the audience window in a video call. The audience slides and
+downloaded PDF contain no notes. Notes embedded in this public website are accessible
+to anyone who opens Speaker View; they are not confidential.
+
+Speaker View works on Pages and through `python3 preview.py` locally, including without
+internet access. Opening the HTML directly from disk still shows the audience deck, but
+the notes button explains how to use Pages or the local preview server. Allow pop-ups
+for this site if the presenter window does not open.
+
+The approved Delivery Script remains the spoken authority. Derive its passages using
+the accepted visual-plan boundaries, without hand-editing a second copy of the speech:
+
+```sh
+python3 presentation/sync_notes.py /path/to/delivery-script.md
+python3 presentation/sync_notes.py /path/to/delivery-script.md --check
+npm run build:pdf
+npm run check
+```
+
+Run these from the repository root. The source script is needed only when updating or
+checking notes against that authority; viewing and publication use the bundled notes.
+The exporter checks each slide's approved passage fingerprint and their combined order,
+requires notes to stay hidden on screen and in print, and checks that speech does not
+leak into the PDF. Changes to script structure require a reviewed boundary update.
+
 ## Save a PDF
 
 **Download PDF** saves the checked counterpart of the published slides, with selectable
@@ -60,7 +95,8 @@ prevent version drift and common export defects, not every possible design probl
 
 - `index.html`: the 20 slide sections, with stable `data-plan-slide` numbers.
 - `assets/theme.css`: slide layouts and print styling, independent of the map.
-- `assets/deck.js`: Reveal setup, keyboard navigation and full-screen controls.
+- `assets/deck.js`: Reveal setup, navigation, full-screen and presenter-window controls.
+- `sync_notes.py`: derives exact approved script passages and separate pointing cues for all 20 slides.
 - `assets/maps/`: vector excerpts derived from the maintained map data.
 - `build_visuals.py`: regenerates those excerpts from `../map/map-data.json`,
   preserving actual recommendations, mixed-cell halves, blank cells and row order.
@@ -78,8 +114,9 @@ The PDF builder updates asset and PDF cache versions automatically. After editin
 `npm run build:pdf` and review the changed views. Push the source changes to `main`; the
 Pages workflow repeats the export/checks and commits generated outputs if they differ.
 After it succeeds, run `git pull --ff-only` to receive that generated commit locally.
-The content follows the approved talk. The Delivery Script
-and its preparation records stay in the separate private presentation workspace.
+The content follows the approved talk. The canonical Delivery Script
+and its preparation records stay in the separate private presentation workspace; its
+approved spoken passages and two pointing cues are also included in the public presenter notes.
 
 ## Sources and scope
 

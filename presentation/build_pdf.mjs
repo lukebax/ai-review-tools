@@ -15,6 +15,7 @@ const pdfName = 'navigating-ai-evidence-synthesis.pdf';
 const manifestPath = path.join(deckDir, 'pdf-build.json');
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const requireThat = (condition, message) => { if (!condition) throw new Error(message); };
+const spokenHash = text => hash(text.trim().replace(/\s+/gu, ' '));
 const normalize = text => text.normalize('NFKC').replace(/[‘’ʼ]/g, "'").replace(/[“”]/g, '"').replace(/\s|\u00ad/g, '');
 
 async function assetFiles(dir) {
@@ -28,7 +29,7 @@ async function assetFiles(dir) {
   return names;
 }
 async function inputsDigest(html) {
-  const paths = [path.join(deckDir, 'index.html'), path.join(deckDir, 'build_pdf.mjs'),
+  const paths = [path.join(deckDir, 'index.html'), path.join(deckDir, 'build_pdf.mjs'), path.join(deckDir, 'sync_notes.py'),
     path.join(root, 'package.json'), path.join(root, 'package-lock.json'),
     ...await assetFiles(path.join(deckDir, 'assets'))].sort();
   const digest = createHash('sha256');
@@ -85,12 +86,15 @@ async function inspectSlide(page, index) {
   return page.evaluate(index => {
     const slide = document.querySelectorAll('section.slide')[index], box = slide.getBoundingClientRect();
     const sx = 1280 / box.width, sy = 720 / box.height;
-    const elements = [...slide.querySelectorAll('h1,h2,h3,p,li,img,svg,.slide-footer')];
+    const audience = selector => [...slide.querySelectorAll(selector)].filter(e => !e.closest('aside.notes'));
+    const notes = slide.querySelector('aside.notes');
+    if (!notes || getComputedStyle(notes).display !== 'none') throw new Error(`Slide ${index + 1}: presenter notes missing or visible`);
+    const elements = audience('h1,h2,h3,p,li,img,svg,.slide-footer');
     const layout = elements.map(e => {
       const b = e.getBoundingClientRect();
       return { tag: e.tagName, x: (b.x - box.x) * sx, y: (b.y - box.y) * sy, w: b.width * sx, h: b.height * sy };
     });
-    const text = [...slide.querySelectorAll('h1,h2,h3,p,li,figcaption,.slide-footer,svg text')]
+    const text = audience('h1,h2,h3,p,li,figcaption,.slide-footer,svg text')
       .map(e => (e.innerText || e.textContent).trim()).filter(Boolean);
     return { text, layout };
   }, index);
@@ -131,6 +135,20 @@ async function build() {
     await ready(false);
     const count = await page.locator('section.slide').count();
     requireThat(count > 0, 'No slides found');
+    const notes = await page.evaluate(() => ({
+      approved: document.querySelector('meta[name="approved-script-sha256"]')?.content,
+      slides: [...document.querySelectorAll('section.slide')].map(slide => ({
+        count: slide.querySelectorAll('aside.notes').length,
+        expected: slide.querySelector('aside.notes')?.dataset.spokenSha256,
+        speech: [...slide.querySelectorAll('aside.notes [data-note="speech"]')].map(p => p.textContent),
+      })),
+    }));
+    for (const [i, note] of notes.slides.entries()) {
+      requireThat(note.count === 1 && note.speech.length > 0, `Slide ${i + 1}: missing or duplicated presenter notes`);
+      requireThat(spokenHash(note.speech.join(' ')) === note.expected, `Slide ${i + 1}: presenter script differs from the approved passage`);
+    }
+    requireThat(spokenHash(notes.slides.flatMap(s => s.speech).join(' ')) === notes.approved,
+      'Presenter notes omit, duplicate, reorder or change the approved speech');
     requireThat(await page.locator('.fragment,video,audio,iframe,canvas').count() === 0,
       'This static PDF pipeline requires complete static slides; interactive/media states need explicit handling.');
     const screen = [];
@@ -173,6 +191,9 @@ async function build() {
       for (let i = 0; i < count; i++) {
         const content = await (await parsed.getPage(i + 1)).getTextContent();
         const actual = normalize(content.items.map(item => item.str || '').join(' '));
+        for (const spoken of notes.slides[i].speech) {
+          if (spoken.length > 60) requireThat(!actual.includes(normalize(spoken)), `PDF page ${i + 1} exposes presenter notes`);
+        }
         for (const expected of screen[i].text) requireThat(actual.includes(normalize(expected)),
           `PDF page ${i + 1} is missing slide text: ${expected.slice(0, 90)}; extracted: ${actual.slice(0, 400)}`);
       }

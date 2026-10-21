@@ -48,3 +48,9 @@ Keep private source libraries and unrelated files out of this public repository.
 - After slide edits run `npm run build:pdf` and `npm run check`; check meaningful visual
   changes in HTML/PDF. `pdf-build.json` records input/output integrity, not a history log.
   Never hand-edit its hashes or treat a stale PDF as a valid fallback.
+
+- Presenter notes are derived from the approved Delivery Script with
+  `python3 presentation/sync_notes.py /path/to/delivery-script.md`; use `--check`
+  to verify exact passages and cue separation. Do not independently rewrite embedded
+  speech or hand-edit approval fingerprints. A changed script structure requires
+  reviewed slide boundaries. Keep `showNotes:false` and notes out of the audience PDF.

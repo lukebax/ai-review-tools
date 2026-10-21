@@ -44,7 +44,7 @@ retain their owners' rights. A tool link is not a validation claim or endorsemen
 
 The `presentation/` deck bundle [Reveal.js](https://revealjs.com/)
 version **6.0.2**, by Hakim El Hattab and contributors, under the MIT licence.
-The required distribution files are unmodified; the upstream licence and version
+The required distribution files, including the speaker-notes plugin, are unmodified; the upstream licence and version
 record are in `presentation/assets/vendor/reveal/`. No CDN is required.
 
 The diagrams and QR asset are original generated graphics. Map excerpts derive

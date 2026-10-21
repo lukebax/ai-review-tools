@@ -5,7 +5,7 @@ Two independent browser tools, created and maintained by Luke Baxter:
 - **[Interactive map](https://lukebax.github.io/ai-review-tools/map/)** — Navigating AI in
   Evidence Synthesis, a guide to RAISE’s recommendations. [Map instructions](map/README.md).
 - **[Presentation](https://lukebax.github.io/ai-review-tools/presentation/)** —
-  a 20-slide presentation, Navigating AI in Evidence Synthesis, with keyboard navigation
+  a 20-slide presentation, Navigating AI in Evidence Synthesis, with presenter notes, keyboard navigation
   and a [checked PDF](https://lukebax.github.io/ai-review-tools/presentation/navigating-ai-evidence-synthesis.pdf).
   [Presentation instructions](presentation/README.md).
 
