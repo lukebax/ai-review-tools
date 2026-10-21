@@ -18,7 +18,7 @@ test('the current pair passes, and stale/corrupt copies are rejected', async () 
   const dir = await fs.mkdtemp(path.join(tmpdir(), 'pdf-alignment-test-'));
   try {
     await fs.cp(path.join(root, 'presentation'), path.join(dir, 'presentation'), { recursive: true });
-    for (const name of ['package.json','package-lock.json','preview.py']) await fs.copyFile(path.join(root,name),path.join(dir,name));
+    for (const name of ['package.json','package-lock.json']) await fs.copyFile(path.join(root,name),path.join(dir,name));
     await fs.symlink(path.join(root,'node_modules'),path.join(dir,'node_modules'),'dir');
     assert.equal(run(dir).status, 0);
     for (const [name, change, reason] of [

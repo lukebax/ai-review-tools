@@ -1,6 +1,6 @@
 // MIT. Export and check the complete static deck before either format is published.
 import { createHash } from 'node:crypto';
-import { spawn } from 'node:child_process';
+import { createServer } from 'node:http';
 import { promises as fs } from 'node:fs';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
@@ -63,20 +63,22 @@ async function check() {
   requireThat(versionPdf(html, pdfHash) === html, 'Stale PDF download cache version');
   console.log(`PDF alignment verified: ${manifest.slides} slides/pages; source and PDF hashes match.`);
 }
-function startServer(directory) {
-  const process = spawn('python3', [path.join(directory, 'preview.py')], { stdio: ['ignore', 'pipe', 'pipe'] });
-  let logs = '';
-  const ready = new Promise((resolve, reject) => {
-    const timer = setTimeout(() => reject(new Error('Preview server did not start')), 15000);
-    process.once('error', error => { clearTimeout(timer); reject(error); });
-    process.once('exit', code => { clearTimeout(timer); reject(new Error(`Preview exited ${code}: ${logs}`)); });
-    process.stderr.on('data', data => { logs = (logs + data).slice(-3000); });
-    process.stdout.on('data', data => {
-      const m = String(data).match(/http:\/\/127\.0\.0\.1:\d+/);
-      if (m) { clearTimeout(timer); resolve(m[0]); }
-    });
+async function startServer(directory) {
+  const types = { '.html':'text/html', '.css':'text/css', '.js':'text/javascript', '.svg':'image/svg+xml', '.png':'image/png', '.jpg':'image/jpeg', '.webp':'image/webp', '.woff2':'font/woff2' };
+  const server = createServer(async (request, response) => {
+    try {
+      const pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
+      const file = path.resolve(directory, '.' + pathname + (pathname.endsWith('/') ? 'index.html' : ''));
+      if (!file.startsWith(directory + path.sep) || !['GET','HEAD'].includes(request.method)) {
+        response.writeHead(404).end(); return;
+      }
+      const bytes = await fs.readFile(file);
+      response.writeHead(200, { 'Content-Type': types[path.extname(file)] || 'application/octet-stream', 'Cache-Control':'no-store' });
+      response.end(request.method === 'HEAD' ? undefined : bytes);
+    } catch { response.writeHead(404).end(); }
   });
-  return { process, ready };
+  await new Promise((resolve, reject) => { server.once('error', reject); server.listen(0, '127.0.0.1', resolve); });
+  return { server, base: `http://127.0.0.1:${server.address().port}` };
 }
 // Logical slide coordinates make screen/print layout comparable at different scales.
 async function inspectSlide(page, index) {
@@ -101,10 +103,9 @@ async function build() {
   try {
     await fs.mkdir(path.join(temp, 'presentation'));
     await fs.cp(path.join(deckDir, 'assets'), path.join(temp, 'presentation/assets'), { recursive: true });
-    await fs.copyFile(path.join(root, 'preview.py'), path.join(temp, 'preview.py'));
     await fs.writeFile(path.join(temp, 'presentation/index.html'), html);
-    server = startServer(temp);
-    const base = await server.ready;
+    server = await startServer(temp);
+    const base = server.base;
     browser = await chromium.launch({ headless: true });
     const context = await browser.newContext({ viewport: { width: 1400, height: 900 } });
     const problems = [];
@@ -186,7 +187,7 @@ async function build() {
     console.log(`Exported and checked ${count} matching HTML slides/PDF pages.`);
   } finally {
     if (browser) await browser.close();
-    if (server) server.process.kill();
+    if (server) await new Promise(resolve => server.server.close(resolve));
     await fs.rm(temp, { recursive: true, force: true });
   }
   await check();
