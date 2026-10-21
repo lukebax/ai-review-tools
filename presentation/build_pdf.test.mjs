@@ -94,13 +94,13 @@ test('presenter controls sync slides and reset long notes without exposing speec
     const notes=await opening;
     await notes.waitForSelector('.speaker-controls-notes [data-note="speech"]');
     await page.evaluate(()=>deck.slide(deck.getIndices(document.getElementById('verification-validation')).h));
-    await notes.waitForFunction(()=>document.querySelector('.speaker-controls-notes .value').innerText.startsWith('Slide 12 ·'));
+    await notes.waitForFunction(()=>document.querySelector('.speaker-controls-notes .value').innerText.startsWith('Slide 8 ·'));
     await notes.evaluate(()=>document.getElementById('speaker-controls').scrollTop=99999);
     assert(await notes.evaluate(()=>document.getElementById('speaker-controls').scrollTop)>0);
     // This forwards a synthetic key event into the slide iframe.
     await notes.keyboard.press('ArrowRight');
-    await page.waitForFunction(()=>deck.getCurrentSlide().id==='independent-evaluation');
-    await notes.waitForFunction(()=>document.querySelector('.speaker-controls-notes .value').innerText.startsWith('Slide 13 ·'));
+    await page.waitForFunction(()=>deck.getCurrentSlide().id==='map-overview');
+    await notes.waitForFunction(()=>document.querySelector('.speaker-controls-notes .value').innerText.startsWith('Slide 9 ·'));
     assert.equal(await notes.evaluate(()=>document.getElementById('speaker-controls').scrollTop),0);
     assert.equal(await page.locator('aside.notes:visible').count(),0);
     await page.evaluate(()=>deck.slide(deck.getIndices(document.getElementById('screening-tasks')).h));

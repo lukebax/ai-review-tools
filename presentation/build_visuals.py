@@ -209,7 +209,7 @@ def screening():
 
 
 def patterns():
-    svg = Svg('Stage clusters and the breadth of ChatGPT uses', 'Left: the full 56-tool matrix, with neutral outlines highlighting the search and synthesis rows in the rule-based group and screening, quality assessment and extraction in the supervised group. A neutral outline identifies the ChatGPT column in the full map, with top and bottom connectors leading to its enlarged counterpart on the right. Both columns align to the same eight stage labels. ChatGPT has mapped uses in seven stages; its certainty-assessment cell stays blank. The different panel scales must not be read as a comparison of prevalence or performance.')
+    svg = Svg('Stage clusters and the breadth of ChatGPT uses', 'Left: the full 56-tool matrix, with neutral outlines highlighting the search and synthesis rows in the rule-based group and screening, quality assessment and extraction in the supervised group. A neutral outline identifies the ChatGPT column in the full map. A shallow curved arrow below the matrix links its bottom centre to the bottom centre of the enlarged column on the right. Both columns align to the same eight stage labels. ChatGPT has mapped uses in seven stages; its certainty-assessment cell stays blank. The different panel scales must not be read as a comparison of prevalence or performance.')
     width = 650
     b = group_bands(svg, TOOLS, width=width)
     header_lines = {
@@ -236,14 +236,14 @@ def patterns():
     svg.matrix('chatgpt-enlarged-excerpt', [TOOL['chatgpt']], x=enlarged_x, width=enlarged_width)
     source_x = X + next(i for i, tool in enumerate(TOOLS) if tool['id'] == 'chatgpt') * column_width
     column_height = len(STAGES) * ROW
-    # Connect the outlined corners along the matrix edges, keeping cell interiors clear.
-    inset = 1.4
-    connector_start, connector_end = source_x + column_width - inset, enlarged_x + inset
+    # Keep the zoom cue below the cells and within the figure's bottom margin.
+    source_centre = source_x + column_width / 2
+    enlarged_centre = enlarged_x + enlarged_width / 2
+    bottom = Y + column_height
     assert X < source_x < source_x + column_width < X + width < enlarged_x
-    for edge in (Y + inset, Y + column_height - inset):
-        svg.add(f'<path class="zoom-connector" d="M{f(connector_start)} {f(edge)}H{f(connector_end)}" stroke="{INK}" stroke-width="1.6" fill="none"/>')
     svg.outline(source_x, Y, column_width, column_height, 'ChatGPT column in the full map')
-    svg.outline(enlarged_x, Y, enlarged_width, column_height, 'Enlarged view of the same ChatGPT column')
+    svg.add(f'<defs><marker id="zoom-arrowhead" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0L8 4L0 8Z" fill="{INK}"/></marker></defs>')
+    svg.add(f'<path class="zoom-arrow" d="M{f(source_centre)} {f(bottom - 1.4)}C{f(source_centre + 70)} {f(bottom + 20)} {f(enlarged_centre - 70)} {f(bottom + 20)} {f(enlarged_centre)} {f(bottom)}" stroke="{INK}" stroke-width="1.8" fill="none" marker-end="url(#zoom-arrowhead)"/>')
     svg.save('map-patterns.svg')
 
 
