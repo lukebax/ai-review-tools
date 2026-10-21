@@ -203,6 +203,16 @@ test('long checkbox labels and both filter menus stay within a narrow viewport',
 
 
 test('filtered map frames fit their tables and recover after resizing, drawers and reset', async () => withPage(async page => {
+  const resize = async (width, height = 1000) => {
+    // The viewport command can return before resize handlers run. Observe the native
+    // event after the map's handler so both intermediate and final layouts are tested.
+    await page.evaluate(() => {
+      window.__mapTestResizeFinished = false;
+      window.addEventListener('resize', () => { window.__mapTestResizeFinished = true; }, { once: true });
+    });
+    await page.setViewportSize({ width, height });
+    await page.waitForFunction(() => window.__mapTestResizeFinished, null, { timeout: 5000 });
+  };
   const geometry = () => page.evaluate(() => {
     const frame=document.getElementById('map-scroll'),table=document.getElementById('map-table');
     const workspace=document.getElementById('workspace'),style=getComputedStyle(workspace);
@@ -217,8 +227,8 @@ test('filtered map frames fit their tables and recover after resizing, drawers a
     await closeFilter(page,'group');
     const before=await geometry();
     assert(Math.abs(before.frame-Math.min(before.table,before.available))<2,'Frame must end at table edge or available viewport');
-    await page.setViewportSize({width:1450,height:1000});
-    await page.setViewportSize({width:1600,height:1000});
+    await resize(1450);
+    await resize(1600);
     const after=await geometry();
     assert(Math.abs(before.frame-after.frame)<2,'Repeated resize must not shrink the map');
   }
@@ -230,7 +240,7 @@ test('filtered map frames fit their tables and recover after resizing, drawers a
   await cell(page,'abstrackr','Screening for relevance').click();
   await page.locator('#close-drawer').click();
   assert(Math.abs((await geometry()).frame-beforeDrawer.frame)<2,'Closing the drawer must recover available width');
-  await page.setViewportSize({width:390,height:844});
+  await resize(390,844);
   await page.locator('#roomier').check();
   const narrow=await geometry();
   assert(narrow.scrollWidth>narrow.frame,'Narrow maps must scroll internally');
