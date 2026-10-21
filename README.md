@@ -22,7 +22,9 @@ The **[site home](https://lukebax.github.io/ai-review-tools/)** links to both co
 | `preview.py` | Optional local preview server for the whole site |
 | `AGENTS.md` | Maintenance rules |
 | `LICENSE`, `CONTENT-LICENSE.md`, `THIRD_PARTY_NOTICES.md`, `LICENSES/` | Scoped licences and attribution |
-| `.nojekyll` | Static GitHub Pages publishing without Jekyll processing |
+| `.github/workflows/pages.yml` | Required PDF build/check and combined Pages publication |
+| `package.json`, `package-lock.json` | Fixed development-only export dependencies |
+| `.nojekyll` | Serve the built site without Jekyll processing |
 
 Each component owns its assets and works independently. Neither depends on the private
 presentation workspace. The map’s generated HTML is self-contained; the presentation’s
@@ -52,7 +54,8 @@ outgoing source links require internet. See the [PDF instructions](presentation/
   `map/index.html`; do not edit it directly. See the [map guide](map/README.md).
 - **Presentation:** edit its HTML, `assets/theme.css` and `assets/deck.js`. No build step
   is needed for the HTML. Regenerate derived map visuals when their data changes and
-  regenerate/check the distributed PDF after slide edits. Bundled dependencies retain
+  run `npm run build:pdf` and `npm run check` after slide edits. Publication repeats the
+  PDF export automatically. Bundled dependencies retain
   their fixed versions and original licence notices.
 - **Landing page:** edit root `index.html`. It has no runtime dependencies.
 
@@ -62,18 +65,24 @@ temporary directory for disposable checks.
 
 ## Publish and verify
 
-GitHub Pages is configured as **Deploy from a branch → main → /(root)**. It serves the
-landing page at the site root and each component at `/map/` or `/presentation/`. These paths
-are an organisational choice; the user permits changing URLs when that improves the layout.
+GitHub Pages uses **GitHub Actions**, through `.github/workflows/pages.yml`. Every push
+to `main` exports a fresh presentation PDF, verifies alignment, and publishes the checked
+HTML and PDF in one site artifact. A failed build does not replace the live site. The
+workflow can also be run manually from Actions; direct branch publishing is disabled.
 
-For requested updates, edit locally, rebuild the map if relevant, check the affected pages,
-then commit and push the complete change to `main`. Verify the Pages deployment and live
-pages before handing them back for review. Explicit local-only instructions take precedence.
-Committing without pushing does not publish. GitHub does not run the Python map build.
+For requested updates, edit locally, rebuild/check the affected components, then commit
+and push to `main`. The workflow saves generated PDF/cache-version/manifest changes back
+to Git before deployment, if needed. Once it succeeds, run `git pull --ff-only` to keep the
+local copy aligned, and verify the live pages. Do not force-push or rebase generated output
+onto different HTML. An explicit local-only request takes precedence over publication.
 
-Verify the root links, map search/cell details/guidance, and presentation navigation/image/PDF
-as relevant to the change. Keep source-specific checks in the component instructions.
-See [GitHub’s publishing instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+The root, `/map/` and `/presentation/` URLs are unchanged. The map remains independent of
+presentation dependencies at viewing time; the workflow checks its generated HTML and
+map excerpts before publication. Source and asset files are fully backed by this repository.
+A fresh clone contains the saved PDF, so no build is needed merely to view/download it.
+
+See [presentation maintenance](presentation/README.md) for checks and
+[GitHub's workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
 ## Licences
 

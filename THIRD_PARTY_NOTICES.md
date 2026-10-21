@@ -52,3 +52,10 @@ from this repository’s maintained data and retain the RAISE attribution above.
 The presentation’s [source note](presentation/README.md#sources-and-scope)
 identifies the exact guidance versions and explains the adaptations. The PDF
 reproduces the same explanatory content and is covered by the same content licence.
+
+## Development-only PDF export tools
+
+The publication tooling uses Playwright (Apache 2.0), pdf-lib (MIT), and PDF.js/pdfjs-dist
+(Apache 2.0), with exact versions in `package-lock.json`. Their installed packages retain
+upstream notices. These tools are build dependencies, not browser runtime dependencies;
+`node_modules/` is excluded from Git and the published site.

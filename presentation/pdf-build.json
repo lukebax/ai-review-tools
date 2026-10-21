@@ -1,0 +1,10 @@
+{
+  "inputSHA256": "5c3587de24def9bf086e1d063fc2b9e34bccd3cb416720fb8d5f22c5ceae6ae6",
+  "pdfSHA256": "d268fec5732046bb5c12009b0f2268fafb2c3f961d1ac0cc2517aca39e27c354",
+  "slides": 20,
+  "pageSize": [
+    960,
+    540
+  ],
+  "browser": "156.0.8078.4"
+}

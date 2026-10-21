@@ -24,20 +24,37 @@ printed Presentation URL. The server binds only to this computer; Ctrl+C stops i
 
 ## Save a PDF
 
-**Download PDF** saves the checked, 20-page counterpart with selectable text and
-vector diagrams. The file is also linked above and bundled alongside the HTML.
-When opened directly from disk, the toolbar instead offers **Open PDF** in a
-separate tab; save it from the PDF viewer if needed. Its pages are 960 × 540 points (16:9). It is regenerated after slide changes;
-the button downloads that export rather than generating a new version in-browser.
+**Download PDF** saves the checked counterpart of the published slides, with selectable
+text and vector diagrams. Each slide becomes one 16:9 PDF page. When opened directly
+from disk, the toolbar offers **Open PDF** instead; save from the PDF viewer if needed.
+The button downloads an already generated file, with a versioned URL to avoid stale caching.
 
-To regenerate using Chrome, open `index.html?print-pdf` through the local preview
-server, then Print → Save as PDF. Enable background graphics and disable browser
-headers/footers; use no margins and landscape. The print stylesheet defines the
-slide-sized pages. Verify 20 pages and inspect all rendered pages before replacing
-`navigating-ai-evidence-synthesis.pdf`. A headless Chromium export can use
-`preferCSSPageSize: true`, `printBackground: true`, after `window.presentationReady`, `window.printReady`,
-`document.fonts.ready` and all images have loaded. Assert that `.pdf-page` contains
-20 wrappers before export; Reveal initialization alone does not finish print layout.
+Every publication to Pages automatically exports the PDF from the same HTML and assets,
+checks it, saves the generated files in Git, then publishes both formats together. A failed
+export/check stops publication and leaves the previous published site in place. A source
+change during the build stops that run; generated files are never rebased onto newer slides.
+Downloaded files and already-open browser tabs remain snapshots; reopen/download after updates.
+
+For local editing, use Node.js 24+ and the committed dependency lockfile:
+
+```sh
+npm ci --ignore-scripts
+npx playwright install chromium
+npm run build:pdf
+npm run check
+npm test
+```
+
+The builder waits for fonts, images and Reveal's print-ready event. It checks slide/page
+counts, 16:9 dimensions, slide text on each PDF page, missing resources, overflow and
+screen/print geometry. `--check` rejects any changed HTML, asset, export code/dependency
+or PDF that no longer matches `pdf-build.json`. The tests deliberately introduce stale
+sources, a damaged PDF, missing images and print-only hidden graphics to test those gates.
+
+Publishing uses macOS 15 and pinned Chromium to retain the current system-font styling.
+The website itself still needs only a browser; these are development dependencies.
+Substantive visual edits still need visual review and rehearsal—the automated checks
+prevent version drift and common export defects, not every possible design problem.
 
 ## Files and maintenance
 
@@ -54,10 +71,13 @@ slide-sized pages. Verify 20 pages and inspect all rendered pages before replaci
   on the first and last slides.
 - `assets/vendor/reveal/`: fixed upstream distribution and MIT licence.
 - `navigating-ai-evidence-synthesis.pdf`: the checked distribution/fallback copy.
+- `build_pdf.mjs` and `build_pdf.test.mjs`: export, alignment checks and regression tests.
+- `pdf-build.json`: compact fingerprints connecting the checked PDF to its exact inputs.
 
-Update the CSS/JS content-version query in `index.html` when changing those files
-(first 12 SHA-256 characters), then regenerate and review the PDF. Check keyboard
-navigation, full screen, offline assets, the PDF download and all changed views.
+The PDF builder updates asset and PDF cache versions automatically. After editing, run
+`npm run build:pdf` and review the changed views. Push the source changes to `main`; the
+Pages workflow repeats the export/checks and commits generated outputs if they differ.
+After it succeeds, run `git pull --ff-only` to receive that generated commit locally.
 The content follows the approved talk. The Delivery Script
 and its preparation records stay in the separate private presentation workspace.
 

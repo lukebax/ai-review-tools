@@ -37,6 +37,14 @@ Keep private source libraries and unrelated files out of this public repository.
   notices embedded in the distributable HTML.
 - Luke reviews requested map updates on GitHub Pages. His standing instruction is to edit and
   rebuild locally, verify the result, commit and push the changed sources and generated HTML,
-  then verify the Pages deployment before handing it back for review. A map-update request
+  then verify the Pages deployment and pull its generated commit with `git pull --ff-only`
+  before handing it back for review. A map-update request
   authorises this release workflow unless he explicitly asks for local-only preparation.
   Changing repository visibility or hosting configuration still requires explicit authorisation.
+
+- Pages publication must pass `.github/workflows/pages.yml`: generate/check the PDF from
+  the same sources, save generated outputs, then deploy the checked site artifact. Keep
+  Pages in Actions mode. Do not bypass this gate with direct branch publishing.
+- After slide edits run `npm run build:pdf` and `npm run check`; check meaningful visual
+  changes in HTML/PDF. `pdf-build.json` records input/output integrity, not a history log.
+  Never hand-edit its hashes or treat a stale PDF as a valid fallback.
