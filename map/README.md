@@ -27,7 +27,9 @@ colour-blind-friendly switch selects ColorBrewer RdYlBu.
 Choose any combination in the **AI category** and **Review stage** dropdowns. With no
 checkboxes selected, that filter shows all. **Show all** clears one dimension; **Reset filters**
 restores all categories, stages and recommendations and clears the tool search. Selections
-within a dimension are alternatives; the dimensions and search work together.
+within a dimension are alternatives; the dimensions and search work together. Filtered
+maps fit their visible columns without a blank bordered extension. Narrow views retain
+horizontal scrolling rather than squeezing tool columns beyond their readable minimum.
 
 Use arrow keys in the map, Enter/Space to open details and Escape to close them. The layout is
 optimised for desktop; narrow views can scroll the map horizontally. The explanations below

@@ -186,28 +186,6 @@ def external_label(svg, target_x, label, label_x=None, anchor='middle'):
     svg.add(f'<path d="M{f(target_x)} 36V122M{f(target_x - 4)} 117L{f(target_x)} 123L{f(target_x + 4)} 117" stroke="{MUTED}" stroke-width="1.8" fill="none"/>')
 
 
-def overview():
-    svg = Svg('AI tools across eight review stages', 'Complete matrix overview of 56 source-ordered tools across eight stages and four AI families. Individual tool names are omitted visually but retained in cell titles and metadata. White means no mapped use; diagonal halves preserve different recommendations for different uses. The slide key explains colours.')
-    b = group_bands(svg, TOOLS)
-    for gid, lines in [('rule-based', ('Rule-based', 'algorithms')), ('supervised', ('Supervised', 'machine', 'learning')), ('generative', ('Generative large', 'language models'))]:
-        baselines = (74, 99, 124) if gid == 'supervised' else (87, 114)
-        for y, line in zip(baselines, lines):
-            svg.add(text(sum(b[gid]) / 2, y, line, size=22 if gid == 'supervised' else 24, anchor='middle', weight=650))
-    external_label(svg, sum(b['unsupervised']) / 2, 'Unsupervised machine learning')
-    svg.stages(); svg.matrix('overview', TOOLS); boundaries(svg, b)
-    svg.save('map-overview.svg')
-
-
-def green_families():
-    tools = [t for t in TOOLS if t['groupId'] in ('rule-based', 'unsupervised')]
-    svg = Svg('Rule-based and unsupervised uses in the map', 'Enlarged excerpt preserving all 29 tool columns and eight stages for the rule-based and unsupervised families. The exceptions remain visible in their original colours. This selection is not a complete market census. Individual tool identities and function assignments remain in metadata.')
-    b = group_bands(svg, tools)
-    for y, line in zip((87, 114), ('Rule-based', 'algorithms')):
-        svg.add(text(sum(b['rule-based']) / 2, y, line, size=24, anchor='middle', weight=650))
-    external_label(svg, sum(b['unsupervised']) / 2, 'Unsupervised machine learning', label_x=1150, anchor='end')
-    svg.stages(); svg.matrix('rule-unsupervised-excerpt', tools); boundaries(svg, b)
-    svg.save('map-rule-unsupervised.svg')
-
 
 def screening():
     ids = ['abstrackr', 'covidence', 'eppi-reviewer-prioritised-screening']
@@ -228,21 +206,6 @@ def screening():
         svg.add(f'<rect x="{centre - 126}" y="64" width="252" height="30" fill="none" stroke="{GRID}" stroke-width="1"/>')
     svg.save('map-supervised-screening.svg')
 
-
-def llms():
-    tools = [t for t in TOOLS if t['groupId'] == 'generative']
-    svg = Svg('Mapped uses in the generative language model display group', 'Enlarged excerpt of all 17 columns in the map’s generative language model display group across eight review stages. Neutral outlines identify its four red synthesis cells without changing their colours or recommendations. Individual product implementations and the map’s category qualifications remain governed by the interactive map.')
-    group_bands(svg, tools)
-    svg.add(text(X + WIDTH / 2, 101, 'Generative large language models', size=26, anchor='middle', weight=650))
-    svg.stages(); cw = svg.matrix('llm-excerpt', tools)
-    red_cells = []
-    for ri, stage in enumerate(STAGES):
-        for ci, tool in enumerate(tools):
-            if 'unacceptable' in categories(tool, stage):
-                red_cells.append((tool['id'], stage))
-                svg.outline(X + ci * cw, Y + ri * ROW, cw, ROW, f'{tool["name"]}: unacceptable synthesis use')
-    assert len(red_cells) == 4 and all(s == 'Data synthesis' for _, s in red_cells)
-    svg.save('map-llm.svg')
 
 
 def patterns():
@@ -293,8 +256,5 @@ if __name__ == '__main__':
     parser.add_argument('--check', action='store_true', help='Check generated visuals without writing files')
     CHECK = parser.parse_args().check
     validate_source()
-    overview()
-    green_families()
     screening()
-    llms()
     patterns()

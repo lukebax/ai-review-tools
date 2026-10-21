@@ -61,7 +61,7 @@ test('the current pair passes, and stale/corrupt copies are rejected', async () 
     assert.match(altered.stderr,/presenter script differs from the approved passage/);
     for (let i=1;i<names.length;i++) assert.deepEqual(await fs.readFile(path.join(dir,'presentation',names[i])),before[i]);
     await fs.writeFile(htmlPath,sourceHtml);
-    await fs.rm(path.join(dir,'presentation/assets/maps/map-overview.svg'));
+    await fs.rm(path.join(dir,'presentation/assets/maps/map-overview.png'));
     const failed=run(dir,[]);
     assert.notEqual(failed.status,0,'Missing image was accepted');
     for (let i=0;i<names.length;i++) assert.deepEqual(await fs.readFile(path.join(dir,'presentation',names[i])),before[i]);
@@ -93,17 +93,17 @@ test('presenter controls sync slides and reset long notes without exposing speec
     await page.keyboard.press('s');
     const notes=await opening;
     await notes.waitForSelector('.speaker-controls-notes [data-note="speech"]');
-    await page.evaluate(()=>deck.slide(11));
-    await notes.waitForFunction(()=>document.querySelector('.speaker-controls-notes .value').innerText.startsWith('Slide 12 ·'));
+    await page.evaluate(()=>deck.slide(deck.getIndices(document.getElementById('verification-validation')).h));
+    await notes.waitForFunction(()=>document.querySelector('.speaker-controls-notes .value').innerText.startsWith('Slide 13 ·'));
     await notes.evaluate(()=>document.getElementById('speaker-controls').scrollTop=99999);
     assert(await notes.evaluate(()=>document.getElementById('speaker-controls').scrollTop)>0);
     // This forwards a synthetic key event into the slide iframe.
     await notes.keyboard.press('ArrowRight');
-    await page.waitForFunction(()=>deck.getIndices().h===12);
-    await notes.waitForFunction(()=>document.querySelector('.speaker-controls-notes .value').innerText.startsWith('Slide 13 ·'));
+    await page.waitForFunction(()=>deck.getCurrentSlide().id==='independent-evaluation');
+    await notes.waitForFunction(()=>document.querySelector('.speaker-controls-notes .value').innerText.startsWith('Slide 14 ·'));
     assert.equal(await notes.evaluate(()=>document.getElementById('speaker-controls').scrollTop),0);
     assert.equal(await page.locator('aside.notes:visible').count(),0);
-    await page.evaluate(()=>deck.slide(13));
+    await page.evaluate(()=>deck.slide(deck.getIndices(document.getElementById('screening-tasks')).h));
     await notes.waitForFunction(()=>document.querySelectorAll('.speaker-controls-notes [data-note="cue"]').length===2);
     assert.equal(await notes.frameLocator('#current-slide iframe').locator('.toolbar').isVisible(),false);
     await notes.close();

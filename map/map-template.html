@@ -305,7 +305,8 @@ input[type=search]{width:100%;padding-left:35px}
 .map-meta strong{color:#3b5665;font-weight:600}
 .map-options{display:flex;align-items:center;gap:5px;white-space:nowrap}
 .map-options input{accent-color:#365d76}
-.map-scroll{scroll-margin-top:16px;isolation:isolate;position:relative;width:100%;height:auto;max-height:none;overflow-x:auto;overflow-y:hidden;border:1px solid #d7e1e7;background:white;border-radius:6px;}
+.map-scroll{scroll-margin-top:16px;isolation:isolate;position:relative;width:max-content;max-width:100%;height:auto;max-height:none;overflow-x:auto;overflow-y:hidden;border:1px solid #d7e1e7;background:white;border-radius:6px;}
+.map-scroll.no-results{width:100%}
 .map-table{border-collapse:separate;border-spacing:0;table-layout:fixed;width:var(--table-width);color:#243746;font-size:12px}
 .map-table th,.map-table td{padding:0;border-right:1px solid #e2e8ed;border-bottom:1px solid #e2e8ed}
 .map-table thead th{position:sticky;z-index:3}
@@ -642,6 +643,7 @@ function renderMap(){
  const tools=visibleTools(),stages=visibleStages();
  byId('map-table').hidden=!tools.length;byId('empty-state').hidden=!!tools.length;
  byId('map-scroll').classList.toggle('compact-map',tools.length>0&&tools.length<=4);
+ byId('map-scroll').classList.toggle('no-results',!tools.length);
  const groups=DATA.groups.map(g=>({...g,tools:tools.filter(t=>t.groupId===g.id)})).filter(g=>g.tools.length);
  const ends=new Set(groups.slice(0,-1).map(g=>g.tools.at(-1).id));
  const mlGroups=groups.filter(g=>ML_GROUPS.has(g.id)),hasSubgroups=mlGroups.length>0;
@@ -667,7 +669,10 @@ function renderMap(){
 }
 function resizeMap(){
  const tools=visibleTools(),scroll=byId('map-scroll');
- const width=scroll.clientWidth,rowWidth=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--stage-width'));
+ // Measure the available workspace, not the fitted map: filtering must not shrink future layouts.
+ const workspace=byId('workspace'),workspaceStyle=getComputedStyle(workspace),scrollStyle=getComputedStyle(scroll);
+ const width=workspace.clientWidth-parseFloat(workspaceStyle.paddingLeft)-parseFloat(workspaceStyle.paddingRight)-parseFloat(scrollStyle.borderLeftWidth)-parseFloat(scrollStyle.borderRightWidth);
+ const rowWidth=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--stage-width'));
  const maxWidth=tools.length<=4?260:tools.length<=12?80:42;
  const tableBorder=scroll.classList.contains('compact-map')?2:0;
  let fitted=Math.max(tools.length<=4?110:16,Math.min(maxWidth,(width-rowWidth-tableBorder)/Math.max(tools.length,1)));

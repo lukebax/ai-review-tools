@@ -200,3 +200,42 @@ test('long checkbox labels and both filter menus stay within a narrow viewport',
   assert(pageWidth <= 390, `Whole page should not scroll sideways (${pageWidth}px); map scrolling is internal`);
   assert.deepEqual(await stages(page), ['Certainty of evidence assessment']);
 }, 390));
+
+
+test('filtered map frames fit their tables and recover after resizing, drawers and reset', async () => withPage(async page => {
+  const geometry = () => page.evaluate(() => {
+    const frame=document.getElementById('map-scroll'),table=document.getElementById('map-table');
+    const workspace=document.getElementById('workspace'),style=getComputedStyle(workspace);
+    return {frame:frame.clientWidth,table:table.getBoundingClientRect().width,
+      available:workspace.clientWidth-parseFloat(style.paddingLeft)-parseFloat(style.paddingRight)-2,
+      scrollWidth:frame.scrollWidth,page:document.documentElement.scrollWidth};
+  });
+  const full=await geometry();
+  for (const groups of [['supervised'],['generative'],['rule-based','unsupervised'],['unsupervised']]) {
+    await page.locator('#reset-filters').click();
+    for (const group of groups) await setOption(page,'group',group);
+    await closeFilter(page,'group');
+    const before=await geometry();
+    assert(Math.abs(before.frame-Math.min(before.table,before.available))<2,'Frame must end at table edge or available viewport');
+    await page.setViewportSize({width:1450,height:1000});
+    await page.setViewportSize({width:1600,height:1000});
+    const after=await geometry();
+    assert(Math.abs(before.frame-after.frame)<2,'Repeated resize must not shrink the map');
+  }
+  await page.locator('#reset-filters').click();
+  assert(Math.abs((await geometry()).frame-full.frame)<2,'Reset must recover full map width');
+  await setOption(page,'group','supervised');
+  await closeFilter(page,'group');
+  const beforeDrawer=await geometry();
+  await cell(page,'abstrackr','Screening for relevance').click();
+  await page.locator('#close-drawer').click();
+  assert(Math.abs((await geometry()).frame-beforeDrawer.frame)<2,'Closing the drawer must recover available width');
+  await page.setViewportSize({width:390,height:844});
+  await page.locator('#roomier').check();
+  const narrow=await geometry();
+  assert(narrow.scrollWidth>narrow.frame,'Narrow maps must scroll internally');
+  assert(narrow.page<=390,'The whole page must not overflow');
+  await page.locator('#tool-search').fill('no matching tool');
+  const empty=await geometry();
+  assert(Math.abs(empty.frame-empty.available)<2,'The empty state should retain a usable full-width message');
+}));

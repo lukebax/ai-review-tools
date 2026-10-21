@@ -1,6 +1,6 @@
 # Navigating AI in Evidence Synthesis
 
-A 20-slide HTML presentation for a methods-focused workshop talk by Luke Baxter. The
+A 21-slide HTML presentation for a methods-focused workshop talk by Luke Baxter. The
 16:9 slides use the companion map’s navy text, restrained blues and off-white
 background. Every slide has a complete static state, shared with the PDF.
 
@@ -60,11 +60,11 @@ leak into the PDF. Changes to script structure require a reviewed boundary updat
 ## Save a PDF
 
 **Download PDF** saves the checked counterpart of the published slides, with selectable
-text and vector diagrams. Each slide becomes one 16:9 PDF page. When opened directly
+slide text, vector diagrams and high-resolution captures of the actual map. Each slide becomes one 16:9 PDF page. When opened directly
 from disk, the toolbar offers **Open PDF** instead; save from the PDF viewer if needed.
 The button downloads an already generated file, with a versioned URL to avoid stale caching.
 
-Every publication to Pages automatically exports the PDF from the same HTML and assets,
+Every publication to Pages refreshes the actual-map captures, then exports the PDF from the same HTML and assets,
 checks it, saves the generated files in Git, then publishes both formats together. A failed
 export/check stops publication and leaves the previous published site in place. A source
 change during the build stops that run; generated files are never rebased onto newer slides.
@@ -93,12 +93,16 @@ prevent version drift and common export defects, not every possible design probl
 
 ## Files and maintenance
 
-- `index.html`: the 20 slide sections, with stable `data-plan-slide` numbers.
+- `index.html`: the 21 slide sections, with stable `data-plan-slide` numbers.
 - `assets/theme.css`: slide layouts and print styling, independent of the map.
 - `assets/deck.js`: Reveal setup, navigation, full-screen and presenter-window controls.
-- `sync_notes.py`: derives exact approved script passages and separate pointing cues for all 20 slides.
-- `assets/maps/`: vector excerpts derived from the maintained map data.
-- `build_visuals.py`: regenerates those excerpts from `../map/map-data.json`,
+- `sync_notes.py`: derives exact approved script passages and separate pointing cues for all 21 slides.
+- `assets/maps/`: four actual-map PNG captures, their source manifest and two explanatory SVG excerpts.
+- `capture_maps.mjs`: captures the maintained map with all or selected AI categories, including
+  native tool labels, all eight stages and the recommendation key. `npm run build:map-images`
+  refreshes the captures; `npm run build:pdf` runs it automatically. Its `--check` verifies
+  source/capture fingerprints. The capture step also checks tool order and cell recommendations.
+- `build_visuals.py`: regenerates the screening comparison and stage-pattern excerpts from `../map/map-data.json`,
   preserving actual recommendations, mixed-cell halves, blank cells and row order.
   Run `python3 presentation/build_visuals.py` from the repository root after a
   relevant approved data change. Run `python3 presentation/build_visuals.py --check` to verify the saved assets
@@ -132,8 +136,10 @@ Public source links may later resolve to newer revisions. Exact source/implement
 qualifications and further product evidence remain in the [map](../map/README.md).
 See [source and licence notices](../THIRD_PARTY_NOTICES.md) for full attribution.
 
-The matrix excerpts use the companion map data current at map release `4afa20f`:
+The map captures and excerpts follow the maintained companion map:
 56 tools, eight stages, 131 functions, 96 populated cells and 12 mixed cells.
+The complete overview preserves all tool names; reading each name at projection distance
+is not required for the talk. The filtered views retain the map’s native proportions.
 Family/row highlights are neutral outlines, not changes to recommendations.
 The screening queues, model diagrams and overlap example are illustrative;
 they do not report measured performance or establish that a stopping procedure

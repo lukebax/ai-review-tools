@@ -13,7 +13,7 @@ GROUPS = [
     ('RAISE', [1]),
     ('Four AI families', [3, 2]),
     ('Five use recommendations', [7]),
-    ('Map patterns', [1, 2, 4, 1, 3]),
+    ('Map patterns', [1, 2, 1, 3, 1, 3]),
     ('Verification, validation and independent evaluation', [5, 2]),
     ('Two screening tasks', [5]),  # Two pointing cues plus three spoken paragraphs.
     ('Unacceptable uses and why', [4, 2]),
@@ -48,7 +48,7 @@ def read_script(path):
         for count in counts:
             slides.append(blocks[start:start + count])
             start += count
-    assert len(slides) == 20
+    assert len(slides) == sum(len(counts) for _, counts in GROUPS)
     return slides
 
 
@@ -81,7 +81,7 @@ def update(source, slides):
         return match[1] + content + notes_html(number, slides[number - 1]) + match[4]
 
     result = pattern.sub(insert, source)
-    assert seen == list(range(1, 21)), 'Expected the 20 plan slides in order.'
+    assert seen == list(range(1, len(slides) + 1)), 'Expected all plan slides in order.'
     spoken = ' '.join(text for blocks in slides for kind, text in blocks if kind == 'speech')
     tag = f'<meta name="approved-script-sha256" content="{fingerprint(spoken)}">'
     if re.search(r'<meta name="approved-script-sha256"[^>]*>', result):
@@ -98,12 +98,13 @@ def main():
     args = parser.parse_args()
     deck = Path(__file__).resolve().with_name('index.html')
     current = deck.read_text()
-    updated, words = update(current, read_script(args.script))
+    slides = read_script(args.script)
+    updated, words = update(current, slides)
     if args.check:
         assert current == updated, 'Presenter notes differ from the approved script; run sync_notes.py.'
     else:
         deck.write_text(updated)
-    print(f'Presenter notes {"verified" if args.check else "derived"}: 20 slides, {words} spoken words; cues separate.')
+    print(f'Presenter notes {"verified" if args.check else "derived"}: {len(slides)} slides, {words} spoken words; cues separate.')
 
 
 if __name__ == '__main__':

@@ -94,7 +94,7 @@ async function inspectSlide(page, index) {
       const b = e.getBoundingClientRect();
       return { tag: e.tagName, x: (b.x - box.x) * sx, y: (b.y - box.y) * sy, w: b.width * sx, h: b.height * sy };
     });
-    const text = audience('h1,h2,h3,p,li,figcaption,.slide-footer,svg text')
+    const text = audience('h1,h2,h3,p,li,figcaption,.slide-footer:not(:has(*)),.slide-footer > *,svg text')
       .map(e => (e.innerText || e.textContent).trim()).filter(Boolean);
     return { text, layout };
   }, index);

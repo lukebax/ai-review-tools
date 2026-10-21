@@ -1,0 +1,50 @@
+{
+  "sourceSHA256": "f17e067e2004d0dae80c4eb53416c185718a3b4ce37fe45015918e9c1a00f389",
+  "builderSHA256": "e8d3363de6b6e6e73f8d87c4d71d735a8fde4e09048d20a1c114eb411c393fe5",
+  "browser": "156.0.8078.4",
+  "images": [
+    {
+      "file": "map-overview.png",
+      "groups": [],
+      "width": 3104,
+      "height": 1442,
+      "sha256": "b18a733783ff8bb414c4e5e8c625479b5782a413c9d137def00118949c70d8e0",
+      "tools": 56,
+      "stages": 8
+    },
+    {
+      "file": "map-rule-unsupervised.png",
+      "groups": [
+        "rule-based",
+        "unsupervised"
+      ],
+      "width": 2882,
+      "height": 1468,
+      "sha256": "4e6dded45a719df2fd2841ed1facc7fb4a9a215ec8b7e4c9f249eb8df73bb70a",
+      "tools": 29,
+      "stages": 8
+    },
+    {
+      "file": "map-supervised.png",
+      "groups": [
+        "supervised"
+      ],
+      "width": 2262,
+      "height": 1442,
+      "sha256": "7c812145b41d2f5c8f599b6eb7f6e184fda79dff4ca479ba675489dcc54618ff",
+      "tools": 10,
+      "stages": 8
+    },
+    {
+      "file": "map-llm.png",
+      "groups": [
+        "generative"
+      ],
+      "width": 2262,
+      "height": 1430,
+      "sha256": "ad2ba008ef7aba30247820cf3c1cb293151a53148f3994b262fd4384c94779cc",
+      "tools": 17,
+      "stages": 8
+    }
+  ]
+}
