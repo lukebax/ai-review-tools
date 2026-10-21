@@ -2,6 +2,7 @@
 import { test } from 'node:test';
 import { createServer } from 'node:http';
 import { chromium } from 'playwright';
+import { updateSlideFooters, checkSlideFooters, PARTS } from './slide_structure.mjs';
 import assert from 'node:assert/strict';
 import { promises as fs } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -89,6 +90,12 @@ test('presenter controls sync slides and reset long notes without exposing speec
     const page=await context.newPage();
     await page.goto(`http://127.0.0.1:${server.address().port}/presentation/`);
     await page.evaluate(()=>presentationReady);
+    const footers=await page.locator('section.slide .slide-footer').allTextContents();
+    assert.deepEqual(footers.map(text=>text.match(/\d+\s*\/\s*\d+/)?.[0]),
+      footers.map((_,index)=>`${index+1} / ${footers.length}`),'Footer numbers must follow actual order, including link-bearing footers');
+    assert.equal(await page.locator('.reveal > .slide-number:visible').count(),0,'Only the footer counter should be visible');
+    const labels=await page.locator('section.slide').evaluateAll(slides=>slides.map(slide=>slide.querySelector('.part-label')?.textContent || ''));
+    assert.deepEqual(labels,['',...Array(7).fill(`1 · ${PARTS[0].title}`),...Array(5).fill(`2 · ${PARTS[1].title}`),...Array(4).fill(`3 · ${PARTS[2].title}`),...Array(3).fill(`4 · ${PARTS[3].title}`),''],'Each content slide needs its agreed part label');
     let opening=page.waitForEvent('popup');
     await page.keyboard.press('s');
     const notes=await opening;
@@ -119,4 +126,25 @@ test('presenter controls sync slides and reset long notes without exposing speec
     if(browser)await browser.close();
     await new Promise(resolve=>server.close(resolve));
   }
+});
+
+
+test('footer generation repairs the linked-map variant and follows reordered sections', async () => {
+  const html=await fs.readFile(path.join(root,'presentation/index.html'),'utf8');
+  checkSlideFooters(html);
+  const stale=html.replace(/(<section[^>]*id="map-overview"[\s\S]*?<span class="slide-count">)9 \/ 21/, '$1'+'7 / 21');
+  assert.notEqual(stale,html,'The regression fixture must corrupt the linked overview footer');
+  assert.throws(()=>checkSlideFooters(stale),/Slide footers do not match/);
+  assert.equal(updateSlideFooters(stale),html,'Generation must repair the original counter defect');
+  const sections=[...html.matchAll(/<section\b[\s\S]*?<\/section>/g)].map(m=>m[0]);
+  const moved=html.replace(sections.slice(9,11).join('\n'),sections.slice(9,11).reverse().join('\n'));
+  assert.notEqual(moved,html);
+  const repaired=updateSlideFooters(moved);
+  checkSlideFooters(repaired);
+  const reordered=[...repaired.matchAll(/<section\b[\s\S]*?<\/section>/g)].map(m=>m[0]);
+  assert.match(reordered[9],/id="map-supervised"/);
+  assert.match(reordered[9],/<span class="slide-count">10 \/ 21<\/span>/);
+  assert.match(reordered[10],/id="map-rule-unsupervised"/);
+  assert.match(reordered[10],/<span class="slide-count">11 \/ 21<\/span>/);
+  assert.match(reordered[8],/<a[^>]*href="https:\/\/lukebax.github.io\/ai-review-tools\//,'The map footer link must survive generation');
 });

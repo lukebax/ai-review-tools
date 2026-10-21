@@ -19,6 +19,11 @@ the first and last slides. Move the pointer to reveal navigation arrows and the
 toolbar. **Full screen** or F enters full screen when supported; Esc exits it or
 opens the slide overview. There are no tabs, hidden builds or live-map dependencies.
 
+The content is organised into four parts, shown by a small footer label: **Foundations**
+(slides 2–8), **Mapping the landscape** (9–13), **Why recommendations differ between uses**
+(14–17), and **Assessing suitability for your review** (18–20). Opening and closing remain
+outside those parts. One bottom-right counter numbers all 21 slides in both HTML and PDF.
+
 For HTTP preview, run `python3 preview.py` from the repository root and open the
 printed Presentation URL. The server binds only to this computer; Ctrl+C stops it.
 
@@ -81,7 +86,7 @@ npm test
 ```
 
 The builder waits for fonts, images and Reveal's print-ready event. It checks slide/page
-counts, 16:9 dimensions, slide text on each PDF page, missing resources, overflow and
+counts, actual-order footer numbering, part labels, 16:9 dimensions, slide text on each PDF page, missing resources, overflow and
 screen/print geometry. `--check` rejects any changed HTML, asset, export code/dependency
 or PDF that no longer matches `pdf-build.json`. The tests deliberately introduce stale
 sources, a damaged PDF, missing images and print-only hidden graphics to test those gates.
@@ -93,7 +98,8 @@ prevent version drift and common export defects, not every possible design probl
 
 ## Files and maintenance
 
-- `index.html`: the 21 slide sections, with stable `data-plan-slide` numbers.
+- `index.html`: the 21 slide sections, with current `data-plan-slide` numbers.
+- `slide_structure.mjs`: agreed part boundaries and automatic footer labels/numbering; the PDF builder regenerates them from actual slide order, including footers with a link.
 - `assets/theme.css`: slide layouts and print styling, independent of the map.
 - `assets/deck.js`: Reveal setup, navigation, full-screen and presenter-window controls.
 - `sync_notes.py`: derives exact current script passages for all 21 slides.
@@ -114,7 +120,7 @@ prevent version drift and common export defects, not every possible design probl
 - `build_pdf.mjs` and `build_pdf.test.mjs`: export, alignment checks and regression tests.
 - `pdf-build.json`: compact fingerprints connecting the checked PDF to its exact inputs.
 
-The PDF builder updates asset and PDF cache versions automatically. After editing, run
+The PDF builder updates slide footers and asset/PDF cache versions automatically. After editing, run
 `npm run build:pdf` and review the changed views. Push the source changes to `main`; the
 Pages workflow repeats the export/checks and commits generated outputs if they differ.
 After it succeeds, run `git pull --ff-only` to receive that generated commit locally.

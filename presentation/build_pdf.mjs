@@ -6,6 +6,7 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright';
+import { updateSlideFooters, checkSlideFooters } from './slide_structure.mjs';
 import { PDFDocument, PDFName } from 'pdf-lib';
 import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs';
 
@@ -29,7 +30,7 @@ async function assetFiles(dir) {
   return names;
 }
 async function inputsDigest(html) {
-  const paths = [path.join(deckDir, 'index.html'), path.join(deckDir, 'build_pdf.mjs'), path.join(deckDir, 'sync_notes.py'),
+  const paths = [path.join(deckDir, 'index.html'), path.join(deckDir, 'build_pdf.mjs'), path.join(deckDir, 'sync_notes.py'), path.join(deckDir, 'slide_structure.mjs'),
     path.join(root, 'package.json'), path.join(root, 'package-lock.json'),
     ...await assetFiles(path.join(deckDir, 'assets'))].sort();
   const digest = createHash('sha256');
@@ -57,6 +58,7 @@ function versionPdf(html, pdfHash) {
 async function check() {
   const manifest = JSON.parse(await fs.readFile(manifestPath, 'utf8'));
   const html = await fs.readFile(path.join(deckDir, 'index.html'), 'utf8');
+  checkSlideFooters(html);
   requireThat(manifest.inputSHA256 === await inputsDigest(), 'PDF is out of date: HTML, assets or export dependencies changed. Run npm run build:pdf.');
   const pdfHash = hash(await fs.readFile(path.join(deckDir, pdfName)));
   requireThat(pdfHash === manifest.pdfSHA256, 'PDF bytes do not match the checked export. Run npm run build:pdf.');
@@ -87,6 +89,14 @@ async function inspectSlide(page, index) {
     const slide = document.querySelectorAll('section.slide')[index], box = slide.getBoundingClientRect();
     const sx = 1280 / box.width, sy = 720 / box.height;
     const audience = selector => [...slide.querySelectorAll(selector)].filter(e => !e.closest('aside.notes'));
+    const count = document.querySelectorAll('section.slide').length;
+    const counters = slide.querySelectorAll('.slide-footer .slide-count');
+    if (counters.length !== 1 || counters[0].textContent !== `${index + 1} / ${count}` || getComputedStyle(counters[0]).display === 'none') {
+      throw new Error(`Slide ${index + 1}: inaccurate, missing or duplicate footer counter`);
+    }
+    if ([...document.querySelectorAll('.reveal > .slide-number')].some(e => getComputedStyle(e).display !== 'none')) {
+      throw new Error('Duplicate Reveal slide counter is visible');
+    }
     const notes = slide.querySelector('aside.notes');
     if (!notes || getComputedStyle(notes).display !== 'none') throw new Error(`Slide ${index + 1}: presenter notes missing or visible`);
     const elements = audience('h1,h2,h3,p,li,img,svg,.slide-footer');
@@ -101,7 +111,7 @@ async function inspectSlide(page, index) {
 }
 async function build() {
   const originalDigest = await inputsDigest();
-  let html = await versionAssets(await fs.readFile(path.join(deckDir, 'index.html'), 'utf8'));
+  let html = await versionAssets(updateSlideFooters(await fs.readFile(path.join(deckDir, 'index.html'), 'utf8')));
   const temp = await fs.mkdtemp(path.join(tmpdir(), 'ai-review-pdf-'));
   let browser, server;
   try {

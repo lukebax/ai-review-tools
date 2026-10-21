@@ -52,9 +52,10 @@ outgoing source links require internet. See the [PDF instructions](presentation/
 - **Map:** edit `map/map-data.json` or `map/map-template.html`, then run
   `python3 map/build.py` and `python3 map/build.py --check`. The generated output is
   `map/index.html`; do not edit it directly. See the [map guide](map/README.md).
-- **Presentation:** edit its HTML, `assets/theme.css` and `assets/deck.js`. No build step
-  is needed for the HTML. Regenerate derived map visuals when their data changes and
-  run `npm run build:pdf` and `npm run check` after slide edits. Publication repeats the
+- **Presentation:** edit its HTML, `assets/theme.css` and `assets/deck.js`. The saved
+  presentation opens directly in a browser. Regenerate derived map visuals when their
+  data changes; after slide edits, run `npm run build:pdf` to refresh section labels,
+  slide numbers and the matching PDF, then `npm run check`. Publication repeats the
   PDF export automatically. Bundled dependencies retain
   their fixed versions and original licence notices.
 - **Landing page:** edit root `index.html`. It has no runtime dependencies.
