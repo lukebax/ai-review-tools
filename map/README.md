@@ -84,20 +84,3 @@ while preserving evidence limits and sources. End-to-end review workflows, chatb
 and methods without a named tool are explained outside the matrix. The guide is not an
 official RAISE publication or a live product catalogue. Check newer guidance and the intended
 review procedure before relying on a recommendation.
-
-## Map baseline and recovery
-
-The accepted map baseline has four families with a two-level header, the completed source-label
-clarifications, and RAISE's five assessment questions. Continue from the current `main` branch;
-documentation-only changes need not change the HTML. The map is maintained at `/map/`.
-The clarity refinements preserve its layout, task assignments and recommendations, adding
-concise terminology explanations, navigation hints and an archived contextual citation.
-
-The historical tag
-**[stable-2026-10-19](https://github.com/lukebax/ai-review-tools/tree/stable-2026-10-19)**
-preserves the earlier three-category map at `3df295d`, with map content matching `76c413b`.
-It is a historical recovery point, not the accepted baseline. The `codex/four-ai-categories`
-and `codex/two-level-headings` branches preserve earlier iterations; they are not active work
-queues. No rollback is planned. If explicitly requested, preserve current work and restore the
-chosen revision in a new commit, then rebuild, check and publish with authorisation.
-Do not rewrite shared Git history.

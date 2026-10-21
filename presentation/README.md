@@ -1,6 +1,6 @@
 # Navigating AI in Evidence Synthesis
 
-A 20-slide HTML draft for a methods-focused workshop talk by Luke Baxter. The
+A 20-slide HTML presentation for a methods-focused workshop talk by Luke Baxter. The
 16:9 slides use the companion map’s navy text, restrained blues and off-white
 background. Every slide has a complete static state, shared with the PDF.
 
@@ -54,12 +54,11 @@ slide-sized pages. Verify 20 pages and inspect all rendered pages before replaci
   on the first and last slides.
 - `assets/vendor/reveal/`: fixed upstream distribution and MIT licence.
 - `navigating-ai-evidence-synthesis.pdf`: the checked distribution/fallback copy.
-- `sample/`: the accepted four-page design sample retained as a visual reference.
 
 Update the CSS/JS content-version query in `index.html` when changing those files
 (first 12 SHA-256 characters), then regenerate and review the PDF. Check keyboard
 navigation, full screen, offline assets, the PDF download and all changed views.
-The deck is a draft for review; its content follows the approved talk. The script
+The content follows the approved talk. The Delivery Script
 and its preparation records stay in the separate private presentation workspace.
 
 ## Sources and scope
