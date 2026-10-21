@@ -30,7 +30,7 @@ html.print-pdf .toolbar{display:none}html.print-pdf .reveal .slides section.slid
 .learning-methods .method-columns{margin-top:45px}.learning-methods .method-diagram{height:225px;margin:15px 0 18px}.learning-methods .caption{font-size:27px}.learning-methods h2{max-width:1140px}
 .map-takeaways{position:absolute;left:64px;right:64px;top:592px;display:flex;align-items:start;gap:48px}.map-takeaways p{font-size:25px;line-height:1.3;color:var(--muted)}.map-takeaways strong{color:var(--ink);font-weight:600}.map-takeaways .legend-item{font-size:22px;white-space:nowrap}.map-takeaways .map-caption{flex:1}
 .patterns .map-figure{top:162px}.patterns .subtitle{max-width:1120px;font-size:24px}.pattern-notes{position:absolute;top:603px;left:64px;right:64px;display:flex;gap:35px;justify-content:space-between}.pattern-notes p{font-size:23px;line-height:1.25;color:var(--muted)}
-.screening .screening-strip{position:absolute;top:134px;left:64px;width:1152px;height:100px}.screening .screening-strip img{width:1152px;height:100px}.screening .queue-pair{display:grid;grid-template-columns:1fr 1fr;gap:72px;margin-top:171px}.queue-pair h3{font-size:31px;margin-bottom:15px}.queue-svg{display:block;width:100%;height:148px}.queue-label{display:flex;gap:12px;align-items:center;font-size:27px!important;font-weight:600!important;line-height:1.24!important}.queue-pair .queue-detail{font-size:24px;margin-top:19px;color:var(--muted)}.reveal .screening-conclusion{position:absolute;left:64px;right:64px;bottom:80px;font-size:27px;color:var(--muted)}
+.screening .screening-strip{position:absolute;top:160px;left:64px;width:1152px;height:90px}.screening .screening-strip img{width:1152px;height:90px}.screening .queue-pair{display:grid;grid-template-columns:1fr 1fr;gap:72px;margin-top:140px}.queue-pair h3{font-size:31px;margin-bottom:15px}.queue-svg{display:block;width:100%;height:132px}.queue-label{display:flex;gap:12px;align-items:center;font-size:27px!important;font-weight:600!important;line-height:1.24!important}.queue-pair .queue-detail{font-size:24px;margin-top:19px;color:var(--muted)}.reveal .screening-conclusion{position:absolute;left:64px;right:64px;bottom:64px;font-size:27px;color:var(--muted)}
 
 
 /* LATE SLIDES */
@@ -46,5 +46,9 @@ html.print-pdf .toolbar{display:none}html.print-pdf .reveal .slides section.slid
 .actual-map h2{font-size:42px}
 .actual-map-figure{position:absolute;left:64px;right:64px;top:110px;bottom:64px;display:flex;align-items:center;justify-content:center}
 .actual-map-figure img{display:block;width:100%;height:100%;object-fit:contain}
-.map-only .actual-map-figure{top:48px}
+.actual-map.with-subtitle .actual-map-figure{top:156px}
 .slide-footer.with-link{justify-content:space-between}
+
+/* Category titles and explanatory subtitles share the map-view hierarchy. */
+.actual-map.with-subtitle .subtitle{margin-top:12px}
+.screening h2{font-size:42px}

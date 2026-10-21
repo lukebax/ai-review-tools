@@ -26,7 +26,7 @@ printed Presentation URL. The server binds only to this computer; Ctrl+C stops i
 
 Choose **Presenter notes** in the toolbar, or press **S**, to open a separate presenter
 window. It shows the current and next slides, a timer and the exact approved script
-passage for the current slide. The two pointing cues are separately labelled **not spoken**.
+passage for the current slide. No written pointing cues are included.
 Use the window's **Layout** menu to change the arrangement; the first opening uses Wide,
 with slide previews above the notes. Longer passages scroll, and each new slide starts
 at the beginning of its notes. Arrow keys in either window advance the presentation.
@@ -96,7 +96,7 @@ prevent version drift and common export defects, not every possible design probl
 - `index.html`: the 21 slide sections, with stable `data-plan-slide` numbers.
 - `assets/theme.css`: slide layouts and print styling, independent of the map.
 - `assets/deck.js`: Reveal setup, navigation, full-screen and presenter-window controls.
-- `sync_notes.py`: derives exact approved script passages and separate pointing cues for all 21 slides.
+- `sync_notes.py`: derives exact current script passages for all 21 slides.
 - `assets/maps/`: four actual-map PNG captures, their source manifest and two explanatory SVG excerpts.
 - `capture_maps.mjs`: captures the maintained map with all or selected AI categories, including
   native tool labels, all eight stages and the recommendation key. `npm run build:map-images`
@@ -120,7 +120,7 @@ Pages workflow repeats the export/checks and commits generated outputs if they d
 After it succeeds, run `git pull --ff-only` to receive that generated commit locally.
 The content follows the approved talk. The canonical Delivery Script
 and its preparation records stay in the separate private presentation workspace; its
-approved spoken passages and two pointing cues are also included in the public presenter notes.
+approved spoken passages are also included in the public presenter notes.
 
 ## Sources and scope
 

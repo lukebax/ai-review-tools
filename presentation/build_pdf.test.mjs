@@ -94,17 +94,19 @@ test('presenter controls sync slides and reset long notes without exposing speec
     const notes=await opening;
     await notes.waitForSelector('.speaker-controls-notes [data-note="speech"]');
     await page.evaluate(()=>deck.slide(deck.getIndices(document.getElementById('verification-validation')).h));
-    await notes.waitForFunction(()=>document.querySelector('.speaker-controls-notes .value').innerText.startsWith('Slide 13 ·'));
+    await notes.waitForFunction(()=>document.querySelector('.speaker-controls-notes .value').innerText.startsWith('Slide 12 ·'));
     await notes.evaluate(()=>document.getElementById('speaker-controls').scrollTop=99999);
     assert(await notes.evaluate(()=>document.getElementById('speaker-controls').scrollTop)>0);
     // This forwards a synthetic key event into the slide iframe.
     await notes.keyboard.press('ArrowRight');
     await page.waitForFunction(()=>deck.getCurrentSlide().id==='independent-evaluation');
-    await notes.waitForFunction(()=>document.querySelector('.speaker-controls-notes .value').innerText.startsWith('Slide 14 ·'));
+    await notes.waitForFunction(()=>document.querySelector('.speaker-controls-notes .value').innerText.startsWith('Slide 13 ·'));
     assert.equal(await notes.evaluate(()=>document.getElementById('speaker-controls').scrollTop),0);
     assert.equal(await page.locator('aside.notes:visible').count(),0);
     await page.evaluate(()=>deck.slide(deck.getIndices(document.getElementById('screening-tasks')).h));
-    await notes.waitForFunction(()=>document.querySelectorAll('.speaker-controls-notes [data-note="cue"]').length===2);
+    await notes.waitForFunction(()=>document.querySelector('.speaker-controls-notes .value').innerText.startsWith('Slide 15 ·'));
+    assert.equal(await notes.locator('.speaker-controls-notes [data-note="speech"]').count(),4);
+    assert.equal(await page.locator('aside.notes [data-note="cue"]').count(),0);
     assert.equal(await notes.frameLocator('#current-slide iframe').locator('.toolbar').isVisible(),false);
     await notes.close();
     opening=page.waitForEvent('popup');

@@ -13,9 +13,9 @@ GROUPS = [
     ('RAISE', [1]),
     ('Four AI families', [3, 2]),
     ('Five use recommendations', [7]),
-    ('Map patterns', [1, 2, 1, 3, 1, 3]),
-    ('Verification, validation and independent evaluation', [5, 2]),
-    ('Two screening tasks', [5]),  # Two pointing cues plus three spoken paragraphs.
+    ('Map patterns', [1, 2, 1, 1, 3]),
+    ('Verification, validation and independent evaluation', [5, 1]),
+    ('Screening examples', [3, 4]),
     ('Unacceptable uses and why', [4, 2]),
     ('Applying RAISE’s five suitability questions', [3, 1, 3]),
     ('Closing', [3]),
@@ -104,7 +104,7 @@ def main():
         assert current == updated, 'Presenter notes differ from the approved script; run sync_notes.py.'
     else:
         deck.write_text(updated)
-    print(f'Presenter notes {"verified" if args.check else "derived"}: {len(slides)} slides, {words} spoken words; cues separate.')
+    print(f'Presenter notes {"verified" if args.check else "derived"}: {len(slides)} slides, {words} spoken words.')
 
 
 if __name__ == '__main__':
