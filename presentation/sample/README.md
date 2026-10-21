@@ -25,14 +25,17 @@ directory. Left/right arrows and the on-screen arrows move between slides;
 Home returns to the first slide, and Esc opens the overview. Full screen is
 available where the browser supports it. The toolbar appears on pointer movement
 or keyboard focus. No internet is needed for viewing or the bundled PDF.
-External source links require a connection.
+External source links require a connection. Direct local-file viewing offers **Open PDF**
+in a separate tab; HTTP/Pages offers **Download PDF**.
 
 The **Download PDF** button retrieves the checked `sample.pdf` alongside the HTML.
 It contains the same four 16:9 views, with selectable text and vector graphics.
 This is a generated counterpart of the HTML, not a separately edited document.
 For a fresh PDF after edits, open `index.html?print-pdf` in Chrome, print/save as
 PDF with backgrounds, no margins and no browser headers/footers, and replace
-`sample.pdf`. Check all four rendered pages before publishing an update.
+`sample.pdf`. For automated export, await `window.sampleReady`, `window.printReady`,
+`document.fonts.ready` and loaded images, and assert four `.pdf-page` wrappers.
+Check all four rendered pages before publishing an update.
 
 The root `python3 preview.py` server also serves this directory. Append `sample/`
 to the Presentation URL it prints; the server chooses a free local port.
@@ -79,3 +82,6 @@ content is CC BY 4.0.
 
 [Official RAISE collection](https://doi.org/10.17605/OSF.IO/FWAUD).
 These are draft guidance versions, not a claim to cover every later revision.
+
+Use `python3 presentation/sample/build_map.py --check` from the repository root to
+verify the saved map visual without modifying it.

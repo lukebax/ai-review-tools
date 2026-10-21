@@ -5,6 +5,7 @@ Run from any directory: python3 presentation/sample/build_map.py
 The source is ../../map/map-data.json relative to this script. No private files,
 third-party packages, network access or browser rendering are required.
 """
+import argparse
 from collections import Counter
 from html import escape
 import json
@@ -42,7 +43,7 @@ def text(x, y, label, size=23, anchor='start', weight=500, **attrs):
             f'{escape(label)}</text>')
 
 
-def build():
+def build(check=False):
     data = json.loads(SOURCE.read_text(encoding='utf-8'))
     tools, stages = data['tools'], data['stages']
     groups, recommendations = data['groups'], data['recommendations']
@@ -139,11 +140,18 @@ def build():
         boundary = bounds[group['id']][1]
         svg.append(f'<path d="M{fmt(boundary)} 51V{Y + len(stages) * ROW_HEIGHT}" stroke="{MUTED}" stroke-width="2.1"/>')
     svg.append('</g></svg>')
-    OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT.write_text('\n'.join(svg) + '\n', encoding='utf-8')
+    content = '\n'.join(svg) + '\n'
+    if check:
+        if not OUTPUT.exists() or OUTPUT.read_text(encoding='utf-8') != content:
+            raise SystemExit(f'Stale visual: {OUTPUT}. Run build_map.py to regenerate.')
+    else:
+        OUTPUT.parent.mkdir(parents=True, exist_ok=True)
+        OUTPUT.write_text(content, encoding='utf-8')
     print(json.dumps({k: v for k, v in metadata.items() if k in ('groupToolCounts', 'populatedCells', 'mixedCells', 'blankCells', 'functionCount')}, indent=2))
-    print(f'Wrote {OUTPUT}')
+    print(f'{"Checked" if check else "Wrote"} {OUTPUT}')
 
 
 if __name__ == '__main__':
-    build()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--check', action='store_true', help='Check the generated visual without writing files')
+    build(check=parser.parse_args().check)

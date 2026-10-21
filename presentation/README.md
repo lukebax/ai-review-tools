@@ -35,8 +35,9 @@ server, then Print → Save as PDF. Enable background graphics and disable brows
 headers/footers; use no margins and landscape. The print stylesheet defines the
 slide-sized pages. Verify 20 pages and inspect all rendered pages before replacing
 `navigating-ai-evidence-synthesis.pdf`. A headless Chromium export can use
-`preferCSSPageSize: true`, `printBackground: true`, after `window.presentationReady`,
-`document.fonts.ready` and all images have loaded.
+`preferCSSPageSize: true`, `printBackground: true`, after `window.presentationReady`, `window.printReady`,
+`document.fonts.ready` and all images have loaded. Assert that `.pdf-page` contains
+20 wrappers before export; Reveal initialization alone does not finish print layout.
 
 ## Files and maintenance
 
@@ -47,7 +48,8 @@ slide-sized pages. Verify 20 pages and inspect all rendered pages before replaci
 - `build_visuals.py`: regenerates those excerpts from `../map/map-data.json`,
   preserving actual recommendations, mixed-cell halves, blank cells and row order.
   Run `python3 presentation/build_visuals.py` from the repository root after a
-  relevant approved data change. The generator also checks cell assignments and colour fidelity.
+  relevant approved data change. Run `python3 presentation/build_visuals.py --check` to verify the saved assets
+  without writing files. The generator also checks cell assignments and colour fidelity.
 - `assets/images/site-qr.svg`: QR code for the site home, also printed as a URL
   on the first and last slides.
 - `assets/vendor/reveal/`: fixed upstream distribution and MIT licence.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Serve the local site, prototype and map on this computer; never publishes anything."""
+"""Serve the local site, presentation and map on this computer; never publishes anything."""
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -10,19 +10,27 @@ class Preview(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(ROOT), **kwargs)
 
-    def do_GET(self):
+    def allowed_path(self):
         if self.headers.get('Host') != f'127.0.0.1:{self.server.server_port}':
             self.send_error(403)
-            return
+            return False
         path = unquote(urlsplit(self.path).path)
         if any(part.startswith('.') for part in Path(path).parts if part not in ('/', '')):
             self.send_error(404)
-            return
+            return False
         resolved = (ROOT / path.lstrip('/')).resolve()
         if not resolved.is_relative_to(ROOT):
             self.send_error(404)
-            return
-        super().do_GET()
+            return False
+        return True
+
+    def do_GET(self):
+        if self.allowed_path():
+            super().do_GET()
+
+    def do_HEAD(self):
+        if self.allowed_path():
+            super().do_HEAD()
 
     def list_directory(self, path):
         self.send_error(404)

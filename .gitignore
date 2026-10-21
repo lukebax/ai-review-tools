@@ -1,0 +1,4 @@
+# Generated operating-system metadata and Python bytecode only
+.DS_Store
+__pycache__/
+*.py[cod]

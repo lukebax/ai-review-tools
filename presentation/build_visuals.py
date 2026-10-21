@@ -5,6 +5,7 @@ Run from any directory with Python 3; uses only the standard library and public
 repository files. The source remains authoritative for tools, stages, colours,
 function assignments, and the recommendation order within diagonal split cells.
 """
+import argparse
 from collections import Counter
 from hashlib import sha256
 from html import escape
@@ -15,6 +16,7 @@ import xml.etree.ElementTree as ET
 HERE = Path(__file__).resolve().parent
 SOURCE = (HERE / '../map/map-data.json').resolve()
 OUT = HERE / 'assets/maps'
+CHECK = False
 DATA = json.loads(SOURCE.read_text(encoding='utf-8'))
 TOOLS, STAGES, GROUPS, RECS = (DATA[k] for k in ('tools', 'stages', 'groups', 'recommendations'))
 TOOL = {t['id']: t for t in TOOLS}
@@ -131,8 +133,13 @@ class Svg:
                 f'<g font-family="{FONT}" fill="{INK}">', *self.parts, '</g></svg>']
         content = '\n'.join(root) + '\n'
         self.verify(content)
-        OUT.mkdir(parents=True, exist_ok=True)
-        (OUT / filename).write_text(content, encoding='utf-8')
+        target = OUT / filename
+        if CHECK:
+            if not target.exists() or target.read_text(encoding='utf-8') != content:
+                raise SystemExit(f'Stale visual: {target}. Run build_visuals.py to regenerate.')
+        else:
+            OUT.mkdir(parents=True, exist_ok=True)
+            target.write_text(content, encoding='utf-8')
         populated = sum(bool(categories(TOOL[t], s)) for _, t, s, *_ in self.expected_cells)
         mixed = sum(len(categories(TOOL[t], s)) == 2 for _, t, s, *_ in self.expected_cells)
         print(f'{filename}: {len(self.expected_cells)} displayed cells; {populated} populated; {mixed} mixed; source order/assignments/fills verified')
@@ -282,6 +289,9 @@ def validate_source():
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--check', action='store_true', help='Check generated visuals without writing files')
+    CHECK = parser.parse_args().check
     validate_source()
     overview()
     green_families()
