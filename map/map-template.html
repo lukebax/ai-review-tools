@@ -247,10 +247,10 @@ the original map software or explanatory content.
 
 *{box-sizing:border-box}
 body{margin:0;color:var(--ink);background:var(--page);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:14px;line-height:1.45}
-button,input,select{font:inherit}
+button,input{font:inherit}
 button{cursor:pointer}
-button,input,select,a{touch-action:manipulation}
-button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+button,input,a,summary{touch-action:manipulation}
+button:focus-visible,input:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
 button:disabled{cursor:default}
 a{color:#086b9b;text-underline-offset:3px}
 a:hover{text-decoration-thickness:2px}
@@ -269,15 +269,28 @@ h1{font-size:28px;letter-spacing:-.035em;line-height:1.16;margin:0 0 6px;font-we
 .map-help{margin:0 0 10px;color:#526c7a;font-size:12px;line-height:1.55}
 .toolbar{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:14px}
 .control{display:flex;flex-direction:column;gap:5px}
-.control label{font-size:12px;font-weight:650;color:#4b626f}
+.control>label,.control-label{font-size:12px;font-weight:650;color:#4b626f}
 .search-control{flex:1 1 220px;max-width:320px}
 .group-control{flex:0 1 360px;min-width:0}
-#group-filter{width:100%;max-width:none;min-width:0}
+.stage-control{flex:0 1 280px;min-width:0}
+.multi-filter{position:relative;width:100%;min-width:0}
+.multi-filter>summary{display:flex;align-items:center;gap:10px;min-height:38px;background:white;border:1px solid #cbd6de;border-radius:5px;padding:7px 10px;cursor:pointer;list-style:none}
+.multi-filter>summary::-webkit-details-marker{display:none}
+.multi-filter>summary:after{content:"";width:7px;height:7px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin:0 3px 4px auto;flex:none}
+.multi-filter[open]>summary:after{transform:rotate(225deg);margin-bottom:0}
+.multi-filter>summary span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.multi-filter[data-active=true]>summary{border-color:#385b70;background:#eaf1f5}
+.filter-panel{position:absolute;top:calc(100% + 5px);left:0;z-index:8;width:100%;max-height:min(430px,65vh);overflow:auto;background:white;border:1px solid #cbd6de;border-radius:5px;box-shadow:0 8px 24px #20374626;padding:10px}
+.filter-hint{font-size:12px;line-height:1.45;color:var(--muted);margin:0 4px 7px}
+.filter-options{border:0;padding:0;margin:0;min-width:0}
+.filter-option{display:flex;align-items:flex-start;gap:9px;min-height:38px;padding:8px 5px;border-radius:3px;font-size:13px;line-height:1.45;cursor:pointer}
+.filter-option:hover{background:#f0f5f7}
+.filter-option input{accent-color:#365d76;margin:3px 0 0;flex:none;width:15px;height:15px}
+.filter-panel .legend-clear{margin-top:5px}
 .search-wrap{position:relative}
 .search-icon{position:absolute;left:11px;top:11px;color:#82939f;width:16px;height:16px;pointer-events:none}
-input[type=search],select{height:38px;background:white;color:var(--ink);border:1px solid #cbd6de;border-radius:5px;padding:7px 10px;min-width:0}
+input[type=search]{height:38px;background:white;color:var(--ink);border:1px solid #cbd6de;border-radius:5px;padding:7px 10px;min-width:0}
 input[type=search]{width:100%;padding-left:35px}
-select{min-width:190px;max-width:260px}
 .plain-button{height:38px;padding:7px 13px;background:white;color:#365260;border:1px solid #cbd6de;border-radius:5px}
 .plain-button:hover{border-color:#829aa8;background:#f0f5f7}
 .legend{padding:0;margin:14px 0 0;border:0}
@@ -417,8 +430,7 @@ h1{font-size:25px}
 h1{font-size:23px}
 .toolbar{gap:9px}
 .control{flex:1 1 170px}
-.group-control{flex-basis:100%}
-.control select{max-width:none;width:100%}
+.group-control,.stage-control{flex-basis:100%}
 .legend-button{font-size:10px}
 .map-table tbody th{font-size:12px}
 .drawer-head{padding-left:22px}
@@ -491,7 +503,7 @@ h1{font-size:23px}
 <fieldset class="legend" id="recommendation-key" aria-describedby="recommendation-help"><legend>RAISE use recommendations <span class="legend-hint">Select one or more to highlight matching cells</span></legend><div class="legend-options" id="recommendation-filters"></div><p class="key-note" id="recommendation-help">Multiple selections match <strong>any</strong> selected recommendation. Split cells keep both colours. Recommendations apply to the specified function or workflow, not to every use of a tool. Faded, hatched cells do not match the active recommendation filter; their details remain available.</p></fieldset>
 <div class="map-caption" id="map-meaning"><span class="caption-key"><svg class="mixed-swatch" aria-hidden="true" viewBox="0 0 100 100"><rect width="100" height="100" fill="var(--rec-verification)"/><path d="M100 0V100H0Z" fill="var(--rec-exploratory)"/></svg>Split cell: different functions or workflows have different recommendations.</span><span class="caption-key"><span class="empty-swatch" aria-hidden="true"></span>White cell: no use listed within this map’s scope.</span></div>
 <section class="map-controls" id="map-filters" aria-label="Search and filters" tabindex="-1">
-<div class="toolbar"><div class="control search-control"><label for="tool-search">Find a tool</label><div class="search-wrap"><svg class="search-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.7" cy="10.7" r="6.7"/><path d="m16 16 4.6 4.6"/></svg><input type="search" id="tool-search" placeholder="Search tool names" autocomplete="off"></div></div><div class="control group-control"><label for="group-filter">AI category</label><select id="group-filter"><option value="">All AI categories</option></select></div><div class="control"><label for="stage-filter">Review stage</label><select id="stage-filter"><option value="">All review stages</option></select></div><button class="plain-button" id="reset-filters">Reset filters</button></div>
+<div class="toolbar"><div class="control search-control"><label for="tool-search">Find a tool</label><div class="search-wrap"><svg class="search-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10.7" cy="10.7" r="6.7"/><path d="m16 16 4.6 4.6"/></svg><input type="search" id="tool-search" placeholder="Search tool names" autocomplete="off"></div></div><div class="control group-control"><span class="control-label" id="group-filter-label">AI category</span><details class="multi-filter" id="group-filter"><summary id="group-filter-summary" aria-labelledby="group-filter-label group-filter-value"><span id="group-filter-value">All AI categories</span></summary><div class="filter-panel"><p class="filter-hint" id="group-filter-hint">Choose any combination. No selection shows all.</p><fieldset class="filter-options" id="group-filter-options" aria-describedby="group-filter-hint"><legend class="sr-only">AI categories to display</legend></fieldset><button type="button" class="legend-clear" id="show-all-groups">Show all AI categories</button></div></details></div><div class="control stage-control"><span class="control-label" id="stage-filter-label">Review stage</span><details class="multi-filter" id="stage-filter"><summary id="stage-filter-summary" aria-labelledby="stage-filter-label stage-filter-value"><span id="stage-filter-value">All review stages</span></summary><div class="filter-panel"><p class="filter-hint" id="stage-filter-hint">Choose any combination. No selection shows all.</p><fieldset class="filter-options" id="stage-filter-options" aria-describedby="stage-filter-hint"><legend class="sr-only">Review stages to display</legend></fieldset><button type="button" class="legend-clear" id="show-all-stages">Show all review stages</button></div></details></div><button class="plain-button" id="reset-filters">Reset filters</button></div>
 </section>
 <div class="map-meta"><div id="result-count" role="status" aria-live="polite"></div><div class="map-options"><label><input id="roomier" type="checkbox"> Roomier columns</label><a href="#map-scroll">Back to map ↑</a></div></div>
 <footer class="page-foot">
@@ -530,7 +542,7 @@ h1{font-size:23px}
 <details class="scope-details" id="ai-category-explanations"><summary>What do the AI categories mean?</summary>
 <div class="disclosure-body"><p>The map retains RAISE’s four technology families. Unsupervised and supervised learning share a visual <strong>Machine Learning</strong> heading, with separate subheadings. The categories reflect RAISE’s classification of the listed functions, rather than every feature of a product:</p>
 <dl class="orientation-definitions">
-<dt>Rule-based algorithms (symbolic AI)</dt><dd>Follow explicit rules, such as matching references or converting search queries. Symbolic AI represents knowledge and rules explicitly. RAISE’s broad group also includes conventional statistics and visualisation; not every statistical calculation is AI.</dd>
+<dt>Rule-based algorithms</dt><dd>Follow explicit rules, such as matching references or converting search queries. Symbolic AI represents knowledge and rules explicitly. RAISE’s broad group also includes conventional statistics and visualisation; not every statistical calculation is AI.</dd>
 <dt>Unsupervised machine learning</dt><dd>Finds patterns without predefined labels, for example clusters of papers or topics. Clustering is one use, not the full definition. The narrow subheading abbreviates “Unsupervised” to <strong>Unsup.</strong></dd>
 <dt>Supervised machine learning</dt><dd>Learns from labelled examples to classify, rank or locate information. Some models come already trained; others learn from decisions made by the review team. Classification is one use, not the full definition; a tool can also combine learned components with fixed rules.</dd>
 <dt>Generative large language models (LLMs)</dt><dd>Neural-network models trained on extensive data to generate text or code; they can also support screening and extraction. Chatbots provide conversation; agentic systems can plan and carry out multiple steps. RAISE treats these as modes of LLM use.</dd>
@@ -584,6 +596,7 @@ h1{font-size:23px}
 
 <details class="scope-details" id="keyboard-help"><summary>Using the map with a keyboard</summary>
 <div class="disclosure-body"><p>Use <strong>Tab</strong> to move through the page’s controls. Once you reach a map cell, use the <strong>arrow keys</strong> to move between cells. <strong>Home</strong> and <strong>End</strong> reach the first and last visible tool in the current row.</p>
+<p>Open the <strong>AI category</strong> or <strong>Review stage</strong> filter with <strong>Enter</strong> or <strong>Space</strong>, then use <strong>Tab</strong> to reach its checkboxes and <strong>Space</strong> to select any combination. <strong>Escape</strong> closes the filter. No selection shows all categories or stages.</p>
 <p>Press <strong>Enter</strong> or <strong>Space</strong> to open the cell’s details. Use <strong>Tab</strong> to reach links and the close button; <strong>Shift + Tab</strong> moves backwards. <strong>Escape</strong> closes the details and returns focus to the cell. On narrow screens, focus stays inside the details panel until you close it.</p></div>
 </details>
 </footer>
@@ -599,7 +612,7 @@ const GROUP=new Map(DATA.groups.map(x=>[x.id,x]));
 const ML_GROUPS=new Set(['unsupervised','supervised']);
 const categoryHeaderIds=tool=>(ML_GROUPS.has(tool.groupId)?'family-machine-learning ':'')+'family-'+tool.groupId;
 const STAGES=DATA.stages;
-const state={search:'',group:'',stage:'',recommendations:new Set(),selected:null,roomier:false,focusCell:null};
+const state={search:'',groups:new Set(),stages:new Set(),recommendations:new Set(),selected:null,roomier:false,focusCell:null};
 const byId=id=>document.getElementById(id);
 const ALTERNATE_PALETTE={acceptable:'#2c7bb6',verification:'#abd9e9',validation:'#ffffbf',exploratory:'#fdae61',unacceptable:'#d7191c'};
 const recommendationColor=id=>'var(--rec-'+id+')';
@@ -620,8 +633,8 @@ function markdown(text){
 }
 function matches(cell){return !state.recommendations.size||cell.categories.some(id=>state.recommendations.has(id));}
 function cellPaint(cell){if(!cell.categories.length)return'<span class="cell-colour"></span>';if(cell.categories.length===1)return'<span class="cell-colour" style="background:'+recommendationColor(cell.categories[0])+'"></span>';const a=recommendationColor(cell.categories[0]),b=recommendationColor(cell.categories[1]);return'<svg class="cell-colour" aria-hidden="true" viewBox="0 0 100 100" preserveAspectRatio="none"><rect width="100" height="100" fill="'+a+'"/><path d="M100 0V100H0Z" fill="'+b+'"/></svg>';}
-function visibleTools(){return DATA.tools.filter(t=>(!state.group||t.groupId===state.group)&&(!state.search||t.name.toLocaleLowerCase().includes(state.search.toLocaleLowerCase())));}
-function visibleStages(){return state.stage?[state.stage]:STAGES;}
+function visibleTools(){return DATA.tools.filter(t=>(!state.groups.size||state.groups.has(t.groupId))&&(!state.search||t.name.toLocaleLowerCase().includes(state.search.toLocaleLowerCase())));}
+function visibleStages(){return STAGES.filter(stage=>!state.stages.size||state.stages.has(stage));}
 function renderLegend(){
  byId('recommendation-filters').innerHTML=DATA.recommendations.map(r=>'<button type="button" class="legend-button" data-rec="'+r.id+'" title="'+esc(r.description)+'" aria-pressed="'+state.recommendations.has(r.id)+'"><span class="swatch" aria-hidden="true" style="background:'+recommendationColor(r.id)+'"></span>'+esc(r.label)+'<span class="legend-tick" aria-hidden="true">✓</span></button>').join('')+(state.recommendations.size?'<button type="button" class="legend-clear" id="clear-recommendations">Show all recommendations</button>':'');
 }
@@ -738,11 +751,44 @@ function closeDrawer(restoreFocus=true){
  state.selected=null;document.body.classList.remove('drawer-open');byId('details-drawer').classList.remove('open');syncDrawerMode();renderMap();
  if(restoreFocus){const button=selectedButton();button?.focus({preventScroll:true});ensureCellVisible(button);}
 }
+const subsetFilters=[
+ {id:'group-filter',selected:state.groups,items:DATA.groups.map(g=>({value:g.id,label:g.label})),all:'All AI categories',plural:'AI categories',clear:'show-all-groups'},
+ {id:'stage-filter',selected:state.stages,items:STAGES.map(stage=>({value:stage,label:stage})),all:'All review stages',plural:'review stages',clear:'show-all-stages'}
+];
+function syncSubsetFilters(){
+ for(const filter of subsetFilters){
+  const selected=filter.items.filter(item=>filter.selected.has(item.value));
+  const label=!selected.length?filter.all:selected.length===1?selected[0].label:selected.length+' '+filter.plural+' selected';
+  byId(filter.id+'-value').textContent=label;
+  byId(filter.id+'-summary').title=selected.length?selected.map(item=>item.label).join('; '):filter.all;
+  byId(filter.id).dataset.active=String(selected.length>0);
+  for(const input of byId(filter.id).querySelectorAll('input'))input.checked=filter.selected.has(input.value);
+ }
+}
+function closeSubsetFilters(){for(const filter of subsetFilters)byId(filter.id).open=false;}
+function initSubsetFilters(){
+ for(const filter of subsetFilters){
+  const details=byId(filter.id);
+  byId(filter.id+'-options').insertAdjacentHTML('beforeend',filter.items.map(item=>'<label class="filter-option"><input type="checkbox" value="'+esc(item.value)+'"><span>'+esc(item.label)+'</span></label>').join(''));
+  details.addEventListener('change',e=>{
+   if(!e.target.matches('input[type=checkbox]'))return;
+   e.target.checked?filter.selected.add(e.target.value):filter.selected.delete(e.target.value);
+   updateFilters();
+  });
+  details.addEventListener('toggle',()=>{if(details.open)for(const other of subsetFilters)if(other!==filter)byId(other.id).open=false;});
+  byId(filter.clear).addEventListener('click',()=>{filter.selected.clear();updateFilters();});
+ }
+ for(const event of ['pointerdown','focusin'])document.addEventListener(event,e=>{
+  for(const filter of subsetFilters){const details=byId(filter.id);if(!details.contains(e.target))details.open=false;}
+ });
+ syncSubsetFilters();
+}
 function updateFilters(){
+ syncSubsetFilters();
  if(state.selected&&(!visibleTools().some(t=>t.id===state.selected.tool)||!visibleStages().includes(state.selected.stage)))closeDrawer(false);
  renderLegend();renderMap();renderDrawer();
 }
-function resetFilters(){state.search='';state.group='';state.stage='';state.recommendations.clear();byId('tool-search').value='';byId('group-filter').value='';byId('stage-filter').value='';updateFilters();}
+function resetFilters(){state.search='';state.groups.clear();state.stages.clear();state.recommendations.clear();byId('tool-search').value='';closeSubsetFilters();updateFilters();}
 const guidanceSections=Array.from(document.querySelectorAll('.page-foot > .scope-details'));
 const guidanceIds=guidanceSections.map(section=>section.id).join(' ');
 for(const [id,open] of [['expand-guidance',true],['collapse-guidance',false]]){
@@ -759,8 +805,6 @@ byId('open-synthesis-explanation').addEventListener('click',()=>{
 });
 
 byId('tool-search').addEventListener('input',e=>{state.search=e.target.value.trim();updateFilters();});
-byId('group-filter').addEventListener('change',e=>{state.group=e.target.value;updateFilters();});
-byId('stage-filter').addEventListener('change',e=>{state.stage=e.target.value;updateFilters();});
 byId('recommendation-filters').addEventListener('click',e=>{const button=e.target.closest('[data-rec]');if(button){const id=button.dataset.rec;state.recommendations.has(id)?state.recommendations.delete(id):state.recommendations.add(id);updateFilters();byId('recommendation-filters').querySelector('[data-rec="'+id+'"]').focus({preventScroll:true});}else if(e.target.closest('#clear-recommendations')){state.recommendations.clear();updateFilters();byId('recommendation-filters').querySelector('[data-rec]').focus({preventScroll:true});}});
 byId('reset-filters').addEventListener('click',resetFilters);byId('empty-reset').addEventListener('click',()=>{resetFilters();byId('tool-search').focus();});
 byId('roomier').addEventListener('change',e=>{state.roomier=e.target.checked;resizeMap();});
@@ -770,6 +814,8 @@ byId('map-body').addEventListener('keydown',e=>{const button=e.target.closest('.
 byId('close-drawer').addEventListener('click',()=>closeDrawer());
 byId('drawer-backdrop').addEventListener('click',()=>closeDrawer());
 document.addEventListener('keydown',e=>{
+ const openFilter=subsetFilters.find(filter=>byId(filter.id).open);
+ if(e.key==='Escape'&&openFilter){e.preventDefault();closeSubsetFilters();byId(openFilter.id+'-summary').focus({preventScroll:true});return;}
  if(e.key==='Escape'&&state.selected){e.preventDefault();closeDrawer();return;}
  if(e.key==='Tab'&&state.selected&&window.innerWidth<=1100){
   const drawer=byId('details-drawer'),items=Array.from(drawer.querySelectorAll('a[href],button:not([disabled]),summary,[tabindex="0"]')).filter(item=>item.getClientRects().length>0);
@@ -779,8 +825,7 @@ document.addEventListener('keydown',e=>{
  }
 });
 window.addEventListener('resize',()=>{resizeMap();syncDrawerMode();});
-for(const group of DATA.groups){const option=document.createElement('option');option.value=group.id;option.textContent=group.label;byId('group-filter').append(option);}
-for(const stage of STAGES){const option=document.createElement('option');option.value=stage;option.textContent=stage;byId('stage-filter').append(option);}
+initSubsetFilters();
 byId('accessible-palette').checked=false;setPalette(false);
 renderReferenceInformation();renderLegend();renderMap();
 </script>

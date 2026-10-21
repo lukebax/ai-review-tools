@@ -59,8 +59,8 @@
   "groups": [
     {
       "id": "rule-based",
-      "label": "Rule-based algorithms (symbolic AI)",
-      "headerLabel": "Rule-based Algorithms"
+      "label": "Rule-based algorithms",
+      "headerLabel": "Rule-based algorithms"
     },
     {
       "id": "unsupervised",

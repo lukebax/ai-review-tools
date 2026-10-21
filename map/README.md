@@ -24,6 +24,11 @@ or confidence. White cells mean no use listed within this map's scope. Recommend
 match either category in a split cell. Balanced is the default palette; the optional
 colour-blind-friendly switch selects ColorBrewer RdYlBu.
 
+Choose any combination in the **AI category** and **Review stage** dropdowns. With no
+checkboxes selected, that filter shows all. **Show all** clears one dimension; **Reset filters**
+restores all categories, stages and recommendations and clears the tool search. Selections
+within a dimension are alternatives; the dimensions and search work together.
+
 Use arrow keys in the map, Enter/Space to open details and Escape to close them. The layout is
 optimised for desktop; narrow views can scroll the map horizontally. The explanations below
 the filters start collapsed. Use **Expand all** or **Collapse all**, or open individual headings.
@@ -50,6 +55,11 @@ anything or need the private presentation workspace. Do not edit generated `map/
 directly. The build rejects cells containing more than two recommendation categories; review
 the display convention before adding such a case.
 
+Run `node --test map/filters.test.mjs` after interaction changes (requires the root
+development dependencies and Playwright Chromium). These checks cover combinations,
+recommendation highlighting, search, resets, keyboard use and narrow layouts. They also
+run in the shared publication gate.
+
 Publication uses the shared [site workflow](../README.md#publish-and-verify).
 
 ## Guidance and interpretation
@@ -65,7 +75,7 @@ Keep appropriate scientific terminology and useful technical distinctions. Brief
 parenthetical explanations support novice readers without replacing precise field terminology.
 The suitability questions and cell explanations follow this principle; do not apply a blanket
 plain-language replacement pass.
-Its four families follow RAISE v4: Rule-based algorithms (symbolic AI), Unsupervised machine
+Its four families follow RAISE v4: Rule-based algorithms, Unsupervised machine
 learning, Supervised machine learning, and Generative large language models (LLMs), with
 27, 2, 10 and 17 columns respectively. Machine Learning is the visual parent of separate
 Unsupervised and Supervised headings. Cell details retain the more specific RAISE Table 2
