@@ -27,40 +27,23 @@ outside those parts. One bottom-right counter numbers all 21 slides in both HTML
 For HTTP preview, run `python3 preview.py` from the repository root and open the
 printed Presentation URL. The server binds only to this computer; Ctrl+C stops it.
 
-## Presenter notes
+## Presenter view
 
-Choose **Presenter notes** in the toolbar, or press **S**, to open a separate presenter
-window. It shows the current and next slides, a timer and the exact approved script
-passage for the current slide. No written pointing cues are included.
-Use the window's **Layout** menu to change the arrangement; the first opening uses Wide,
-with slide previews above the notes. Longer passages scroll, and each new slide starts
-at the beginning of its notes. Arrow keys in either window advance the presentation.
+Choose **Presenter view** in the toolbar, or press **S**, to open current/next-slide
+previews, a timer and navigation. There are no script passages or presenter notes
+in the published deck. Keep the presenter window on the laptop and the audience
+window on the projector using extended displays, or share only the audience window.
 
-Keep this window on the laptop and the audience window on the projector using extended
-displays, or share only the audience window in a video call. The audience slides and
-downloaded PDF contain no notes. Notes embedded in this public website are accessible
-to anyone who opens Speaker View; they are not confidential.
+Presenter view works on Pages and through `python3 preview.py` locally, including
+without internet access. Allow pop-ups if it does not open. Opening HTML directly
+from disk still shows the audience deck; the presenter button explains how to use
+Pages or the local preview server.
 
-Speaker View works on Pages and through `python3 preview.py` locally, including without
-internet access. Opening the HTML directly from disk still shows the audience deck, but
-the notes button explains how to use Pages or the local preview server. Allow pop-ups
-for this site if the presenter window does not open.
-
-The approved Delivery Script remains the spoken authority. Derive its passages using
-the accepted visual-plan boundaries, without hand-editing a second copy of the speech:
-
-```sh
-python3 presentation/sync_notes.py /path/to/delivery-script.md
-python3 presentation/sync_notes.py /path/to/delivery-script.md --check
-npm run build:pdf
-npm run check
-```
-
-Run these from the repository root. The source script is needed only when updating or
-checking notes against that authority; viewing and publication use the bundled notes.
-The exporter checks each slide's approved passage fingerprint and their combined order,
-requires notes to stay hidden on screen and in print, and checks that speech does not
-leak into the PDF. Changes to script structure require a reviewed boundary update.
+The Delivery Script and editable Word review copy remain in the private presentation
+workspace. The public build rejects embedded notes and script metadata, preventing
+those from being reintroduced by the normal publication process. Previous repository
+commits retain previously published content; removing notes from the current site
+does not rewrite Git history.
 
 ## Save a PDF
 
@@ -102,7 +85,6 @@ prevent version drift and common export defects, not every possible design probl
 - `slide_structure.mjs`: agreed part boundaries and automatic footer labels/numbering; the PDF builder regenerates them from actual slide order, including footers with a link.
 - `assets/theme.css`: slide layouts and print styling, independent of the map.
 - `assets/deck.js`: Reveal setup, navigation, full-screen and presenter-window controls.
-- `sync_notes.py`: derives exact current script passages for all 21 slides.
 - `assets/maps/`: four actual-map PNG captures, their source manifest and two explanatory SVG excerpts.
 - `capture_maps.mjs`: captures the maintained map with all or selected AI categories, including
   native tool labels, all eight stages and the recommendation key. `npm run build:map-images`
@@ -125,8 +107,8 @@ The PDF builder updates slide footers and asset/PDF cache versions automatically
 Pages workflow repeats the export/checks and commits generated outputs if they differ.
 After it succeeds, run `git pull --ff-only` to receive that generated commit locally.
 The content follows the approved talk. The canonical Delivery Script
-and its preparation records stay in the separate private presentation workspace; its
-approved spoken passages are also included in the public presenter notes.
+and its preparation records stay in the separate private presentation workspace.
+The public site contains the audience slides and a presenter view without notes.
 
 ## Sources and scope
 

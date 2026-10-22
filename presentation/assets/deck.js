@@ -13,36 +13,21 @@ if(location.protocol==='file:'){
   pdf.textContent='Open PDF';
 }
 
-// Notes live in a separate presenter window; never put them on audience slides.
-const notesButton=document.getElementById('presenter-notes');
-const openNotes=()=>{
+// Presenter view retains slide previews and timing without embedded script passages.
+const presenterButton=document.getElementById('presenter-view');
+const openPresenter=()=>{
   if(location.protocol==='file:'){
-    alert('For presenter notes, open the presentation on GitHub Pages or through the local preview server (python3 preview.py).');
+    alert('For presenter view, open the presentation on GitHub Pages or through the local preview server (python3 preview.py).');
     return;
   }
   try{if(!localStorage.getItem('reveal-speaker-layout'))localStorage.setItem('reveal-speaker-layout','wide')}catch{}
   try{deck.getPlugin('notes').open()}
-  catch{alert('The presenter window could not open. Allow pop-ups for this site, then try Presenter notes again.')}
+  catch{alert('The presenter window could not open. Allow pop-ups for this site, then try Presenter view again.')}
 };
-notesButton.addEventListener('click',openNotes);
+presenterButton.addEventListener('click',openPresenter);
 window.presentationReady.then(()=>{
   if(!printMode && !deck.isSpeakerNotes()){
-    deck.addKeyBinding({keyCode:83,key:'S',description:'Presenter notes'},openNotes);
+    deck.addKeyBinding({keyCode:83,key:'S',description:'Presenter view'},openPresenter);
   }
   if(deck.isSpeakerNotes())document.querySelector('.toolbar').hidden=true;
-});
-
-// Each new passage should start at the top, even after reading a long note.
-let presenterWindow=null;
-window.addEventListener('message',event=>{
-  if(event.origin!==location.origin || event.source?.opener!==window || typeof event.data!=='string')return;
-  try{
-    const message=JSON.parse(event.data);
-    if(message.namespace==='reveal-notes' && message.type==='connected')presenterWindow=event.source;
-  }catch{}
-});
-deck.on('slidechanged',()=>{
-  if(presenterWindow && !presenterWindow.closed){
-    presenterWindow.document.getElementById('speaker-controls')?.scrollTo(0,0);
-  }
 });

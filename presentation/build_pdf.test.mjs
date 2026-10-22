@@ -46,21 +46,23 @@ test('the current pair passes, and stale/corrupt copies are rejected', async () 
     assert.match(hidden.stderr,/print layout differs/);
     for (let i=0;i<names.length;i++) assert.deepEqual(await fs.readFile(path.join(dir,'presentation',names[i])),before[i]);
     await fs.writeFile(cssPath,css);
-    // Presenter notes must remain hidden even if slide styling is changed later.
-    await fs.appendFile(cssPath,'\n@media print { aside.notes { display:block!important } }');
-    const leaked=run(dir,[]);
-    assert.notEqual(leaked.status,0,'Visible presenter notes were accepted');
-    assert.match(leaked.stderr,/presenter notes missing or visible/);
-    for (let i=0;i<names.length;i++) assert.deepEqual(await fs.readFile(path.join(dir,'presentation',names[i])),before[i]);
-    await fs.writeFile(cssPath,css);
+    // Any return of embedded speech must block export, even when hidden by CSS.
     const htmlPath=path.join(dir,'presentation/index.html');
     const sourceHtml=await fs.readFile(htmlPath,'utf8');
-    assert(sourceHtml.includes('broad landscape'));
-    await fs.writeFile(htmlPath,sourceHtml.replace('broad landscape','altered approved speech'));
-    const altered=run(dir,[]);
-    assert.notEqual(altered.status,0,'An independently changed script passage was accepted');
-    assert.match(altered.stderr,/presenter script differs from the approved passage/);
-    for (let i=1;i<names.length;i++) assert.deepEqual(await fs.readFile(path.join(dir,'presentation',names[i])),before[i]);
+    for (const injected of [
+      sourceHtml.replace('</section>', '<aside class="notes"><p>Private rehearsal text</p></aside></section>'),
+      sourceHtml.replace('<section ', '<section data-notes="Private rehearsal text" '),
+      sourceHtml.replace('</head>', '<meta name="approved-script-sha256" content="stale"></head>'),
+    ]) {
+      await fs.writeFile(htmlPath,injected);
+      for (const args of [[],['--check']]) {
+        const leaked=run(dir,args);
+        assert.notEqual(leaked.status,0,'Embedded presenter speech was accepted');
+        assert.match(leaked.stderr,/must not contain presenter notes or script passages/);
+      }
+      assert.equal(await fs.readFile(htmlPath,'utf8'),injected,'Failed export must not rewrite the source');
+      for (let i=1;i<names.length;i++) assert.deepEqual(await fs.readFile(path.join(dir,'presentation',names[i])),before[i]);
+    }
     await fs.writeFile(htmlPath,sourceHtml);
     await fs.rm(path.join(dir,'presentation/assets/maps/map-overview.png'));
     const failed=run(dir,[]);
@@ -70,7 +72,7 @@ test('the current pair passes, and stale/corrupt copies are rejected', async () 
 });
 
 
-test('presenter controls sync slides and reset long notes without exposing speech', async () => {
+test('presenter view syncs slides and timing without published notes', async () => {
   const server=createServer(async (request,response)=>{
     try {
       const pathname=new URL(request.url,'http://localhost').pathname;
@@ -98,28 +100,25 @@ test('presenter controls sync slides and reset long notes without exposing speec
     assert.deepEqual(labels,['',...Array(7).fill(`1 · ${PARTS[0].title}`),...Array(5).fill(`2 · ${PARTS[1].title}`),...Array(4).fill(`3 · ${PARTS[2].title}`),...Array(3).fill(`4 · ${PARTS[3].title}`),''],'Each content slide needs its agreed part label');
     let opening=page.waitForEvent('popup');
     await page.keyboard.press('s');
-    const notes=await opening;
-    await notes.waitForSelector('.speaker-controls-notes [data-note="speech"]');
+    const presenter=await opening;
+    await presenter.waitForSelector('#current-slide iframe');
+    await presenter.waitForSelector('.speaker-controls-time');
+    assert.equal(await page.locator('aside.notes,[data-note],[data-notes],[data-spoken-sha256]').count(),0);
+    assert.equal(await presenter.locator('.speaker-controls-notes').isVisible(),false);
     await page.evaluate(()=>deck.slide(deck.getIndices(document.getElementById('verification-validation')).h));
-    await notes.waitForFunction(()=>document.querySelector('.speaker-controls-notes .value').innerText.startsWith('Slide 8 ·'));
-    await notes.evaluate(()=>document.getElementById('speaker-controls').scrollTop=99999);
-    assert(await notes.evaluate(()=>document.getElementById('speaker-controls').scrollTop)>0);
-    // This forwards a synthetic key event into the slide iframe.
-    await notes.keyboard.press('ArrowRight');
+    await presenter.frameLocator('#current-slide iframe').locator('#verification-validation.present').waitFor();
+    // Presenter keys still advance the audience slide.
+    await presenter.keyboard.press('ArrowRight');
     await page.waitForFunction(()=>deck.getCurrentSlide().id==='map-overview');
-    await notes.waitForFunction(()=>document.querySelector('.speaker-controls-notes .value').innerText.startsWith('Slide 9 ·'));
-    assert.equal(await notes.evaluate(()=>document.getElementById('speaker-controls').scrollTop),0);
-    assert.equal(await page.locator('aside.notes:visible').count(),0);
-    await page.evaluate(()=>deck.slide(deck.getIndices(document.getElementById('screening-tasks')).h));
-    await notes.waitForFunction(()=>document.querySelector('.speaker-controls-notes .value').innerText.startsWith('Slide 15 ·'));
-    assert.equal(await notes.locator('.speaker-controls-notes [data-note="speech"]').count(),4);
-    assert.equal(await page.locator('aside.notes [data-note="cue"]').count(),0);
-    assert.equal(await notes.frameLocator('#current-slide iframe').locator('.toolbar').isVisible(),false);
-    await notes.close();
+    await presenter.frameLocator('#current-slide iframe').locator('#map-overview.present').waitFor();
+    assert.equal(await presenter.locator('.speaker-controls-notes').isVisible(),false);
+    assert.equal(await presenter.frameLocator('#current-slide iframe').locator('.toolbar').isVisible(),false);
+    await presenter.close();
     opening=page.waitForEvent('popup');
-    await page.getByRole('button',{name:'Presenter notes',exact:true}).click();
+    await page.getByRole('button',{name:'Presenter view',exact:true}).click();
     const reopened=await opening;
-    await reopened.waitForSelector('.speaker-controls-notes [data-note="speech"]');
+    await reopened.waitForSelector('#current-slide iframe');
+    assert.equal(await reopened.locator('.speaker-controls-notes').isVisible(),false);
     await reopened.close();
     assert.deepEqual(errors,[]);
   } finally {

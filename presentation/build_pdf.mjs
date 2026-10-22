@@ -16,8 +16,15 @@ const pdfName = 'navigating-ai-evidence-synthesis.pdf';
 const manifestPath = path.join(deckDir, 'pdf-build.json');
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const requireThat = (condition, message) => { if (!condition) throw new Error(message); };
-const spokenHash = text => hash(text.trim().replace(/\s+/gu, ' '));
 const normalize = text => text.normalize('NFKC').replace(/[‘’ʼ]/g, "'").replace(/[“”]/g, '"').replace(/\s|\u00ad/g, '');
+
+// Script passages belong in the private Word/Markdown review workflow, not this site.
+function checkNoPresenterSpeech(html) {
+  requireThat(!/<aside\b[^>]*\bclass\s*=\s*["'][^"']*\bnotes\b/i.test(html)
+    && !/\b(?:data-notes|data-note|data-spoken-sha256)\s*=/i.test(html)
+    && !/approved-script-sha256/i.test(html),
+  'Public presentation must not contain presenter notes or script passages.');
+}
 
 async function assetFiles(dir) {
   const names = [];
@@ -30,7 +37,7 @@ async function assetFiles(dir) {
   return names;
 }
 async function inputsDigest(html) {
-  const paths = [path.join(deckDir, 'index.html'), path.join(deckDir, 'build_pdf.mjs'), path.join(deckDir, 'sync_notes.py'), path.join(deckDir, 'slide_structure.mjs'),
+  const paths = [path.join(deckDir, 'index.html'), path.join(deckDir, 'build_pdf.mjs'), path.join(deckDir, 'slide_structure.mjs'),
     path.join(root, 'package.json'), path.join(root, 'package-lock.json'),
     ...await assetFiles(path.join(deckDir, 'assets'))].sort();
   const digest = createHash('sha256');
@@ -59,6 +66,7 @@ async function check() {
   const manifest = JSON.parse(await fs.readFile(manifestPath, 'utf8'));
   const html = await fs.readFile(path.join(deckDir, 'index.html'), 'utf8');
   checkSlideFooters(html);
+  checkNoPresenterSpeech(html);
   requireThat(manifest.inputSHA256 === await inputsDigest(), 'PDF is out of date: HTML, assets or export dependencies changed. Run npm run build:pdf.');
   const pdfHash = hash(await fs.readFile(path.join(deckDir, pdfName)));
   requireThat(pdfHash === manifest.pdfSHA256, 'PDF bytes do not match the checked export. Run npm run build:pdf.');
@@ -88,7 +96,7 @@ async function inspectSlide(page, index) {
   return page.evaluate(index => {
     const slide = document.querySelectorAll('section.slide')[index], box = slide.getBoundingClientRect();
     const sx = 1280 / box.width, sy = 720 / box.height;
-    const audience = selector => [...slide.querySelectorAll(selector)].filter(e => !e.closest('aside.notes'));
+    const audience = selector => [...slide.querySelectorAll(selector)];
     const count = document.querySelectorAll('section.slide').length;
     const counters = slide.querySelectorAll('.slide-footer .slide-count');
     if (counters.length !== 1 || counters[0].textContent !== `${index + 1} / ${count}` || getComputedStyle(counters[0]).display === 'none') {
@@ -97,8 +105,9 @@ async function inspectSlide(page, index) {
     if ([...document.querySelectorAll('.reveal > .slide-number')].some(e => getComputedStyle(e).display !== 'none')) {
       throw new Error('Duplicate Reveal slide counter is visible');
     }
-    const notes = slide.querySelector('aside.notes');
-    if (!notes || getComputedStyle(notes).display !== 'none') throw new Error(`Slide ${index + 1}: presenter notes missing or visible`);
+    if (slide.querySelector('aside.notes,[data-note],[data-notes],[data-spoken-sha256]') || slide.hasAttribute('data-notes')) {
+      throw new Error(`Slide ${index + 1}: public presenter notes are not permitted`);
+    }
     const elements = audience('h1,h2,h3,p,li,img,svg,.slide-footer');
     const layout = elements.map(e => {
       const b = e.getBoundingClientRect();
@@ -112,6 +121,7 @@ async function inspectSlide(page, index) {
 async function build() {
   const originalDigest = await inputsDigest();
   let html = await versionAssets(updateSlideFooters(await fs.readFile(path.join(deckDir, 'index.html'), 'utf8')));
+  checkNoPresenterSpeech(html);
   const temp = await fs.mkdtemp(path.join(tmpdir(), 'ai-review-pdf-'));
   let browser, server;
   try {
@@ -145,20 +155,6 @@ async function build() {
     await ready(false);
     const count = await page.locator('section.slide').count();
     requireThat(count > 0, 'No slides found');
-    const notes = await page.evaluate(() => ({
-      approved: document.querySelector('meta[name="approved-script-sha256"]')?.content,
-      slides: [...document.querySelectorAll('section.slide')].map(slide => ({
-        count: slide.querySelectorAll('aside.notes').length,
-        expected: slide.querySelector('aside.notes')?.dataset.spokenSha256,
-        speech: [...slide.querySelectorAll('aside.notes [data-note="speech"]')].map(p => p.textContent),
-      })),
-    }));
-    for (const [i, note] of notes.slides.entries()) {
-      requireThat(note.count === 1 && note.speech.length > 0, `Slide ${i + 1}: missing or duplicated presenter notes`);
-      requireThat(spokenHash(note.speech.join(' ')) === note.expected, `Slide ${i + 1}: presenter script differs from the approved passage`);
-    }
-    requireThat(spokenHash(notes.slides.flatMap(s => s.speech).join(' ')) === notes.approved,
-      'Presenter notes omit, duplicate, reorder or change the approved speech');
     requireThat(await page.locator('.fragment,video,audio,iframe,canvas').count() === 0,
       'This static PDF pipeline requires complete static slides; interactive/media states need explicit handling.');
     const screen = [];
@@ -201,9 +197,6 @@ async function build() {
       for (let i = 0; i < count; i++) {
         const content = await (await parsed.getPage(i + 1)).getTextContent();
         const actual = normalize(content.items.map(item => item.str || '').join(' '));
-        for (const spoken of notes.slides[i].speech) {
-          if (spoken.length > 60) requireThat(!actual.includes(normalize(spoken)), `PDF page ${i + 1} exposes presenter notes`);
-        }
         for (const expected of screen[i].text) requireThat(actual.includes(normalize(expected)),
           `PDF page ${i + 1} is missing slide text: ${expected.slice(0, 90)}; extracted: ${actual.slice(0, 400)}`);
       }

@@ -59,3 +59,15 @@ The publication tooling uses Playwright (Apache 2.0), pdf-lib (MIT), and PDF.js/
 (Apache 2.0), with exact versions in `package-lock.json`. Their installed packages retain
 upstream notices. These tools are build dependencies, not browser runtime dependencies;
 `node_modules/` is excluded from Git and the published site.
+
+## Opening-slide logos
+
+The University of Oxford and Department of Paediatrics logos are reproduced unchanged
+from the [department's official website](https://www.paediatrics.ox.ac.uk/), retrieved
+22 October 2026 ([Oxford artwork](https://www.paediatrics.ox.ac.uk/++branding++/secondary-logo),
+[Paediatrics artwork](https://www.paediatrics.ox.ac.uk/++branding++/primary-logo)).
+Use follows the [Oxford brand guidance](https://www.ox.ac.uk/about/the-university/brand/guidelines).
+The MESISIG logo was supplied in the preceding symposium presentation, “AI in evidence
+synthesis: Setting the scene”, by Aidan Cashin and Michael Ferraro (slide 1); its original
+PNG is reproduced unchanged. These marks identify the presenter's affiliation and workshop.
+They retain their owners' rights and are excluded from this project's MIT and CC BY licences.
