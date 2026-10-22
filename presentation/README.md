@@ -42,10 +42,7 @@ from disk still shows the audience deck; the presenter button explains how to us
 Pages or the local preview server.
 
 The Delivery Script and editable Word review copy remain in the private presentation
-workspace. The public build rejects embedded notes and script metadata, preventing
-those from being reintroduced by the normal publication process. Previous repository
-commits retain previously published content; removing notes from the current site
-does not rewrite Git history.
+workspace. The public build rejects embedded script passages and notes metadata.
 
 ## Save a PDF
 
@@ -59,6 +56,8 @@ checks it, saves the generated files in Git, then publishes both formats togethe
 export/check stops publication and leaves the previous published site in place. A source
 change during the build stops that run; generated files are never rebased onto newer slides.
 Downloaded files and already-open browser tabs remain snapshots; reopen/download after updates.
+
+## Edit and check
 
 For local editing, use Node.js 24+ and the committed dependency lockfile:
 
@@ -76,7 +75,8 @@ screen/print geometry. `--check` rejects any changed HTML, asset, export code/de
 or PDF that no longer matches `pdf-build.json`. The tests deliberately introduce stale
 sources, a damaged PDF, missing images and print-only hidden graphics to test those gates.
 
-Publishing uses macOS 15 and pinned Chromium to retain the current system-font styling.
+Publishing uses macOS 15 and the Chromium version fixed by the dependency lockfile to retain
+the current system-font styling.
 The website itself still needs only a browser; these are development dependencies.
 Substantive visual edits still need visual review and rehearsal—the automated checks
 prevent version drift and common export defects, not every possible design problem.
@@ -105,13 +105,13 @@ prevent version drift and common export defects, not every possible design probl
 - `build_pdf.mjs` and `build_pdf.test.mjs`: export, alignment checks and regression tests.
 - `pdf-build.json`: compact fingerprints connecting the checked PDF to its exact inputs.
 
-The PDF builder updates slide footers and asset/PDF cache versions automatically. After editing, run
-`npm run build:pdf` and review the changed views. Push the source changes to `main`; the
-Pages workflow repeats the export/checks and commits generated outputs if they differ.
-After it succeeds, run `git pull --ff-only` to receive that generated commit locally.
-The content follows the approved talk. The canonical Delivery Script
-and its preparation records stay in the separate private presentation workspace.
-The public site contains the audience slides and a presenter view without notes.
+The PDF builder updates slide footers and asset/PDF cache versions automatically. After editing,
+run the checks above and review changed views. Follow the shared
+[publication steps](../README.md#maintain-and-publish).
+
+Keep substantive slide changes aligned with the approved Delivery Script in the private
+workspace, and refresh its Word review copy if the speech or slide sequence changes.
+Visual-only refinements do not require rewriting the script.
 
 ## Sources and scope
 

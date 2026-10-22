@@ -1,6 +1,6 @@
 {
   "sourceSHA256": "646686fd0c646fb0d679bccf631e05672c630931449f5db347ba1d8e6605e9b2",
-  "builderSHA256": "e8d3363de6b6e6e73f8d87c4d71d735a8fde4e09048d20a1c114eb411c393fe5",
+  "builderSHA256": "b1889ec5426e8c696527c34988d24e93b23953a8da1c39168d1efba99922bc83",
   "browser": "156.0.8078.4",
   "images": [
     {
@@ -8,7 +8,7 @@
       "groups": [],
       "width": 3104,
       "height": 1442,
-      "sha256": "995777512df26ce81318423ffd0a90e4241855ff96736241b99acca50f1f5140",
+      "sha256": "b18a733783ff8bb414c4e5e8c625479b5782a413c9d137def00118949c70d8e0",
       "tools": 56,
       "stages": 8
     },
@@ -20,7 +20,7 @@
       ],
       "width": 2882,
       "height": 1468,
-      "sha256": "a60d49b0c84a2361a37ab7dccc16d26131a28c7fdcc0afcdc928c205e6e1a19e",
+      "sha256": "4e6dded45a719df2fd2841ed1facc7fb4a9a215ec8b7e4c9f249eb8df73bb70a",
       "tools": 29,
       "stages": 8
     },
@@ -31,7 +31,7 @@
       ],
       "width": 2262,
       "height": 1442,
-      "sha256": "126a82a8804bb07c029b3ab40a405a5e5968d8e4b7d2ab24ac2c0d0018fd7d9c",
+      "sha256": "7c812145b41d2f5c8f599b6eb7f6e184fda79dff4ca479ba675489dcc54618ff",
       "tools": 10,
       "stages": 8
     },
@@ -42,7 +42,7 @@
       ],
       "width": 2262,
       "height": 1430,
-      "sha256": "64566f0cccc24b87ee9ab82030ac4e216b55139cd392f7afa3a698ac92b8fe60",
+      "sha256": "ad2ba008ef7aba30247820cf3c1cb293151a53148f3994b262fd4384c94779cc",
       "tools": 17,
       "stages": 8
     }

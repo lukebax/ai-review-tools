@@ -1,7 +1,8 @@
 # Navigating AI in Evidence Synthesis
 
 An independent interactive guide to RAISE’s recommendations on using AI, created and
-maintained by Luke Baxter. Based on RAISE 3 draft v4.0 (23 September 2026): 56 tools,
+maintained by Luke Baxter. Based on **RAISE 3 Table 2**, draft v4.0 (23 September 2026), with supporting explanations
+from the wider guidance: 56 tools,
 131 functions, 96 populated cells and twelve cells with two recommendations.
 
 [Site overview](../README.md) · [Live map](https://lukebax.github.io/ai-review-tools/map/)
@@ -16,8 +17,7 @@ connection is required to explore the map; outgoing source/tool links require in
 The complete map and its editable sources live together in `map/`.
 
 Select a cell to read its function-specific explanations, recommendations and sources.
-The instruction above the map links to Find a tool and Roomier columns for a closer view;
-these controls retain their existing positions below the map.
+Use **Find a tool**, **Roomier columns** and the filters below the matrix for a closer view.
 Recommendations apply to the specified function or workflow, not to every use of a product.
 Split cells preserve both recommendations; their diagonal halves do not represent proportions
 or confidence. White cells mean no use listed within this map's scope. Recommendation filters
@@ -27,9 +27,7 @@ colour-blind-friendly switch selects ColorBrewer RdYlBu.
 Choose any combination in the **AI category** and **Review stage** dropdowns. With no
 checkboxes selected, that filter shows all. **Show all** clears one dimension; **Reset filters**
 restores all categories, stages and recommendations and clears the tool search. Selections
-within a dimension are alternatives; the dimensions and search work together. Filtered
-maps fit their visible columns without a blank bordered extension. Narrow views retain
-horizontal scrolling rather than squeezing tool columns beyond their readable minimum.
+within a dimension are alternatives; the dimensions and search work together. Narrow views retain horizontal scrolling to keep tool columns readable.
 
 Use arrow keys in the map, Enter/Space to open details and Escape to close them. The layout is
 optimised for desktop; narrow views can scroll the map horizontally. The explanations below
@@ -49,7 +47,9 @@ The generated map itself needs only a browser.
 3. From the repository root, run `python3 map/build.py` to validate and regenerate `map/index.html`.
 4. Open the map and check the change. Run `python3 map/build.py --check` to confirm that
    the generated HTML matches its sources without changing any files.
-5. Follow the publication instructions below when a release is authorised.
+5. When changing map data, regenerate the presentation excerpts with
+   `python3 presentation/build_visuals.py`. Then follow the shared
+   [check and publication steps](../README.md#maintain-and-publish).
 
 The script also works when called by its path from another directory. It reads the data and
 template beside itself in `map/` and writes only `map/index.html`. It does not download
@@ -61,8 +61,6 @@ Run `node --test map/filters.test.mjs` after interaction changes (requires the r
 development dependencies and Playwright Chromium). These checks cover combinations,
 recommendation highlighting, search, resets, keyboard use and narrow layouts. They also
 run in the shared publication gate.
-
-Publication uses the shared [site workflow](../README.md#publish-and-verify).
 
 ## Guidance and interpretation
 

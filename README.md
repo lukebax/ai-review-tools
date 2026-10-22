@@ -1,97 +1,84 @@
-# AI in evidence synthesis
+# Navigating AI in Evidence Synthesis
 
-Two independent browser tools, created and maintained by Luke Baxter:
+An interactive map and accompanying presentation by **Dr Luke Baxter**, exploring AI tools
+across the systematic-review workflow and the conditions for using them responsibly.
 
-- **[Interactive map](https://lukebax.github.io/ai-review-tools/map/)** — Navigating AI in
-  Evidence Synthesis, a guide to RAISE’s recommendations. [Map instructions](map/README.md).
-- **[Presentation](https://lukebax.github.io/ai-review-tools/presentation/)** —
-  a 21-slide presentation, Navigating AI in Evidence Synthesis, with presenter view, keyboard navigation
-  and a [checked PDF](https://lukebax.github.io/ai-review-tools/presentation/navigating-ai-evidence-synthesis.pdf).
-  [Presentation instructions](presentation/README.md).
-
+- **[Interactive map](https://lukebax.github.io/ai-review-tools/map/)** — tools, tasks and
+  use recommendations, with filters, cell details and explanatory guidance.
+- **[Presentation](https://lukebax.github.io/ai-review-tools/presentation/)** — 21 slides
+  with keyboard navigation, presenter view and a
+  [matching PDF](https://lukebax.github.io/ai-review-tools/presentation/navigating-ai-evidence-synthesis.pdf).
 
 The **[site home](https://lukebax.github.io/ai-review-tools/)** links to both components.
 
-## Structure
+The map is an independent adaptation of **RAISE 3 Table 2**, with supporting explanations
+from the wider RAISE guidance. The source baseline is **RAISE v4**; exact versions,
+adaptations and licences are described in the [map guide](map/README.md) and
+[source notices](THIRD_PARTY_NOTICES.md). Recommendations concern particular uses, not
+blanket approval of a product.
 
-| Path | Purpose |
-|---|---|
-| `index.html` | Small landing page linking to the map and presentation |
-| `map/` | Complete map: data, template, build script, generated HTML and instructions |
-| `presentation/` | Complete presentation: HTML, vector visuals, checked PDF, bundled dependencies and instructions |
-| `preview.py` | Optional local preview server for the whole site |
-| `AGENTS.md` | Maintenance rules |
-| `LICENSE`, `CONTENT-LICENSE.md`, `THIRD_PARTY_NOTICES.md`, `LICENSES/` | Scoped licences and attribution |
-| `.github/workflows/pages.yml` | Required PDF build/check and combined Pages publication |
-| `package.json`, `package-lock.json` | Fixed development-only export dependencies |
-| `.nojekyll` | Serve the built site without Jekyll processing |
+## View locally
 
-Each component owns its assets and works independently. Neither depends on the private
-presentation workspace. The map’s generated HTML is self-contained; the presentation’s
-required files are bundled in its own folder. A fresh clone or source ZIP contains everything
-needed to view both. A clone also includes Git history and the remote connection.
+Download the repository ZIP or clone it, keep the folders together, and open `index.html`
+in a modern browser. No build or internet connection is needed to view the map,
+audience slides or saved PDF. Outgoing links require internet access.
 
-## Preview locally
-
-Open root `index.html` in a modern browser and choose a component. You can also open
-`map/index.html` or `presentation/index.html` directly. Keep the presentation’s assets with it.
-
-For local HTTP preview, run from the repository root:
+For presenter view and local HTTP preview, run from the repository root:
 
 ```sh
 python3 preview.py
 ```
 
-Open one of the printed URLs. The server binds only to this computer and does not publish
-anything. Stop it with Ctrl+C. Python 3.9+ is required for the preview helper and map build;
-viewing the HTML needs only a browser. Browsing and PDF download use bundled assets;
-outgoing source links require internet. See the [PDF instructions](presentation/README.md#save-a-pdf).
+Open one of the printed URLs. The server runs only on your computer; stop it with Ctrl+C.
+See the [map instructions](map/README.md) and [presentation instructions](presentation/README.md)
+for navigation, filtering and PDF use.
 
-## Edit
+## Repository structure
 
-- **Map:** edit `map/map-data.json` or `map/map-template.html`, then run
-  `python3 map/build.py` and `python3 map/build.py --check`. The generated output is
-  `map/index.html`; do not edit it directly. See the [map guide](map/README.md).
-- **Presentation:** edit its HTML, `assets/theme.css` and `assets/deck.js`. The saved
-  presentation opens directly in a browser. Regenerate derived map visuals when their
-  data changes; after slide edits, run `npm run build:pdf` to refresh section labels,
-  slide numbers and the matching PDF, then `npm run check`. Publication repeats the
-  PDF export automatically. Bundled dependencies retain
-  their fixed versions and original licence notices.
-- **Landing page:** edit root `index.html`. It has no runtime dependencies.
+| Path | Purpose |
+|---|---|
+| `index.html` | Landing page linking to the map and presentation |
+| `map/` | Editable data/template, generated standalone HTML and map tests |
+| `presentation/` | Slides, bundled assets, checked PDF, export tools and tests |
+| `preview.py` | Optional local preview server; Python 3.9+ |
+| `package.json`, `package-lock.json` | Fixed development dependencies for checks and PDF export |
+| `.github/workflows/pages.yml` | Build, verify and publish HTML and PDF together |
+| `AGENTS.md` | Maintenance rules |
+| `LICENSE`, `CONTENT-LICENSE.md`, `THIRD_PARTY_NOTICES.md`, `LICENSES/` | Licences and attribution |
 
-Keep all required project files versioned. Keep private sources, temporary inspection files
-and unrelated material out of this public repository. Use the operating system’s
-temporary directory for disposable checks.
+All viewing assets and build inputs are versioned here. The Delivery Script, Word review
+copy and original source library stay in the separate private presentation workspace;
+they are not public-site dependencies. Presenter view contains slide previews, a timer
+and navigation, without the private script.
 
-## Publish and verify
+## Maintain and publish
 
-GitHub Pages uses **GitHub Actions**, through `.github/workflows/pages.yml`. Every push
-to `main` exports a fresh presentation PDF, verifies alignment, and publishes the checked
-HTML and PDF in one site artifact. A failed build does not replace the live site. The
-workflow can also be run manually from Actions; direct branch publishing is disabled.
+Edit the source files described in each component's README. After changing map data,
+regenerate both the standalone map and its explanatory slide excerpts:
 
-For requested updates, edit locally, rebuild/check the affected components, then commit
-and push to `main`. The workflow saves generated PDF/cache-version/manifest changes back
-to Git before deployment, if needed. Once it succeeds, run `git pull --ff-only` to keep the
-local copy aligned, and verify the live pages. Do not force-push or rebase generated output
-onto different HTML. An explicit local-only request takes precedence over publication.
+```sh
+python3 map/build.py
+python3 presentation/build_visuals.py
+```
 
-The root, `/map/` and `/presentation/` URLs are unchanged. The map remains independent of
-presentation dependencies at viewing time; the workflow checks its generated HTML and
-map excerpts before publication. Source and asset files are fully backed by this repository.
-A fresh clone contains the saved PDF, so no build is needed merely to view/download it.
+With the [presentation development dependencies](presentation/README.md#edit-and-check)
+installed, finish an update with:
 
-See [presentation maintenance](presentation/README.md) for checks and
-[GitHub's workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+```sh
+npm run build:pdf
+npm run check
+npm test
+```
+
+Review affected browser views and PDF pages, then commit and push to `main`. GitHub Actions
+refreshes the map captures, generates the PDF from the same slides and assets, checks
+alignment, and publishes the checked site. A failed check leaves the previous site live.
+The workflow saves generated files back to Git; after it succeeds, run `git pull --ff-only`
+and verify Pages. Keep build outputs together with the sources that produced them.
 
 ## Licences
 
-- Original interface/build software and technical maintenance documentation:
-  **[MIT](LICENSE)**, © 2026 Luke Baxter.
-- Original explanatory text, annotations and curated map data:
-  **[CC BY 4.0](CONTENT-LICENSE.md)**, including that content inside the map HTML.
-- Upstream RAISE material retains its CC BY 4.0 terms and authorship. Bundled libraries and
-  other third-party assets retain their respective terms; see [third-party notices](THIRD_PARTY_NOTICES.md).
-
-Software and content licences remain distinct when bundled in one HTML file.
+- Original software and maintenance documentation: **[MIT](LICENSE)**.
+- Original explanatory content and curated map data: **[CC BY 4.0](CONTENT-LICENSE.md)**.
+- RAISE material, bundled libraries and third-party assets retain their own attribution
+  and terms; see [source and licence notices](THIRD_PARTY_NOTICES.md).

@@ -55,7 +55,7 @@ try{
    assert.equal(cell.categories,recs.join(','));assert.equal(cell.filtered,false);
   }
   const clip=await page.evaluate(()=>{
-   const map=document.getElementById('map-scroll'),table=document.getElementById('map-table');
+   const map=document.getElementById('map-scroll');
    if(map.scrollWidth>map.clientWidth+2)throw new Error('Capture would omit map columns');
    const rects=[map,...document.querySelectorAll('#recommendation-key legend,#recommendation-filters button')].map(e=>e.getBoundingClientRect());
    const left=Math.floor(Math.min(...rects.map(r=>r.left))),top=Math.floor(rects[0].top);
