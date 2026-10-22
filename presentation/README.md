@@ -23,6 +23,8 @@ The content is organised into four parts, shown by a small footer label: **Found
 (slides 2–8), **Mapping the landscape** (9–13), **Why recommendations differ between uses**
 (14–17), and **Assessing suitability for your review** (18–20). Opening and closing remain
 outside those parts. One bottom-right counter numbers all 21 slides in both HTML and PDF.
+Slides 9–13 share a centred map-access link. The closing identifies RAISE as the
+guidance and the interactive map as a companion for exploring it.
 
 For HTTP preview, run `python3 preview.py` from the repository root and open the
 printed Presentation URL. The server binds only to this computer; Ctrl+C stops it.
@@ -95,6 +97,7 @@ prevent version drift and common export defects, not every possible design probl
   Run `python3 presentation/build_visuals.py` from the repository root after a
   relevant approved data change. Run `python3 presentation/build_visuals.py --check` to verify the saved assets
   without writing files. The generator also checks cell assignments and colour fidelity.
+- `assets/images/navigation-map.png`: generated general navigation illustration on the closing slide; it is conceptual, not the tool matrix or a real geographical map.
 - `assets/images/site-qr.svg`: QR code for the site home, also printed as a URL
   on the first and last slides.
 - `assets/vendor/reveal/`: fixed upstream distribution and MIT licence.

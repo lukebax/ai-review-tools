@@ -47,7 +47,10 @@ version **6.0.2**, by Hakim El Hattab and contributors, under the MIT licence.
 The required distribution files, including the speaker-notes plugin, are unmodified; the upstream licence and version
 record are in `presentation/assets/vendor/reveal/`. No CDN is required.
 
-The diagrams and QR asset are original generated graphics. Map excerpts derive
+The diagrams and QR asset are original generated graphics. The closing-slide
+`navigation-map.png` illustration was generated with OpenAI image generation on
+23 October 2026. It depicts a conceptual navigation map, not actual geography or
+evidence, and contains no third-party artwork. Map excerpts derive
 from this repository’s maintained data and retain the RAISE attribution above.
 The presentation’s [source note](presentation/README.md#sources-and-scope)
 identifies the exact guidance versions and explains the adaptations. The PDF
