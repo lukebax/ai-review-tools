@@ -10,9 +10,9 @@
 <rect x="710.6786" y="51" width="197.3214" height="81" fill="#eaf0f3"/>
 <text x="414.6964" y="87" font-size="23" text-anchor="middle" font-weight="650" fill="#203746">Rule-based</text>
 <text x="414.6964" y="114" font-size="23" text-anchor="middle" font-weight="650" fill="#203746">algorithms</text>
-<text x="652.6429" y="74" font-size="21" text-anchor="middle" font-weight="650" fill="#203746">Supervised</text>
-<text x="652.6429" y="99" font-size="21" text-anchor="middle" font-weight="650" fill="#203746">machine</text>
-<text x="652.6429" y="124" font-size="21" text-anchor="middle" font-weight="650" fill="#203746">learning</text>
+<text x="652.6429" y="74" font-size="19" text-anchor="middle" font-weight="650" fill="#203746">Supervised</text>
+<text x="652.6429" y="99" font-size="19" text-anchor="middle" font-weight="650" fill="#203746">machine</text>
+<text x="652.6429" y="124" font-size="19" text-anchor="middle" font-weight="650" fill="#203746">learning</text>
 <text x="809.3393" y="87" font-size="23" text-anchor="middle" font-weight="650" fill="#203746">Generative</text>
 <text x="809.3393" y="114" font-size="23" text-anchor="middle" font-weight="650" fill="#203746">LLMs</text>
 <text x="583" y="25" font-size="23" text-anchor="middle" font-weight="650" fill="#203746">Unsupervised machine learning</text>

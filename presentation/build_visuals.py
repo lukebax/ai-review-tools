@@ -214,7 +214,7 @@ def patterns():
     b = group_bands(svg, TOOLS, width=width)
     header_lines = {
         'rule-based': ((87, 114), ('Rule-based', 'algorithms'), 23),
-        'supervised': ((74, 99, 124), ('Supervised', 'machine', 'learning'), 21),
+        'supervised': ((74, 99, 124), ('Supervised', 'machine', 'learning'), 19),
         'generative': ((87, 114), ('Generative', 'LLMs'), 23),
     }
     for gid, (ys, labels, size) in header_lines.items():
