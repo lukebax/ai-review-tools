@@ -49,7 +49,7 @@ record are in `presentation/assets/vendor/reveal/`. No CDN is required.
 
 The diagrams and QR asset are original generated graphics. The closing-slide
 `navigation-map.png` illustration was generated with OpenAI image generation on
-23 October 2026. It depicts a conceptual navigation map, not actual geography or
+23 October 2026. It depicts a playful conceptual treasure map, not actual geography or
 evidence, and contains no third-party artwork. Map excerpts derive
 from this repository’s maintained data and retain the RAISE attribution above.
 The presentation’s [source note](presentation/README.md#sources-and-scope)

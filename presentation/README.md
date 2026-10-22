@@ -97,7 +97,7 @@ prevent version drift and common export defects, not every possible design probl
   Run `python3 presentation/build_visuals.py` from the repository root after a
   relevant approved data change. Run `python3 presentation/build_visuals.py --check` to verify the saved assets
   without writing files. The generator also checks cell assignments and colour fidelity.
-- `assets/images/navigation-map.png`: generated general navigation illustration on the closing slide; it is conceptual, not the tool matrix or a real geographical map.
+- `assets/images/navigation-map.png`: generated playful scroll-style treasure-map illustration on the closing slide; it is conceptual, not the tool matrix or a real geographical map.
 - `assets/images/site-qr.svg`: QR code for the site home, also printed as a URL
   on the first and last slides.
 - `assets/vendor/reveal/`: fixed upstream distribution and MIT licence.
