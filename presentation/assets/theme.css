@@ -52,13 +52,13 @@ html.print-pdf .toolbar{display:none}html.print-pdf .reveal .slides section.slid
 .actual-map.with-subtitle .subtitle{margin-top:12px}
 .screening h2{font-size:42px}
 
-/* Opening-slide affiliation marks; original artwork and proportions retained. */
-.cover-logos{display:flex;justify-content:space-between;align-items:center;height:108px;margin-bottom:30px}
+/* Original logo artwork and proportions retained. Multiply blends the Paediatrics white field into the slide paper. */
+.cover-logos{display:flex;justify-content:space-between;align-items:center;height:108px;margin-top:12px;margin-bottom:68px}
 .affiliation-logos{display:flex;gap:38px;align-items:center}
 .reveal .logo-oxford{width:100px;height:100px;outline:1px solid #fff}
-.reveal .logo-paediatrics{width:192px;height:108px}
+.reveal .logo-paediatrics{width:192px;height:108px;mix-blend-mode:multiply}
 .reveal .logo-mesisig{width:360px;height:auto}
-.reveal .cover h1{font-size:68px;margin-top:0;line-height:1.06}
+.reveal .cover h1{font-size:68px;max-width:100%;margin-top:0;line-height:1.06;white-space:nowrap}
 .reveal .cover-subtitle{font-size:32px;margin-top:20px}
 .reveal .cover .presenter{font-size:27px;margin-top:24px;color:var(--ink)}
 .reveal .presenter-role{font-size:23px;margin-top:8px;color:var(--muted)}
