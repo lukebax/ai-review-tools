@@ -97,7 +97,7 @@ test('presenter view syncs slides and timing without published notes', async () 
       footers.map((_,index)=>`${index+1} / ${footers.length}`),'Footer numbers must follow actual order, including link-bearing footers');
     assert.equal(await page.locator('.reveal > .slide-number:visible').count(),0,'Only the footer counter should be visible');
     const labels=await page.locator('section.slide').evaluateAll(slides=>slides.map(slide=>slide.querySelector('.part-label')?.textContent || ''));
-    assert.deepEqual(labels,['',...Array(7).fill(`1 · ${PARTS[0].title}`),...Array(5).fill(`2 · ${PARTS[1].title}`),...Array(4).fill(`3 · ${PARTS[2].title}`),...Array(3).fill(`4 · ${PARTS[3].title}`),''],'Each content slide needs its agreed part label');
+    assert.deepEqual(labels,['',...Array(7).fill(`1 · ${PARTS[0].title}`),...Array(6).fill(`2 · ${PARTS[1].title}`),...Array(4).fill(`3 · ${PARTS[2].title}`),...Array(3).fill(`4 · ${PARTS[3].title}`),''],'Each content slide needs its agreed part label');
     let opening=page.waitForEvent('popup');
     await page.keyboard.press('s');
     const presenter=await opening;
@@ -131,19 +131,19 @@ test('presenter view syncs slides and timing without published notes', async () 
 test('footer generation repairs the linked-map variant and follows reordered sections', async () => {
   const html=await fs.readFile(path.join(root,'presentation/index.html'),'utf8');
   checkSlideFooters(html);
-  const stale=html.replace(/(<section[^>]*id="map-overview"[\s\S]*?<span class="slide-count">)9 \/ 21/, '$1'+'7 / 21');
+  const stale=html.replace(/(<section[^>]*id="map-overview"[\s\S]*?<span class="slide-count">)9 \/ 22/, '$1'+'7 / 22');
   assert.notEqual(stale,html,'The regression fixture must corrupt the linked overview footer');
   assert.throws(()=>checkSlideFooters(stale),/Slide footers do not match/);
   assert.equal(updateSlideFooters(stale),html,'Generation must repair the original counter defect');
   const sections=[...html.matchAll(/<section\b[\s\S]*?<\/section>/g)].map(m=>m[0]);
-  const moved=html.replace(sections.slice(9,11).join('\n'),sections.slice(9,11).reverse().join('\n'));
+  const moved=html.replace(sections.slice(10,12).join('\n'),sections.slice(10,12).reverse().join('\n'));
   assert.notEqual(moved,html);
   const repaired=updateSlideFooters(moved);
   checkSlideFooters(repaired);
   const reordered=[...repaired.matchAll(/<section\b[\s\S]*?<\/section>/g)].map(m=>m[0]);
-  assert.match(reordered[9],/id="map-supervised"/);
-  assert.match(reordered[9],/<span class="slide-count">10 \/ 21<\/span>/);
-  assert.match(reordered[10],/id="map-rule-unsupervised"/);
-  assert.match(reordered[10],/<span class="slide-count">11 \/ 21<\/span>/);
+  assert.match(reordered[10],/id="map-supervised"/);
+  assert.match(reordered[10],/<span class="slide-count">11 \/ 22<\/span>/);
+  assert.match(reordered[11],/id="map-rule-unsupervised"/);
+  assert.match(reordered[11],/<span class="slide-count">12 \/ 22<\/span>/);
   assert.match(reordered[8],/<a[^>]*href="https:\/\/lukebax.github.io\/ai-review-tools\//,'The map footer link must survive generation');
 });

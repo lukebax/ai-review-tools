@@ -1,6 +1,6 @@
 # Navigating AI in Evidence Synthesis
 
-A 21-slide HTML presentation for a methods-focused workshop talk by Luke Baxter. The
+A 22-slide HTML presentation for a methods-focused workshop talk by Luke Baxter. The
 16:9 slides use the companion map’s navy text, restrained blues and off-white
 background. Every slide has a complete static state, shared with the PDF.
 
@@ -20,10 +20,10 @@ toolbar. **Full screen** or F enters full screen when supported; Esc exits it or
 opens the slide overview. There are no tabs, hidden builds or live-map dependencies.
 
 The content is organised into four parts, shown by a small footer label: **Foundations**
-(slides 2–8), **Mapping the landscape** (9–13), **Why recommendations differ between uses**
-(14–17), and **Assessing suitability for your review** (18–20). Opening and closing remain
-outside those parts. One bottom-right counter numbers all 21 slides in both HTML and PDF.
-Slides 9–13 share a centred map-access link. The closing identifies RAISE as the
+(slides 2–8), **Mapping the landscape** (9–14), **Why recommendations differ between uses**
+(15–18), and **Assessing suitability for your review** (19–21). Opening and closing remain
+outside those parts. One bottom-right counter numbers all 22 slides in both HTML and PDF.
+Slides 9 and 11–14 share a centred map-access link. Slide 10 explains how to interpret the selected map patterns. The closing identifies RAISE as the
 guidance and the interactive map as a companion for exploring it.
 
 For HTTP preview, run `python3 preview.py` from the repository root and open the
@@ -83,7 +83,7 @@ prevent version drift and common export defects, not every possible design probl
 
 ## Files and maintenance
 
-- `index.html`: the 21 slide sections, with current `data-plan-slide` numbers.
+- `index.html`: the 22 slide sections, with current `data-plan-slide` numbers.
 - `slide_structure.mjs`: agreed part boundaries and automatic footer labels/numbering; the PDF builder regenerates them from actual slide order, including footers with a link.
 - `assets/theme.css`: slide layouts and print styling, independent of the map.
 - `assets/deck.js`: Reveal setup, navigation, full-screen and presenter-window controls.

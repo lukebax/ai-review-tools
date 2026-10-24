@@ -31,7 +31,7 @@
       "id": "validation",
       "label": "Requires validation within the review",
       "color": "#F3CE55",
-      "description": "Test the intended task and workflow within this review against a task-specific threshold (minimum acceptable performance) set in advance and an appropriate benchmark (reference for comparison). The workflow must meet that standard; previous use elsewhere or convincing examples are insufficient. If you cannot reliably establish that the tool meets the required standard, use it only for exploration or alongside established methods, without replacing them."
+      "description": "Test the intended task and workflow within this review against a task-specific threshold (minimum acceptable performance) set in advance and an appropriate benchmark (reference for comparison). The workflow must meet that standard; previous use elsewhere alone or convincing examples are insufficient. If you cannot reliably establish that the tool meets the required standard, use it only for exploration or alongside established methods, without replacing them."
     },
     {
       "id": "exploratory",

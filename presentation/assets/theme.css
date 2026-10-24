@@ -68,3 +68,11 @@ html.print-pdf .toolbar{display:none}html.print-pdf .reveal .slides section.slid
 
 /* The five map views share the same link position, independently of image height. */
 .slide-footer .map-access{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:16px;font-weight:650;color:#075ea8}.slide-footer .map-access span{color:var(--muted)}
+
+/* A shared note completes the four-family introduction without obscuring its diagrams. */
+.methods .method-diagram,.learning-methods .method-diagram{height:220px}
+.reveal .taxonomy-note{position:absolute;left:64px;right:64px;bottom:66px;font-size:22px;line-height:1.3;color:var(--muted)}
+/* Reading a selected map: three static, spacious statements also work in the PDF. */
+.map-reading-points{margin-top:64px;max-width:1080px}
+.reveal .map-reading-points p{font-size:32px;line-height:1.35;padding:29px 0;border-top:1px solid var(--line)}
+.reveal .map-reading-points p:first-child{border-top:0;padding-top:0}
