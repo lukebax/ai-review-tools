@@ -23,7 +23,7 @@ The content is organised into four parts, shown by a small footer label: **Found
 (slides 2–8), **Mapping the landscape** (9–14), **Why recommendations differ between uses**
 (15–18), and **Assessing suitability for your review** (19–21). Opening and closing remain
 outside those parts. One bottom-right counter numbers all 22 slides in both HTML and PDF.
-Slides 9 and 11–14 share a centred map-access link. Slide 10 explains how to interpret the selected map patterns. The closing identifies RAISE as the
+The full-map view on slide 9 retains a centred map-access link; slides 11–14 omit it. Slide 10 explains how to interpret the selected map patterns. The closing identifies RAISE as the
 guidance and the interactive map as a companion for exploring it.
 
 For HTTP preview, run `python3 preview.py` from the repository root and open the
