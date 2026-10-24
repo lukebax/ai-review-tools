@@ -5,7 +5,7 @@ across the systematic-review workflow and the conditions for using them responsi
 
 - **[Interactive map](https://lukebax.github.io/ai-review-tools/map/)** — tools, tasks and
   use recommendations, with filters, cell details and explanatory guidance.
-- **[Presentation](https://lukebax.github.io/ai-review-tools/presentation/)** — 22 slides
+- **[Presentation](https://lukebax.github.io/ai-review-tools/presentation/)** — 20 slides
   with keyboard navigation, presenter view and a
   [matching PDF](https://lukebax.github.io/ai-review-tools/presentation/navigating-ai-evidence-synthesis.pdf).
 
