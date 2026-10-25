@@ -105,8 +105,8 @@ test('presenter view syncs slides and timing without published notes', async () 
     await presenter.waitForSelector('.speaker-controls-time');
     assert.equal(await page.locator('aside.notes,[data-note],[data-notes],[data-spoken-sha256]').count(),0);
     assert.equal(await presenter.locator('.speaker-controls-notes').isVisible(),false);
-    await page.evaluate(()=>deck.slide(deck.getIndices(document.getElementById('verification-validation')).h));
-    await presenter.frameLocator('#current-slide iframe').locator('#verification-validation.present').waitFor();
+    await page.evaluate(()=>deck.slide(deck.getIndices(document.getElementById('foundations-recap')).h));
+    await presenter.frameLocator('#current-slide iframe').locator('#foundations-recap.present').waitFor();
     // Presenter keys still advance the audience slide.
     await presenter.keyboard.press('ArrowRight');
     await page.waitForFunction(()=>deck.getCurrentSlide().id==='map-overview');
