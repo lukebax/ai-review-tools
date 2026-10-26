@@ -70,6 +70,10 @@ npm run check
 npm test
 ```
 
+Develop appearance or interaction changes on a separate branch when the live version must
+stay stable. Test with the local preview; branch pushes do not deploy Pages. Merge into
+`main` only when the update is ready for release.
+
 Review affected browser views and PDF pages, then commit and push to `main`. GitHub Actions
 refreshes the map captures, generates the PDF from the same slides and assets, checks
 alignment, and publishes the checked site. A failed check leaves the previous site live.

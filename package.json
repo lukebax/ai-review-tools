@@ -7,7 +7,7 @@
     "build:map-images": "node presentation/capture_maps.mjs",
     "build:pdf": "npm run build:map-images && node presentation/build_pdf.mjs",
     "check": "python3 map/build.py --check && python3 presentation/build_visuals.py --check && node presentation/capture_maps.mjs --check && node presentation/build_pdf.mjs --check",
-    "test": "node --test map/filters.test.mjs presentation/build_pdf.test.mjs"
+    "test": "node --test map/filters.test.mjs map/appearance.test.mjs presentation/build_pdf.test.mjs"
   },
   "devDependencies": {
     "pdf-lib": "1.17.1",

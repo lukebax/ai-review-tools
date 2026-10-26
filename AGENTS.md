@@ -28,8 +28,11 @@ Keep private source libraries and unrelated files out of this public repository.
 - Keep the eight-stage scope and separate outside-stage explanations unless the maintainer
   authorises a scope change. A new third recommendation within one cell requires a reviewed
   visual convention; do not silently omit it or choose one category.
-- Balanced is the fresh-load default. Any palette change must update cells, diagonal halves,
-  key and detail panels consistently. Keep textual recommendations and keyboard access.
+- First-time appearance is light with Balanced colours; restore valid browser preferences.
+  Keep theme and recommendation palette independent. Any palette change must update cells,
+  diagonal halves, key and detail panels consistently. Keep textual recommendations and
+  keyboard access. Storage failures must not prevent use. Test all four appearance combinations;
+  keep print and presentation captures light, with Balanced colours for slide captures.
 - Use python3 map/build.py --check, then browser-test affected map interactions. Keep map
   viewing self-contained: no runtime network dependency, server requirement or external
   workspace paths. A local server is optional for previewing the presentation.

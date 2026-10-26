@@ -20,9 +20,16 @@ Select a cell to read its function-specific explanations, recommendations and so
 Use **Find a tool**, **Roomier columns** and the filters below the matrix for a closer view.
 Recommendations apply to the specified function or workflow, not to every use of a product.
 Split cells preserve both recommendations; their diagonal halves do not represent proportions
-or confidence. White cells mean no use listed within this map's scope. Recommendation filters
-match either category in a split cell. Balanced is the default palette; the optional
-colour-blind-friendly switch selects ColorBrewer RdYlBu.
+or confidence. Blank cells mean no use listed within this map's scope. Recommendation filters
+match either category in a split cell.
+
+The two switches at the top work independently: **Dark mode** changes the interface;
+**Colour-blind-friendly colours** selects ColorBrewer RdYlBu for recommendations.
+First-time visitors see the light interface and Balanced traffic-light palette. The browser
+remembers both choices when local storage is available. If storage is blocked, both
+switches still work for the current visit. Appearance changes preserve filters, search and
+open cell details; **Reset filters** leaves appearance choices alone. Printing uses the light
+interface, and presentation captures are explicitly fixed to light/Balanced.
 
 Choose any combination in the **AI category** and **Review stage** dropdowns. With no
 checkboxes selected, that filter shows all. **Show all** clears one dimension; **Reset filters**
@@ -57,10 +64,11 @@ anything or need the private presentation workspace. Do not edit generated `map/
 directly. The build rejects cells containing more than two recommendation categories; review
 the display convention before adding such a case.
 
-Run `node --test map/filters.test.mjs` after interaction changes (requires the root
+Run `node --test map/*.test.mjs` after interaction or appearance changes (requires the root
 development dependencies and Playwright Chromium). These checks cover combinations,
 recommendation highlighting, search, resets, keyboard use and narrow layouts. They also
-run in the shared publication gate.
+run in the shared publication gate. Appearance checks cover both palettes in light/dark
+mode, saved or unavailable storage, offline use, keyboard focus and text contrast.
 
 ## Guidance and interpretation
 

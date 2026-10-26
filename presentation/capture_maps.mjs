@@ -8,6 +8,7 @@ import assert from 'node:assert/strict';
 
 const here=path.dirname(fileURLToPath(import.meta.url)), root=path.resolve(here,'..');
 const out=path.join(here,'assets/maps'), manifestPath=path.join(out,'captures.json');
+const captureAppearance={theme:'light',palette:'balanced'};
 const views=[
  {file:'map-overview.png',groups:[]},
  {file:'map-rule-unsupervised.png',groups:['rule-based','unsupervised']},
@@ -30,12 +31,15 @@ if(process.argv.includes('--check')) {await check();process.exit(0);}
 const data=JSON.parse(await fs.readFile(path.join(root,'map/map-data.json'),'utf8'));
 const browser=await chromium.launch({headless:true});
 try{
- const page=await browser.newPage({viewport:{width:1600,height:1000},deviceScaleFactor:2});
+ const page=await browser.newPage({viewport:{width:1600,height:1000},deviceScaleFactor:2,colorScheme:'light'});
+ // The presentation keeps its approved light appearance, independent of viewer preferences.
+ await page.addInitScript(appearance=>localStorage.setItem('ai-review-tools-appearance',JSON.stringify(appearance)),captureAppearance);
  const errors=[];page.on('pageerror',error=>errors.push(error.message));
  const images=[];
  for(const view of views){
   await page.goto(pathToFileURL(path.join(root,'map/index.html')).href);
   await page.locator('#map-body .cell-button').first().waitFor();
+  assert.deepEqual(await page.evaluate(()=>({theme:document.documentElement.dataset.theme,palette:document.documentElement.dataset.palette})),captureAppearance);
   if(view.groups.length){
    await page.locator('#group-filter-summary').click();
    for(const group of view.groups)await page.locator(`#group-filter input[value="${group}"]`).check();
