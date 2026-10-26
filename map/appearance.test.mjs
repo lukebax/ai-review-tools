@@ -283,6 +283,125 @@ async function contrastSamples(page, selectors, focus = false) {
   }, { selectors, focus });
 }
 
+// Read the cell's paint (including faded SVG halves and hatch stripes), rather
+// than comparing a focus token with the surrounding page background.
+async function cellFocusSample(cell) {
+  return cell.evaluate(node => {
+    const rgba = css => {
+      const values = css.match(/[\d.]+/g)?.map(Number);
+      if (!values || values.length < 3) throw new Error(`Unrecognised colour: ${css}`);
+      return [...values.slice(0, 3), values[3] ?? 1];
+    };
+    const over = (front, back) => front.slice(0, 3).map((v, i) => v * front[3] + back[i] * (1 - front[3]));
+    const ancestors = [];
+    for (let el = node; el; el = el.parentElement) ancestors.unshift(el);
+    const background = ancestors.reduce((back, el) => over(rgba(getComputedStyle(el).backgroundColor), back), [255, 255, 255]);
+    const paint = node.querySelector('.cell-colour'), paintStyle = getComputedStyle(paint);
+    const shapes = [...paint.querySelectorAll('rect, path')];
+    let fills = (shapes.length ? shapes.map(shape => getComputedStyle(shape).fill) : [paintStyle.backgroundColor]).map(css => {
+      const colour = rgba(css);
+      colour[3] *= Number(paintStyle.opacity);
+      return over(colour, background);
+    });
+    const hatch = getComputedStyle(node.querySelector('.filtered-mark'));
+    if (hatch.display !== 'none') {
+      const stripes = [...hatch.backgroundImage.matchAll(/rgba?\([^)]*\)/g)].map(match => rgba(match[0]));
+      fills = fills.flatMap(fill => [fill, ...stripes.map(stripe => over(stripe, fill))]);
+    }
+    const style = getComputedStyle(node), rect = node.getBoundingClientRect(), indicators = [];
+    const visible = style.visibility === 'visible' && Number(style.opacity) > 0 && rect.width > 0 && rect.height > 0;
+    if (visible && !['none', 'hidden'].includes(style.outlineStyle) && parseFloat(style.outlineWidth) >= 2) {
+      indicators.push({ source: 'outline', colour: style.outlineColor, width: style.outlineWidth, position: style.outlineOffset });
+    }
+    for (const pseudo of ['::before', '::after']) {
+      const ring = getComputedStyle(node, pseudo), width = parseFloat(ring.borderTopWidth);
+      if (visible && !['none', 'normal'].includes(ring.content) && ring.display !== 'none' && ring.visibility === 'visible'
+          && !['none', 'hidden'].includes(ring.borderTopStyle) && width >= 2
+          && ['Top', 'Right', 'Bottom', 'Left'].every(side => parseFloat(ring[`border${side}Width`]) >= 2)
+          && parseFloat(ring.left) >= 0 && parseFloat(ring.top) >= 0
+          && rect.width > parseFloat(ring.left) + parseFloat(ring.right) + 2 * width
+          && rect.height > parseFloat(ring.top) + parseFloat(ring.bottom) + 2 * width) {
+        indicators.push({ source: pseudo, colour: ring.borderTopColor, width: ring.borderTopWidth,
+          position: [ring.top, ring.right, ring.bottom, ring.left].join(' ') });
+      }
+    }
+    const luminance = colour => colour.map(v => v / 255).map(v => v <= .04045 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4)
+      .reduce((total, v, i) => total + v * [.2126, .7152, .0722][i], 0);
+    return { focused: node === document.activeElement, focusVisible: node.matches(':focus-visible'),
+      filtered: node.classList.contains('filtered-out'), paintOpacity: Number(paintStyle.opacity),
+      indicators: indicators.map(indicator => ({ ...indicator, contrasts: fills.map(fill => {
+        const a = luminance(over(rgba(indicator.colour), fill)), b = luminance(fill);
+        return (Math.max(a, b) + .05) / (Math.min(a, b) + .05);
+      }) })) };
+  });
+}
+
+function assertCellFocus(sample, baseline, label) {
+  assert(sample.focused && sample.focusVisible, `${label}: keyboard focus must be on the cell and match :focus-visible`);
+  const signature = ({ source, colour, width, position }) => JSON.stringify({ source, colour, width, position });
+  const changed = sample.indicators.filter(indicator => !baseline.indicators.some(before => signature(before) === signature(indicator)));
+  assert(changed.length, `${label}: focus must add a distinct visible indicator, including on a selected cell`);
+  for (let i = 0; i < changed[0].contrasts.length; i++) {
+    const ratio = Math.max(...changed.map(indicator => indicator.contrasts[i]));
+    assert(ratio >= 3, `${label}: focus contrast against cell paint is ${ratio.toFixed(2)}:1 < 3:1`);
+  }
+}
+
+test('keyboard cell focus contrasts with every palette colour, split fill, blank and faded cell', async () => withPage(async page => {
+  const samples = await page.locator('#map-body .cell-button').evaluateAll(cells => {
+    const seen = new Set();
+    return cells.flatMap((cell, index) => {
+      const categories = cell.dataset.categories;
+      if (seen.has(categories)) return [];
+      seen.add(categories);
+      return [{ index, categories: categories ? categories.split(',') : [] }];
+    });
+  });
+  assert.equal(samples.filter(sample => sample.categories.length === 1).length, 5, 'Exercise every single recommendation colour');
+  assert(samples.some(sample => sample.categories.length === 2), 'Exercise both halves of mixed SVG cells');
+  assert(samples.some(sample => !sample.categories.length), 'Exercise blank cells');
+  const recommendations = await page.locator('.legend-button').evaluateAll(nodes => nodes.map(node => node.dataset.rec));
+  for (const appearance of combinations) {
+    await setAppearance(page, appearance);
+    const first = page.locator('#map-body .cell-button').first();
+    const baseline = await cellFocusSample(first);
+    await first.focus();
+    await page.keyboard.press('ArrowRight');
+    assert.equal((await cellFocusSample(first)).focusVisible, false, 'Arrow navigation removes focus from the previous cell');
+    const next = page.locator('#map-body .cell-button').nth(1);
+    assertCellFocus(await cellFocusSample(next), baseline, 'ArrowRight destination');
+    await page.keyboard.press('ArrowLeft');
+    assertCellFocus(await cellFocusSample(first), baseline, 'ArrowLeft destination');
+    for (const sample of samples) {
+      const cell = page.locator('#map-body .cell-button').nth(sample.index);
+      const label = `${appearance.theme}/${appearance.palette} ${sample.categories.join('/') || 'blank'}`;
+      for (const faded of [false, true]) {
+        const filter = recommendations.find(id => !sample.categories.includes(id));
+        if (faded) await page.locator(`.legend-button[data-rec="${filter}"]`).click();
+        await page.locator('#tool-search').focus();
+        await page.keyboard.press('Tab');
+        const before = await cellFocusSample(cell);
+        await cell.focus();
+        const focused = await cellFocusSample(cell);
+        assert.equal(focused.filtered, faded, `${label}: exercise the expected filter state`);
+        if (faded && sample.categories.length) assert(focused.paintOpacity < 1, `${label}: test the composited faded fill`);
+        assertCellFocus(focused, before, `${label}${faded ? ' faded' : ''}`);
+        if (faded) await page.locator('#clear-recommendations').click();
+      }
+    }
+    const cell = page.locator('#map-body .cell-button:not(.empty)').first();
+    await cell.focus();
+    await page.keyboard.press('Enter');
+    assert.equal(await cell.getAttribute('aria-pressed'), 'true');
+    const selected = await cellFocusSample(cell);
+    await cell.focus();
+    assertCellFocus(await cellFocusSample(cell), selected, 'Selected cell');
+    await page.keyboard.press('Escape');
+    assert.equal(await page.locator('#details-drawer.open').count(), 0);
+    assertCellFocus(await cellFocusSample(cell), baseline, 'Cell restored after Escape');
+  }
+}));
+
 test('text remains readable in each combination and keyboard switches have a visible focus indicator', async () => withPage(async page => {
   await page.locator('.scope-details > summary').first().click();
   await page.locator('[data-rec="acceptable"]').click();
